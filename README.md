@@ -4,7 +4,7 @@ Specification of composable data stations
 
 ## Contributing
 
-### Getting started:
+### Getting started
 
 -   clone the repository
 -   install [uv](https://docs.astral.sh/uv/getting-started/installation/) if you haven't already done so
@@ -25,3 +25,8 @@ You can edit the markdown pages with your editor of choice. The project layout i
 ```
 
 The website is build automatically with GitHub actions on every commit on main.
+
+### Citations and references
+
+`data-station-specification.bib` contains references in Bibtex format. Note that `mkdocs-bibtex` can't handle Better Bibtext format, so make sure the bibliography is in plain Bibtex.
+

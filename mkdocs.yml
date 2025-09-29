@@ -1,4 +1,4 @@
-site_name: Specifcation of composable data stations
+site_name: Specification data stations for health data sharing
 site_url: https://health-ri.github.io/data-station-specification
 repo_url: https://github.com/Health-RI/data-station-specification
 theme:
@@ -16,5 +16,31 @@ theme:
     accent: custom
   features:
     - header.autohide
+    - navigation.indexes
+    - navigation.instant.preview
+    - navigation.tracking
 extra_css:
   - stylesheets/extra.css
+markdown_extensions:
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - footnotes
+plugins:
+  - search
+  - bibtex:
+      bib_file: "data-station-specification.bib"
+
+# Page tree
+nav:
+  - Home: index.md
+  - Architecture:
+    - architecture/index.md
+    - Motivation: architecture/motivation.md
+    - Principles: architecture/principles.md
+    - Implementation guide: architecture/implementation.md
+  - Component specifications:
+    - components/index.md
+    - Ingestion: components/ingestion.md

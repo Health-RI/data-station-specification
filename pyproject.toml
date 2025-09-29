@@ -3,7 +3,11 @@ name = "data-station-specification"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
-    "mkdocs-material>=9.6.20",
+    "mkdocs-bibtex>=4.4.0",
+    "mkdocs-material",
 ]
+
+[tool.uv.sources]
+mkdocs-material = { git = "https://github.com/Health-RI/mkdocs-material-insiders" }
