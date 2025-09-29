@@ -1,4 +1,20 @@
 site_name: Specifcation of composable data stations
 site_url: https://health-ri.github.io/data-station-specification
+repo_url: https://github.com/Health-RI/data-station-specification
 theme:
   name: material
+  custom_dir: overrides
+  font:
+    text: Lato
+    code: Fira Code
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  palette:
+    primary: custom
+    accent: custom
+  features:
+    - header.autohide
+extra_css:
+  - stylesheets/extra.css
