@@ -1,0 +1,4 @@
+site_name: Specifcation of composable data stations
+site_url: https://health-ri.github.io/data-station-specification
+theme:
+  name: material
