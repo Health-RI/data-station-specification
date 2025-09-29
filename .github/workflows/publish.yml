@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      # - name: Configure Git Credentials
-      #   run: |
-      #     git config user.name github-actions[bot]
-      #     git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
