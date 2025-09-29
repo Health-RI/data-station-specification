@@ -34,8 +34,8 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0 mkdocs-bibtex
-              env:
-                GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       # - run: pip install mkdocs-material mkdocs-bibtex
       - run: mkdocs build                      
       - uses: actions/configure-pages@v5       
