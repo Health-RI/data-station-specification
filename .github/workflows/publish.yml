@@ -35,7 +35,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-bibtex
+      - run: pip install mkdocs-material@git+https://github.com/health-ri/mkdocs-material-insiders mkdocs-bibtex
       - run: mkdocs build                      # Adjusted from 'mkdocs gh-deploy'
       - uses: actions/configure-pages@v5       # Added
       - uses: actions/upload-pages-artifact@v3 # Added
