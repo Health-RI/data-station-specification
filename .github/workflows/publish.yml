@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      # - name: Configure Git Credentials
+      #   run: |
+      #     git config user.name github-actions[bot]
+      #     git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
@@ -24,7 +24,7 @@ jobs:
         run: uv sync --locked --all-extras --dev
       - name: Add venv to PATH
         run: echo "$(pwd)/.venv/bin" >> $GITHUB_PATH
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      # - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
       # - uses: actions/cache@v4
       #   with:
       #     key: mkdocs-material-${{ env.cache_id }}
