@@ -7,11 +7,10 @@ on:
       - main
 
 permissions:
-  contents: read  # Adjusted from 'write'
-  pages: write    # Added
-  id-token: write # Added
+  contents: read  
+  pages: write    
+  id-token: write 
 
-# Used to avoid concurrency issues
 concurrency:
   group: github-pages
   cancel-in-progress: false
@@ -21,11 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }} # Retrieved from deploy-pages action
+      url: ${{ steps.deployment.outputs.page_url }} 
     steps:
       - uses: actions/checkout@v4
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: 3.13
@@ -36,13 +33,14 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      # need fixing
-      # - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0 mkdocs-bibtex
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0 mkdocs-bibtex
+              env:
+                GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: pip install mkdocs-material mkdocs-bibtex
-      - run: mkdocs build                      # Adjusted from 'mkdocs gh-deploy'
-      - uses: actions/configure-pages@v5       # Added
-      - uses: actions/upload-pages-artifact@v3 # Added
+      - run: mkdocs build                      
+      - uses: actions/configure-pages@v5       
+      - uses: actions/upload-pages-artifact@v3 
         with:
           path: 'site/'
-      - uses: actions/deploy-pages@v4          # Added
+      - uses: actions/deploy-pages@v4          
         id: deployment
