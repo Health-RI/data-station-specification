@@ -120,7 +120,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "mkdocs-bibtex", specifier = ">=4.4.0" },
-    { name = "mkdocs-material", git = "https://github.com/Health-RI/mkdocs-material-insiders" },
+    { name = "mkdocs-material", git = "https://github.com/health-ri/mkdocs-material-insiders" },
 ]
 
 [[package]]
@@ -316,7 +316,7 @@ wheels = [
 [[package]]
 name = "mkdocs-material"
 version = "9.6.20+insiders.4.53.17"
-source = { git = "https://github.com/Health-RI/mkdocs-material-insiders#0892d2e7967351da96f8d1ede2b46beec7e407a1" }
+source = { git = "https://github.com/health-ri/mkdocs-material-insiders#0892d2e7967351da96f8d1ede2b46beec7e407a1" }
 dependencies = [
     { name = "babel" },
     { name = "backrefs" },
