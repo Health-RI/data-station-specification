@@ -16,9 +16,13 @@ theme:
     accent: custom
   features:
     - header.autohide
+    - navigation.footer
     - navigation.indexes
     - navigation.instant.preview
+    - navigation.top
     - navigation.tracking
+    - navigation.path
+    - toc.integrate
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
@@ -42,7 +46,9 @@ nav:
     - architecture/index.md
     - Motivation: architecture/motivation.md
     - Principles: architecture/principles.md
-    - Implementation guide: architecture/implementation.md
+    - Standards: architecture/standards.md
   - Component specifications:
     - components/index.md
     - Ingestion: components/ingestion.md
+  - Implementation guide:
+    - implementation/index.md
