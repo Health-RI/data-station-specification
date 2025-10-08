@@ -18,5 +18,5 @@ This specification of data stations in not only motivated by technological enabl
 - data stations are essential in implementing contemporary data governance frameworks, including the Data Governance Act (DGA), the European Health Data Space (EHDS) and the concept of data solidarity.[@prainsack2023beyond]
 - data stations can also contribute in the shift towards a more equitable, open digital infrastructure.[@krewer2024digital]
 
-![FAIR Hourglass](fair-hourglass.png)
+![FAIR Hourglass](../assets/fair-hourglass.png)
 

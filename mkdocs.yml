@@ -6,7 +6,7 @@ theme:
   language: 'nl'
   custom_dir: overrides
   font:
-    text: Lato
+    text: Fira Sans
     code: Fira Code
   icon:
     repo: fontawesome/brands/github
@@ -27,17 +27,22 @@ theme:
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
-markdown_extensions:
   - attr_list
+  - md_in_html
   - pymdownx.blocks.caption
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - footnotes
 plugins:
+  - glightbox
   - meta
   - search
-  # https://ultrabug.github.io/mkdocs-static-i18n/setup/
   - i18n:
       docs_structure: suffix
       languages:
@@ -48,16 +53,16 @@ plugins:
         - locale: en
           name: English
           build: true
-      nav_translations:
-        # main sections
-        Architectuur: Architecture
-        Componenten: Components
-        Implementaties: Implementations
+          nav_translations:
+            # main sections
+            Architectuur: Architecture
+            Componenten: Components
+            Implementaties: Implementations
 
-        # sub-sections
-        Motivatie: Motivation
-        Principes: Principles
-        Standaarden: Standards
+            # sub-sections
+            Motivatie: Motivation
+            Principes: Principles
+            Standaarden: Standards
 
   - bibtex:
       bib_file: "data-station-specification.bib"
