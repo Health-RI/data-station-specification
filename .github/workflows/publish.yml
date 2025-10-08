@@ -37,7 +37,7 @@ jobs:
         # run: pip install git+https://${MATERIAL_INSIDERS_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.4.2-insiders-4.42.0 mkdocs-bibtex
         # env:
         #   MATERIAL_INSIDERS_TOKEN: ${{ secrets.MATERIAL_INSIDERS_TOKEN }}
-        run: pip install mkdocs-material mkdocs-bibtex
+        run: pip install mkdocs-material mkdocs-bibtex mkdocs-static-i18n
       - run: mkdocs build                      
       - uses: actions/configure-pages@v5       
       - uses: actions/upload-pages-artifact@v3 
