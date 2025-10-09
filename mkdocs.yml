@@ -56,13 +56,17 @@ plugins:
           nav_translations:
             # main sections
             Architectuur: Architecture
-            Componenten: Components
+            Functionele componenten: Functional components
             Implementaties: Implementations
 
             # sub-sections
             Motivatie: Motivation
             Principes: Principles
             Standaarden: Standards
+            Data station: Data station
+            Federatief netwerk: Federated network
+            PLUGIN: PLUGIN
+            KIK-V: KIK-V
 
   - bibtex:
       bib_file: "data-station-specification.bib"
@@ -84,7 +88,24 @@ nav:
     - Motivatie: architectuur/motivatie.md
     - Principes: architectuur/principes.md
     - Standaarden: architectuur/standaarden.md
-  - Componenten:
+  - Functionele componenten:
     - componenten/index.md
+    - Data station:
+      - componenten/data-station/index.md  
+      - Aanleveren: componenten/data-station/aanleveren.md
+      - Ingestie: componenten/data-station/ingestie.md
+      - Transformeren: componenten/data-station/transformeren.md
+    - Federatief netwerk:
+      - componenten/federatief-netwerk/index.md
+      - Federatieve analyse: componenten/federatief-netwerk/federatieve-analyse.md
+      - Federatief leren: componenten/federatief-netwerk/federatief-leren.md
+      - Data pooling: componenten/federatief-netwerk/data-pooling.md
+  
   - Implementaties:
     - implementaties/index.md
+    - PLUGIN:
+      - implementaties/PLUGIN/index.md
+      - Architectuur: implementaties/PLUGIN/architectuur.md
+    - KIK-V:
+      - implementaties/KIK-V/index.md
+      - Architectuur: implementaties/PLUGIN/architectuur.md  

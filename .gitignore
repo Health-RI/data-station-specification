@@ -1,3 +1,4 @@
 /site
 .DS_Store
 *.code-workspace
+/references
