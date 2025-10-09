@@ -12,3 +12,7 @@
 
   --md-footer-bg-color: #173d75;
 }
+
+.md-grid {
+  max-width: 1200px; 
+}
