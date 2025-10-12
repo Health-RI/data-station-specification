@@ -1,4 +1,4 @@
-site_name: Specificatie van data stations voor secundair gebruik
+site_name: Data stations voor secundair gebruik in de zorg
 site_url: https://health-ri.github.io/data-station-specification
 repo_url: https://github.com/Health-RI/data-station-specification
 theme:
@@ -43,10 +43,6 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - tables
-  # - toc:
-  #     permalink: true
-  #     toc_depth: 2
-  #     title: Op deze pagina
 plugins:
   - glightbox
   - meta
@@ -75,10 +71,8 @@ plugins:
             Federatief netwerk: Federated network
             PLUGIN: PLUGIN
             KIK-V: KIK-V
-
   - bibtex:
       bib_file: "data-station-specification.bib"
-
 extra:
   alternate:
     - name: Nederlands
@@ -92,7 +86,7 @@ extra:
 nav:
   - Inleiding:
     - index.md
-    - Waarom deze specificatie?: scope.md
+    - Scope van de specificatie: scope.md
     - Leeswijzer: leeswijzer.md
   - Architectuur:
     - architectuur/index.md
@@ -111,7 +105,6 @@ nav:
       - Federatieve analyse: componenten/federatief-netwerk/federatieve-analyse.md
       - Federatief leren: componenten/federatief-netwerk/federatief-leren.md
       - Data pooling: componenten/federatief-netwerk/data-pooling.md
-  
   - Implementaties:
     - implementaties/index.md
     - PLUGIN:

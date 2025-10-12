@@ -13,6 +13,14 @@
   --md-footer-bg-color: #173d75;
 }
 
+.md-content__inner.md-typeset {
+  font-size: 0.9rem
+}
+
+.md-typeset .admonition>*, .md-typeset details>*, .md-typeset .tabbed-labels>label {
+    font-size: 0.8rem
+}
+
 .md-grid {
   max-width: 1200px; 
 }
