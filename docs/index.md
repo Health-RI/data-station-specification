@@ -13,7 +13,7 @@ Dit document beschrijft een functionele specificatie van een federatieve gezondh
 Het kerndoel van deze specificatie is om:
 
 - Een overzicht te geven van de architectuur van een federatieve gezondheidsdata-infrastructuur
-- Beschrijven van de functionele specificaties van de onderliggen componenten
+- Beschrijven van de functionele specificaties van de onderliggende componenten
 - Beschrijven van de werkprocessen die ten grondslag liggen aan secundair gebruik van data
 - Beschrijven van referentie implementaties als leidraad voor verder ontwikkeling en adoptie van deze specificatie
 
