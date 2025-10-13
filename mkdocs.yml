@@ -113,4 +113,12 @@ nav:
       - Architectuur: implementaties/PLUGIN/architectuur.md
     - KIK-V:
       - implementaties/KIK-V/index.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md  
+      - Architectuur: implementaties/PLUGIN/architectuur.md
+    - DataSHIELD:
+      - implementaties/DataSHIELD/index.md
+      - Architectuur: implementaties/DataSHIELD/architectuur.md
+  - Discussie:
+    - discussie/index.md
+    - Primair vs. secundair: discussie/primair-vs-secundair.md
+    - Centraal vs. federatief: discussie/centraal-vs-federatief.md
+    - Permit vs. request: discussie/permit-vs-request.md  
