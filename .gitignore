@@ -1,4 +1,5 @@
 /site
 .DS_Store
 *.code-workspace
-/references
+references/*
+!references/TEHDAS2/
