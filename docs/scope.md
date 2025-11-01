@@ -71,7 +71,7 @@ In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het i
     Elk dataproduct bevat, naast de data zelf, ook metadata. Deze metadata kunnen bijvoorbeeld verwijzen naar de betekenis van de data,
     vastgelegd in een ontologie of domeinmodel. Daarnaast legt een dataproduct vast aan welke regels de data moet voldoen: hoe de structuur is opgebouwd, welke inhoudelijke eisen gelden voor de data, hoe het mag worden gebruikt en welke beleidsregels van toepassing zijn voor toegang.
 
-    ![Data product](../assets/data-product.png)
+    ![Data product](./assets/data-product.png)
 
 
 #### FAIR orchestratie

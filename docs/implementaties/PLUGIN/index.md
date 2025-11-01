@@ -7,4 +7,6 @@
 
 ## Externe documentatie
 
-- [Installatiegids](https://installatiegids-aioc.dhd.nl/)
+- [Installatiegids PLUGIN](https://installatiegids-aioc.dhd.nl/)
+- [vantage6 software management plan](https://vantage6.ai/documents/27/vantage6-software-management-plan-v1.0.pdf)
+
