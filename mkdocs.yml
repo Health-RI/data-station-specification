@@ -78,9 +78,13 @@ plugins:
             PLUGIN: PLUGIN
             KIK-V: KIK-V
   - meta
+  - mkdocs-pdf
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
+      theme:
+        light: kanagawa/fuji
+        dark: kanagawa/wave
 extra:
   alternate:
     - name: Nederlands
@@ -102,7 +106,11 @@ nav:
     - architectuur/index.md
     - Motivatie: architectuur/motivatie.md
     - Principes: architectuur/principes.md
-    - Use case: architectuur/use-case.md
+    - Use cases:
+      - architectuur/use-cases/index.md
+      - DAAMS: architectuur/use-cases/daams.md
+      - Federated Analytics Portal: architectuur/use-cases/fap.md
+      - Data station: architectuur/use-cases/data-station.md
     - Standaarden: architectuur/standaarden.md
   - Functionele componenten:
     - componenten/index.md
@@ -131,4 +139,8 @@ nav:
     - discussie/index.md
     - Primair vs. secundair: discussie/primair-vs-secundair.md
     - Centraal vs. federatief: discussie/centraal-vs-federatief.md
-    - Permit vs. request: discussie/permit-vs-request.md  
+    - Permit vs. request: discussie/permit-vs-request.md
+  - Appendix:
+    - appendix/index.md
+    - Archimate data space: https://health-ri.github.io/data-spaces-archimate/
+

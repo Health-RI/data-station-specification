@@ -23,7 +23,14 @@ Het concept van een data station staat centraal in deze architectuur. Wat een da
 
 De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om een hergebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken in het schrijven en uitwerken van dit document. Het is de bedoeling dat specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via nog een nader te kiezen proces.
 
-Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commen
+Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld hieronder.
+
+## Attributie
+
+Deze specificatie is opgesteld in opdracht van Health-RI door:
+
+- [Daniel Kapitan](https://linkedin.com/in/dkapitan)
+- [René Hietkamp](https://www.linkedin.com/in/renehietkamp/)
 
 **:material-creative-commons: Dit werk is gelicenseerd onder een [Creative Commons Naamsvermelding 4.0 Internationaal licentie](https://creativecommons.org/licenses/by/4.0/).**
 
