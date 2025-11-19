@@ -23,7 +23,7 @@ theme:
     - navigation.instant.preview
     - navigation.top
     - navigation.tracking
-    - navigation.path
+    # - navigation.path
     - toc.integrate
 extra_css:
   - stylesheets/extra.css
@@ -106,7 +106,7 @@ watch:
 
 # Page tree
 nav:
-  - Inleiding:
+  - Samenvatting:
     - index.md
     - Scope van de specificatie: scope.md
     - Data stations als basis voor interoperabiliteit: data-stations-als-hoeksteen.md
