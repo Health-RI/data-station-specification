@@ -1,4 +1,6 @@
-# Specification overview
+---
+title: Home
+---
 
 ## Introduction to Health-RI
 

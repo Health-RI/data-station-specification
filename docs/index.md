@@ -1,23 +1,15 @@
----
-title: Data stations voor secundair gebruik in de zorg
----
+# Inleiding
 
-# Een specificatie van een federatieve gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie
-
-## Inleiding
-
-Dit document beschrijft een functionele specificatie van een federatieve gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie, het zogenaamde secundair gebruik van data. Het doel is om hiermee de implementatie van de European Health Data Space (EHDS) en de daarvoor benogdigde infrastructuur te ondersteunen.
+Dit document beschrijft een functionele specificatie van een __federatieve__ gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie, het zogenaamde secundair gebruik van data. Federatief in deze context wil zeggen dat het concept van __data stations__ centraal staat. Wat een data station precies omvat, welke functionaliteit het heeft en hoe het op landelijke schaal geimplementeerd kan worden, zijn de vragen waarop deze specificatie een antwoord geeft. Daarmee wil deze specificatie een bijdrage leveren aan de implementatie van de European Health Data Space (EHDS).
 
 ## Kerndoel van deze specificatie
 
 Het kerndoel van deze specificatie is om:
 
-- Een overzicht te geven van de architectuur van een federatieve gezondheidsdata-infrastructuur
-- Beschrijven van de functionele specificaties van de onderliggende componenten
+- Een overzicht te geven van de architectuur van een federatieve gezondheidsdata-infrastructuur, gebaseerd op data stations
+- Beschrijven van de functionele specificaties van data stations en andere de andere componenten van een dergelijke infrastructuur
 - Beschrijven van de werkprocessen die ten grondslag liggen aan secundair gebruik van data
 - Beschrijven van referentie implementaties als leidraad voor verder ontwikkeling en adoptie van deze specificatie
-
-Het concept van een data station staat centraal in deze architectuur. Wat een data station precies omvat, welke functionaliteit het heeft en hoe het op landelijke schaal geimplementeerd kan worden zijn de vragen waarop deze specificatie een antwoord geeft.
 
 ## Proces voor de ontwikkeling en vaststelling van deze specificatie.
 

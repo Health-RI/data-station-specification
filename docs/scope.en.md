@@ -1,5 +1,3 @@
-# Specification scope
-
 ## Health data infrastructure as system of interest
 Het _system of interest_ van deze specificatie is de gezondheidsdata-infrastructuur voor secundair gebruik. Een dergelijk systeem bestaat uit verschillende elementen, zoals hieronder is weergegeven.
 

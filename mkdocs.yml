@@ -63,7 +63,15 @@ plugins:
         - locale: en
           name: English
           build: true
+          site_name: Data stations for secondary use of health data
           nav_translations:
+            # Introduction sections
+            Data stations voor secundair gebruik in de zorg: Data station for secondary use of health data
+            Inleiding: Introduction
+            Scope van de specificatie: Scope of the specification
+            Data stations als basis voor interoperabiliteit: Data stations as cornerstone for interoperability
+            Leeswijzer: Reader's guide
+
             # main sections
             Architectuur: Architecture
             Functionele componenten: Functional components
@@ -101,6 +109,7 @@ nav:
   - Inleiding:
     - index.md
     - Scope van de specificatie: scope.md
+    - Data stations als basis voor interoperabiliteit: data-stations-als-hoeksteen.md
     - Leeswijzer: leeswijzer.md
   - Architectuur:
     - architectuur/index.md
@@ -143,4 +152,6 @@ nav:
   - Appendix:
     - appendix/index.md
     - Archimate data space: https://health-ri.github.io/data-spaces-archimate/
+    - TEHDAS2 HDAB: appendix/tehdas2-hdab.md
+    - TEHDAS2 SPE: appendix/tehdas2-spe.md
 
