@@ -116,7 +116,6 @@ nav:
     - Use-case DAAMS: architectuur/daams.md
     - Use-case Federated Analytics Portal: architectuur/fap.md
     - Use-case Data station: architectuur/data-station.md
-    - Standaarden: architectuur/standaarden.md
   - Functionele componenten:
     - componenten/index.md
     - Data station:
