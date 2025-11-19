@@ -106,20 +106,16 @@ watch:
 
 # Page tree
 nav:
-  - Samenvatting:
+  - Inleiding:
     - index.md
-    - Scope van de specificatie: scope.md
-    - Data stations als basis voor interoperabiliteit: data-stations-als-hoeksteen.md
-    - Leeswijzer: leeswijzer.md
+    - waarom.md
+    - data-stations-als-hoeksteen.md
+    - leeswijzer.md
   - Architectuur:
     - architectuur/index.md
-    - Motivatie: architectuur/motivatie.md
-    - Principes: architectuur/principes.md
-    - Use cases:
-      - architectuur/use-cases/index.md
-      - DAAMS: architectuur/use-cases/daams.md
-      - Federated Analytics Portal: architectuur/use-cases/fap.md
-      - Data station: architectuur/use-cases/data-station.md
+    - Use-case DAAMS: architectuur/daams.md
+    - Use-case Federated Analytics Portal: architectuur/fap.md
+    - Use-case Data station: architectuur/data-station.md
     - Standaarden: architectuur/standaarden.md
   - Functionele componenten:
     - componenten/index.md

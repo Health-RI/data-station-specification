@@ -1,3 +1,0 @@
-# Principes
-
-De principes ...

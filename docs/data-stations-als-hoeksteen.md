@@ -1,8 +1,17 @@
-In de context van de European Health Data Space (EHDS) en de Data Governance Act (DGA) is het concept van beveiligde verwerkingsomgevingen (BVOs) essentieel voor de implementatie van de gezondheidsdata-infrastructuur. Data gebruikers _krijgen_ geen data, maar _toegang tot_ data in een BVO die voldoet aan vastgestelde strenge technische en veiligheidsnormen.[^1] Daarbij is de gedachte dat er meerdere BVOs zullen worden gerealiseerd, dus een netwerk van veilige verwerkingsomgevingen zoals is weergegeven in de blauwe laag in figuur 1.
+# Data stations als hoeksteen voor federatieve BVOs
 
-Om een dergelijk netwerk van BVOs te realiseren is (data) interoperabiliteit essentieel. Het 'zandloper' model is een bewezen concept om interoperabiliteit voor dergelijke netwerk technologieen te realiseren. Dit model (zie figuur 2) gaat uit van het principe van maximimale vrijheid voor toepassingen (boven in de zandloper) èn maximale vrijheid voor de onderliggende basisinfrastructuur aan de onderkant. Ondanks deze vrijheid kan een hoge mate van standaardisatie en harmonisatie worden gerealiseerd in het hart van de zandloper, zodat daarmee interoperabiliteit kan worden gerealiseerd in het netwerk. Schultes (2023)[@schultes2023fair] heeft de principes van het zandloper model gecombineerd met de FAIR principes.
+## Data stations en het zandloper model
+Het concept van **data stations** staat centraal in dit document dat een specificatie beschrijft van federatieve BVOs. Het concept van data stations kent vandaag de dag veel verschillende verschijningsvormen:
 
-![](./fair-hourglass.png)
+- Het originele concept van PHT omschrijft data stations in de context van federated learning[@choudhury2025advancing], wat vervolgens is gegeneraliseerd om andere vormen van gefedereerde berekeningen te omvatten[@boninodasilvasantos2022personal].
+- De FAIR principes zijn uitgewerkt in het concept van een [FAIR data point](https://specs.fairdatapoint.org/fdp-specs-v1.2.html), zijnde een data station gevuld met FAIR metadata wat is bedoeld als een gefedereerde oplossing voor een data catalogus.
+- Het [Programma KIK-V](https://www.kik-v.nl/starten-met-kik-v) van het Zorginstituut heeft het concept van data stations geoperationaliseerd voor geautomatiseerde informatie-uitwisseling voor de VVT sector, wat een vorm is van gefedereerde analyse.
+- Data stations in de context van primair gebruik zijn conceptueel hetzelfde als de [Shared Health Record](https://guides.ohie.org/arch-spec/openhie-component-specifications-1/openhie-shared-health-record-shr) component zoals in de [OpenHIE architectuur](https://guides.ohie.org/arch-spec) is gespecificeerd. Alhoewel data stations voor primair gebruik veel overeenkomsten vertonen met data stations voor secundair gebruik, zijn er ook belangrijke verschillen in de technische kenmerken tussen deze systemen, bijvoorbeeld in snelheid (_latency_) en volume waarmee data in het station kan worden benaderd (snel enkelvoudige records ophalen voor primair gebruik, langzamer grote data sets bevragen voor secundair gebruik). 
+
+Ondanks de vele verschijningsvormen zien we meer overeenkomsten dan verschillen in bestaande conceptualisaties en implementaties van data stations. Sterker nog, verschillende studies wijzen op de potentie die data stations bieden om te komen tot betere standaardisatie en interoperabiliteit. Het succes van het Internet en andere technologieen met een sterk netwerkeffect zoals het Linux/Unix operating systeem hebben ons geleerd dat standaardisatie een groot goed is, maar dat we spaarzaam moeten zijn in het opleggen van standaarden. Dit concept is beschreven met een zandloper als metafoor[@estrin2010health;@beck2019hourglass] (figuur 2) en gaat uit van het principe van maximimale vrijheid voor toepassingen aan de bovenkant van de zandloper (het domein van de data gebruiker) èn maximale vrijheid voor de onderliggende basisinfrastructuur aan de onderkant (het domein van de data houder). Ondanks deze vrijheid kan een hoge mate van interoperabiliteit worden gerealiseerd door het hart van de de zandloper (het data station) in hoge mate te standaardiseren en uniformeren. Schultes (2023)[@schultes2023fair] heeft de principes van het zandloper model gecombineerd met de FAIR principes om te komen tot een vijf lagen model
+
+![](fair-hourglass.png)
+
 
 /// caption
 **Figuur 2.** Het zandloper model als denkraam voor data interoperabiliteit. Bron: Schultes (2023).[@schultes2023fair]
@@ -19,13 +28,13 @@ Om een dergelijk netwerk van BVOs te realiseren is (data) interoperabiliteit ess
 
     Alhoewel de principes oorspronkelijk zijn geformuleerd voor wetenschappelijke data, worden ze ook toegepast voor secundair gebruik van data die routematig wordt vastgelegd in bijvoorbeeld het reguliere zorgproces.
 
-## De vijf lagen van het zandloper model
+## De vijf lagen van het zandloper model als denkraam
 
 Het zandloper model gaat uit van vijf lagen die de data moeten laten stromen vanaf het eerste moment dat ze worden vastgelegd door de data houder (laag 1) tot en met het uiteindelijke secundair gebruik door de data gebruiker (laag 5).
 
 ### Het FAIRificatie proces in de eerste twee lagen
 
-In **laag 1** wordt de data gecreerd. Diegene die verantwoordelijk is voor het vastleggen van de data heeft hierin maximale vrijheid. Het vastleggen van de data kan gebeuren door een onderzoeker, die handmatig data verzameld, codeert en vastlegd als een onderzoeksdataset, maar kan ook worden gedaan in het primaire proces van de zorg waarbij allerlei zorgverleners in verschillende zorginformatiesystemen data vastleggen.
+In **laag 1** wordt de data gecreëerd. Diegene die verantwoordelijk is voor het vastleggen van de data heeft hierin maximale vrijheid. Het vastleggen van de data kan gebeuren door een onderzoeker, die handmatig data verzameld, codeert en vastlegd als een onderzoeksdataset, maar kan ook worden gedaan in het primaire proces van de zorg waarbij allerlei zorgverleners in verschillende zorginformatiesystemen data vastleggen.
 
 In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het is een soort trechter waar met gebruik van allerlei databewerkings tools de data en metadata worden omgezet naar gestructureerde formats die machine-leesbaar zijn en gebruik maken van gestandaardiseerde terminologie en informatieschemas.
 
@@ -37,7 +46,7 @@ In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het i
 ??? abstract "Data product"
     Primair gebruik heeft betrekking op de directe zorgverlening aan een patiënt, terwijl secundair gebruik betrekking heeft op het hergebruik van gegevens voor onder andere onderzoek, beleid en innovatie.
     
-    Bepaalde gegevens voor primair gebruik kunnen worden samengebracht in een dataproduct, zoals de patiëntsamenvatting. Deze bevat onder meer de essentiële patiëntgegevens, recepten en verstrekkingen. Een dataproduct wordt hierbij gedefinieerd als een concrete dataset die kan worden gedeeldtussen zorgverleners, systemen en instellingen. Ook voor secundair gebruik kunnen datasets worden samengesteld als dataproduct, bijvoorbeeld in OMOP-formaat.
+    Bepaalde gegevens voor primair gebruik kunnen worden samengebracht in een dataproduct, zoals de patiëntsamenvatting. Deze bevat onder meer de essentiële patiëntgegevens, recepten en verstrekkingen. Een dataproduct wordt hierbij gedefinieerd als een concrete dataset die kan worden gedeeld tussen zorgverleners, systemen en instellingen. Ook voor secundair gebruik kunnen datasets worden samengesteld als dataproduct, bijvoorbeeld in OMOP-formaat.
     
     Elk dataproduct bevat, naast de data zelf, ook metadata. Deze metadata kunnen bijvoorbeeld verwijzen naar de betekenis van de data,
     vastgelegd in een ontologie of domeinmodel. Daarnaast legt een dataproduct vast aan welke regels de data moet voldoen: hoe de structuur is opgebouwd, welke inhoudelijke eisen gelden voor de data, hoe het mag worden gebruikt en welke beleidsregels van toepassing zijn voor toegang.
@@ -50,10 +59,3 @@ In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het i
 In **laag 4** wordt het data station opgenomen in een netwerk om de data te verwerken en te verbruiken. Denk hierbij aan generieke voorzieningen zoals een catalogus en zoekfunctionaliteit (welke data stations hebben welke data?), het integreren wat data uit verschillende data stations en het uitvoeren van allerlei berekeningen op de data.
 
 In **laag 5** wordt aan de data gebruiker maximale vrijheid gegeven om allerlei diensten af te nemen en/of analyses te doen.
-
-
-
-
-
-[^1]: Wat deze vereisten exact gaan zijn wordt door de Europese Commissie vastgesteld. Voor primair gebruik is dit uiterlijk maart 2027, voor secundair gebruik maart 2029.
-

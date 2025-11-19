@@ -1,5 +1,36 @@
 ## Federated Analytics Portal
 
+Het portaal geeft een datagebruiker de mogelijkheid om een algoritme te registreren en te distribueren voor het uitvoeren van een gefedereerde analyse. De ontwikkeling van het algoritme vindt buiten het portaal plaats, waarbij de datagebruiker de gelegenheid heeft om testruns uit te voeren om het algoritme te verifiëren.
+
+Uitgangspunt is een gefedereerde manier van databeschikbaarheid. Dit in tegenstelling tot de beschrijving gegeven in [M6.1 Guideline for health data holders on making personal and non-personal electronic health data available for reuse](https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-holders-on-making-personal-and-non-personal-electronic-health-data-available-for-reuse.pdf). Het portaal geeft hiermee invulling aan de EHDS overweging 80 dat gezien de gevoeligheid van gezondheidsgegevens waar mogelijk beginselen als “privacy door ontwerp” en “privacy door standaardinstellingen” en het concept “breng de vragen naar de gegevens in plaats van die gegevens te verplaatsen” in acht moeten worden genomen.
+
+```puml
+@startuml
+!theme plain
+
+actor "Health Data User" as HDU
+actor "Data Station" as DS
+actor "Container Image Registry" as CIR
+actor "DAAMS" as DAAMS
+rectangle "Federated Analytics Portal" {
+  usecase "Sign Up" as UC1
+  usecase “Register Algorithm” as UC2
+  usecase "Conduct Federated Analytics" as UC3
+  usecase "Conduct Descriptive Analytics" as UC4
+}
+HDU --> UC1
+HDU --> UC2
+HDU --> UC3
+HDU --> UC4
+
+UC2 --> DAAMS
+UC2 --> CIR
+UC3 --> DS
+UC4 --> DS
+
+@enduml
+```
+
 ### Sign Up
 
 **Goal**: Health Data User meldt zich aan en registreert zich

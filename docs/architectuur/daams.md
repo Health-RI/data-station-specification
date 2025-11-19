@@ -1,4 +1,48 @@
-## Data Access Application Management System (DAAMS)
+# Data Access Application Management System (DAAMS)
+
+## Beschrijving
+Voor het beschikbaar stellen van data is het noodzakelijk dat een potentiële datagebruiker een vergunning aanvraagt voor toegang tot gezondheidsgegevens, of een verzoek tot datatoegang indient. Beide worden verleend door de HDAB. De gezondheidsgegevens zijn opgenomen in een Europese datacatalogus met dataproducten waaruit de aanvrager kan kiezen. Wanneer een vergunning is verleend of een dataverzoek is goedgekeurd, dan wordt een verzoek tot datalevering verzonden naar de datastations van de dataleveranciers van de betreffende dataproducten.
+
+De eisen voor de usecases zijn beschreven in [TEHDAS2 D6.3 Guideline for Health Data Access Bodies on the procedures and formats for data access](https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf).
+
+
+```puml
+@startuml
+!theme plain
+
+actor "Health Data Applicant" as HDA
+actor "Data Station" as DS
+actor "Dataset Catalogue System" as DC
+actor "Federated Analytics Portal" as AP
+actor "Data Guard" as DG
+actor "QEAA Provider" as ISS
+
+rectangle "Data Access Application Management System (DAAMS)" {
+  usecase "Apply for Health Data Access" as UC1
+  usecase "Request for Data" as UC2
+  usecase "Verify Algorithm" as UC3
+  usecase "Verify Analytics Output" as UC4
+  usecase "Revoke Data Permit" as UC5
+}
+
+HDA --> UC1
+HDA --> UC2
+AP --> UC3
+DS --> UC4
+ISS --> UC5
+
+UC1 --> DC
+UC1 --> DS
+UC1 --> ISS
+UC2 --> DC
+UC2 --> DS
+UC2 --> ISS
+UC3 --> DG
+UC4 --> DG
+
+@enduml
+```
+
 
 ### Apply for Health Data Access
 
