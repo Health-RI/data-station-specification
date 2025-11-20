@@ -8,12 +8,12 @@ Op 26 maart 2025 is de verordening betreffende de European Health Data Space (EH
 - **maart 2031**: de tweede groep prioritaire categorieën gezondheidsgegevens (medische beelden, laboresultaten en verslagen ziekenhuisontslag) is beschikbaar voor primair gebruik. De regels voor secundair gebruik worden ook van toepassing voor de overige gegevenscategorieën (bv. genomische gegevens).
 - **maart 2035**: derde landen en internationale organisaties kunnen zich aansluiten bij HealthData@EU voor het secundaire gebruik.
 
-Dit document richt zich op de uitwerking een de EHDS specifiek voor secundair gebruik, zoals hieronder is weergegeven.
+Dit document richt zich op de uitwerking van de EHDS specifiek voor secundair gebruik, zoals hieronder is weergegeven.
 
 ![](ehds-simpel.png)
 
 ///caption
-**Figuur 1.** Vereenvoudigede weergave van de secundair gebruik van data in de context van de EHDS.
+**Figuur 1.** Vereenvoudigde weergave van de secundair gebruik van data in de context van de EHDS.
 ///
 
 ???+ abstract "De belangrijkste concepten rondom secundair gebruik"
@@ -51,7 +51,7 @@ Deze specificatie is opgesteld in opdracht van Health-RI door:
 Daarnaast hebben de volgende personen een bijdrage geleverd aan de eerste versie:
 
 - [Maarten Kollenstart](https://www.linkedin.com/in/maarten-kollenstart-a08429146/) (TNO): review algehele architectuur van data spaces, _verifiable credentials_
-- [Tim Hendriks](https://www.maastrichtuniversity.nl/nl/tjn-hendriks) (Universiteit Maastricht): federated learning, beschrijving PLUGIN/vantage6 implementatie
+- [Tim Hendriks](https://www.clinicaldatascience.nl/Staff/tim-hendriks) (Medical Data Works): federated learning, beschrijving PLUGIN/vantage6 implementatie
 - [Madou Derksen](https://www.linkedin.com/in/madou-derksen/) (Dutch Hospital Data): beschrijving PLUGIN/vantage6 implementatie
 - [Rik Sonderkamp](https://www.linkedin.com/in/rik-sonderkamp/) (Visma Connect, in opdracht van Zorginstituut Nederland): beschrijving KIK-V implementatie
 
