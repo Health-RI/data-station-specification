@@ -37,7 +37,7 @@ Dit document richt zich op de uitwerking een de EHDS specifiek voor secundair ge
 
 ## Proces voor de ontwikkeling en vaststelling van deze specificatie.
 
-De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om een hergebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken in het schrijven en uitwerken van dit document. Het is de bedoeling dat specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via nog een nader te kiezen proces.
+De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om hergebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken in het schrijven en uitwerken van dit document. Het is de bedoeling dat specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via nog een nader te kiezen proces.
 
 Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld hieronder.
 

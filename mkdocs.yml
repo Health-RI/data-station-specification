@@ -141,9 +141,9 @@ nav:
       - Architectuur: implementaties/DataSHIELD/architectuur.md
   - Discussie:
     - discussie/index.md
-    - Primair vs. secundair: discussie/primair-vs-secundair.md
     - Centraal vs. federatief: discussie/centraal-vs-federatief.md
     - Permit vs. request: discussie/permit-vs-request.md
+    - Primair vs. secundair: discussie/primair-vs-secundair.md
   - Appendix:
     - appendix/index.md
     - Archimate data space: https://health-ri.github.io/data-spaces-archimate/

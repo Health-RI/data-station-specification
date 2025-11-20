@@ -8,7 +8,7 @@ In dit document wordt de architectuur van een federatieve BVO uitgewerkt dat kan
 - Kan een eenduidige functionele en technische specificatie gegeven worden van federatieve BVOs gebaseerd op data stations, dat consistent is met bestaande referentie architecturen?
 - Op welke manier zouden data stations gestandaardiseerd kunnen worden om te komen tot maximale interoperabiliteit van federatieve BVOs?
 - Op welke manier kunnen hybride BVOs, zijnde een synergie tussen federatieve en centrale BVOs, gerealiseerd worden en welke mogelijkheden zijn er om hierin tot standaardisatie te komen?
-- Zijn er lancunes danwel tegenstrijdigheden in de huidge benadering van de EHDS voor secundair gebruik die het gebruik van federatieve BVOs in de weg staan? Zo ja, welke oplossingsrichtingen zijn er?
+- Zijn er lancunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van federatieve BVOs in de weg staan. met name ook in relatie tot data stations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
 - Wat is de volwassenheid van de bestaande referentie implementaties ten opzichte van bovengenoemd ontwerp:
     - KIK-V als referentie implementatie van data stations voor gefedereerde analyse
     - PLUGIN/vantage6 als referentie implementatie van data stations voor gefedereerde analyse en gefedereerd leren
