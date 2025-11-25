@@ -4,8 +4,8 @@
 Op 26 maart 2025 is de verordening betreffende de European Health Data Space (EHDS) in werking getreden. De belangrijkste mijlpalen op weg naar de volledige uitvoering zijn:
 
 - **maart 2027**: vaststelling landelijke uitvoeringswetten met gedetailleerde regels en praktische uitwerking van de verordening, inclusief de benoeming van de nationale Health Data Access Body (HDAB) als orgaan voor toezicht op en mogelijk maken van secundair gebruik.
-- **maart 2029**: de verordening zal van toepassing zijn voor de eerste prioritaire categorieen van gezondheidsgegevens (patientendossiers, electronische recepten en aflevering) in alle EU landen voor primair gebruik. De HDAB is operationeel en secundair gebruik is mogelijk voor de meeste gegevenscategorieën.
-- **maart 2031**: de tweede groep prioritaire categorieën gezondheidsgegevens (medische beelden, laboresultaten en verslagen ziekenhuisontslag) is beschikbaar voor primair gebruik. De regels voor secundair gebruik worden ook van toepassing voor de overige gegevenscategorieën (bv. genomische gegevens).
+- **maart 2029**: de verordening zal van toepassing zijn voor de eerste prioritaire categorieën van gezondheidsgegevens (patientendossiers, elektronische recepten en aflevering) in alle EU landen voor primair gebruik. De HDAB is operationeel en secundair gebruik is mogelijk voor de meeste gegevenscategorieën.
+- **maart 2031**: de tweede groep prioritaire categorieën gezondheidsgegevens (medische beelden, laboratoriumuitslagen en ontslagverslagen) is beschikbaar voor primair gebruik. De regels voor secundair gebruik worden ook van toepassing voor de overige gegevenscategorieën (bv. genomische gegevens).
 - **maart 2035**: derde landen en internationale organisaties kunnen zich aansluiten bij HealthData@EU voor het secundaire gebruik.
 
 Dit document richt zich op de uitwerking een de EHDS specifiek voor secundair gebruik, zoals hieronder is weergegeven.
@@ -13,7 +13,7 @@ Dit document richt zich op de uitwerking een de EHDS specifiek voor secundair ge
 ![](ehds-simpel.png)
 
 ///caption
-**Figuur 1.** Vereenvoudigede weergave van de secundair gebruik van data in de context van de EHDS.
+**Figuur 1.** Vereenvoudigde weergave van secundair gebruik van data in de context van de EHDS.
 ///
 
 ???+ abstract "De belangrijkste concepten rondom secundair gebruik"
@@ -35,9 +35,9 @@ Dit document richt zich op de uitwerking een de EHDS specifiek voor secundair ge
 
 
 
-## Proces voor de ontwikkeling en vaststelling van deze specificatie.
+## Proces voor de ontwikkeling en vaststelling van deze specificatie
 
-De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om hergebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken in het schrijven en uitwerken van dit document. Het is de bedoeling dat specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via nog een nader te kiezen proces.
+De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om hergebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
 
 Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld hieronder.
 

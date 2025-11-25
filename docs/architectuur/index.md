@@ -13,13 +13,13 @@ Het _system of interest_ van deze specificatie is de gezondheidsdata-infrastruct
 In de draft documentatie van TEHDAS2 zijn de belangrijkste processtappen voor secundair gebruik benoemd. Deze hebben we gerelateerd aan bovenstaand diagram en zullen we in het als leidraad gebruiken in de uitwerking van de architectuur aan de hand van use-cases.
 
 ###  Data zoeken en vinden (_data discovery_)
-Voordat de gebruiker de gegevens kan gebruiken, moet hij of zij nagaan of de benodigde gegevens beschikbaar zijn en of deze beschikbaar zijn in het noodzakelijke formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een metadatacatalogus op https://qa.data.health.europa.eu/. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het proces van het aanvragen van de gegevens.
+Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een metadatacatalogus op https://qa.data.health.europa.eu/. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het aanvragen van de gegevens.
 
 ### Data aanvragen (_data access_)
 Het aanvragen van toegang tot data is feitelijk een aanvraag tot verwerking door de data gebruiker van gegevens die door een gegevenshouder zijn verstrekt, in overeenstemming met specifieke technische, juridische of organisatorische vereisten, zonder noodzakelijkerwijs de overdracht of het downloaden van dergelijke gegevens te impliceren. (Verordening inzake Gegevensgovernance (DGA), Artikel 2(8), (9) en (13)).
 
 ### Data klaarzetten voor verwerking (_data preparation_)
-Gedurende deze fase leveren de gegevenshouder(s) de noodzakelijke gegevens aan de HDAB (Gezondheidsgegevens Toegangsorgaan), die begint met het voorbereiden van de gegevens voor secundair gebruik. Er worden technieken voor pseudonimisering, anonimisering, generalisatie, onderdrukking en randomisering van persoonsgegevens toegepast. Het beginsel van dataminimalisatie (conform de AVG/GDPR) moet worden gerespecteerd om de privacy te waarborgen.
+Gedurende deze fase leveren de gegevenshouders de benodigde gegevens aan de HDAB (Gezondheidsgegevens Toegangsorgaan), die de gegevens voorbereidt voor secundair gebruik. Hierbij worden technieken toegepast voor pseudonimisering, anonimisering, generalisatie, onderdrukking en randomisering van persoonsgegevens. Het beginsel van dataminimalisatie (conform de AVG/GDPR) moet worden gerespecteerd om de privacy te waarborgen.
 
 ### Data analyseren (_use of data_)
 In deze fase voert de gebruiker analyses uit op basis van de ontvangen gegevens voor het doel dat is gedefinieerd in de aanvraagfase. Het analyseren van gegevens op persoonsniveau moet gebeuren in een BVO. De duur van deze fase wordt gespecificeerd in de verordening (Art 68(12)).

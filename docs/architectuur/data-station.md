@@ -53,13 +53,13 @@ UC2 --> DAAMS
 
 **Main Success Scenario:**
 
-1. Federated Analytics Portal verzend een bericht met het dataverzoek
+1. Federated Analytics Portal verzendt een bericht met het dataverzoek
 2. Het systeem registreert het ontvangen bericht in het logboek
-3. Het systeem verifieert de authenticeert de verzender van het bericht
+3. Het systeem verifieert en authenticeert de verzender van het bericht
 4. Het systeem verifieert het dataverzoek
 5. Het systeem voert de technische vraagstelling uit
 6. Het systeem stelt een bericht samen met het antwoord op de vraag
-7. Het systeem verzend het bericht naar het Federated Analytics Portal
+7. Het systeem verzendt het bericht naar het Federated Analytics Portal
 8. Het systeem registreert het verzonden bericht in het logboek
 
 **Extension Points:**

@@ -51,9 +51,9 @@ UC4 --> DS
 **Main Success Scenario:**
 
 - Health Data User start project voor gefedereerde analyse.
-- Health Data User uploadt het algoritme en de bijbehorende configuratie, waaronder de coniguratie voor het bouwen van een image.
+- Health Data User uploadt het algoritme en de bijbehorende configuratie, waaronder de configuratie voor het bouwen van een image.
 - Health Data User presenteert de vergunning voor toegang tot gezondheidsgegevens.
-- Verzend algoritme en de configuratie naar DAAMS met een verzoek tot verificatie. Met het verzoek wordt de vergunning meegezonden.
+- Het systeem verzendt algoritme en configuratie naar DAAMS met een verzoek tot verificatie. De vergunning wordt met het verzoek meegezonden.
 - Het systeem wacht totdat DAAMS met een antwoord komt op het verzoek. Er is akkoord op het algoritme.
 - Het systeem notificeert de Health Data User dat er akkoord is gegeven op het algoritme.
 - Het systeem bouwt op basis van de configuratie een container image voor het algoritme
