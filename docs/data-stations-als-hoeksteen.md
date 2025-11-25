@@ -40,7 +40,7 @@ In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het i
 
 ### Het data station in het hart van de zandloper
 
-**Laag 3 is het hart van de zandloper** en fungeert als een brug tussen de twee onderste en twee bovenste lagen. In deze laag worden de data en metadata klaargezet voor gebruik en FAIRificatie proces en verbonden aan het netwerk van beveiligde verwerkingsomgevingen. Deze laag is het meest cruciale om interoperabiliteit te realiseren. Daarvoor wordt een set van minimale, open en technologie-neutrale standaarden gedefinieert. Het idee van een data station sluit aan bij het concept van data producten in de DSSC.
+**Laag 3 is het hart van de zandloper** en fungeert als een brug tussen de twee onderste en twee bovenste lagen. In deze laag worden de data en metadata (1) klaargezet voor gebruik en FAIRificatie proces en (2) verbonden aan het netwerk van beveiligde verwerkingsomgevingen. Deze laag is het meest cruciale om interoperabiliteit te realiseren. Daarvoor wordt een set van minimale, open en technologie-neutrale standaarden gedefinieert. Het idee van een data station sluit aan bij het concept van data producten in de DSSC.
 
 
 ??? abstract "Data product"
