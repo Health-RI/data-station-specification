@@ -113,7 +113,7 @@ nav:
     - leeswijzer.md
   - Architectuur:
     - architectuur/index.md
-    - Use-case DAAMS: architectuur/daams.md
+    - Data aanvragen: architectuur/aanvragen.md
     - Use-case Federated Analytics Portal: architectuur/fap.md
     - Use-case Data station: architectuur/data-station.md
   - Functionele componenten:
