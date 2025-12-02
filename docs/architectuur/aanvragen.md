@@ -1,4 +1,4 @@
-# Data aanvragen (data access)
+# Data aanvragen (_data access_)
 
 Het aanvraagproces start op het moment dat de benodigde gezondheidsgegevens gevonden zijn in de Europese of nationale gezondheidsdatacatalogus.
 
@@ -25,7 +25,6 @@ In de usecase-methodiek kan een use case worden uitgebreid met een andere use ca
 
 ```puml
 @startuml
-!theme plain
 
 actor "Nationaal Contactpunt voor e-Health(systeem)" as MSB
 actor "Aanvrager\n(mens)" as HDA_I
@@ -33,24 +32,24 @@ actor "Aanvrager\n(mens)" as HDA_O
 actor "Behandelaar\n(mens)" as AC_I
 actor "Behandelaar\n(mens)" as AC_O
 actor "Beoordelaar\n(mens)" as AA
-actor "Dataleverancier\n(organisatie)" as DH
+actor "Dataleverancier\n(organisatie)" as DL
 actor "Catalogus gezondheidsgegevens\n(systeem)" as DC
-actor "Publiek\n(mens of organisatie)" as B
+actor "Publiek\n(mens of organisatie)" as P
 
 rectangle "Data Access Application Management System (DAAMS)" {
   usecase "Vraag (toegang tot)\ngezondheidsdata aan" as UC1
   usecase "Verstrek vergunning\nof goedkeuring" as UC2
   usecase "Trek attestatie in" as UC3
-  usecase "Raadpleeg aanvragen" as UC4
+  usecase "Raadpleeg\ningediende aanvragen" as UC4
 }
 
 HDA_I --> UC1
 MSB --> UC2
 AC_I --> UC3
-B --> UC4
+P --> UC4
 
 UC1 --> DC
-UC2 --> DH
+UC2 --> DL
 UC2 --> AC_O
 UC2 --> AA
 UC2 --> HDA_O
@@ -60,7 +59,7 @@ UC1 .> UC2 : << extend >>
 @enduml
 ```
 
-De usecases uit het diagram zijn in de vervolgparagrafen beschreven.
+De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven. 
 
 ## Vraag (toegang tot) gezondheidsdata aan
 
@@ -84,7 +83,6 @@ De usecase start op het moment dat een aanvraag wordt ingediend, hetzij via het 
 ```puml
 @startuml
 
-state "Prijsindicatie verzonden" as PrijsVerzonden
 state "In Behandeling" as InBehandeling {
     state "In onderzoek" as InOnderzoek
     state "Ter Beoordeling" as TerBeoordeling
@@ -96,6 +94,7 @@ state "In Behandeling" as InBehandeling {
     InOnderzoek --> Volledig
     InOnderzoek --> Onvolledig
     Onvolledig --> [*]
+    Onvolledig : Besluit - aanvraag is onvolledig
 
     Wachtend : Verzoek om reactie met aanvullende informatie
     Wachtend --> InOnderzoek
@@ -118,11 +117,13 @@ InBehandeling --> Toegewezen
 
 Afgewezen: Besluit - Reactie niet ontvangen
 Afgewezen: Besluit - Reactie is onvoldoende
+Afgewezen: Besluit - Beoordeling negatief
 Afgewezen --> [*]
 
 Ingetrokken : Aanvrager trekt aanvraag in
 Ingetrokken --> [*]
 Toegewezen --> [*]
+Toegewezen: Besluit - Beoordeling positief
 
 @enduml
 ```
@@ -142,40 +143,41 @@ Wanneer een aanvraag in behandeling wordt genomen, wordt deze als eerste gecontr
 
 ### Beoordelen
 
-Tijdens de inhoudelijke beoordeling wordt gekeken of de aanvraag voldoet aan de gestelde eisen. Ook wordt onderzocht of de aanvraag technisch uitvoerbaar is. Hiervoor wordt de aanvraag doorgestuurd naar de datahouders, die beoordelen of de gevraagde gegevens geleverd kunnen worden. De datahouders maken eveneens een kostenraming voor de verwerking en levering.
+Tijdens de inhoudelijke beoordeling wordt gekeken of de aanvraag voldoet aan de gestelde eisen. Ook wordt onderzocht of de aanvraag technisch uitvoerbaar is. Hiervoor wordt de aanvraag doorgestuurd naar de dataleveranciers, die beoordelen of de gevraagde gegevens geleverd kunnen worden. De dataleveranciers maken eveneens een kostenraming voor de verwerking en levering.
 
 Als de aanvraag haalbaar is, gaat deze door naar de volgende stap. Soms wordt een aanvraag gedeeltelijk goedgekeurd of aangepast naar een eenvoudiger gegevensverzoek, bijvoorbeeld wanneer anonieme statistische gegevens al voldoende zijn.
 
 ### Verstrekken kostenindicatie
 
-Zodra duidelijk is welke gegevens geleverd kunnen worden, worden de totale kosten berekend, inclusief de kosten van de datahouders en die van de HDAB. De aanvrager ontvangt een overzicht van deze kosten en moet aangeven of hij hiermee akkoord gaat. Bij akkoord gaat de aanvraag verder. Als de aanvrager niet reageert of de kosten niet accepteert, kan de aanvraag worden beëindigd.
+Zodra duidelijk is welke gegevens geleverd kunnen worden, worden de totale kosten berekend, inclusief de kosten van de dataleveranciers en die van de HDAB. De aanvrager ontvangt een overzicht van deze kosten en moet aangeven of hij hiermee akkoord gaat. Bij akkoord gaat de aanvraag verder. Als de aanvrager niet reageert of de kosten niet accepteert, kan de aanvraag worden beëindigd.
 
 ### Verstrekken attestatie (vergunning of goedkeuring)
 
 Wanneer een aanvrager de kosten accepteert, kan er een vergunning of goedkeuring worden verleend. Het verkrijgen van deze acceptatie vraagt om vertrouwen, dat geborgd wordt door de Europese verordening voor digitale identiteit en vertrouwensdiensten. Deze verordening onderscheidt drie betrouwbaarheidsniveaus[^5]: laag, substantieel en hoog.
 
-Voor bijzondere persoonsgegevens, zoals medische dossiergegevens, is een hoog betrouwbaarheidsniveau vereist om een veilige beschikbaarstelling te garanderen. Daarom moeten zowel de vergunning als de goedkeuring op hoog niveau worden verleend en op een betrouwbare manier worden gepresenteerd aan de partijen die verantwoordelijk zijn voor veilige toegang tot en verwerking van de data, zoals de datahouders en de aanbieders van beveiligde verwerkingsomgevingen.
+Voor bijzondere persoonsgegevens, zoals medische dossiergegevens, is een hoog betrouwbaarheidsniveau vereist om een veilige beschikbaarstelling te garanderen. Daarom moeten zowel de vergunning als de goedkeuring op hoog niveau worden verleend en op een betrouwbare manier worden gepresenteerd aan de partijen die verantwoordelijk zijn voor veilige toegang tot en verwerking van de data, zoals de dataleveranciers en de aanbieders van beveiligde verwerkingsomgevingen.
 
 ### Versturen verzoek
 
-Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de datahouders gestuurd om de gevraagde gegevens beschikbaar te stellen aan de aanvrager, hetzij binnen een beveiligde verwerkingsomgeving, hetzij door de gegevens zoals gevraagd uit het verzoek te leveren.
+Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de dataleveranciers gestuurd om de gevraagde gegevens beschikbaar te stellen aan de aanvrager, hetzij binnen een beveiligde verwerkingsomgeving, hetzij door de gegevens zoals gevraagd uit het verzoek te leveren.
 
 ## Trek attestatie in
 
 Op basis van artikel 63 van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken.
 
-## Raadpleeg aanvragen
+## Raadpleeg ingediende aanvragen
 
 De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken (artikel 57), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 
 ## Referenties
 
-[^1] European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/
+[^1]: European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/
 
-[^2] European Parliament and Council. (2014). Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2014/910
+[^2]: European Parliament and Council. (2014). Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2014/910
 
-[^3] European Parliament and Council. (2024). Regulation (EU) 2024/1183 of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards the establishment of the European framework for digital identity. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2024/1183/
+[^3]: European Parliament and Council. (2024). Regulation (EU) 2024/1183 of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards the establishment of the European framework for digital identity. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2024/1183/
 
-[^4] European Commission. (2025, November 19). Proposal for a Regulation on the establishment of European Business Wallets. https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets
+[^4]: European Commission. (2025, November 19). Proposal for a Regulation on the establishment of European Business Wallets. https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets
 
-[^5] European Commission. (2015, September 8). Commission implementing regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(3) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market. https://eur-lex.europa.eu/eli/reg_impl/2015/1502/
+[^5]: European Commission. (2015, September 8). Commission implementing regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(3) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market. https://eur-lex.europa.eu/eli/reg_impl/2015/1502/
+

@@ -27,14 +27,20 @@ In deze fase voert de gebruiker analyses uit op basis van de ontvangen gegevens 
 ### Resultaten publiceren (_finalisation_)
 Deze laatste fase van het gebruikerstraject betreft de plichten van de gegevensgebruiker met betrekking tot de analyseresultaten die voortvloeien uit het secundaire gebruik van gegevens. De gegevensgebruiker moet de resultaten van het secundaire gebruik van gezondheidsgegevens publiceren binnen 18 maanden na de voltooiing van de gegevensverwerking in een veilige verwerkingsomgeving of na ontvangst van de gevraagde gezondheidsgegevens. De resultaten moeten in een anoniem formaat worden verstrekt. De gegevensgebruiker moet het gezondheidsgegevens toegangsorgaan op de hoogte stellen van de resultaten. Bovendien moet de gegevensgebruiker in de output vermelden dat de resultaten zijn verkregen door gebruik te maken van gegevens in het kader van de EHDS (Europese Ruimte voor Gezondheidsgegevens).
 
-## Uitwerking in use-cases
+## Uitwerking in usecases
 
-In dit hoofdstuk wordt voor ieder systeem het use-case-diagram weergegeven en kort toegelicht. De use-cases worden in het hoofdstuk over het betreffende systeem nader uitgewerkt.
+Met de usecase-methode wordt een methode bedoeld om de eisen aan een _system of interest_ te beschrijven. De methode begint met het identificeren van de actoren en de bijbehorende usecases. Een actor vertegenwoordigt een persoon, systeem, object of organisatie die interactie heeft met het systeem, zoals een “onderzoeker”, “dataleverancier” of “datastation”. Elke usecase vertegenwoordigt een specifiek stukje waarde van het systeem, uitgedrukt in functionaliteit voor de actor.
 
-[TO DO: korte toelichting Use-case 3.0 modeling]
+Het identificeren van actoren en usecases is geen eenmalige stap. Het gebeurt juist in meerdere iteraties, waarbij het inzicht stap voor stap groeit. Na elke iteratie wordt duidelijker welke waarde het systeem moet leveren voor de belanghebbenden.
+
+Als de usecases zijn geïdentificeerd, worden ze verder beschreven. Een usecase beschrijft één logisch afgerond doel dat een actor wil bereiken, bijvoorbeeld “Zoeken van datasets”, “Aanvragen van gezondheidsdata” of “Bekijken van de status van een aanvraag”. De naam van een usecase is altijd geformuleerd als het functionele resultaat dat de actor wil behalen.
+
+In dit document worden de usecases samengevat om de functionaliteit te beschrijven die nodig is voor de verschillende stappen in het proces voor secundair gebruik van data. Voor een meer gedetailleerde beschrijving van de functionele en technische vereisten verwijzen we naar de documenten van TEHDAS2[^1].
+
+Usecases zijn niet alleen een methode om een systeem te beschrijven, maar ook om deze te ontwerpen, te ontwikkelen en te documenteren. Zodra de eisen voor een usecase duidelijk zijn, kan deze worden gerealiseerd. Het technische ontwerp van de usecase wordt een usecase-realisatie genoemd en bestaat onder andere uit sequentiediagrammen, statusdiagrammen en informatiemodellen. De componenten en andere bouwstenen in dit technische ontwerp worden hergebruikt voor alle usecases van het _system of interest_.
 
 
-
+[^1]: TEHDAS2. (2025). Public consultation of the guidelines and technical specifications to enable seamless use of health data across Europe under the upcoming European Health Data Space (EHDS). https://tehdas.eu/public-consultations/
 
 
 
