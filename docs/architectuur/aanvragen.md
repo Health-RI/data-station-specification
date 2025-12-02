@@ -1,4 +1,4 @@
-# Data aanvragen (data access)
+# Data aanvragen (_data access_)
 
 Het aanvraagproces start op het moment dat de benodigde gezondheidsgegevens gevonden zijn in de Europese of nationale gezondheidsdatacatalogus.
 
@@ -59,7 +59,7 @@ UC1 .> UC2 : << extend >>
 @enduml
 ```
 
-De usecases uit het diagram zijn in de vervolgparagrafen beschreven.
+De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven. 
 
 ## Vraag (toegang tot) gezondheidsdata aan
 
@@ -180,3 +180,4 @@ De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet
 [^4]: European Commission. (2025, November 19). Proposal for a Regulation on the establishment of European Business Wallets. https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets
 
 [^5]: European Commission. (2015, September 8). Commission implementing regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(3) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market. https://eur-lex.europa.eu/eli/reg_impl/2015/1502/
+
