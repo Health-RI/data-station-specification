@@ -113,9 +113,11 @@ nav:
     - leeswijzer.md
   - Architectuur:
     - architectuur/index.md
+    - Data zoeken en vinden: architectuur/ontdekken.md
     - Data aanvragen: architectuur/aanvragen.md
-    - Use-case Federated Analytics Portal: architectuur/fap.md
-    - Use-case Data station: architectuur/data-station.md
+    - Data klaarzetten: architectuur/klaarzetten.md
+    - Data analyseren: architectuur/analyseren.md
+    - Resultaten publiceren: architectuur/publiceren.md
   - Functionele componenten:
     - componenten/index.md
     - Data station:
