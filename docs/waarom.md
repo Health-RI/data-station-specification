@@ -5,13 +5,13 @@ Ten tijde van het schrijven van dit document zijn een aantal belangrijke richtli
 
 - [TEHDAS2](https://tehdas.eu/public-consultations/): gedetailleerde richtlijnen en technische specificiaties in 11 documenten.[^1]
 - [Data Spaces Support Center Blueprint](https://dssc.eu/space/BVE2/1071251457/Data+Spaces+Blueprint+v2.0+-+Home): industrie-overstijgende richtlijnen voor inrichting van data spaces.
-- [Uitgangspunten LDN](https://open.overheid.nl/documenten/52acfd51-3585-416d-979b-ab6deaba79d9/file): brede uitgangspunten geformuleerd voor VWS, waaronder _privacy by design_, hoge mate van open source werken en opslag van data bij de bron.
+- [Uitgangspunten LDN](https://open.overheid.nl/documenten/52acfd51-3585-416d-979b-ab6deaba79d9/file): brede uitgangspunten geformuleerd door VWS, waaronder _privacy-by-design_, hoge mate van open source werken en opslag van data bij de bron.
 
-Deze ontwikkelingen geven een steeds duidelijker beeld van hoe een landelijke gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie eruit zou kunnen c.q. moeten zien. Tegelijkertijd constateren we een lacune ten aanzien van het hanteren van principes als 'privacy-by-design' en 'data visiting'. In de inleiding van de EHDS wordt in overweging 80 gesteld dat:
+Deze ontwikkelingen geven een steeds duidelijker beeld van hoe een landelijke gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie eruit zou kunnen c.q. moeten zien. Tegelijkertijd constateren we een lacune ten aanzien van het hanteren van principes als _privacy-by-design_ en _data visiting_. In de inleiding van de EHDS wordt in overweging 80 gesteld dat:
 
 > _Gezien de gevoeligheid van gezondheidsgegevens moeten waar mogelijk beginselen als “privacy door ontwerp” en “privacy door standaardinstellingen” en het concept “breng de vragen naar de gegevens in plaats van die gegevens te verplaatsen” in acht worden genomen._
 
-Het concept van _data visiting_, ook wel bekend als _federated computing_ of _Personal Health Train_ (PHT), wordt nergens in de EHDS nader toegelicht[^1]. TEHDAS2 [_M7.4 Draft technical, functional and security specifications of Secure Processing Environments_](./appendix/tehdas2-spe.md) (hoofdstuk 6) gaat hier op in en maakt een aanzet voor de definitie van federated computing.
+Het concept van _data visiting_, ook wel bekend als _federated computing_ of _Personal Health Train_ (PHT), wordt nergens in de EHDS nader toegelicht[^2]. TEHDAS2 [_M7.4 Draft technical, functional and security specifications of Secure Processing Environments_](./appendix/tehdas2-spe.md) (hoofdstuk 6) gaat hier op in en maakt een aanzet voor de definitie van federated computing.
 
 ???+ abstract "Definities federated computing in TEHDAS2"
     
