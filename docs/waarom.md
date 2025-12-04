@@ -5,6 +5,7 @@ Ten tijde van het schrijven van dit document zijn een aantal belangrijke richtli
 
 - [TEHDAS2](https://tehdas.eu/public-consultations/): gedetailleerde richtlijnen en technische specificiaties in 11 documenten.[^1]
 - [Data Spaces Support Center Blueprint](https://dssc.eu/space/BVE2/1071251457/Data+Spaces+Blueprint+v2.0+-+Home): industrie-overstijgende richtlijnen voor inrichting van data spaces.
+- [Uitgangspunten LDN](https://open.overheid.nl/documenten/52acfd51-3585-416d-979b-ab6deaba79d9/file): brede uitgangspunten geformuleerd voor VWS, waaronder _privacy by design_, hoge mate van open source werken en opslag van data bij de bron.
 
 Deze ontwikkelingen geven een steeds duidelijker beeld van hoe een landelijke gezondheidsdata-infrastructuur voor onderzoek, beleid en innovatie eruit zou kunnen c.q. moeten zien. Tegelijkertijd constateren we een lacune ten aanzien van het hanteren van principes als 'privacy-by-design' en 'data visiting'. In de inleiding van de EHDS wordt in overweging 80 gesteld dat:
 

@@ -7,6 +7,7 @@
 *[EHDS]: European Health Data Space
 *[FAIR]: Findable, Accessible, Interoperable, Reusable
 *[HDAB]: Health Data Access Body
+*[LDN]: Landelijke Dekkend Netwerk
 *[primair gebruik]: gebruik van data voor directe behandeling van een persoon
 *[secundair gebruik]: gebruik van data voor andere doeleinden dan directe behandeling
 *[PHT]: Personal Health Train
