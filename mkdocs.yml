@@ -127,6 +127,8 @@ nav:
       - Data pooling: componenten/laag-5/data-pooling.md
     - Laag 4:
       - componenten/laag-4/index.md
+      - catalogus: componenten/laag-4/catalogus.md
+      - DAAMS: componenten/laag-4/daams.md
       - Federatieve analyse hub: componenten/laag-4/fah.md
     - Laag 3:
       - componenten/laag-3/index.md

@@ -8,11 +8,11 @@ We positioneren systeem actoren uit de use-cases in de lagen.
 
 | Laag | Systemen |
 |:----:|:---------|
-| 5 | - Gefedereerde analyse<br>- Gefedereerd leren<br>- Data pooling |
-| 4 | - DAAMS<br>- Catalogus gezondheidsgegevens<br>- federated analytics portal |
-| 3 | - data station |
-| 2 | - data ontsluitingssysteem |
-| 1 | - bronsystemen |
+| **5** | - Gefedereerde analyse<br>- Gefedereerd leren<br>- Data pooling |
+| **4** | - DAAMS<br>- Catalogus gezondheidsgegevens<br>- federated analytics portal |
+| **3** | - data station |
+| **2** | - data ontsluitingssysteem |
+| **1** | - bronsystemen |
 
 
 
