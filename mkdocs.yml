@@ -111,23 +111,29 @@ nav:
     - waarom.md
     - data-stations-als-hoeksteen.md
     - leeswijzer.md
-  - Architectuur:
+  - Architectuur use-cases:
     - architectuur/index.md
-    - Use-case DAAMS: architectuur/daams.md
-    - Use-case Federated Analytics Portal: architectuur/fap.md
-    - Use-case Data station: architectuur/data-station.md
-  - Functionele componenten:
+    - Data zoeken en vinden: architectuur/ontdekken.md
+    - Data aanvragen: architectuur/aanvragen.md
+    - Data klaarzetten: architectuur/klaarzetten.md
+    - Data analyseren: architectuur/analyseren.md
+    - Resultaten publiceren: architectuur/publiceren.md
+  - Architectuur componenten:
     - componenten/index.md
-    - Data station:
-      - componenten/data-station/index.md  
-      - Aanleveren: componenten/data-station/aanleveren.md
-      - Ingestie: componenten/data-station/ingestie.md
-      - Transformeren: componenten/data-station/transformeren.md
-    - Federatief netwerk:
-      - componenten/federatief-netwerk/index.md
-      - Federatieve analyse: componenten/federatief-netwerk/federatieve-analyse.md
-      - Federatief leren: componenten/federatief-netwerk/federatief-leren.md
-      - Data pooling: componenten/federatief-netwerk/data-pooling.md
+    - Laag 5:
+      - componenten/laag-5/index.md
+      - Federatieve analyse: componenten/laag-5/federatieve-analyse.md
+      - Federatief leren: componenten/laag-5/federatief-leren.md
+      - Data pooling: componenten/laag-5/data-pooling.md
+    - Laag 4:
+      - componenten/laag-4/index.md
+      - catalogus: componenten/laag-4/catalogus.md
+      - DAAMS: componenten/laag-4/daams.md
+      - Federated processing hub: componenten/laag-4/fph.md
+    - Laag 3:
+      - componenten/laag-3/index.md
+      - Data station: componenten/laag-3/data-station.md
+      - Technische standaarden: componenten/laag-3/standaarden.md
   - Implementaties:
     - implementaties/index.md
     - PLUGIN:
@@ -141,12 +147,14 @@ nav:
       - Architectuur: implementaties/DataSHIELD/architectuur.md
   - Discussie:
     - discussie/index.md
-    - Centraal vs. federatief: discussie/centraal-vs-federatief.md
+    - Primair vs. secundair: discussie/primair-vs-secundair.md    
     - Permit vs. request: discussie/permit-vs-request.md
-    - Primair vs. secundair: discussie/primair-vs-secundair.md
+    - Centraal vs. federatief: discussie/centraal-vs-federatief.md    
   - Appendix:
     - appendix/index.md
     - Archimate data space: https://health-ri.github.io/data-spaces-archimate/
+    - TEHDAS2 requirements: appendix/tehdas2-requirements.md
     - TEHDAS2 HDAB: appendix/tehdas2-hdab.md
     - TEHDAS2 SPE: appendix/tehdas2-spe.md
+    - EOSC-ENTRUST blueprint: https://zenodo.org/records/14362388
 
