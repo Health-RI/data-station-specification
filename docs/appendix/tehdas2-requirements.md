@@ -1,152 +1,152 @@
 # Vereisten van beveilige verwerkingsomgevingen
 
-Hieronder staan de verschillende vereisten zoals in de TEHDAS2 consultatie _7.4 Draft technical, functional and security specifications of Secure Processing Environments | Appendix B_ zijn geformuleerd. Deze zijn gebruikt als ijkpunt in de verdere specificatie van de componenten. [TO DO: requirements vertalen naar het Nederlands.]
+Hieronder staan de verschillende vereisten zoals in de TEHDAS2 consultatie _7.4 Draft technical, functional and security specifications of Secure Processing Environments | Appendix B_ zijn geformuleerd. Deze zijn gebruikt als ijkpunt in de verdere specificatie van de componenten.
 
-??? abstract "Sensitive data (SD) requirements"
-    | ID | Requirements |
-    |----|--------------|
-    | SDR-1 | Unauthorised users MUST NOT be able to access sensitive data |
-    | SDR-2 | Service administrators SHOULD NOT have access to sensitive data |
-    | SDR-3 | Sensitive data MUST be in a protected format at rest and in transit |
-    | SDR-4 | Sensitive data protection MUST be done with widely accepted, secure algorithms combined with effective isolation measures |
+??? abstract "Vereisten voor gevoelige data (SD)"
+    | ID | Vereisten |
+    |----|-----------|
+    | SDR-1 | Ongeautoriseerde gebruikers MOGEN GEEN toegang hebben tot gevoelige data |
+    | SDR-2 | Systeembeheerders ZOUDEN GEEN toegang moeten hebben tot gevoelige data |
+    | SDR-3 | Gevoelige data MOET in een beveiligd formaat worden opgeslagen en overgedragen |
+    | SDR-4 | Bescherming van gevoelige data MOET worden gedaan met algemeen geaccepteerde, veilige algoritmes gecombineerd met effectieve isolatiemaatregelen |
 
-??? abstract "Secure Processing Environment (SPE) requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |SPER-1 | SPE MUST enable scientific research on sensitive data |
-    |SPER-2 | There SHOULD be a diverse selection of SPEs for the varied needs of sensitive data research |
-    |SPER-3 | It MUST be possible to transfer sensitive data between, in and out of SPEs |
-    |SPER-4 | SPE MUST provide adequate protection against exposing sensitive data to unauthorised users |
-    |SPER-5 | SPE design SHOULD promote collaboration among authorised users |
-    |SPER-6 | Project-based user environments of SPE MUST be isolated from each other and open Internet |
-    |SPER-7 | Authorised users MUST protect sensitive data they display |
-    |SPER-8 | Authorised users MUST interact with their SPE project space only through secure protocols |
-    |SPER-9 | All APIs connecting SPE components MUST be logged and monitored |
-
-
-??? abstract "European Health Data Space (EHDS) SPE requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |EHDSR-1 | HDAB MUST grant access to EHD using a data permit |
-    |EHDSR-2 | EHD MUST be accessed using an SPE |
-    |EHDSR-3 | Natural persons listed in the data permit MAY access the identified EHD in SPE |
-    |EHDSR-4 | TOMs MUST minimise the risk of unauthorised EHD access in SPEs |
-    |EHDSR-5 | Authorised health data users MUST be strongly identified
-    |EHDSR-6 | All access and operation logs of SPE MUST be available for verification and auditing |
-    |EHDSR-7 | All SPE logs MUST identify the actor |
-    |EHDSR-8 | All SPE logs MUST be kept at least for one year |
-    |EHDSR-9 | TOMs of SPEs MUST be monitored for security |
-    |EHDSR-10 | EHD MUST be identified in the data permit |
-    |EHDSR-11 | Health data holder MUST upload the permitted EHD to be available in an SPE for the health data user |
-    |EHDSR-12 | Health data user MAY download only non-personal EHD from SPE. Anonymised personal data is non-personal |
-    |EHDSR-13 | HDAB MUST ensure by reviewing that no personal data is taken out of the SPE by the health data user |
-    |EHDSR-14 | Regular internal and external security audits MUST be done on SPE TOMs |
-    |EHDSR-15 | SPE TOMs MUST undergo risk assessments |
-    |EHDSR-16 | HDABs MUST ensure that SPE TOMs audits are carried out and that risk assessments lead to risk mitigations |
-    |EHDSR-17 | When SPEs mentioned in the EU Data Act are used for EHD, EHDS rules and requirements MUST be followed |
-    |EHDSR-18 | SPEs MUST adapt to TOMs that the Commission will write into EHDS implementing acts |
-
-??? abstract "Operational (OP) EHDS SPE requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |OPR-1 | The SPE operator MUST have procedures in place to enforce user authentication and access restrictions based on the data permit associated with the processing of health data |
-    |OPR-2 | SPE Operator MUST limit the number of authorised staff and any subcontractors who have high-privileged access enabling them to access or process health data and MUST implement effective procedures for managing and monitoring such access within the SPE infrastructure |
-    |OPR-3 | SPE Operator SHOULD maintain a Service Portfolio including all services |
-    |OPR-4 | SPE Operator SHOULD maintain a configuration management database (CMDB) |
-    |OPR-5 | SPE Operator MUST implement mechanisms to terminate the secure processing environment upon expiration of the data permit | All electronic health data within the environment MUST be deleted or rendered unrecoverable within six months of permit expiry, including any backups or redundant copies | Procedures MUST be formally documented, monitored, and aligned with risk assessments and confidentiality requirements | |
-    |OPR-6 | SPE Operator MUST undergo regular internal and external security audits to assess compliance with security, data protection, and operational requirements |
-    |OPR-7 | SPE Operator MUST retain logs and access records to ensure traceability of all operations and enable audits or investigations when needed |
-    |OPR-8 | The SPE operator MUST maintain up-to-date documentation of all relevant technical, organisational, and security processes |
-    |OPR-9 | The SPE operator SHOULD assign a Compliance Officer or designate responsibilities to ensure adherence to legal, ethical, and technical obligations |
-    |OPR-10 | SPE Operator MUST have an operating information security management system (ISMS) |
-    |OPR-11 | SPE Operator SHOULD establish a Service Management System |
-    |OPR-12 | SPE operators MUST conduct regular Data Protection Impact Assessments (DPIAs) |
-    |OPR-13 | SPE Operator MUST maintain policies to ensure security around procurement systems and development and operation of systems | |
-    |OPR-14 | SPEs SHOULD adopt change management process with impact and risk assessment |
-    |OPR-15 | SPE Operator SHOULD adopt a release and deployment management process |
-    |OPR-16 | SPE Operator MUST track and log actions of each authorised project member, including instances of data access, processing, viewing and output |
-    |OPR-17 | SPE Operator MUST implement a secure storage process to retain logs of user access to the SPE for a minimum period of one year |
-    |OPR-18 | A reporting process MUST be in place to notify HDABs and relevant authorities of security incidents or non-compliance findings including data breaches or misuse |
-    |OPR-19 | SPE Operator SHOULD adopt and enforce defined timelines for communicating and reporting incidents to the HDAB: Early warning notification: within 24 hours of incident detection. Detailed incident notification: within 72 hours of incident detection. Final incident report: no later than one month after the incident |
-    |OPR-20 | SPE Operator MUST be able to promptly halt access and processing activities within the SPE when misuse or data breaches are identified |
-    |OPR-21 | SPE Operator MUST have disaster recovery procedures in place to restore the availability and integrity of the SPE services, including critical system components, configurations, and platform-level functionality, from clean backups, and to resume normal service operations following an incident |
-    |OPR-22 | SPE operator MUST adopt robust security measures to protect data, including the use of firewalls, encryption, and intrusion detection systems, in order to prevent unauthorised access, modification, or removal of sensitive information |
-    |OPR-23 | Health data users, HDAB staff and SPE Operator staff who interact with the SPE MUST receive detailed, role-specific information or training covering health data processing, EHDS compliance requirements and security best practices coming from GDPR |
-    |OPR-24 | The SPE Operator MUST implement strategies for backup management, disaster recovery, and crisis management |
-    |OPR-25 | The SPE Operator MUST implement cybersecurity procedures to regularly evaluate the effectiveness of risk-management measures and promote fundamental cybersecurity practices and provide necessary training |
-    |OPR-26 | SPE Operator SHOULD define SLAs that include: uptime guarantees, response/resolution times for incidents include security SLAs, such as data encryption guarantees, incident response times, and audit logging |
-    |OPR-27 | The SPE Operator SHOULD regularly restore backups to the platform as part of standard feature development and operational activities, ensuring preparedness for incident response |
-    |OPR-28 | The SPE operator MUST implement a formal patch management policy to identify, evaluate, and apply security patches in a timely manner based on severity |
-    |OPR-29 | SPE Operator MUST establish a system update process to ensure timely and secure updates of software, OS, and firmware, tested prior to deployment |
-    |OPR-30 | A change management process SHOULD be used for assessing the impact of patches and updates before applying them to the production environment |
-    |OPR-31 | SPE Operator MUST provide dedicated technical support with clearly defined SLAs and escalation paths for addressing incidents and technical issues |
-    |OPR-32 | SPE Operator support staff SHOULD be trained in information security and privacy procedures, with roles and responsibilities clearly defined |
-    |OPR-33 | A knowledge base and support documentation SHOULD be maintained to assist in common issue resolution and improve incident response times |
-
-??? abstract "Federated (FSPE) requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |FSPER-1 | Legal or contractual agreement MUST cover the SPE federation across organisations |
-    |FSPER-2 | Federation use identities MUST match over services |
-    |FSPER-3 | SPE federation environment MUST fulfil sensitive data processing requirements defined for stand-alone SPEs |
-    |FSPER-4 | All interactive user actions on sensitive data in the federation MUST be through SPE |
-    |FSPER-5 | Federation governance structure MUST cover secure, shared data access and export from SPE |
-    |FSPER-6 | Federation user identities SHOULD be shared |
-    |FSPER-7 | Federation of SPEs MUST share technical and semantic interoperability needed for shared processing |
-    |FSPER-8 | Federation of SPEs MUST use shared secure communication and data transfer protocols |
-    |FSPER-9 | The federation MUST support distributed processing through authorisation and accounting services |
-    |FSPER-10 | A federation SPE MAY fulfil federated processing requirements |
-
-???+ abstract "Federated computing (FC) requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |FCR-1 | SPE MUST support common data models, such as OMOP CDM and applicable GA4GH standards, to enable technical and semantic interoperability |
-    |FCR-2 | The HDAB MUST have in place (internally or in collaboration with SPE operators) required processes to deploy additional data models required by data users |
-    |FCR-3 | SPE MUST support the deployment and execution of software components needed to carry out federated computing as described and authorised in the data permit, subject to applicable security controls |
-    |FCR-4 | The HDAB MUST have in place required processes to authorise the use of software components needed in federated computing |
-    |FCR-5 | SPE MUST enable a data user application to retrieve anonymous results from the SPE to be merged with results retrieved from other SPEs |
-    |FCR-6 | SPE MUST include functionality for ensuring the anonymity of results, with applicable methods such as: (1) pre-assessment of software components producing the results, (2) automated anonymity assessment, (3) additional privacy protection mechanisms (such as differential privacy) and (4) manual inspections |
-    |FCR-7 | The HDAB MUST have established processes for approving computerised access permissions for data user applications in the context of data permit authorisation |
-    |FCR-8 | SPE MUST provide an open and standardised interface needed to exchange information with other trusted SPEs as needed to accomplish federated learning computations |
-    |FCR-9 | SPE SHOULD support the use of privacy protection methods (such as differential privacy) for federated learning |
+??? abstract "Vereisten voor Beveiligde Verwerkingsomgeving (BVO)"
+    | ID | Vereisten |
+    |----|-----------|
+    |SPER-1 | BVO MOET wetenschappelijk onderzoek op gevoelige data mogelijk maken |
+    |SPER-2 | Er ZOU een diversiteit aan BVOs moeten zijn voor de uiteenlopende behoeften van onderzoek met gevoelige data |
+    |SPER-3 | Het MOET mogelijk zijn om gevoelige data over te brengen van, naar en tussen BVOs |
+    |SPER-4 | BVO MOET adequate bescherming bieden tegen blootstelling van gevoelige data aan ongeautoriseerde gebruikers |
+    |SPER-5 | BVO-ontwerp ZOU samenwerking tussen geautoriseerde gebruikers moeten bevorderen |
+    |SPER-6 | Projectgebaseerde gebruikersomgevingen van BVO MOETEN van elkaar en van het open internet geïsoleerd zijn |
+    |SPER-7 | Geautoriseerde gebruikers MOETEN gevoelige data die zij weergeven beschermen |
+    |SPER-8 | Geautoriseerde gebruikers MOETEN alleen via beveiligde protocollen interacteren met hun BVO-projectruimte |
+    |SPER-9 | Alle API's die BVO-componenten verbinden MOETEN worden gelogd en gemonitord |
 
 
-??? abstract "Technical Interoperability (TIR) requirements"
-    | ID | Requirements |
-    |----|--------------|
-    |TIR-1 | The API services MUST be accessed via data user and data holder applications, which can be dedicated client applications or browser-based applications.|
-    |TIR-2 | The API MUST follow a web services architecture (e.g., RESTful, GraphQL), enabling stateless request/response interactions and supporting secure file transfer protocols. The implementation MUST adhere to common architectural and security practices, including resource grouping and, where appropriate, the use of microservices to isolate sensitive services.|
-    |TIR-3 | The API MUST operate over HTTPS, ensuring compatibility with standard web clients and server implementations. Additionally, it MUST support secure file transfer protocols (e.g. HTTPS, SFTP or FTPS for file operations) where applicable.|
-    |TIR-4 | The API MUST use JSON as the primary data format for requests and responses with support for other formats where needed, ensuring secure data transfer via HTTPS or other secure protocols.|
-    |TIR-5 | The API MUST be capable of uploading and downloading files of all standard file types. It MUST be possible to set restrictions on allowed file types and transfer direction (upload/download) through configuration settings separately for each API and workspace. The API must support efficient handling of large files, including resumable transfers, asynchronous processing where necessary, and configurable timeout settings to accommodate long-lasting operations.|
-    |TIR-6 | API SHOULD have clear, machine-readable documentation (e.g., OpenAPI/Swagger).|
-    |TIR-7 | All requests to data user and data holder API functions MUST be authenticated and authorised using standard methods (e.g., OAuth 2.0 with JWT, API keys). The system MUST enforce role-based access control, limiting access based on user roles and privileges.|
-    |TIR-8 | API communication MUST use encryption (e.g., TLS) to protect data in transit. Additionally, it MUST be possible to enforce application-level encryption (e.g., AES-256) before transmission to provide an extra layer of security. If content encryption is used, keys MUST be securely managed and stored according to industry best practices (e.g., using a dedicated key management system).|
-    |TIR-9 | The API MUST validate all incoming data to prevent injection attacks (e.g., SQLi, XSS) and malformed requests, responding only to predefined and approved requests with valid parameters.|
-    |TIR-10 | Error responses MUST avoid exposing sensitive details (e.g., stack traces, internal error codes) while providing meaningful messages for debugging.|
-    |TIR-11 | API access MAY be restricted based on network-level controls, including firewall rules, IP whitelisting, or Virtual Private Network (VPN) restrictions.|
-    |TIR-12 | Requests, responses, and errors MUST be logged for monitoring and compliance.|
-    |TIR-13 | API usage, failures, performance metrics and service availability MUST be monitored, with alerts for anomalies.|
-    |TIR-14 | Mechanisms MUST be in place for approving and deploying new API versions and phasing out old API versions.|
-    |TIR-15 | The API SHOULD meet defined latency and response time SLAs.|
-    |TIR-16 | The system SHOULD handle expected and peak loads efficiently, with rate limiting and throttling mechanisms in place if necessary.|
-    |TIR-17 | The API SHOULD ensure the accuracy and consistency of requests and responses by applying relevant format validators and other appropriate validation mechanisms, thereby preventing the delivery of erroneous, corrupted or inconsistent data.|
-    |TIR-18 | The remote desktop interface MUST enable the data user to interactively access and process data with a remote desktop application|
-    TIR-19 | The data user MAY use a standard browser or a dedicated client to access the remote desktop environment.|
-    |TIR-20 | The remote desktop solution MUST support remote desktop clients running on standard operating systems including (e.g., Windows, macOS, Linux).|
-    |TIR-21 | The remote desktop solution MUST use a secure remote access protocol (e.g., RDP, VNC, or SSH with X11 forwarding) to establish a connection between the client and server. The communication protocol MUST support encryption to protect data in transit.|
-    |TIR-22 | Access MUST require multifactor authentication (MFA). The system MUST enforce role-based access control, limiting remote access based on user roles and privileges.|
-    |TIR-23 | Access MAY be restricted based on network-level controls, including firewall rules, IP whitelisting, or VPN restrictions.|
-    |TIR-24 | Idle sessions MUST be automatically terminated after a predefined time to prevent unauthorised access. Users MUST be logged out or locked after a period of inactivity.|
-    |TIR-25 | Clipboard sharing and file transfers MUST be restricted by default to prevent unauthorised export of data from the SPE. Changes to or removal of these restrictions MUST be configurable at the discretion of the HDAB.|
-    |TIR-26 | All remote sessions MUST be logged, including authentication attempts, connection times, and actions performed during the session.|
-    |TIR-27 | Service usage, failures, performance metrics and service availability MUST be monitored, with alerts for anomalies.|
-    |TIR-28 | The service endpoint MUST enable communication between trusted SPEs to support federated learning.|
-    |TIR-29 | The interface MUST support protocols needed to support client-server and bidirectional streaming communication (gRPC with HTTP/2 or an equivalent). Connections MUST be secured using TLS.|
-    |TIR-30 | All connections MUST be authenticated using appropriate methods such as mutual TLS (mTLS) or token-based authentication while ensuring all data is transmitted over an encrypted channel.|
-    |TIR-31 | Only pre-approved clients with valid certificates MUST be allowed to connect.|
-    |TIR-32 | The interface MAY be configured to restrict access using firewall rules, IP whitelisting, VPN access, other network-level policies and holistic approaches such as virtual closed networks.|
-    |TIR-33 | All requests, responses, and streaming events MUST be logged securely.|
-    |TIR-34 | Real-time monitoring of streaming sessions, errors, latency, and security threats MUST be implemented. Alerts shall be generated based on anomalous activity (e.g., failed authentication attempts, unusual data patterns).|
-    |TIR-35 | The interface MUST meet defined latency and response time SLAs.|
-    |TIR-36 | The system MUST implement flow control to manage varying loads and prevent overloads, using rate limiting, throttling, and adaptive resource allocation as needed.|
+??? abstract "European Health Data Space (EHDS) BVO-vereisten"
+    | ID | Vereisten |
+    |----|-----------|
+    |EHDSR-1 | HDAB MOET toegang tot elektronische gezondheidsdata verlenen middels een data-vergunning |
+    |EHDSR-2 | Elektronische gezondheidsdata MOET worden benaderd via een BVO |
+    |EHDSR-3 | Natuurlijke personen vermeld in de data-vergunning MOGEN de geïdentificeerde elektronische gezondheidsdata in de BVO benaderen |
+    |EHDSR-4 | TOMs MOETEN het risico op ongeautoriseerde toegang tot elektronische gezondheidsdata in BVOs minimaliseren |
+    |EHDSR-5 | Geautoriseerde gezondheidsdata-gebruikers MOETEN sterk geïdentificeerd zijn |
+    |EHDSR-6 | Alle toegangs- en operatielogs van de BVO MOETEN beschikbaar zijn voor verificatie en auditing |
+    |EHDSR-7 | Alle BVO-logs MOETEN de actor identificeren |
+    |EHDSR-8 | Alle BVO-logs MOETEN minimaal één jaar bewaard worden |
+    |EHDSR-9 | TOMs van BVOs MOETEN gemonitord worden op beveiliging |
+    |EHDSR-10 | Elektronische gezondheidsdata MOET geïdentificeerd zijn in de data-vergunning |
+    |EHDSR-11 | Gezondheidsdata-houder MOET de vergunde elektronische gezondheidsdata uploaden zodat deze beschikbaar is in een BVO voor de gezondheidsdata-gebruiker |
+    |EHDSR-12 | Gezondheidsdata-gebruiker MAG alleen niet-persoonlijke elektronische gezondheidsdata uit de BVO downloaden. Geanonimiseerde persoonsgegevens zijn niet-persoonlijk |
+    |EHDSR-13 | HDAB MOET door beoordeling waarborgen dat geen persoonsgegevens uit de BVO worden gehaald door de gezondheidsdata-gebruiker |
+    |EHDSR-14 | Reguliere interne en externe beveiligingsaudits MOETEN worden uitgevoerd op BVO TOMs |
+    |EHDSR-15 | BVO TOMs MOETEN risico-beoordelingen ondergaan |
+    |EHDSR-16 | HDABs MOETEN waarborgen dat BVO TOMs-audits worden uitgevoerd en dat risico-beoordelingen leiden tot risicobeperkingen |
+    |EHDSR-17 | Wanneer BVOs genoemd in de EU Data Act worden gebruikt voor elektronische gezondheidsdata, MOETEN EHDS-regels en -vereisten worden nageleefd |
+    |EHDSR-18 | BVOs MOETEN zich aanpassen aan TOMs die de Commissie de EHDS uitvoeringshandelingen in zal schrijven |
+
+??? abstract "Operationele (OP) EHDS BVO-vereisten"
+    | ID | Vereisten |
+    |----|-----------|
+    |OPR-1 | De BVO-operator MOET procedures hebben om gebruikersauthenticatie en toegangsbeperkingen af te dwingen op basis van de data-vergunning die verbonden is aan de verwerking van gezondheidsdata |
+    |OPR-2 | BVO-operator MOET het aantal geautoriseerde medewerkers en eventuele onderaannemers met hoge machtigingen die hen in staat stellen gezondheidsdata te benaderen of verwerken beperken en MOET effectieve procedures implementeren voor het beheren en monitoren van dergelijke toegang binnen de BVO-infrastructuur |
+    |OPR-3 | BVO-operator ZOU een Dienstenportfolio met alle diensten moeten bijhouden |
+    |OPR-4 | BVO-operator ZOU een configuratiemanagementdatabase (CMDB) moeten bijhouden |
+    |OPR-5 | BVO-operator MOET mechanismen implementeren om de beveiligde verwerkingsomgeving te beëindigen bij het aflopen van de data-vergunning | Alle elektronische gezondheidsdata binnen de omgeving MOET worden verwijderd of onherstelbaar worden gemaakt binnen zes maanden na het aflopen van de vergunning, inclusief back-ups of redundante kopieën | Procedures MOETEN formeel worden gedocumenteerd, gemonitor en afgestemd op risico-beoordelingen en vertrouwelijkheidsvereisten | |
+    |OPR-6 | BVO-operator MOET regelmatige interne en externe beveiligingsaudits ondergaan om naleving van beveiligings-, gegevensbeschermings- en operationele vereisten te beoordelen |
+    |OPR-7 | BVO-operator MOET logs en toegangsregistraties bewaren om traceerbaarheid van alle operaties te waarborgen en audits of onderzoeken mogelijk te maken wanneer nodig |
+    |OPR-8 | De BVO-operator MOET actuele documentatie bijhouden van alle relevante technische, organisatorische en beveiligingsprocessen |
+    |OPR-9 | De BVO-operator ZOU een Compliance Officer moeten aanwijzen of verantwoordelijkheden moeten toewijzen om naleving van juridische, ethische en technische verplichtingen te waarborgen |
+    |OPR-10 | BVO-operator MOET een operationeel informatiebeveiligingsmanagementsysteem (ISMS) hebben |
+    |OPR-11 | BVO-operator ZOU een Servicemanagementsysteem moeten opzetten |
+    |OPR-12 | BVO-operators MOETEN regelmatig gegevensbeschermingseffectbeoordelingen (DPIA's) uitvoeren |
+    [TODO]|OPR-13 | BVO-operator MOET beleid handhaven om beveiliging rond inkoopsystemen en ontwikkeling en gebruik van systemen te waarborgen | |
+    |OPR-14 | BVOs ZOUDEN een wijzigingsbeheerproces met impact- en risicobeoordeling moeten hanteren |
+    |OPR-15 | BVO-operator ZOU een release- en implementatiebeheerproces moeten hanteren |
+    |OPR-16 | BVO-operator MOET acties van elk geautoriseerd projectlid volgen en loggen, inclusief gevallen van datatoegang, verwerking, weergave en output |
+    |OPR-17 | BVO-operator MOET een veilig opslagproces implementeren om logs van gebruikerstoegang tot de BVO minimaal één jaar te bewaren |
+    |OPR-18 | Een rapportageproces MOET aanwezig zijn om HDABs en relevante autoriteiten op de hoogte te stellen van beveiligingsincidenten of bevindingen van niet-naleving, inclusief datalekken of misbruik |
+    |OPR-19 | BVO-operator ZOU gedefinieerde tijdslijnen moeten hanteren en afdwingen voor het communiceren en rapporteren van incidenten aan de HDAB: Vroege waarschuwingsmelding: binnen 24 uur na detectie van het incident. Gedetailleerde incidentmelding: binnen 72 uur na detectie van het incident. Definitief incidentrapport: uiterlijk één maand na het incident |
+    |OPR-20 | BVO-operator MOET in staat zijn om toegang en verwerkingsactiviteiten binnen de BVO onmiddellijk te stoppen wanneer misbruik of datalekken worden geïdentificeerd |
+    |OPR-21 | BVO-operator MOET rampherstelprocedures hebben om de beschikbaarheid en integriteit van de BVO-diensten te herstellen, inclusief kritieke systeemcomponenten, configuraties en platformfunctionaliteit, vanuit schone back-ups, en om normale dienstoperaties te hervatten na een incident |
+    |OPR-22 | BVO-operator MOET robuuste beveiligingsmaatregelen hanteren om data te beschermen, inclusief het gebruik van firewalls, encryptie en inbraakdetectiesystemen, om ongeautoriseerde toegang, wijziging of verwijdering van gevoelige informatie te voorkomen |
+    |OPR-23 | Gezondheidsdata-gebruikers, HDAB-personeel en BVO-operatorpersoneel die interacteren met de BVO MOETEN gedetailleerde, rolspecifieke informatie of training ontvangen over gezondheidsdata-verwerking, EHDS-nalevingsvereisten en best practices op het gebied van beveiliging volgens de AVG |
+    |OPR-24 | De BVO-operator MOET strategieën implementeren voor back-upbeheer, rampherstel en crisismanagement |
+    |OPR-25 | De BVO-operator MOET cybersecurityprocedures implementeren om regelmatig de effectiviteit van risicobeheermaatregelen te evalueren en fundamentele cybersecurity-praktijken te bevorderen en noodzakelijke training te bieden |
+    |OPR-26 | BVO-operator ZOU SLA's moeten definiëren die het volgende omvatten: garanties voor uptime, reactie-/oplostijden voor incidenten, inclusief beveiligings-SLA's, zoals data-encryptie garanties, reactietijden bij incidenten en auditlogging |
+    |OPR-27 | De BVO-operator ZOU regelmatig back-ups naar het platform moeten herstellen als onderdeel van standaard feature-ontwikkeling en operationele activiteiten, om paraatheid voor incidentrespons te waarborgen |
+    |OPR-28 | De BVO-operator MOET een formeel patchbeheerbeleid implementeren om beveiligingspatches tijdig te identificeren, evalueren en toepassen op basis van ernst |
+    |OPR-29 | BVO-operator MOET een systeemupdateproces opzetten om tijdige en veilige updates van software, OS en firmware te waarborgen, getest voorafgaand aan implementatie |
+    |OPR-30 | Een wijzigingsbeheerproces ZOU moeten worden gebruikt voor het beoordelen van de impact van patches en updates voordat deze op de productieomgeving worden toegepast |
+    |OPR-31 | BVO-operator MOET toegewijde technische ondersteuning bieden met duidelijk gedefinieerde SLA's en escalatiepaden voor het aanpakken van incidenten en technische problemen |
+    |OPR-32 | Ondersteunend personeel van de BVO-operator ZOU getraind moeten zijn in informatiebeveiligings- en privacyprocedures, met duidelijk gedefinieerde rollen en verantwoordelijkheden |
+    |OPR-33 | Een kennisbank en ondersteunende documentatie ZOU moeten worden bijgehouden om te helpen bij het oplossen van veelvoorkomende problemen en om incidentresponsetijden te verbeteren |
+
+??? abstract "Federatieve BVO-vereisten (FSPE)"
+    | ID | Vereisten |
+    |----|-----------|
+    |FSPER-1 | Juridische of contractuele overeenkomst MOET de BVO-federatie tussen organisaties dekken |
+    |FSPER-2 | Federatie-gebruik identiteiten MOETEN overeenkomen tussen diensten |
+    |FSPER-3 | BVO-federatieomgeving MOET voldoen aan de verwerkingsvereisten voor gevoelige data die zijn gedefinieerd voor zelfstandige BVOs |
+    |FSPER-4 | Alle interactieve gebruikersacties op gevoelige data in de federatie MOETEN via de BVO verlopen |
+    |FSPER-5 | Federatie-governancestructuur MOET veilige, gedeelde datatoegang en export uit de BVO dekken |
+    |FSPER-6 | Federatie-gebruikersidentiteiten ZOUDEN gedeeld moeten worden |
+    |FSPER-7 | Federatie van BVOs MOET technische en semantische interoperabiliteit delen die nodig is voor gedeelde verwerking |
+    |FSPER-8 | Federatie van BVOs MOET gedeelde veilige communicatie- en data-overdrachtsprotocollen gebruiken |
+    |FSPER-9 | De federatie MOET gedistribueerde verwerking ondersteunen via autorisatie- en verantwoordingsdiensten |
+    |FSPER-10 | Een federatie-BVO MAG aan federatieve verwerkingsvereisten voldoen |
+
+???+ abstract "Vereisten voor gefedereerde gegevensverwerking (FC)"
+    | ID | Vereisten |
+    |----|-----------|
+    |FCR-1 | BVO MOET gemeenschappelijke datamodellen ondersteunen, zoals OMOP CDM en toepasselijke GA4GH-standaarden, om technische en semantische interoperabiliteit mogelijk te maken |
+    |FCR-2 | De HDAB MOET (intern of in samenwerking met BVO-operators) de vereiste processen hebben om aanvullende datamodellen in te zetten die door data-gebruikers worden vereist |
+    |FCR-3 | BVO MOET de deployering en uitvoering ondersteunen van softwarecomponenten die nodig zijn om gefedereerde gegevensverwerking uit te voeren zoals beschreven en geautoriseerd in de data-vergunning, onderhevig aan toepasselijke beveiligingscontroles |
+    |FCR-4 | De HDAB MOET de vereiste processen hebben om het gebruik van softwarecomponenten die nodig zijn in federated computing te autoriseren |
+    |FCR-5 | BVO MOET een data-gebruikersapplicatie in staat stellen om anonieme resultaten uit de BVO op te halen om samen te voegen met resultaten die zijn opgehaald uit andere BVOs |
+    |FCR-6 | BVO MOET functionaliteit bevatten om de anonimiteit van resultaten te waarborgen, met toepasselijke methoden zoals: (1) voorafgaande beoordeling van softwarecomponenten die de resultaten produceren, (2) geautomatiseerde anonymiteitsbeoordeling, (3) aanvullende privacy-beschermingsmechanismen (zoals differential privacy) en (4) handmatige inspecties |
+    |FCR-7 | De HDAB MOET processen hebben vastgesteld voor het goedkeuren van geautomatiseerde toegangsrechten voor data-gebruikersapplicaties in de context van data-vergunningautorisatie |
+    |FCR-8 | BVO MOET een open en gestandaardiseerde interface bieden die nodig is om informatie uit te wisselen met andere vertrouwde BVOs zoals nodig om federatief leren uit te voeren |
+    |FCR-9 | BVO ZOU het gebruik van privacy-beschermingsmethoden (zoals differential privacy) voor federatief leren moeten ondersteunen |
+
+
+??? abstract "Vereisten voor technische interoperabiliteit (TIR)"
+    | ID | Vereisten |
+    |----|-----------|
+    |TIR-1 | De API-diensten MOETEN worden benaderd via data-gebruikers- en data-houderapplicaties, die dedicated clientapplicaties of browser-gebaseerde applicaties kunnen zijn.|
+    |TIR-2 | De API MOET een webservices-architectuur volgen (bijv. RESTful, GraphQL), die stateless request/response-interacties mogelijk maakt en veilige bestandsoverdrachtprotocollen ondersteunt. De implementatie MOET voldoen aan algemene architecturale en beveiligingspraktijken, inclusief resourcegroepering en, waar van toepassing, het gebruik van microservices om gevoelige diensten te isoleren.|
+    |TIR-3 | De API MOET via HTTPS opereren, zodat compatibiliteit met standaard webclients en serverimplementaties wordt gewaarborgd. Daarnaast MOET het veilige bestandsoverdrachtprotocollen ondersteunen (bijv. HTTPS, SFTP of FTPS voor bestandsoperaties) waar van toepassing.|
+    |TIR-4 | De API MOET JSON als primair dataformaat gebruiken voor requests en responses met ondersteuning voor andere formaten waar nodig, waarbij veilige data-overdracht via HTTPS of andere veilige protocollen wordt gewaarborgd.|
+    |TIR-5 | De API MOET in staat zijn om bestanden van alle standaard bestandstypen te uploaden en downloaden. Het MOET mogelijk zijn om beperkingen in te stellen voor toegestane bestandstypen en overdrachtsrichting (upload/download) via configuratie-instellingen afzonderlijk voor elke API en werkruimte. De API moet efficiënte verwerking van grote bestanden ondersteunen, inclusief hervattbare overdrachten, asynchrone verwerking waar nodig, en configureerbare timeout-instellingen om langdurige operaties te accommoderen.|
+    |TIR-6 | API ZOU duidelijke, machineleesbare documentatie moeten hebben (bijv. OpenAPI/Swagger).|
+    |TIR-7 | Alle requests aan data-gebruikers- en data-houder-API-functies MOETEN worden geauthenticeerd en geautoriseerd met standaardmethoden (bijv. OAuth 2.0 met JWT, API-sleutels). Het systeem MOET op rollen gebaseerde toegangscontrole afdwingen, waarbij toegang wordt beperkt op basis van gebruikersrollen en privileges.|
+    |TIR-8 | API-communicatie MOET encryptie gebruiken (bijv. TLS) om data tijdens overdracht te beschermen. Daarnaast MOET het mogelijk zijn om encryptie op applicatieniveau (bijv. AES-256) af te dwingen vóór transmissie om een extra beveiligingslaag te bieden. Als content-encryptie wordt gebruikt, MOETEN sleutels veilig worden beheerd en opgeslagen volgens best practices in de industrie (bijv. met behulp van een dedicated key management systeem).|
+    |TIR-9 | De API MOET alle inkomende data valideren om injectie-aanvallen (bijv. SQLi, XSS) en malformed requests te voorkomen, waarbij alleen wordt gereageerd op vooraf gedefinieerde en goedgekeurde requests met geldige parameters.|
+    |TIR-10 | Foutmeldingen MOETEN het blootstellen van gevoelige details (bijv. stack traces, interne foutcodes) vermijden terwijl ze betekenisvolle berichten bieden voor debugging.|
+    |TIR-11 | API-toegang MAG worden beperkt op basis van controlemechanismen op netwerkniveau, inclusief firewallregels, IP-whitelisting of Virtual Private Network (VPN) beperkingen.|
+    |TIR-12 | Requests, responses en fouten MOETEN worden gelogd voor monitoring en compliance.|
+    |TIR-13 | API-gebruik, fouten, prestatiemetrics en servicebeschikbaarheid MOETEN worden gemonitord, met waarschuwingen voor afwijkingen.|
+    |TIR-14 | Mechanismen MOETEN aanwezig zijn voor het goedkeuren en inzetten van nieuwe API-versies en het uitfaseren van oude API-versies.|
+    |TIR-15 | De API ZOU moeten voldoen aan gedefinieerde latency- en reactietijd-SLA's.|
+    |TIR-16 | Het systeem ZOU verwachte en piekbelastingen efficiënt moeten verwerken, met rate limiting en throttling mechanismen indien nodig.|
+    |TIR-17 | De API ZOU de nauwkeurigheid en consistentie van requests en responses moeten waarborgen door relevante formaatvalidators en andere geschikte validatiemechanismen toe te passen, waardoor de levering van foutieve, beschadigde of inconsistente data wordt voorkomen.|
+    |TIR-18 | De remote desktop-interface MOET de data-gebruiker in staat stellen om interactief toegang te krijgen tot en data te verwerken met een remote desktop-applicatie|
+    |TIR-19 | De data-gebruiker MAG een standaard browser of een dedicated client gebruiken om toegang te krijgen tot de remote desktop-omgeving.|
+    |TIR-20 | De remote desktop-oplossing MOET remote desktop-clients ondersteunen die draaien op standaard besturingssystemen waaronder (bijv. Windows, macOS, Linux).|
+    |TIR-21 | De remote desktop-oplossing MOET een veilig remote access-protocol gebruiken (bijv. RDP, VNC, of SSH met X11 forwarding) om een verbinding tot stand te brengen tussen de client en server. Het communicatieprotocol MOET encryptie ondersteunen om data tijdens overdracht te beschermen.|
+    |TIR-22 | Toegang MOET multifactorauthenticatie (MFA) vereisen. Het systeem MOET op rollen gebaseerde toegangscontrole afdwingen, waarbij remote toegang wordt beperkt op basis van gebruikersrollen en privileges.|
+    |TIR-23 | Toegang MAG worden beperkt op basis van controlemechanismen op netwerkniveau, inclusief firewallregels, IP-whitelisting of VPN-beperkingen.|
+    |TIR-24 | Inactieve sessies MOETEN automatisch worden beëindigd na een vooraf bepaalde tijd om ongeautoriseerde toegang te voorkomen. Gebruikers MOETEN worden uitgelogd of vergrendeld na een periode van inactiviteit.|
+    |TIR-25 | Klembord delen en bestandsoverdrachten MOETEN standaard worden beperkt om ongeautoriseerde export van data uit de BVO te voorkomen. Wijzigingen of verwijdering van deze beperkingen MOETEN configureerbaar zijn naar goeddunken van de HDAB.|
+    |TIR-26 | Alle remote sessies MOETEN worden gelogd, inclusief authenticatiepogingen, verbindingstijden en acties uitgevoerd tijdens de sessie.|
+    |TIR-27 | Dienstgebruik, fouten, prestatiemetrics en servicebeschikbaarheid MOETEN worden gemonitord, met waarschuwingen voor afwijkingen.|
+    |TIR-28 | Het service endpoint MOET communicatie mogelijk maken tussen vertrouwde BVOs om federatief leren te ondersteunen.|
+    |TIR-29 | De interface MOET protocollen ondersteunen die nodig zijn om client-server en bidirectionele streamingcommunicatie te ondersteunen (gRPC met HTTP/2 of een equivalent). Verbindingen MOETEN worden beveiligd met TLS.|
+    |TIR-30 | Alle verbindingen MOETEN worden geauthenticeerd met behulp van geschikte methoden zoals wederzijdse TLS (mTLS) of token-gebaseerde authenticatie, terwijl wordt gewaarborgd dat alle data via een versleuteld kanaal wordt verzonden.|
+    |TIR-31 | Alleen vooraf goedgekeurde clients met geldige certificaten MOETEN verbinding mogen maken.|
+    |TIR-32 | De interface MAG worden geconfigureerd om toegang te beperken met behulp van firewallregels, IP-whitelisting, VPN-toegang, ander netwerkbeleid en holistische benaderingen zoals virtuele gesloten netwerken.|
+    |TIR-33 | Alle requests, responses en streaming-events MOETEN veilig worden gelogd.|
+    |TIR-34 | Real-time monitoring van streaming-sessies, fouten, latency en beveiligingsdreigingen MOET worden geïmplementeerd. Waarschuwingen moeten worden gegenereerd op basis van afwijkende activiteit (bijv. mislukte authenticatiepogingen, ongebruikelijke datapatronen).|
+    |TIR-35 | De interface MOET voldoen aan gedefinieerde latency- en reactietijd-SLA's.|
+    |TIR-36 | Het systeem MOET flow control implementeren om wisselende belastingen te beheren en overbelasting te voorkomen, waarbij gebruik wordt gemaakt van rate limiting, throttling en adaptieve resource-allocatie zoals nodig.|
