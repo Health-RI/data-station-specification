@@ -1,6 +1,6 @@
-# Scope van de architectuur
-## De gezondheidsdata-infrastructuur voor secundair gebruik als _system of interest_
-Het _system of interest_ van deze specificatie is de gezondheidsdata-infrastructuur voor secundair gebruik. Een dergelijk systeem bestaat uit verschillende elementen, zoals in figuur 3 is weergegeven.
+# Perspectief: proces
+## Het proces van secundair gebruik van data _system of interest_
+Het _system of interest_ van deze specificatie is het proces en de daarbij benodige infomratie, applicaties en infrastructuur voor secundair gebruik van zorggegevens. Een dergelijk systeem bestaat uit verschillende elementen, zoals in figuur 3 is weergegeven.
 
 ![](health-ri-flowchart.jpg)
 

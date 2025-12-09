@@ -1,12 +1,9 @@
----
-title: Architectuur componenten
----
+#  Perspectief: informatie
+## Gefedereerde informatieverwerking in gelaagde, decentrale netwerken
 
-## Gefedereerde gegevensverwerking in gelaagde, decentrale netwerken
+Dit document richt zich op de uitwerking van wat in TEHDAS2 een **federatieve BVO** wordt genoemd (_federated SPE_). De EHDS is in essentie federatief ontworpen: we willen uiteindelijk gezondheidsgegevens uit heel Europa kunnen aanwenden voor secundair gebruik. Tegelijkertijd willen we dat gezondheidsgegevens zoveel mogelijk binnen de landsgrenzen blijven. Om dit mogelijk te maken is **ten minste een architectuur nodig voor gefedereerde informatieverwerking tussen landen**. Hierin is voorzien dat landelijke knooppunten gezamenlijk analyses kunnen uitvoeren, onder regie van een centraal knooppunt op Europees niveau. Deze aanpak is uitgewerkt in [TEHDAS2 M7.4](../appendix/tehdas2-spe.md) hoofdstuk 5 (_SPE federation_ p. 42) en hoofdstuk 6 (_Implementing federated computing_ p. 50). In dit document passen wij dezelfde ontwerpprincipes toe om **binnen een land een LDN voor decentrale, gefedereerde informatieverwerking** mogelijk te maken.
 
-Dit document richt zich op de uitwerking van wat in TEHDAS2 een **federatieve BVO** wordt genoemd (_federated SPE_). De EHDS is in essentie federatief ontworpen: we willen uiteindelijk gezondheidsgegevens uit heel Europa kunnen aanwenden voor secundair gebruik. Tegelijkertijd willen we dat gezondheidsgegevens zoveel mogelijk binnen de landsgrenzen blijven. Om dit mogelijk te maken is **ten minste een architectuur nodig voor gefedereerde gegevensverwerking tussen landen**. Hierin is voorzien dat landelijke knooppunten gezamenlijk analyses kunnen uitvoeren, onder regie van een centraal knooppunt op Europees niveau. Deze aanpak is uitgewerkt in [TEHDAS2 M7.4](../appendix/tehdas2-spe.md) hoofdstuk 5 (_SPE federation_ p. 42) en hoofdstuk 6 (_Implementing federated computing_ p. 50). In dit document passen wij dezelfde ontwerpprincipes toe om **binnen een land een LDN voor decentrale, gefedereerde gegevensverwerking** mogelijk te maken.
-
-Gefedereerde gegevensverwerking gaat uit van een netwerk van data stations die met elkaar verbonden zijn. De manier waarop deze data stations zijn verbonden (de zogenaamde netwerk topologie) is bepalend voor de architectuur van de federatieve BVO. We kennen grofweg drie netwerk topologieën[@baran1964distributed]: centraal, decentraal en gedistribueerd.
+Gefedereerde informatieverwerking gaat uit van een netwerk van data stations die met elkaar verbonden zijn. De manier waarop deze data stations zijn verbonden (de zogenaamde netwerk topologie) is bepalend voor de architectuur van de federatieve BVO. We kennen grofweg drie netwerk topologieën[@baran1964distributed]: centraal, decentraal en gedistribueerd.
 
 ![](../assets/type-of-networks.png)
 
@@ -14,16 +11,16 @@ Gefedereerde gegevensverwerking gaat uit van een netwerk van data stations die m
 Soorten netwerken: a) centraal, b) decentraal, c) distribueerd.
 ///
 
-Gefedereerd gegevensverwerking kan met een centraal netwerk (ook wel een _hub-and-spoke netwerk_ genoemd) of met een distribueerd netwerk (ook wel _peer-to-peer_ genoemd).[@rieke2020future]
+Gefedereerd informatieverwerking kan met een centraal netwerk (ook wel een _hub-and-spoke netwerk_ genoemd) of met een distribueerd netwerk (ook wel _peer-to-peer_ genoemd).[@rieke2020future]
 
 
 ![](../assets/fl-types.png)
 
 ///caption
-Gefedereerde gegevensverwerking met een a) centrale aggregatie server, en b) _peer-to-peer_ netwerk.
+Gefedereerde informatieverwerking met een a) centrale aggregatie server, en b) _peer-to-peer_ netwerk.
 ///
 
-De meest gebruikte vorm van gefedereerde gegevensverwerking gaat uit van een centrale server die de data stations aanstuurd. Het concept een _Federated Database System (FDBS)_ is 1985 beschreven en wordt al jaren gebruikt voor het uitvoeren van gefedereerde queries over meerdere databases.[@heimbigner1985federated] Het concept van gefedereerd leren zoals in 2017 door Google is geintroduceerd[@mcmahan2017communication] maakt ook gebruik van een centrale server.
+De meest gebruikte vorm van gefedereerde informatieverwerking gaat uit van een centrale server die de data stations aanstuurd. Het concept een _Federated Database System (FDBS)_ is 1985 beschreven en wordt al jaren gebruikt voor het uitvoeren van gefedereerde queries over meerdere databases.[@heimbigner1985federated] Het concept van gefedereerd leren zoals in 2017 door Google is geintroduceerd[@mcmahan2017communication] maakt ook gebruik van een centrale server.
 
 In de beschrijving van data stations gaan we dus uit van een centrale server, waarop de data gebruiker inlogt om toegang te krijgen tot de federatieve BVO gebruikt. Federatieve BVOs met een _peer-to-peer_ netwerk zijn expliciet niet in scope van de architectuur zoals hier beschreven is.
 
