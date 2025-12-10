@@ -67,10 +67,11 @@ Vaak ziet u in Nederland ook de term **ZIBs (Zorginformatiebouwstenen)**. ZIBs z
 
 Er zijn standaarden in de maak om tussen de informatiemodellen vertalingen te maken. Conform TEHDAS2 moet een BVO transformaties tussen deze informatiemodellen ondersteunen. Voor de komende jaren zullen deze verschillende informatiemodellen blijven bestaan, dus we moeten hier een werkbare oplossing voor aanbieden.
 
-**Standard** | **Purpose**
-:--|:--
-[FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data.
-[FHIRconnect](https://sevkohler.github.io/FHIRconnect-spec/build/site/FHIRconnect/v1.0.0/index.html) | **FHIRconnect** is a mapping specification for bidirectional mapping between openEHR and FHIR. The goal is to create a mapping language that communities can use to transform data between these standards. The markup language used to express the mappings is YAML.
+| Transformatie | Beschrijving |
+|:--|:--|
+| [FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data.
+| [FHIRconnect](https://sevkohler.github.io/FHIRconnect-spec/build/site/FHIRconnect/v1.0.0/index.html) | **FHIRconnect** is a mapping specification for bidirectional mapping between openEHR and FHIR. The goal is to create a mapping language that communities can use to transform data between these standards. The markup language used to express the mappings is YAML. |
+| [openEHR to OMOP](https://github.com/SevKohler/Eos) | The **EOS** research project has developed an ETL engine to transform openEHR into OMOP. |
 
 
 
