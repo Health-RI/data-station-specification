@@ -119,25 +119,27 @@ nav:
     - Data analyseren: proces/analyseren.md
     - Resultaten publiceren: proces/publiceren.md
   - Informatie:
-    - informatie/index.md
-    - Laag 5:
-      - informatie/laag-5/index.md
-      - Federatieve analyse: informatie/laag-5/federatieve-analyse.md
-      - Federatief leren: informatie/laag-5/federatief-leren.md
-      - Data pooling: informatie/laag-5/data-pooling.md
-    - Laag 4:
-      - informatie/laag-4/index.md
-      - catalogus: informatie/laag-4/catalogus.md
-      - DAAMS: informatie/laag-4/daams.md
-      - Federated processing hub: informatie/laag-4/fph.md
-    - Laag 3:
-      - informatie/laag-3/index.md
-      - Data station: informatie/laag-3/data-station.md
-      - Technische standaarden: informatie/laag-3/standaarden.md
+      - informatie/index.md
+      - informatie/syntactisch.md
+      - informatie/semantisch.md
   - Applicatie:
       - applicatie/index.md
+      - Laag 5:
+          - applicatie/laag-5/index.md
+          - Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
+          - Federatief leren: applicatie/laag-5/federatief-leren.md
+          - Data pooling: applicatie/laag-5/data-pooling.md
+      - Laag 4:
+          - applicatie/laag-4/index.md
+          - catalogus: applicatie/laag-4/catalogus.md
+          - DAAMS: applicatie/laag-4/daams.md
+          - Federated processing hub: applicatie/laag-4/fph.md
+      - Laag 3:
+          - applicatie/laag-3/index.md
+          - Data station: applicatie/laag-3/data-station.md
   - Infrastructuur:
       - infrastructuur/index.md
+      - infrastructuur/standaarden.md
   - Implementaties:
     - implementaties/index.md
     - PLUGIN:

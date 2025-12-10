@@ -17,10 +17,7 @@ The following are the standards that have been used or are in the process of bei
 
 ## Information standards
 
-**Standard** | **Purpose**
-:--|:--
-[FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data.
-[FHIRconnect](https://sevkohler.github.io/FHIRconnect-spec/build/site/FHIRconnect/v1.0.0/index.html) | **FHIRconnect** is a mapping specification for bidirectional mapping between openEHR and FHIR. The goal is to create a mapping language that communities can use to transform data between these standards. The markup language used to express the mappings is YAML.
+
 
 
 ## Open source application components
