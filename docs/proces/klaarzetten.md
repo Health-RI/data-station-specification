@@ -1,70 +1,54 @@
-# Data Station
+# Data klaarzetten voor verwerking (_data preparation_)
 
-Met een datastation maakt een dataleverancier data toegankelijk voor diverse toepassingen. Secundair gebruik is een van de toepassingen van het datastation. Nadat een vergunning is verleend voor toegang of nadat een verzoek om data is goedgekeurd, verstuurt de HDAB via het analyseportaal een verzoek aan het datastation om een dataproduct beschikbaar te stellen aan een datagebruiker.
+Het klaarzetten van de data begint als een datavergunning is afgegeven of een verzoek om data is goedgekeurd. De HDAB stuurt na het afgeven van de vergunning of goedkeuring een verzoek naar de dataleveranciers om de data klaar te zetten. Het klaarzetten gaat over het leveren van zowel persoonsgegevens als niet-persoonsgegevens. Het klaarzetten van de metadatabeschrijving van datasets voor de catalogus van gezondheidsgegevens is geen onderdeel van dit proces. Dit is onderdeel van het data zoeken en vinden.
 
-Een datagebruiker kan vanuit het analyseportaal een project starten en uitvoeren. De configuratie wordt vanuit het analyseportaal beheerd en verzonden naar het datastation. Wanneer het algoritme moet worden uitgevoerd, stuurt het analyseportaal een bericht naar het datastation met de opdracht tot uitvoering. Het image wordt vervolgens door het datastation gedownload en geplaatst in een beveiligde containeromgeving. De resultaten worden eerst gevalideerd en daarna vrijgegeven aan het analyseportaal.
+**Persoonsgegevens**
+Wanneer een gegevensvergunning is afgegeven of een verzoek is goedgekeurd, moeten de gezondheidsgegevens in elektronische vorm beschikbaar worden gesteld. Dit moet binnen drie maanden gebeuren, met de mogelijkheid om deze termijn één keer met nog eens drie maanden te verlengen als daar goede redenen voor zijn (Artikel 60(1) van de EHDS-verordening). De termijn start op het moment dat het HDAB de gegevenshouder informeert over de vergunning of het goedgekeurde verzoek, zoals beschreven in Artikel 63(3).
 
-Op basis van een verzoek om data wordt een vraag naar het datastation verzonden. De vraag wordt verwerkt en het antwoord wordt teruggezonden.
+In het geval van data pooling betekent het beschikbaar stellen dat de gezondheidsgegevens van verschillende dataleveranciers worden samengebracht en gecombineerd tot één dataset, die vervolgens wordt gebruikt voor de data-analyse in een beveiligde verwerkingsomgeving. Wanneer de analyse federatief wordt uitgevoerd, worden de gezondheidsgegevens niet centraal verzameld, maar ter verwerking beschikbaar gesteld binnen het eigen datastation van de dataleverancier.
+
+**Niet-Persoonsgegevens**
+Als een organisatie beschikt over niet-persoonlijke elektronische gezondheidsgegevens — zoals geanonimiseerde gegevens waarbij personen niet meer identificeerbaar zijn, synthetische datasets of gegevens die niet over individuen gaan — moeten deze beschikbaar worden gesteld via openbare databanken. Deze databanken moeten voldoen aan normen voor transparantie, goed bestuur en duurzame toegankelijkheid (Artikel 60(5)).
+
+Voor gezondheidsgegevens waarop intellectuele eigendomsrechten rusten of die bedrijfsgeheimen bevatten, geldt uiteraard dat deze niet in een openbare databank worden opgenomen (Artikel 52). Deze gegevens moeten echter wel beschikbaar worden gesteld voor secundair gebruik. 
+
+**Verplichting**
+Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren. In de usecases gebruiken we daarom bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier). 
+
+Een dataleverancier is verplicht om gegevens beschikbaar te stellen aan de HDAB op basis van een vergunning of een goedgekeurd verzoek. Overweging 80 van de EHDS benadrukt echter het principe: “breng de vragen naar de gegevens in plaats van de gegevens te verplaatsen”. Daarom wordt in de processen uitgegaan van een federatief netwerk waarbij data zoveel mogelijk bij de bron blijft. Dit betekent dat ‘beschikbaar stellen’ inhoudt dat waar mogelijk de gegevens bij de bron toegankelijk worden gemaakt voor de datagebruiker, zonder dat deze naar de HDAB worden getransporteerd.
+
+## Overzicht van de usecases
 
 ```puml
 @startuml
-!theme plain
+scale max 500 width
 
-actor "Federated Analytics Portal" as AP
-actor "Container Image Registry" as CIR
 actor "DAAMS" as DAAMS
 rectangle "Data Station" {
-  usecase "Request Data Extraction" as UC1
-  usecase “Execute Algorithm” as UC2
-  usecase “Process Data Request” as UC3
+  usecase "Maak data beschikbaar" as UC1
 }
 
 DAAMS --> UC1
-AP --> UC2
-AP --> UC3
-
-UC2 --> CIR
-UC2 --> DAAMS
 
 @enduml
 ```
-## Request Data Extraction
 
-**Goal**: DAAMS vraagt om de dataproducten te extraheren en beschikbaar te stellen aan een Health Data User.
+De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-**Primary Actor**: Data Access Application Management System (DAAMS) (systeem)
+## Maak data beschikbaar
 
+Het uitgangspunt is dat de dataleverancier alle datasets voor de catalogus van gezondheidsgegevens heeft beschreven. Het beschikbaar stellen van gegevens vindt plaats op basis van deze beschreven datasets.
 
-## Execute Algorithm
+Wanneer een datagebruiker (bijvoorbeeld een onderzoeker) een vergunning aanvraagt, kiest deze zowel de benodigde datasets als een specifiek cohort — een groep mensen met een gemeenschappelijk kenmerk — waarvoor het onderzoek wordt uitgevoerd. Op basis van deze keuzes maakt de dataleverancier een extract van de dataset en stelt dit beschikbaar aan de datagebruiker.
 
-**Goal**: Federated Analytics Portal vraagt om uitvoering van een algoritme en retournering van de resultaten
+Het verzoek aan de HDAB (Health Data Access Body) moet duidelijk specificeren op welke wijze de gegevens beschikbaar worden gesteld. Er zijn verschillende manieren mogelijk:
 
-**Primary Actor**: Federated Analytics Portal (systeem)
+1. Gefedereerde analyse: De data blijft bij de datahouder en wordt beschikbaar gesteld voor een gefedereerde analyse.
 
+2. Gefedereerd leren: De data blijft bij de datahouder en wordt beschikbaar gesteld voor het uitvoeren van gefedereerd leren (Federated Learning).
 
-## Process Data Request
+3. Datapooling (Gecombineerde analyse): De data wordt beschikbaar gesteld voor een analyse waarbij de gegevens van verschillende datahouders eerst gecombineerd moeten worden.
 
-**Goal**: Federated Analytics Portal verzoekt om data op basis van een vraag.
+In het geval van datapooling moet de data door de verschillende datahouders naar de HDAB worden verzonden, alwaar de combinatie van de datasets beschikbaar wordt gesteld.
 
-**Primary Actor**: Federated Analytics Portal (systeem)
-
-**Preconditions**: 
-
-
-**Main Success Scenario:**
-
-1. Federated Analytics Portal verzendt een bericht met het dataverzoek
-2. Het systeem registreert het ontvangen bericht in het logboek
-3. Het systeem verifieert en authenticeert de verzender van het bericht
-4. Het systeem verifieert het dataverzoek
-5. Het systeem voert de technische vraagstelling uit
-6. Het systeem stelt een bericht samen met het antwoord op de vraag
-7. Het systeem verzendt het bericht naar het Federated Analytics Portal
-8. Het systeem registreert het verzonden bericht in het logboek
-
-**Extension Points:**
-
-
-**Post-conditions**
-
-- De vraag is beantwoord en geretourneerd
+Voor een dataverzoek wordt géén extract gemaakt, maar wordt de dataset uitsluitend beschikbaar gesteld voor de ontvangst van het verzoek. Een dataverzoek houdt in dat de datagebruiker een vraag stelt, waarna de datahouder deze in een beveiligde verwerkingsomgeving uitvoert. Vervolgens wordt alleen het antwoord op de vraag teruggestuurd naar de datagebruiker. De dataset zelf wordt hierbij niet overgedragen.

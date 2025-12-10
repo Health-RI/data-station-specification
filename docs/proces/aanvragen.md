@@ -13,7 +13,7 @@ In de EHDS[^1] wordt onderscheid gemaakt tussen twee soorten aanvragen:
 
 Wanneer een aanvraag positief wordt beoordeeld, leidt dit tot het verstrekken van een datavergunning voor toegang tot de gegevens of een goedkeuring van het verzoek. In het diagram worden deze stappen weergegeven als "Verstrek datavergunning of goedkeuring aan verzoek" en "Vraag toegang tot gezondheidsdata aan."
 
-Op basis van een aanvraag kan een HDAB een gegevensvergunning afgeven, en op basis van een verzoek kan een goedkeuring worden gegegen. Zowel de gegevensvergunning als de goedkeuring is een elektronische attestering van attributen, in lijn met het Europese kader voor digitale identiteit[^2][^3] en de voorstellen voor Europese zakelijke wallets[^4]. Deze attestatie kan op enig moment ook worden ingetrokken als dat noodzakelijk is.
+Op basis van een aanvraag kan een HDAB een gegevensvergunning afgeven, en op basis van een verzoek kan een goedkeuring worden gegegen. Zowel de gegevensvergunning als de goedkeuring is een elektronische attestering van attributen (onze aanname en eis voor een federatieve werking van het stelsel, maar niet geborgd in THEDAS2), in lijn met het Europese kader voor digitale identiteit[^2][^3] en de voorstellen voor Europese zakelijke wallets[^4]. Deze attestatie kan op enig moment ook worden ingetrokken als dat noodzakelijk is.
 
 Om transparant (open en duidelijk) te zijn over hoe gezondheidsgegevens worden gebruikt, worden alle aanvragen direct gepubliceerd zodra ze binnenkomen. Dit betekent dat een aanvraag al openbaar wordt gemaakt voordat gecontroleerd is of deze compleet is.
 
@@ -25,8 +25,9 @@ In de usecase-methodiek kan een use case worden uitgebreid met een andere use ca
 
 ```puml
 @startuml
+scale max 1024 width
 
-actor "Nationaal Contactpunt voor e-Health(systeem)" as MSB
+actor "Nationaal Contactpunt voor e-Health\n(systeem)" as MSB
 actor "Aanvrager\n(mens)" as HDA_I
 actor "Aanvrager\n(mens)" as HDA_O
 actor "Behandelaar\n(mens)" as AC_I
@@ -59,7 +60,7 @@ UC1 .> UC2 : << extend >>
 @enduml
 ```
 
-De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven. 
+De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
 ## Vraag (toegang tot) gezondheidsdata aan
 
@@ -169,15 +170,8 @@ Op basis van artikel 63 van de EHDS moet de HDAB toezicht houden op de naleving 
 
 De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken (artikel 57), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 
-## Referenties
-
 [^1]: European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/
-
 [^2]: European Parliament and Council. (2014). Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2014/910
-
 [^3]: European Parliament and Council. (2024). Regulation (EU) 2024/1183 of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards the establishment of the European framework for digital identity. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2024/1183/
-
 [^4]: European Commission. (2025, November 19). Proposal for a Regulation on the establishment of European Business Wallets. https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets
-
 [^5]: European Commission. (2015, September 8). Commission implementing regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(3) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market. https://eur-lex.europa.eu/eli/reg_impl/2015/1502/
-

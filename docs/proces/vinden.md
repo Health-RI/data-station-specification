@@ -4,22 +4,21 @@ Het zoeken en vinden van data is de eerste stap in het hele proces. Een potenti�
 
 Het publiceren en beheren van een nationale catalogus van gezondheidsinformatie is een taak van de HDAB, zoals vastgelegd in artikel 57 van de EHDS[^1].
 
-In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Hiermee maken we een duidelijk onderscheid tussen de verantwoordelijkheden van een organisatie die data bezit (datahouder) en een partij die data levert (dataleverancier).
-
-Een datahouder kan zelf als dataleverancier optreden, maar kan er ook voor kiezen om een andere partij deze taak te laten uitvoeren, onder de verwerkingsverantwoordelijkheid van de datahouder.
+In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
 
 ## Overzicht van de usecases
 
 ```puml
 @startuml
+scale max 500 width
 
-actor "Time\n(ding)" as T
+actor "Tijd\n(ding)" as T
 actor "Dataleverancier\n(organisatie)" as DL_I
 actor "Dataleverancier\n(organisatie)" as DL_O
-actor "Nationaal Contactpunt voor e-Health(systeem)" as MSB
+actor "Nationaal Contactpunt voor e-Health\n(systeem)" as MSB
 actor "Publiek\n(mens of organisatie)" as B
 
-rectangle "Nationale Catalogus van Gezondheidsgegevens" {
+rectangle "Nationale catalogus van gezondheidsgegevens" {
   usecase "Meld\ndatacatalogus aan" as UC1
   usecase "Haal datacatalogus op\nvan dataleverancier" as UC2
   usecase "Zoek datasets" as UC3
@@ -35,9 +34,11 @@ UC2 --> MSB
 @enduml
 ```
 
+De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
+
 ## Meld datacatalogus aan
 
-Een dataleverancier stelt voor de datasets die zij beheert en die onder de categorieën van artikel 51 van de EHDS vallen, een datacatalogus op en publiceert deze. De leverancier zorgt er vervolgens voor dat deze catalogus voor alle deelnemers van de dataspace toegankelijk is via het datastation.
+Dataleveranciers stellen een datacatalogus op en publiceren deze voor minimaal de datasets die zij beheren en die onder de categorieën van artikel 51 van de EHDS vallen. De leverancier waarborgt vervolgens dat deze catalogus via het datastation toegankelijk is voor alle deelnemers van de dataspace.
 
 De dataleverancier hoeft de datacatalogus slechts één keer aan te melden. Daarbij geeft zij het adres (URL) op van het datastation waarop de catalogus is gepubliceerd. Deze stap is verplicht overeenkomstig artikel 60 van de EHDS. Minimaal 1x per jaar moet de dataleverancier 
 
