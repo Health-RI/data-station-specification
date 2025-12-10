@@ -1,4 +1,4 @@
-## Federated Analytics Portal
+# Data analyseren (_use of data_)
 
 Het portaal geeft een datagebruiker de mogelijkheid om een algoritme te registreren en te distribueren voor het uitvoeren van een gefedereerde analyse. De ontwikkeling van het algoritme vindt buiten het portaal plaats, waarbij de datagebruiker de gelegenheid heeft om testruns uit te voeren om het algoritme te verifiëren.
 
@@ -12,7 +12,7 @@ actor "Health Data User" as HDU
 actor "Data Station" as DS
 actor "Container Image Registry" as CIR
 actor "DAAMS" as DAAMS
-rectangle "Federated Analytics Portal" {
+rectangle "Federated processing hub" {
   usecase "Sign Up" as UC1
   usecase “Register Algorithm” as UC2
   usecase "Conduct Federated Analytics" as UC3
