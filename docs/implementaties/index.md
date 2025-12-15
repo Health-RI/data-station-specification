@@ -10,7 +10,7 @@
 
     ---
 
-    [:octicons-arrow-right-24: Bekijk](implementaties/PLUGIN/index.md)
+    [:octicons-arrow-right-24: Bekijk](./PLUGIN/index.md)
 
 -  ![](kik-v.svg)
 
@@ -20,7 +20,7 @@
 
     ---
 
-    [:octicons-arrow-right-24: Bekijk](implementaties/KIK-V/index.md)
+    [:octicons-arrow-right-24: Bekijk](./KIK-V/index.md)
 
 -   ![](datashield.webp)
 
@@ -30,6 +30,6 @@
 
     ---
 
-    [:octicons-arrow-right-24: Bekijk](implementaties/DataSHIELD/index.md)
+    [:octicons-arrow-right-24: Bekijk](./DataSHIELD/index.md)
 
 </div>
