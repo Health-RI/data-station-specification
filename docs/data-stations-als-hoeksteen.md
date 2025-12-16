@@ -1,4 +1,4 @@
-# Data stations als hoeksteen voor open, hybride BVOs
+# Data stations als hoeksteen voor een decentraal netwerk van BVOs
 
 ## Data stations en het zandloper model
 Het concept van **data stations** staat centraal in dit document dat een architectuur beschrijft van een landelijk dekkend decentraal netwerk van BVOs ten behoeve van secundair gebruik. Het concept van data stations kent vandaag de dag veel verschillende verschijningsvormen:
