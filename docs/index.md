@@ -50,11 +50,11 @@ Het werk aan het LDN is onderdeel van de implementatie van de European Health Da
 
 
 
-## Proces voor de ontwikkeling van deze specificatie
+## Scope van dit specificatie document
 
-De eerste versie van deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om secundair van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
+Dit specificatie document beschrijft een architectuur voor een landelijke gezondheidsdata-infrastructuur voor secundair gebruik. Het gaat uit van het concept van data stations als hoeksteen om syntactische en semantische interoperabiliteit te realiseren. Deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om secundair van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
 
-Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld hieronder.
+Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld onder aan elke pagina.
 
 ## Attributie
 

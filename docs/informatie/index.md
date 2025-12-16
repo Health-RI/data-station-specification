@@ -5,33 +5,38 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 * **Syntactische interoperabiliteit (de envelop & de grammatica):**
     Dit gaat over de **vorm** en de **structuur** van het bericht, zoals bijvoorbeeld een brief. Syntactische interoperabiliteit betekent dat de ontvanger de brief fysiek kan openen, herkent dat het een brief is, en dat zij de letters kan lezen (bijvoorbeeld het Latijnse alfabet). In de computerwereld betekent dit dat twee systemen elkaars bestanden technisch kunnen openen en de structuur herkennen (bijv. "hier staat de naam", "daar staat de datum").
-    > *Analogie:* Ik stuur jou een zin die grammaticaal perfect klopt: *"De blerf schrobt de grakker."* De ontvanger kan de zin lezen (syntax is correct), maar heeft geen idee wat de verzender ermee bedoelt te zeggen.
+    
+    !!! info "Analogie"
+    
+        Ik stuur jou een zin die grammaticaal perfect klopt: *"De blerf schrobt de grakker."* De ontvanger kan de zin lezen (syntax is correct), maar heeft geen idee wat de verzender ermee bedoelt te zeggen.
 
 * **Semantische interoperabiliteit (de betekenis):**
     Dit gaat over de **inhoud** en het **begrip**. Als de brief eenmaal is geopend, willen we begrijpen wat er staat. We moeten dezelfde taal spreken en dezelfde definities gebruiken. Als ik "bank" schrijf, moet de ontvanger weten of ik een zitmeubel bedoel of een geldinstelling.
-    > *Analogie:* Om *"De blerf schrobt de grakker"* te begrijpen, hebben we een woordenboek nodig dat uitlegt wat een 'blerf' is. Semantische interoperabiliteit zorgt ervoor dat de computer niet alleen "180" ziet staan, maar begrijpt dat dit een "bloeddruk" is in "mmHg".
+    
+    !!! info "Analogie"
+    
+        Om *"De blerf schrobt de grakker"* te begrijpen, hebben we een woordenboek nodig dat uitlegt wat een 'blerf' is. Semantische interoperabiliteit zorgt ervoor dat de computer niet alleen "180" ziet staan, maar begrijpt dat dit een "bloeddruk" is in "mmHg".
 
 ---
 
 ## Informatiemodellen voor syntactische interoperabiliteit
 Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge]. Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
 
-* **FHIR (Fast Healthcare Interoperability Resources): De Koerier**
+* **FHIR (Fast Healthcare Interoperability Resources)**
     * *Doel:* Snelle uitwisseling van gegevens tussen systemen (bijv. tussen een ziekenhuis en een app op je telefoon).
     * *Hoe het werkt:* Zie FHIR als een set kleine, gestandaardiseerde "bouwblokjes" of kaartjes. Er is een kaartje voor 'Patiënt', een kaartje voor 'Medicatie', etc. Het is heel flexibel en modern, vergelijkbaar met hoe internetpagina's werken.
     * *Syntactische rol:* Het bepaalt precies hoe het digitale berichtje eruitziet dat over de lijn gaat.
 
-* **openEHR: Het Archiefsysteem**
+* **openEHR**
     * *Doel:* Het langdurig en zeer gedetailleerd vastleggen van medische dossiers, onafhankelijk van leveranciers.
     * *Hoe het werkt:* openEHR werkt als een zeer geavanceerde LEGO-doos. Het definieert "archetypen" (sjablonen) voor elk mogelijk medisch concept (zoals een bloeddrukmeting) met maximale precisie.
     * *Syntactische rol:* Het biedt een strikte structuur voor **opslag**. Waar FHIR zich richt op het *versturen* van de brief, richt openEHR zich op hoe je het dossier in de kast *archiveert* zodat het over 20 jaar nog steeds leesbaar is.
 
-* **OMOP (Observational Medical Outcomes Partnership): De Onderzoekstabel**
+* **OMOP (Observational Medical Outcomes Partnership)**
     * *Doel:* Grootschalig wetenschappelijk onderzoek en data-analyse over meerdere ziekenhuizen of landen heen.
     * *Hoe het werkt:* OMOP dwingt data uit allerlei verschillende systemen in één universeel tabel-formaat (het Common Data Model). Het zet alle data om naar een standaardtaal zodat onderzoekers één vraag ("Hoeveel mensen kregen griep na medicijn X?") aan honderd verschillende databases kunnen stellen.
     * *Syntactische rol:* Het standaardiseert de database-structuur voor **analyse**.
 
----
 
 ## Thesauri en taxonomieen voor semantische interoperabiliteit
 Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invullen. Hiervoor gebruiken we **terminologiestelsels** (thesauri en taxonomieën). Dit zijn de officiële woordenboeken van de zorg. Zonder deze codes zijn de bovenstaande informatiemodellen lege hulzen.
@@ -52,12 +57,10 @@ Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invul
     * Dit is een classificatie (taxonomie) die vooral wordt gebruikt voor statistiek en facturatie ("declaraties"). Het groepeert ziektes in categorieën.
     * *Verschil met SNOMED:* SNOMED is heel gedetailleerd voor de *behandeling* ("breuk van het derde kootje van de linker wijsvinger"), terwijl ICD-10 vaak wat grover is voor de *administratie* ("vingerfractuur").
 
----
 
 ## Ontologieen
 
 TO DO: KIK-V uitleggen, ontologieen in b.v. genomics
-
 
 
 ## De Nederlandse context

@@ -1,24 +1,3 @@
-## Health data infrastructure as system of interest
-Het _system of interest_ van deze specificatie is de gezondheidsdata-infrastructuur voor secundair gebruik. Een dergelijk systeem bestaat uit verschillende elementen, zoals hieronder is weergegeven.
-
-![Schematisch overzicht van het proces van secundair gebruik van data. Bron: Health-RI.](health-ri-flowchart.jpg)
-
-!!! abstract "Definities"
-    De belangrijkste concepten van de gezondheidsinfrastructuur zijn gedefinieerd in de nieuwe Europease wetgeving, met name de European Health Data Space (EHDS) en de Data Governance Act (DGA).
-
-    === "**Beveiligde verwerkingsomgeving (BVO)**"
-        Een beveiligde omgeving waarin gezondheidsgegevens verwerkt kunnen worden voor bijvoorbeeld wetenschappelijk onderzoek. Dit kan een centrale BVO zijn, zoals bijvoorbeeld de [CBS Microdata omgeving](https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen), een gefedereerde BVO of een hybride combinatie daarvan. Dit focus van deze specificatie is dat data stations als hoeksteen kunnen fungeren voor een netwerk van BVOs.
-    
-    === "**Data gebruiker**" 
-        Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten.
-
-    === "**Data houder**"
-        Een data houder is een persoon of organisatie (publiek of privaat) die gezondheidsdata beheert. Veel organisaties vallen hieronder. Het gaat niet alleen om ziekenhuizen, maar bijvoorbeeld ook iedereen die producten of diensten ontwikkelt die bestemd zijn voor de zorgsector of gezondheidszorg, of ontwikkelaars van wellnessapps, of wetenschappelijk onderzoekers die zich bezighouden met de zorgsector of gezondheidszorg.
-
-    === "**Secundair gebruik**"
-        Het gebruik van elektronische gezondheidsgegevens voor andere doeleinden dan die waarvoor ze verzameld zijn. Het gebruiken van gezondheidsgegevens, die zijn vastgelegd voor de behandeling van een patiënt, voor wetenschappelijk onderzoek, is een voorbeeld van secundair gebruik.
-
-
 ## Data stations as foundational building blocks for a network of secure processing environments
 
 The hourglass model is a powerful framework for achieving widespread data interoperability by balancing flexibility with standardization. [cite_start]It draws inspiration from the architecture of the internet, which successfully connects countless different applications (the wide top) over numerous physical network technologies (the wide bottom) by forcing all traffic through a minimal, universal standard—the "waist" of the hourglass (TCP/IP)[cite: 19, 212, 248]. Similarly, a data interoperability hourglass allows for a wide variety of domain-specific data creation tools and analytical applications, while ensuring they can all connect through a common, machine-readable format.
