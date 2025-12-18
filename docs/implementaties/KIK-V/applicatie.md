@@ -27,3 +27,24 @@ Per december 2025 zijn er drie leveranciers van KIK-V data stations: [bince](htt
 
 ## KIK-Starter
 
+![type:video](https://youtu.be/rMiQUMycBe8?si=Oll-eQlkaYVg0GHW)
+
+TO DO: hier nog een korte beschrijving van KIK-started toevoegen
+
+
+## Credentialsplatform
+
+![](../../assets/kik-v-credentialsplatform.png)
+
+Niet iedere informatie-vragende partij kan en mag zomaar gebruik maken van ieder uitwisselprofiel of zomaar elke zorgaanbieder bevragen. Via het credentialsplatform ontvangen informatie-vragende partijen de juiste vraag-credentials, die hen toestaan om alleen de vragen te stellen die binnen het betreffende uitwisselprofiel zijn vastgelegd. Daarnaast geeft het credentialsplatform credentials uit aan deelnemende zorgaanbieders, zodat informatie-vragende partijen zeker weten dat ze de juiste zorgaanbieder benaderen.
+
+Het credentialsplatform is geen platform die zichtbaar is voor eindgebruikers. Het biedt de beheerorganisatie van KIK-V echter de mogelijkheid om ervoor te zorgen dat gebruikers van de KIK-starter alleen toegang hebben tot gegevens waarvoor zij op basis van hun rol gemachtigd zijn.
+
+Binnen het credentialsplatform worden per informatie-vragende partij rechten verleend. Het platform geeft daarbij sturing voor welk uitwisselprofiel (inclusief versienummer) en indicatoren informatie opgevraagd mag worden bij een datastation. Op het platform kan het volgende worden geselecteerd:
+
+− Subject DiD: het ID van de informatie-vragende partij
+− Uitwisselprofiel: het uitwisselprofiel
+− Versie: het versienummer van het uitwisselprofiel
+− Indicatoren: de indicatoren die berekend mogen worden binnen het uitwisselprofiel
+− Datum ingang: ingangsdatum vanaf wanneer de rechten verleend worden
+

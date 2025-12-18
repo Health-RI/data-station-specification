@@ -12,4 +12,10 @@ EHDS maakt onderscheidt tussen:
     - Een trusted data holder die netwerk van data stations beheerd kan direct deze vragen beantwoorden
     - DHD en Zorginstituut zijn _de facto_ dergelijke trusted data holders, net zoals dat IKNL, Vektis, RIVM en CBS dat zijn.
 
-    
+
+
+## Praktijk beproeving universeel data station
+
+In december 2023 tot april 2024 is onderzoek gedaan naar databeschikbaarheid via eenfederatief netwerk van datastations en herbruikbaarheid van KIK-V producten in deAchterhoek.
+
+![Alt text](<../appendix/KIK-V/praktijkbeproeving-universeel-datastation-met-hergebruik-van-kik-v-producten.pdf>){ type=application/pdf style="min-height:100vh;width:100%" }
