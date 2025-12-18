@@ -87,6 +87,7 @@ plugins:
             KIK-V: KIK-V
   - meta
   - mkdocs-pdf
+  - mkdocs-video
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
@@ -142,15 +143,20 @@ nav:
       - infrastructuur/standaarden.md
   - Implementaties:
     - implementaties/index.md
-    - PLUGIN:
-      - implementaties/PLUGIN/index.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
     - KIK-V:
       - implementaties/KIK-V/index.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
+      - Proces: implementaties/KIK-V/proces.md
+      - Informatie: implementaties/KIK-V/informatie.md
+      - Applicatie: implementaties/KIK-V/applicatie.md
+      - Infrastructuur: implementaties/KIK-V/infrastructuur.md
+    - PLUGIN:
+      - implementaties/PLUGIN/index.md
+      - Informatie: implementaties/PLUGIN/informatie.md
+      - Applicatie: implementaties/PLUGIN/applicatie.md
     - DataSHIELD:
       - implementaties/DataSHIELD/index.md
-      - Architectuur: implementaties/DataSHIELD/architectuur.md
+      - Informatie: implementaties/DataSHIELD/informatie.md
+      - Applicatie: implementaties/DataSHIELD/applicatie.md
   - Discussie:
     - discussie/index.md
     - Primair vs. secundair: discussie/primair-vs-secundair.md    
