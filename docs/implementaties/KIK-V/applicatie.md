@@ -27,7 +27,7 @@ Per december 2025 zijn er drie leveranciers van KIK-V data stations: [bince](htt
 
 ## KIK-Starter
 
-![type:video](https://youtu.be/rMiQUMycBe8?si=Oll-eQlkaYVg0GHW)
+![type:video](https://www.youtube.com/embed/rMiQUMycBe8?si=Ygu8BX2kWHzOM4Eu)
 
 TO DO: hier nog een korte beschrijving van KIK-started toevoegen
 

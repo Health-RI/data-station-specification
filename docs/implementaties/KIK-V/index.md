@@ -2,7 +2,7 @@
 
 ## Waarom KIK-V en wat kunnen we ermee?
 
-![type:video](https://youtu.be/e57qKcb1ZRw?si=aC4q1uhEfZspUjra)
+![type:video](https://www.youtube.com/embed/e57qKcb1ZRw?si=MBryg2leLNIA7pXt)
 
 In het programma KIK-V werken ketenpartijen in de verpleeghuiszorg samen aan het stroomlijnen van de informatie-uitwisseling, aan de hand van een afsprakenset. 
 
