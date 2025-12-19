@@ -6,7 +6,7 @@ Het publiceren en beheren van een Nationale catalogus van datasets is een taak v
 
 !!! info Gebruik van het concept dataleverancier
 
-    In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
+    In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en een organisatie die gegevens beschikbaar moet stellen (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
 
 ## Overzicht van de usecases
 
