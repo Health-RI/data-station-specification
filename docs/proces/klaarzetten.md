@@ -24,19 +24,11 @@ Een dataleverancier is verplicht om gegevens beschikbaar te stellen aan de HDAB 
 
 De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binnen het stelsel voor secundair gebruik heet dit systeem het Data Access Application Management System (DAAMS). Vanuit dit systeem verstuurt de HDAB een verzoek om data beschikbaar te stellen naar het datastation van een dataleverancier. het datastation is een systeem dat gebruikt wordt voor het beschikbaar stellen van data voor secundair gebruik.
 
-```puml
-@startuml
-scale max 150 width
+![](uc-klaarzetten.drawio.svg)
 
-actor "DAAMS\n(systeem)" as DAAMS
-rectangle "Data Station" {
-  usecase "Maak data beschikbaar" as UC1
-}
-
-DAAMS --> UC1
-
-@enduml
-```
+///caption
+**Figuur 5.** Overzicht van de usecases voor het klaarzetten van het extract uit de datasets.
+///
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 

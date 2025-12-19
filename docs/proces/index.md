@@ -5,7 +5,7 @@ Het _system of interest_ van deze specificatie is het proces en de daarbij benod
 ![](health-ri-flowchart.jpg)
 
 ///caption
-**Figuur 3.** Schematisch overzicht van het proces van secundair gebruik van data. Bron: Health-RI.
+**Figuur 1.** Schematisch overzicht van het proces van secundair gebruik van data. Bron: Health-RI.
 ///
 
 ## Het proces van secundair gebruik vanuit het perspectief van de data gebruiker

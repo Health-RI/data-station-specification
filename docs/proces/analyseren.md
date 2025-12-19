@@ -1,6 +1,6 @@
 # Data analyseren (_use of data_)
 
-Het proces start wanneer een datagebruiker een analyse wil uitvoeren op gegevens die door dataleveranciers beschikbaar zijn gesteld. Voor het uitvoeren van de analyse maakt de datagebruiker gebruik van een federated processing hub, of van een beveiligde verwerkingsomgeving (BVO) van de HDAB dan wel van een betrouwbare datahouder (artikel 72 van de EHDS). Waar in deze tekst wordt verwezen naar de BVO van de HDAB, wordt daarmee tevens de BVO van een betrouwbare datahouder bedoeld.
+Het proces start wanneer een datagebruiker een analyse wil uitvoeren op gegevens die door dataleveranciers beschikbaar zijn gesteld. Voor het uitvoeren van de analyse maakt de datagebruiker gebruik van een processing hub, of van een beveiligde verwerkingsomgeving (BVO) van de HDAB dan wel van een betrouwbare datahouder (artikel 72 van de EHDS). Waar in deze tekst wordt verwezen naar de BVO van de HDAB, wordt daarmee tevens de BVO van een betrouwbare datahouder bedoeld.
 
 De BVO van de HDAB wordt uitsluitend gebruikt wanneer de analyse niet gefedereerd kan worden uitgevoerd. Overweging 80 van de EHDS benadrukt daarbij het uitgangspunt: “_breng de vragen naar de gegevens in plaats van de gegevens te verplaatsen_”. Om die reden heeft een federatieve analyse de voorkeur.
 
@@ -10,54 +10,25 @@ Een analyse kan op drie manieren worden uitgevoerd:
 2. Gefedereerd leren: de data blijft bij de datahouder en wordt beschikbaar gesteld voor het uitvoeren van gefedereerd leren (federated learning).
 3. Datapooling (gecombineerde analyse): de data wordt beschikbaar gesteld voor een analyse waarbij gegevens van meerdere datahouders eerst worden samengevoegd.
 
-Naast het uitvoeren van een analyse kan binnen dit proces ook een verzoek om data worden gedaan. Uitgangspunt is dat een dergelijk dataverzoek gedurende de geldigheidstermijn van de goedkeuring meerdere malen kan worden uitgevoerd. In tegenstelling tot een analyse krijgt de datagebruiker bij een dataverzoek geen toegang tot de onderliggende data waarop de antwoorden zijn gebaseerd.
+Naast het uitvoeren van een analyse kan binnen dit proces ook een verzoek om data worden gedaan. Uitgangspunt is dat een dergelijk dataverzoek gedurende de geldigheidstermijn van de goedkeuring meerdere malen kan worden uitgevoerd. In tegenstelling tot een analyse krijgt de datagebruiker bij een dataverzoek geen toegang tot de onderliggende data waarop de antwoorden zijn gebaseerd. 
+
+Voordat deze activiteiten kunnen plaatsvinden, moet de HDAB eerst een vergunning of goedkeuring verlenen.
 
 ## Overzicht van de usecases
 
-Een Federated Processing Hub dient als centraal portaal. Datagebruikers kunnen via dit portaal analyses of leermodellen starten, de resultaten ontvangen en deze downloaden. De hub maakt het ook mogelijk om dataverzoeken naar de aangesloten datastations van dataleveranciers te sturen. Voordat deze activiteiten kunnen plaatsvinden, moet de HDAB eerst een vergunning of goedkeuring verlenen. De Federated Processing Hub is een systeem van de HDAB of van een betrouwbare datahouder. 
+De Processing Hub is een portaal van de HDAB en, afhankelijk van het beleid van de lidstaat, van één of meerdere betrouwbare datahouders. Samen vormen deze portalen een decentraal netwerk van Processing Hubs. Via dit portaal kunnen datagebruikers algoritmen starten voor het uitvoeren van analyses of het trainen van modellen. Na afloop van de uitvoering ontvangen zij de resultaten, die zij binnen de hub kunnen raadplegen en downloaden.
 
+Naast het uitvoeren van analyses biedt de Processing Hub de mogelijkheid om dataverzoeken te versturen naar de aangesloten datastations van dataleveranciers. Op deze manier fungeert de hub als schakel tussen datagebruikers en dataleveranciers binnen het netwerk.
 
-```puml
-@startuml
-scale max 400 width
+Voor analyses waarvoor datapooling noodzakelijk is, stelt de HDAB een Beveiligde Verwerkingsomgeving (BVO) beschikbaar. In deze situatie moeten data uit verschillende bronnen fysiek worden samengebracht om de analyse te kunnen uitvoeren. De BVO is geïntegreerd in de Processing Hub, waardoor deze hub zowel dient als portaal voor decentrale analyses — waarbij de data bij de leverancier blijft — als voor gecentraliseerde analyses in een beveiligde omgeving waarin gepoolde data wordt verwerkt. De wijze waarop gebruikers toegang krijgen tot de Processing Hub wordt vastgesteld en beheerd door de HDAB.
 
-actor "Datagebuiker\n(mens of organisatie)" as HDU
-actor "Data Station\n(systeem)" as DS
-actor "Algoritmeregister\n(systeem)" as CIR
-rectangle "Federated Processing Hub" {
-  usecase “Registreer algoritme” as UC1
-  usecase "Voer gefedereerd\neen analyse of leren uit" as UC2
-  usecase "Voer dataverzoek uit" as UC3
-}
+Het proces voor het verzamelen van data voor een gecentraliseerde analyse begint met een verzoek van de HDAB aan de dataleverancier, waarin expliciet wordt aangegeven dat het om datapooling gaat. Naar aanleiding van dit verzoek transporteert het datastation de gevraagde data naar de HDAB. Vervolgens zorgt de HDAB ervoor dat deze data veilig beschikbaar wordt gesteld binnen de BVO, zodat de analyse onder gecontroleerde en beveiligde omstandigheden kan worden uitgevoerd.
 
-HDU --> UC1
-HDU --> UC2
-HDU --> UC3
+![](uc-analyseren.drawio.svg)
 
-UC1 --> CIR
-UC2 --> DS
-UC3 --> DS
-
-@enduml
-```
-
-De HDAB stelt een Beveiligde Verwerkingsomgeving (BVO) ter beschikking voor het uitvoeren van analyses die datapooling vereisen. Dit houdt in dat de data van verschillende bronnen fysiek bij elkaar gebracht moet worden om de analyse te kunnen uitvoeren. De BVO is een ander systeem dan de Federated Processing Hub. Waar de Federated Processing Hub functioneert als een portaal voor decentrale analyses (de data blijft bij de leverancier), is de BVO een gecentraliseerde omgeving waar de gepoolde data wordt samengebracht voor verwerking. De manieren waarop gebruikers toegang krijgen tot de BVO worden bepaald en beheerd door de HDAB. 
-
-Het proces voor het verzamelen van de data voor de gecentraliseerde analyse start met een verzoek van de HDAB aan de dataleverancier, waarin duidelijk wordt aangegeven dat het om datapooling gaat. Als reactie op dit verzoek transporteert het datastation de gevraagde data naar de HDAB. De HDAB zorgt er vervolgens voor dat deze data veilig beschikbaar wordt gesteld binnen de BVO voor de analyse.
-
-```puml
-@startuml
-scale max 200 width
-
-actor "Datagebuiker\n(mens of organisatie)" as HDU
-rectangle "Beveiligde Verwerkingsomgeving" {
-  usecase "Voer gecentraliseerde analyse uit" as UC1
-}
-
-HDU --> UC1
-
-@enduml
-```
+///caption
+**Figuur 6.** Overzicht van de usecases voor het analyseren of leren van data.
+///
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
@@ -67,7 +38,7 @@ Een analyse of leerproces wordt uitgevoerd door een algoritme, bijvoorbeeld een 
 
 De datagebruiker ontwikkelt het algoritme, test het en registreert het vervolgens in een algoritmeregister. De voorwaarden voor registratie moeten nog worden uitgewerkt. Een mogelijke voorwaarde voor registratie is bijvoorbeeld het uitvoeren van een code review.
 
-## Voer gefedereerd een analyse of leren uit
+## Voer gefedereerd een algoritme uit
 
 Bij een gefedereerde analyse of gefedereerd leren blijft de data veilig op de locaties waar deze is opgeslagen. In plaats van de data te verplaatsen, wordt het algoritme verspreid naar de datastations waar de gegevens beschikbaar zijn. Elk datastation voert het algoritme uit en stuurt de resultaten vervolgens terug naar de centrale processing hub. Tijdens de geldigheidstermijn van de vergunning kan de datagebruiker deze analyses herhaald uitvoeren, bijvoorbeeld om meerdere testruns te doen. Een testrun is een proefuitvoering waarbij het doel niet het definitieve resultaat is, maar het controleren of de analyse technisch en inhoudelijk correct werkt.
 
@@ -85,8 +56,16 @@ Zodra het verzoek is goedgekeurd en vertaald, kan het daadwerkelijk worden uitge
 
 Toegang tot de processing hub is uitsluitend mogelijk voor datagebruikers die beschikken over een geldige goedkeuring van een dataverzoek. Om deze toegang te krijgen, moet de datagebruiker worden geauthenticeerd op een hoog betrouwbaarheidsniveau. Dit betekent dat de identiteit van de gebruiker zorgvuldig wordt vastgesteld en altijd gekoppeld is aan een geldige goedkeuring van het betreffende dataverzoek, zodat alleen bevoegde personen toegang hebben tot de gegevens.
 
-## Voer gecentraliseerde analyse uit
+## Stel data beschikbaar in centrale beveiligde verwerkingsomgeving
 
-De algoritmen voor een gecentraliseerde analyse worden uitgevoerd binnen de beveiligde verwerkingsomgeving (BVO) van de HDAB. Binnen deze omgeving stelt de HDAB de data beschikbaar waarvoor een vergunning is verkregen, zodat de datagebruiker deze kan gebruiken. Toegang tot de BVO vereist dat de datagebruiker zich aanmeldt met een hoog betrouwbaarheidsniveau en dat zijn of haar identiteit gekoppeld is aan een geldige vergunning. Op deze manier wordt gewaarborgd dat alleen bevoegde gebruikers toegang hebben tot de data en de analyses binnen de beveiligde omgeving kunnen uitvoeren.
+De HDAB heeft een verzoek gestuurd aan dataleveranciers om data beschikbaar te stellen voor het centraal uitvoeren van een algoritme in een Beveiligde Verwerkingsomgeving (BVO). Dit verzoek wordt ontvangen door het datastation van de dataleverancier en vervolgens doorgestuurd naar de Processing Hub.
+
+## Voer gecentraliseerd een algoritme uit
+
+De algoritmen voor een gecentraliseerde analyse of gefedereerd leren worden uitgevoerd binnen de beveiligde verwerkingsomgeving (BVO) van de HDAB. Binnen deze omgeving stelt de HDAB de data beschikbaar waarvoor een vergunning is verkregen, zodat de datagebruiker deze kan gebruiken. Toegang tot de BVO vereist dat de datagebruiker zich aanmeldt met een hoog betrouwbaarheidsniveau en dat zijn of haar identiteit gekoppeld is aan een geldige vergunning. Op deze manier wordt gewaarborgd dat alleen bevoegde gebruikers toegang hebben tot de data en de analyses binnen de beveiligde omgeving kunnen uitvoeren.
 
 Nadat de analyse is uitgevoerd, kan de datagebruiker de resultaten downloaden. Net als bij een gefedereerde analyse is hiervoor een vrijgaveproces nodig, waarbij de resultaten eerst worden gecontroleerd.
+
+## Geef resultaten vrij
+
+Voordat een datagebruiker de resultaten kan downloaden, moeten deze worden vrijgegeven door een beoordelaar van de HDAB (of van een betrouwbare datahouder).
