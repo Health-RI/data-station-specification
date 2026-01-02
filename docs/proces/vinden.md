@@ -1,56 +1,40 @@
 # Data zoeken en vinden (_data discovery_)
 
-Het zoeken en vinden van data is de eerste stap in het hele proces. Een potentiële aanvrager — zoals een onderzoeker of een beleidsdepartement — wil eerst ontdekken welke data over een bepaald onderwerp beschikbaar zijn en onder welke voorwaarden deze kunnen worden gebruikt. Dit zoeken gebeurt via een nationale catalogus van gezondheidsgegevens. Op Europees niveau worden deze nationale catalogi ontsloten via het centrale platform van HealthData@EU (hierna: het centrale platform).
+Het zoeken en vinden van data is de eerste stap in het hele proces. Een potentiële aanvrager — zoals een onderzoeker of een beleidsdepartement — wil eerst ontdekken welke data over een bepaald onderwerp beschikbaar zijn en onder welke voorwaarden deze kunnen worden gebruikt. Dit zoeken gebeurt via een Nationale catalogus van datasets. Op Europees niveau worden deze nationale catalogi ontsloten via het centrale platform van HealthData@EU (hierna: het centrale platform).
 
-Het publiceren en beheren van een nationale catalogus van gezondheidsinformatie is een taak van de HDAB, zoals vastgelegd in artikel 57 van de EHDS[^1].
+Het publiceren en beheren van een Nationale catalogus van datasets is een taak van de HDAB, zoals vastgelegd in artikel 57(1j) van de EHDS[^1].
 
-In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
+!!! info Gebruik van het concept dataleverancier
+
+    In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en een organisatie die gegevens beschikbaar moet stellen (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
 
 ## Overzicht van de usecases
 
-```puml
-@startuml
-scale max 500 width
+In het overzicht van de usecases wordt de actor tijd weergegeven om aan te geven dat deze usecase periodiek wordt uitgevoerd. Binnen het systeem van de Nationale catalogus voor datasets worden deze periodes gepland om de catalogus bij de dataleveranciers op te halen. De dataleveranciers hebben hiervoor een datastation ingericht waarop de catalogus is gepubliceerd.
 
-actor "Tijd\n(ding)" as T
-actor "Dataleverancier\n(organisatie)" as DL_I
-actor "Dataleverancier\n(organisatie)" as DL_O
-actor "Nationaal Contactpunt voor e-Health\n(systeem)" as MSB
-actor "Publiek\n(mens of organisatie)" as B
+![](uc-vinden.drawio.svg)
 
-rectangle "Nationale catalogus van gezondheidsgegevens" {
-  usecase "Meld\ndatacatalogus aan" as UC1
-  usecase "Haal datacatalogus op\nvan dataleverancier" as UC2
-  usecase "Zoek datasets" as UC3
-}
-
-DL_I --> UC1
-T --> UC2
-B --> UC3
-
-UC2 --> DL_O
-UC2 --> MSB
-
-@enduml
-```
+///caption
+**Figuur 2.** Overzicht van de usecases voor het zoeken en vinden van datasets.
+///
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-## Meld datacatalogus aan
+## Meld catalogus aan
 
-Dataleveranciers stellen een datacatalogus op en publiceren deze voor minimaal de datasets die zij beheren en die onder de categorieën van artikel 51 van de EHDS vallen. De leverancier waarborgt vervolgens dat deze catalogus via het datastation toegankelijk is voor alle deelnemers van de dataspace.
+Dataleveranciers stellen een catalogus op en publiceren deze voor minimaal de datasets die zij beheren en die onder de categorieën van artikel 51 van de EHDS vallen. De leverancier waarborgt vervolgens dat deze catalogus via het datastation toegankelijk is voor alle deelnemers van de dataspace.
 
-De dataleverancier hoeft de datacatalogus slechts één keer aan te melden. Daarbij geeft zij het adres (URL) op van het datastation waarop de catalogus is gepubliceerd. Deze stap is verplicht overeenkomstig artikel 60 van de EHDS. Minimaal 1x per jaar moet de dataleverancier 
+De dataleverancier hoeft de catalogus slechts één keer aan te melden. Daarbij geeft zij het adres (URL) op van het datastation waarop de catalogus is gepubliceerd. Deze stap is verplicht overeenkomstig artikel 60 van de EHDS. Minimaal 1x per jaar moet de dataleverancier 
 
-## Haal datacatalogus op van dataleverancier
+## Haal catalogus op van dataleverancier
 
-Het systeem controleert periodiek of de datacatalogus van de dataleverancier is bijgewerkt. Vervolgens wordt de datacatalogus gedownload en geïntegreerd in de publieke Nationale catalogus van gezondheidsgegevens. Alleen de datacatalogus van een dataleverancier die zich heeft aangemeld, wordt gecontroleerd.
+Het systeem controleert periodiek of de catalogus van de dataleverancier is bijgewerkt. Vervolgens wordt de catalogus gedownload en geïntegreerd in de publieke Nationale catalogus van datasets. Alleen de catalogus van een dataleverancier die zich heeft aangemeld, wordt gecontroleerd.
 
-Als beheerder van de Nationale catalogus van gezondheidsgegevens zal de HDAB de Nationale catalogus doorsturen naar het centrale platform van HealthData@EU. Dit gebeurt nadat de catalogi van alle aangemelde dataleveranciers zijn verwerkt. Het verzenden van de catalogus verloopt via het Nationale contactpunt.
+Als beheerder van de Nationale catalogus van datasets zal de HDAB de Nationale catalogus doorsturen naar het centrale platform van HealthData@EU. Dit gebeurt nadat de catalogi van alle aangemelde dataleveranciers zijn verwerkt. Het verzenden van de catalogus verloopt via het Nationale contactpunt.
 
 ## Zoek datasets
 
-Een onderzoeker of andere partij kan in de Nationale of Europese catalogus zoeken naar relevante datasets. In de beschrijving van de datasets moet voldoende informatie beschikbaar zijn om te bepalen welke data gebruikt kan worden voor een van de doelen zoals genoemd in artikel 53 van de EHDS. Het formaat van de datacatalogus is beschreven in HealthDCAT-AP Release 5[^2]. 
+Een onderzoeker of andere partij kan in de Nationale of Europese catalogus zoeken naar relevante datasets. In de beschrijving van de datasets moet voldoende informatie beschikbaar zijn om te bepalen welke data gebruikt kan worden voor een van de doelen zoals genoemd in artikel 53 van de EHDS. Het formaat van de catalogus is beschreven in HealthDCAT-AP Release 5[^2]. 
 
 ### Welke data wordt gepubliceerd in de catalogus
 

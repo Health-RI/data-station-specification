@@ -23,52 +23,21 @@ De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binn
 
 In de usecase-methodiek kan een use case worden uitgebreid met een andere use case. In het diagram is dit toegepast om duidelijk te maken dat het verstrekken van een datavergunning of goedkeuring voorafgaat aan het aanvragen van toegang tot gezondheidsgegevens. Dit betekent dat een aanvrager kan beginnen met de usecase voor het aanvragen van data, en dat deze vervolgens automatisch de stappen bevat die nodig zijn voor het verlenen van de vergunning of goedkeuring.
 
-```puml
-@startuml
-scale max 1024 width
+![](uc-aanvragen.drawio.svg)
 
-actor "Nationaal Contactpunt voor e-Health\n(systeem)" as MSB
-actor "Aanvrager\n(mens)" as HDA_I
-actor "Aanvrager\n(mens)" as HDA_O
-actor "Behandelaar\n(mens)" as AC_I
-actor "Behandelaar\n(mens)" as AC_O
-actor "Beoordelaar\n(mens)" as AA
-actor "Dataleverancier\n(organisatie)" as DL
-actor "Catalogus gezondheidsgegevens\n(systeem)" as DC
-actor "Publiek\n(mens of organisatie)" as P
-
-rectangle "Data Access Application Management System (DAAMS)" {
-  usecase "Vraag (toegang tot)\ngezondheidsdata aan" as UC1
-  usecase "Verstrek vergunning\nof goedkeuring" as UC2
-  usecase "Trek attestatie in" as UC3
-  usecase "Raadpleeg\ningediende aanvragen" as UC4
-}
-
-HDA_I --> UC1
-MSB --> UC2
-AC_I --> UC3
-P --> UC4
-
-UC1 --> DC
-UC2 --> DL
-UC2 --> AC_O
-UC2 --> AA
-UC2 --> HDA_O
-
-UC1 .> UC2 : << extend >>
-
-@enduml
-```
+///caption
+**Figuur 3.** Overzicht van de usecases voor het aanvragen van (toegang tot) gezondheidsgegevens.
+///
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-## Vraag (toegang tot) gezondheidsdata aan
+## Vraag (toegang tot) gezondheidsgegevens aan
 
 Een aanvrager, zoals een onderzoeker of een overheidsorganisatie, kan toegang vragen tot gezondheidsgegevens voor een specifiek doel. Om dit te doen moet de aanvrager eerst inloggen met een inlogmiddel dat in Nederland is erkend onder de Wet digitale overheid (Wdo). Voorbeelden zijn DigiD, de Europese Digital Identity Wallet (vanaf 2027) en eHerkenning voor organisaties.
 
 Na het inloggen kan de aanvrager de aanvraag invullen, tussentijds opslaan en later definitief indienen.
 
-De aanvrager moet tijdens het invullen van de aanvraag aangeven welke datasets nodig zijn. Dat betekent dat de aanvrager kiest tot welke datasets toegang wordt gevraagd, of – in het geval van een dataverzoek – uit welke datasets gegevens moeten worden geleverd. Alle informatie over beschikbare datasets staat in de Nationale catalogus voor gezondheidsgegevens. Deze catalogus kun je zien als een kaartenbak met alle datasets die gebruikt kunnen worden. Met behulp van een soort winkelwagen kan de aanvrager eenvoudig datasets selecteren en toevoegen aan de aanvraag.
+De aanvrager moet tijdens het invullen van de aanvraag aangeven welke datasets nodig zijn. Dat betekent dat de aanvrager kiest tot welke datasets toegang wordt gevraagd, of – in het geval van een dataverzoek – uit welke datasets gegevens moeten worden geleverd. Alle informatie over beschikbare datasets staat in de Nationale catalogus voor datasets. Deze catalogus kun je zien als een kaartenbak met alle datasets die gebruikt kunnen worden. Met behulp van een soort winkelwagen kan de aanvrager eenvoudig datasets selecteren en toevoegen aan de aanvraag.
 
 ## Verstrek vergunning of goedkeuring
 
@@ -81,53 +50,12 @@ In dit deel (de usecase) leggen we uit welke stappen doorlopen moeten worden om 
 
 De usecase start op het moment dat een aanvraag wordt ingediend, hetzij via het centrale platform of via het eigen systeem van de HDAB. Het onderstaande diagram illustreert de verschillende statussen die een aanvraag doorloopt vanaf het indienen tot het definitieve besluit: toewijzing, afwijzing of intrekking door de aanvrager. Elke status vertegenwoordigt een uitgevoerde processtap, welke in deze usecase beknopt wordt beschreven.
 
-```puml
-@startuml
+![](uc-aanvragen-state.drawio.svg)
 
-state "In Behandeling" as InBehandeling {
-    state "In onderzoek" as InOnderzoek
-    state "Ter Beoordeling" as TerBeoordeling
 
-    [*] --> InOnderzoek
-    InOnderzoek : Start vooronderzoek
-    InOnderzoek : Reactie ontvangen op verzoek
-    InOnderzoek --> Wachtend
-    InOnderzoek --> Volledig
-    InOnderzoek --> Onvolledig
-    Onvolledig --> [*]
-    Onvolledig : Besluit - aanvraag is onvolledig
-
-    Wachtend : Verzoek om reactie met aanvullende informatie
-    Wachtend --> InOnderzoek
-    Wachtend --> [*]
-
-    Volledig : Besluit - aanvraag is volledig
-    Volledig --> TerBeoordeling
-
-    TerBeoordeling : HDAB start beoordeling
-    TerBeoordeling --> [*]
-}
-InBehandeling : HDAB start behandeling aanvraag
-
-[*] --> Ingediend
-Ingediend : HDAB ontvangt aanvraag
-Ingediend --> InBehandeling
-InBehandeling --> Ingetrokken
-InBehandeling --> Afgewezen
-InBehandeling --> Toegewezen
-
-Afgewezen: Besluit - Reactie niet ontvangen
-Afgewezen: Besluit - Reactie is onvoldoende
-Afgewezen: Besluit - Beoordeling negatief
-Afgewezen --> [*]
-
-Ingetrokken : Aanvrager trekt aanvraag in
-Ingetrokken --> [*]
-Toegewezen --> [*]
-Toegewezen: Besluit - Beoordeling positief
-
-@enduml
-```
+///caption
+**Figuur 4.** Overzicht van de statusovergangen tijdens de behandelprocedure van de aanvraag.
+///
 
 ### Ontvangen en in behandeling nemen
 
@@ -171,7 +99,11 @@ Op basis van artikel 63 van de EHDS moet de HDAB toezicht houden op de naleving 
 De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken (artikel 57), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 
 [^1]: European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/
+
 [^2]: European Parliament and Council. (2014). Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2014/910
+
 [^3]: European Parliament and Council. (2024). Regulation (EU) 2024/1183 of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards the establishment of the European framework for digital identity. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2024/1183/
+
 [^4]: European Commission. (2025, November 19). Proposal for a Regulation on the establishment of European Business Wallets. https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets
+
 [^5]: European Commission. (2015, September 8). Commission implementing regulation (EU) 2015/1502 of 8 September 2015 on setting out minimum technical specifications and procedures for assurance levels for electronic identification means pursuant to Article 8(3) of Regulation (EU) No 910/2014 of the European Parliament and of the Council on electronic identification and trust services for electronic transactions in the internal market. https://eur-lex.europa.eu/eli/reg_impl/2015/1502/
