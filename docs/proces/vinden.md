@@ -26,7 +26,7 @@ Dataleveranciers stellen een catalogus op en publiceren deze voor minimaal de da
 
 De dataleverancier hoeft de catalogus slechts één keer aan te melden. Daarbij geeft zij het adres (URL) op van het datastation waarop de catalogus is gepubliceerd. Deze stap is verplicht overeenkomstig artikel 60 van de EHDS. Minimaal 1x per jaar moet de dataleverancier 
 
-## Haal catalogus op van dataleverancier
+## Update Nationale catalogus met catalogussen van dataleveranciers
 
 Het systeem controleert periodiek of de catalogus van de dataleverancier is bijgewerkt. Vervolgens wordt de catalogus gedownload en geïntegreerd in de publieke Nationale catalogus van datasets. Alleen de catalogus van een dataleverancier die zich heeft aangemeld, wordt gecontroleerd.
 
