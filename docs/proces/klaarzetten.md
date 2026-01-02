@@ -12,11 +12,11 @@ In het geval van data pooling betekent het beschikbaar stellen dat de gezondheid
 
 Als een organisatie beschikt over niet-persoonlijke elektronische gezondheidsgegevens — zoals geanonimiseerde gegevens waarbij personen niet meer identificeerbaar zijn, synthetische datasets of gegevens die niet over individuen gaan — moeten deze beschikbaar worden gesteld via openbare databanken. Deze databanken moeten voldoen aan normen voor transparantie, goed bestuur en duurzame toegankelijkheid (Artikel 60(5)).
 
-Voor gezondheidsgegevens waarop intellectuele eigendomsrechten rusten of die bedrijfsgeheimen bevatten, geldt uiteraard dat deze niet in een openbare databank worden opgenomen (Artikel 52). Deze gegevens moeten echter wel beschikbaar worden gesteld voor secundair gebruik. 
+Voor gezondheidsgegevens waarop intellectuele eigendomsrechten rusten of die bedrijfsgeheimen bevatten, geldt uiteraard dat deze niet in een openbare databank worden opgenomen (Artikel 52). Deze gegevens moeten echter wel beschikbaar worden gesteld voor secundair gebruik.
 
 **Verplichting**
 
-Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren. In de usecases gebruiken we daarom bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier). 
+Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren. In de usecases gebruiken we daarom bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en die van een partij die deze gegevens moet aanleveren (dataleverancier).
 
 Een dataleverancier is verplicht om gegevens beschikbaar te stellen aan de HDAB op basis van een vergunning of een goedgekeurd verzoek. Overweging 80 van de EHDS benadrukt echter het principe: “breng de vragen naar de gegevens in plaats van de gegevens te verplaatsen”. Daarom wordt in de processen uitgegaan van een federatief netwerk waarbij data zoveel mogelijk bij de bron blijft. Dit betekent dat ‘beschikbaar stellen’ inhoudt dat waar mogelijk de gegevens bij de bron toegankelijk worden gemaakt voor de datagebruiker, zonder dat deze naar de HDAB worden getransporteerd.
 
@@ -32,7 +32,7 @@ De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binn
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-## Maak data beschikbaar
+## Maak data beschikbaar voor secundair gebruik
 
 Het uitgangspunt is dat de dataleverancier alle datasets voor de catalogus van gezondheidsgegevens heeft beschreven. Het beschikbaar stellen van gegevens vindt plaats op basis van deze beschreven datasets.
 
