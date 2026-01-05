@@ -45,7 +45,7 @@ Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invul
     * Dit is het meest uitgebreide medische woordenboek ter wereld. Het bevat codes voor ziektes, symptomen, operaties, lichaamsdelen, etc.
     * *Voorbeeld:* In plaats van dat de dokter "longontsteking" typt (wat in een ander land "pneumonia" heet), slaat de computer de code `233604007` op. Elke computer wereldwijd weet: dit is een longontsteking.
 
-* **Loinc (Het Laboratoriumboek):**
+* **LOINC (Het Laboratoriumboek):**
     * Specifiek bedoeld voor lab-uitslagen en metingen.
     * *Voorbeeld:* Als er bloed wordt geprikt voor glucose, zorgt de LOINC-code ervoor dat het ene ziekenhuis precies weet dat het om "Glucose in serum, nuchter" gaat, en niet "Glucose in urine".
 
