@@ -125,46 +125,45 @@ nav:
       - informatie/index.md
       - informatie/syntactisch.md
       - informatie/semantisch.md
-  - Applicatie:
+  - 4. Applicatie:
       - applicatie/index.md
       - Laag 3:
           - applicatie/laag-3/index.md
-          - Data station: applicatie/laag-3/data-station.md
+          - 4.1. Data station: applicatie/laag-3/data-station.md
       - Laag 4:
           - applicatie/laag-4/index.md
-          - catalogus: applicatie/laag-4/catalogus.md
-          - DAAMS: applicatie/laag-4/daams.md
-          - Federated processing hub: applicatie/laag-4/fph.md
+          - 4.2. catalogus: applicatie/laag-4/catalogus.md
+          - 4.3. DAAMS: applicatie/laag-4/daams.md
+          - 4.4. Federated processing hub: applicatie/laag-4/fph.md
       - Laag 5:
           - applicatie/laag-5/index.md
-          - Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
-          - Federatief leren: applicatie/laag-5/federatief-leren.md
-          - Data pooling: applicatie/laag-5/data-pooling.md
-      
-  - Infrastructuur:
+          - 4.5. Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
+          - 4.6. Federatief leren: applicatie/laag-5/federatief-leren.md
+          - 4.7. Data pooling: applicatie/laag-5/data-pooling.md
+  - 5. Infrastructuur:
       - infrastructuur/index.md
       - infrastructuur/standaarden.md
-  - Implementaties:
+  - 6. Implementaties:
     - implementaties/index.md
-    - KIK-V:
+    - 6.1. KIK-V:
       - implementaties/KIK-V/index.md
       - Proces: implementaties/KIK-V/proces.md
       - Informatie: implementaties/KIK-V/informatie.md
       - Applicatie: implementaties/KIK-V/applicatie.md
       - Infrastructuur: implementaties/KIK-V/infrastructuur.md
-    - PLUGIN:
+    - 6.2. PLUGIN:
       - implementaties/PLUGIN/index.md
       - Informatie: implementaties/PLUGIN/informatie.md
       - Applicatie: implementaties/PLUGIN/applicatie.md
-    - DataSHIELD:
+    - 6.3. DataSHIELD:
       - implementaties/DataSHIELD/index.md
       - Informatie: implementaties/DataSHIELD/informatie.md
       - Applicatie: implementaties/DataSHIELD/applicatie.md
-  - Discussie:
+  - 7. Discussie:
     - discussie/index.md
-    - Primair vs. secundair: discussie/primair-vs-secundair.md    
-    - Permit vs. request: discussie/permit-vs-request.md
-    - Centraal vs. federatief: discussie/centraal-vs-federatief.md    
+    - 7.1. Primair vs. secundair: discussie/primair-vs-secundair.md    
+    - 7.2. Permit vs. request: discussie/permit-vs-request.md
+    - 7.3. Centraal vs. federatief: discussie/centraal-vs-federatief.md    
   - Appendix:
     - appendix/index.md
     - Archimate data space: https://health-ri.github.io/data-spaces-archimate/
