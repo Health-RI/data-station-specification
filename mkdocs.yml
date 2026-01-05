@@ -24,7 +24,7 @@ theme:
     - navigation.top
     - navigation.tracking
     # - navigation.path
-    - toc.integrate
+    # - toc.integrate
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
@@ -49,6 +49,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - tables
+  - toc:
+      title: Op deze pagina
 plugins:
   - bibtex:
       bib_file: "data-station-specification.bib"
@@ -114,30 +116,31 @@ nav:
     - leeswijzer.md
   - Proces:
     - proces/index.md
-    - Data zoeken en vinden: proces/vinden.md
-    - Data aanvragen: proces/aanvragen.md
-    - Data klaarzetten: proces/klaarzetten.md
-    - Data analyseren: proces/analyseren.md
-    - Resultaten publiceren: proces/publiceren.md
+    - 2.1. Data zoeken en vinden: proces/vinden.md
+    - 2.2. Data aanvragen: proces/aanvragen.md
+    - 2.3. Data klaarzetten: proces/klaarzetten.md
+    - 2.4. Data analyseren: proces/analyseren.md
+    - 2.5. Resultaten publiceren: proces/publiceren.md
   - Informatie:
       - informatie/index.md
       - informatie/syntactisch.md
       - informatie/semantisch.md
   - Applicatie:
       - applicatie/index.md
-      - Laag 5:
-          - applicatie/laag-5/index.md
-          - Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
-          - Federatief leren: applicatie/laag-5/federatief-leren.md
-          - Data pooling: applicatie/laag-5/data-pooling.md
+      - Laag 3:
+          - applicatie/laag-3/index.md
+          - Data station: applicatie/laag-3/data-station.md
       - Laag 4:
           - applicatie/laag-4/index.md
           - catalogus: applicatie/laag-4/catalogus.md
           - DAAMS: applicatie/laag-4/daams.md
           - Federated processing hub: applicatie/laag-4/fph.md
-      - Laag 3:
-          - applicatie/laag-3/index.md
-          - Data station: applicatie/laag-3/data-station.md
+      - Laag 5:
+          - applicatie/laag-5/index.md
+          - Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
+          - Federatief leren: applicatie/laag-5/federatief-leren.md
+          - Data pooling: applicatie/laag-5/data-pooling.md
+      
   - Infrastructuur:
       - infrastructuur/index.md
       - infrastructuur/standaarden.md

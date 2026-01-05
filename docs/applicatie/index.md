@@ -1,5 +1,5 @@
-# Perspectief: applicatie
-## Applicatiecomponenten voor gegevenswerking in gelaagde, decentrale netwerken
+# 4.0. Perspectief: applicatie
+## 4.0.1. Applicatiecomponenten voor gegevenswerking in gelaagde, decentrale netwerken
 
 Dit document richt zich op de uitwerking van een gelaagde, decentraal netwerk van BVOs, wat in TEHDAS2 een federatieve BVO wordt genoemd (_federated SPE_). De EHDS is in essentie federatief ontworpen: we willen uiteindelijk gezondheidsgegevens uit heel Europa kunnen aanwenden voor secundair gebruik. Tegelijkertijd willen we dat gezondheidsgegevens zoveel mogelijk binnen de landsgrenzen blijven. Om dit mogelijk te maken is **ten minste een architectuur nodig voor decentrale gegevensverwerking tussen landen**. Hierin is voorzien dat landelijke knooppunten gezamenlijk analyses kunnen uitvoeren, onder regie van een centraal knooppunt op Europees niveau. Deze aanpak is uitgewerkt in [TEHDAS2 M7.4](../appendix/tehdas2-spe.md) hoofdstuk 5 (_SPE federation_ p. 42) en hoofdstuk 6 (_Implementing federated computing_ p. 50). In dit document passen wij dezelfde ontwerpprincipes toe om **binnen een land een LDN voor decentrale informatieverwerking** mogelijk te maken.
 
@@ -29,7 +29,7 @@ In de beschrijving van data stations gaan we dus uit van een centrale server, wa
 
 Daarnaast moet het in de context van de EHDS mogelijk zijn om te werken met _federations of federations_. De decentrale BVO die we voor ogen hebben kent een gelaagdheid van knooppunten. Denk bijvoorbeeld aan een zorginstelling die participeert in een regionale federatieve BVO, waarbij vervolgens verschillende regionale knooppunten opgaan in een landelijke federatief netwerk. Daarbovenop kunnen landelijke knooppunten onderdeel uitmaken van een Europese federatie. In de uitwerking van de architectuur gaan we daarom uit van een _decentraal netwerk_ dat een gelaagdheid kent van meerdere netwerken van BVOs (netwerk type b in bovenstaande illustratie).
 
-## De componenten van een decentraal netwerk van BVOs
+## 4.0.2. De componenten van een decentraal netwerk van BVOs
 
 In de uitwerking van de architectuur voor een decentraal netwerk van BVOs staan **het data station** en de **federated processing hub (FPH)** centraal. Deze twee applicatie componenten realiseren gezamenlijk de functionaliteit die nodig is in een decentrale BVO. In relatie tot het FAIR zandloper model, is het data station onderdeel van laag 3, terwijl de FPH onderdeel is van laag 4. Conceptueel plaatsen we de verschillende vormen van gefedereerde gegevensbewerking in laag 5. Voortbouwend op TEHDAS2 maken we onderscheid tussen drie (arche)typen:
 

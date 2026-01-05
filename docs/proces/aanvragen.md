@@ -1,4 +1,4 @@
-# Data aanvragen (_data access_)
+# 2.2. Data aanvragen (_data access_)
 
 Het aanvraagproces start op het moment dat de benodigde gezondheidsgegevens gevonden zijn in de Europese of nationale gezondheidsdatacatalogus.
 
@@ -17,7 +17,7 @@ Op basis van een aanvraag kan een HDAB een gegevensvergunning afgeven, en op bas
 
 Om transparant (open en duidelijk) te zijn over hoe gezondheidsgegevens worden gebruikt, worden alle aanvragen direct gepubliceerd zodra ze binnenkomen. Dit betekent dat een aanvraag al openbaar wordt gemaakt voordat gecontroleerd is of deze compleet is.
 
-## Overzicht van de usecases
+## 2.2.1 Overzicht van de usecases
 
 De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binnen het stelsel voor secundair gebruik heet dit systeem het Data Access Application Management System (DAAMS). In het diagram hieronder staan de belangrijkste usecases van dit systeem. De naam van elke usecase geeft aan wat een gebruiker met het systeem kan doen.
 
@@ -31,7 +31,7 @@ In de usecase-methodiek kan een use case worden uitgebreid met een andere use ca
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-## Vraag (toegang tot) gezondheidsgegevens aan
+## 2.2.2. Vraag (toegang tot) gezondheidsgegevens aan
 
 Een aanvrager, zoals een onderzoeker of een overheidsorganisatie, kan toegang vragen tot gezondheidsgegevens voor een specifiek doel. Om dit te doen moet de aanvrager eerst inloggen met een inlogmiddel dat in Nederland is erkend onder de Wet digitale overheid (Wdo). Voorbeelden zijn DigiD, de Europese Digital Identity Wallet (vanaf 2027) en eHerkenning voor organisaties.
 
@@ -39,7 +39,7 @@ Na het inloggen kan de aanvrager de aanvraag invullen, tussentijds opslaan en la
 
 De aanvrager moet tijdens het invullen van de aanvraag aangeven welke datasets nodig zijn. Dat betekent dat de aanvrager kiest tot welke datasets toegang wordt gevraagd, of – in het geval van een dataverzoek – uit welke datasets gegevens moeten worden geleverd. Alle informatie over beschikbare datasets staat in de Nationale catalogus voor datasets. Deze catalogus kun je zien als een kaartenbak met alle datasets die gebruikt kunnen worden. Met behulp van een soort winkelwagen kan de aanvrager eenvoudig datasets selecteren en toevoegen aan de aanvraag.
 
-## Verstrek vergunning of goedkeuring
+## 2.2.3. Verstrek vergunning of goedkeuring
 
 De HDAB geeft een vergunning of een goedkeuring op een aanvraag. Welke van de twee het wordt, hangt af van het soort aanvraag dat is ingediend:
 
@@ -57,7 +57,7 @@ De usecase start op het moment dat een aanvraag wordt ingediend, hetzij via het 
 **Figuur 4.** Overzicht van de statusovergangen tijdens de behandelprocedure van de aanvraag.
 ///
 
-### Ontvangen en in behandeling nemen
+### 2.2.3.1. Ontvangen en in behandeling nemen
 
 Zodra een aanvraag is ontvangen, start de behandeling. Aanvragen van overheidsinstanties worden sneller afgehandeld via een versneld proces. Voor alle aanvragen gelden daarnaast wettelijke maximale termijnen, zoals vastgelegd in de artikelen 68 en 69 van de EHDS:
 
@@ -66,27 +66,27 @@ Zodra een aanvraag is ontvangen, start de behandeling. Aanvragen van overheidsin
 
 Daarom begint de behandeling altijd met een controle of de aanvraag compleet is, voordat de inhoudelijke beoordeling start.
 
-### Onderzoeken
+### 2.2.3.2. Onderzoeken
 
 Wanneer een aanvraag in behandeling wordt genomen, wordt deze als eerste gecontroleerd op volledigheid. Als er informatie ontbreekt, krijgt de aanvrager de kans om de aanvraag aan te vullen. Als de aanvrager dit niet op tijd doet, kan de aanvraag worden afgewezen. Zodra de aanvraag compleet is, kan de inhoudelijke beoordeling van start gaan.
 
-### Beoordelen
+### 2.2.3.3. Beoordelen
 
 Tijdens de inhoudelijke beoordeling wordt gekeken of de aanvraag voldoet aan de gestelde eisen. Ook wordt onderzocht of de aanvraag technisch uitvoerbaar is. Hiervoor wordt de aanvraag doorgestuurd naar de dataleveranciers, die beoordelen of de gevraagde gegevens geleverd kunnen worden. De dataleveranciers maken eveneens een kostenraming voor de verwerking en levering.
 
 Als de aanvraag haalbaar is, gaat deze door naar de volgende stap. Soms wordt een aanvraag gedeeltelijk goedgekeurd of aangepast naar een eenvoudiger gegevensverzoek, bijvoorbeeld wanneer anonieme statistische gegevens al voldoende zijn.
 
-### Verstrekken kostenindicatie
+### 2.2.3.4. Verstrekken kostenindicatie
 
 Zodra duidelijk is welke gegevens geleverd kunnen worden, worden de totale kosten berekend, inclusief de kosten van de dataleveranciers en die van de HDAB. De aanvrager ontvangt een overzicht van deze kosten en moet aangeven of hij hiermee akkoord gaat. Bij akkoord gaat de aanvraag verder. Als de aanvrager niet reageert of de kosten niet accepteert, kan de aanvraag worden beëindigd.
 
-### Verstrekken attestatie (vergunning of goedkeuring)
+### 2.2.3.5. Verstrekken attestatie (vergunning of goedkeuring)
 
 Wanneer een aanvrager de kosten accepteert, kan er een vergunning of goedkeuring worden verleend. Het verkrijgen van deze acceptatie vraagt om vertrouwen, dat geborgd wordt door de Europese verordening voor digitale identiteit en vertrouwensdiensten. Deze verordening onderscheidt drie betrouwbaarheidsniveaus[^5]: laag, substantieel en hoog.
 
 Voor bijzondere persoonsgegevens, zoals medische dossiergegevens, is een hoog betrouwbaarheidsniveau vereist om een veilige beschikbaarstelling te garanderen. Daarom moeten zowel de vergunning als de goedkeuring op hoog niveau worden verleend en op een betrouwbare manier worden gepresenteerd aan de partijen die verantwoordelijk zijn voor veilige toegang tot en verwerking van de data, zoals de dataleveranciers en de aanbieders van beveiligde verwerkingsomgevingen.
 
-### Versturen verzoek
+### 2.2.3.6. Versturen verzoek
 
 Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de dataleveranciers gestuurd om de gevraagde gegevens beschikbaar te stellen aan de aanvrager, hetzij binnen een beveiligde verwerkingsomgeving, hetzij door de gegevens zoals gevraagd uit het verzoek te leveren.
 
@@ -94,7 +94,7 @@ Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de datalev
 
 Op basis van artikel 63 van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken.
 
-## Raadpleeg ingediende aanvragen
+## 2.2.4. Raadpleeg ingediende aanvragen
 
 De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken (artikel 57), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 

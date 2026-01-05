@@ -1,4 +1,4 @@
-# Data klaarzetten voor verwerking (_data preparation_)
+# 2.3. Data klaarzetten voor verwerking (_data preparation_)
 
 Het klaarzetten van de data begint als een datavergunning is afgegeven of een verzoek om data is goedgekeurd. De HDAB stuurt na het afgeven van de vergunning of goedkeuring een verzoek naar de dataleveranciers om de data klaar te zetten. Het klaarzetten gaat over het leveren van zowel persoonsgegevens als niet-persoonsgegevens. Het klaarzetten van de metadatabeschrijving van datasets voor de catalogus van gezondheidsgegevens is geen onderdeel van dit proces. Dit is onderdeel van het data zoeken en vinden.
 
@@ -20,7 +20,7 @@ Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders gee
 
 Een dataleverancier is verplicht om gegevens beschikbaar te stellen aan de HDAB op basis van een vergunning of een goedgekeurd verzoek. Overweging 80 van de EHDS benadrukt echter het principe: “breng de vragen naar de gegevens in plaats van de gegevens te verplaatsen”. Daarom wordt in de processen uitgegaan van een federatief netwerk waarbij data zoveel mogelijk bij de bron blijft. Dit betekent dat ‘beschikbaar stellen’ inhoudt dat waar mogelijk de gegevens bij de bron toegankelijk worden gemaakt voor de datagebruiker, zonder dat deze naar de HDAB worden getransporteerd.
 
-## Overzicht van de usecases
+## 2.3.1. Overzicht van de usecases
 
 De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binnen het stelsel voor secundair gebruik heet dit systeem het Data Access Application Management System (DAAMS). Vanuit dit systeem verstuurt de HDAB een verzoek om data beschikbaar te stellen naar het datastation van een dataleverancier. het datastation is een systeem dat gebruikt wordt voor het beschikbaar stellen van data voor secundair gebruik.
 
@@ -32,7 +32,7 @@ De HDAB gebruikt een systeem voor het ontvangen en verwerken van aanvragen. Binn
 
 De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
-## Maak data beschikbaar voor secundair gebruik
+## 2.3.2. Maak data beschikbaar voor secundair gebruik
 
 Het uitgangspunt is dat de dataleverancier alle datasets voor de catalogus van gezondheidsgegevens heeft beschreven. Het beschikbaar stellen van gegevens vindt plaats op basis van deze beschreven datasets.
 

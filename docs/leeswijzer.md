@@ -1,7 +1,6 @@
-# Vraagestelling en leeswijzer
+# 1.3. Vraagestelling en leeswijzer
 
-
-## Centrale ontwerp- en onderzoeksvragen
+## 1.3.1. Centrale ontwerp- en onderzoeksvragen
 
 In dit document wordt de architectuur van een decentraal netwerk van BVOs uitgewerkt dat kan worden implementeerd als onderdeel van een landelijk dekkend basisinfrastructuur voor voor secundair gebruik van data. Daarbij staan de volgende ontwerp- en onderzoeksvragen centraal:
 
@@ -14,7 +13,7 @@ In dit document wordt de architectuur van een decentraal netwerk van BVOs uitgew
     - PLUGIN/vantage6 als referentie implementatie van data stations voor i) gefedereerde analyse, ii) gefedereerd leren en iii) data pooling.
 
 
-## Leeswijzer
+## 1.3.2. Leeswijzer
 
 Dit document is als volgt opgesteld. In de sectie **Proces** wordt allereerst de basisprocessen van secundair gebruik beschreven, van data aanvraag tot data gebruik en publicaties. Daarbij gebruiken we de [Use Case 3.0](https://www.ivarjacobson.com/files/use-case_3.0_v1.0.pdf) modeleringstechniek. De relevante concepten binnen de architectuur van een data space worden toegelicht, om daarmee de context van een data station helder in beeld te hebben. Waar nodig wordt verwezen naar een [Archimate model van de data space](https://health-ri.github.io/data-spaces-archimate/). Het hoofdstuk over **Informatie** gaat in op semantische en syntactische interoperabiliteit als randvoorwaarde voor het (her)gebruik van gezondheidsgegevens. De sectie **Applicatie** gaat in meer detail in op de verschillende applicatie componenten van een decentrale en hybride BVO en het data station _an sich_. We volgen hierin het FAIR zandloper model als definitie van de lagen. Daarbij worden de specificaties van TEHDAS2 worden als startpunt gebruikt en nader uitgewerkt. De sectie **Infrastructuur** beschrijft vervolgens de fysieke technologie en standaarden die relevant zijn voor het realiseren van de applicatiecomponenten.
 

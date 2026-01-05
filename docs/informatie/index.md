@@ -1,5 +1,5 @@
-#  Perspectief: informatie
-## Semantische en syntactische interoperabiliteit als randvoorwaarde voor (her)gebruik van gezondheidsgegevens
+#  3.0. Perspectief: informatie
+## 3.0.1. Semantische en syntactische interoperabiliteit als randvoorwaarde voor (her)gebruik van gezondheidsgegevens
 
 Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en betekenis (semantiek) vergelijkbaar en uitwisselbaar zijn. Deze twee vormen van interoperabiliteit zijn essentiele randvoorwaarden. Om te begrijpen hoe computers met elkaar "praten", kunnen we dit vergelijken met hoe mensen communiceren.
 
@@ -19,7 +19,7 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 ---
 
-## Informatiemodellen voor syntactische interoperabiliteit
+## 3.0.2. Informatiemodellen voor syntactische interoperabiliteit
 Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge]. Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
 
 * **FHIR (Fast Healthcare Interoperability Resources)**
@@ -38,7 +38,7 @@ Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **stru
     * *Syntactische rol:* Het standaardiseert de database-structuur voor **analyse**.
 
 
-## Thesauri en taxonomieen voor semantische interoperabiliteit
+## 3.0.3. Thesauri en taxonomieen voor semantische interoperabiliteit
 Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invullen. Hiervoor gebruiken we **terminologiestelsels** (thesauri en taxonomieën). Dit zijn de officiële woordenboeken van de zorg. Zonder deze codes zijn de bovenstaande informatiemodellen lege hulzen.
 
 * **SNOMED CT (De Medische Encyclopedie):**
@@ -58,26 +58,23 @@ Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invul
     * *Verschil met SNOMED:* SNOMED is heel gedetailleerd voor de *behandeling* ("breuk van het derde kootje van de linker wijsvinger"), terwijl ICD-10 vaak wat grover is voor de *administratie* ("vingerfractuur").
 
 
-## Ontologieen
+## 3.0.4. Ontologieen
 
 TO DO: KIK-V uitleggen, ontologieen in b.v. genomics
 
 
-## De Nederlandse context
+## 3.0.5. De Nederlandse context
 Vaak ziet u in Nederland ook de term **ZIBs (Zorginformatiebouwstenen)**. ZIBs zijn de Nederlandse "afspraken" over hoe we een medisch concept (zoals 'Brandwond') definiëren. Een ZIB gebruikt **SNOMED** voor de betekenis en kan vervolgens technisch worden verpakt in **FHIR** (voor een app) of **openEHR** (voor het dossier).
 
-## Wat leggen we uit
+## 3.0.6. Wat leggen we uit
 
 Er zijn standaarden in de maak om tussen de informatiemodellen vertalingen te maken. Conform TEHDAS2 moet een BVO transformaties tussen deze informatiemodellen ondersteunen. Voor de komende jaren zullen deze verschillende informatiemodellen blijven bestaan, dus we moeten hier een werkbare oplossing voor aanbieden.
 
 | Transformatie | Beschrijving |
 |:--|:--|
-| [FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data.
+| [FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data. |
 | [FHIRconnect](https://sevkohler.github.io/FHIRconnect-spec/build/site/FHIRconnect/v1.0.0/index.html) | **FHIRconnect** is a mapping specification for bidirectional mapping between openEHR and FHIR. The goal is to create a mapping language that communities can use to transform data between these standards. The markup language used to express the mappings is YAML. |
 | [openEHR to OMOP](https://github.com/SevKohler/Eos) | The **EOS** research project has developed an ETL engine to transform openEHR into OMOP. |
-
-
-
 
 
 Er zijn reeds verschillende thesauri beschikbaar, maar die worden nog te weinig gebruikt. Er zijn ook al vertalingen tussen verschillende thesauri

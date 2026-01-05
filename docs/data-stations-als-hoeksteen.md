@@ -1,6 +1,6 @@
-# Data stations als hoeksteen voor een decentraal netwerk van BVOs
+# 1.2. Data stations als hoeksteen voor een decentraal netwerk van BVOs
 
-## Data stations en het zandloper model
+## 1.2.1. Data stations en het zandloper model
 Het concept van **data stations** staat centraal in dit document dat een architectuur beschrijft van een landelijk dekkend decentraal netwerk van BVOs ten behoeve van secundair gebruik. Het concept van data stations kent vandaag de dag veel verschillende verschijningsvormen:
 
 - Het originele concept van PHT omschrijft data stations in de context van federated learning[@choudhury2025advancing], wat vervolgens is gegeneraliseerd om andere vormen van gefedereerde berekeningen te omvatten[@boninodasilvasantos2022personal].
@@ -28,17 +28,17 @@ Ondanks de vele verschijningsvormen zien we meer overeenkomsten dan verschillen 
 
     Alhoewel de principes oorspronkelijk zijn geformuleerd voor wetenschappelijke data, worden ze ook toegepast voor secundair gebruik van data die routematig wordt vastgelegd in bijvoorbeeld het reguliere zorgproces.
 
-## De vijf lagen van het zandloper model als denkraam
+## 1.2.2. De vijf lagen van het zandloper model als denkraam
 
 Het zandloper model gaat uit van vijf lagen die de data moeten laten stromen vanaf het eerste moment dat ze worden vastgelegd door de data houder (laag 1) tot en met het uiteindelijke secundair gebruik door de data gebruiker (laag 5).
 
-### Het FAIRificatie proces in de eerste twee lagen
+### 1.2.2.1. Het FAIRificatie proces in de eerste twee lagen
 
 In **laag 1** wordt de data gecreëerd. Diegene die verantwoordelijk is voor het vastleggen van de data heeft hierin maximale vrijheid. Het vastleggen van de data kan gebeuren door een onderzoeker, die handmatig data verzameld, codeert en vastlegd als een onderzoeksdataset, maar kan ook worden gedaan in het primaire proces van de zorg waarbij allerlei zorgverleners in verschillende zorginformatiesystemen data vastleggen.
 
 In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het is een soort trechter waar met gebruik van allerlei databewerkings tools de data en metadata worden omgezet naar gestructureerde formats die machine-leesbaar zijn en gebruik maken van gestandaardiseerde terminologie en informatieschemas.
 
-### Het data station in het hart van de zandloper
+### 1.2.2.2. Het data station in het hart van de zandloper
 
 **Laag 3 is het hart van de zandloper** en fungeert als een brug tussen de twee onderste en twee bovenste lagen. In deze laag worden de data en metadata (1) klaargezet voor gebruik en FAIRificatie proces en (2) verbonden aan het netwerk van beveiligde verwerkingsomgevingen. Deze laag is het meest cruciale om interoperabiliteit te realiseren. Daarvoor wordt een set van minimale, open en technologie-neutrale standaarden gedefinieert. Het idee van een data station sluit aan bij het concept van data producten in de DSSC.
 
@@ -53,7 +53,7 @@ In **laag 2** wordt een begin gemaakt met het standaardiseren van de data. Het i
     ![Data product](./assets/data-product.png)
 
 
-### FAIR orchestratie
+### 1.2.2.3. FAIR orchestratie
 
 In **laag 4** wordt het data station opgenomen in een netwerk om de data te verwerken en te verbruiken. Denk hierbij aan generieke voorzieningen zoals een catalogus en zoekfunctionaliteit (welke data stations hebben welke data?), het integreren wat data uit verschillende data stations en het uitvoeren van allerlei berekeningen op de data.
 
