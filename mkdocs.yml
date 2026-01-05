@@ -155,7 +155,7 @@ nav:
     - PLUGIN:
       - implementaties/PLUGIN/index.md
       - Informatie: implementaties/PLUGIN/informatie.md
-      - Applicatie: implementaties/PLUGIN/applicatie.md
+      - Architectuur: implementaties/PLUGIN/architectuur.md
     - DataSHIELD:
       - implementaties/DataSHIELD/index.md
       - Informatie: implementaties/DataSHIELD/informatie.md
