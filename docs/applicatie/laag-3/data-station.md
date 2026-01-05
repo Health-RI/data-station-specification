@@ -1,4 +1,4 @@
-# Datastation
+# 4.1. Datastation
 
 Het datastation is als systeem betrokken in de processen voor het [klaarzetten](../../proces/klaarzetten.md) van data en het [analyseren](../../proces/analyseren.md) van data. Het moet het proces ondersteunen met de functionaliteit getoond in onderstaand diagram.
 
@@ -30,7 +30,7 @@ Iedere datalevencier heeft de verantwoordelijkheid om haar datasets te catalogis
 **Figuur 4.** Componenten voor het aanmelden van de catalogus van datasets
 ///
 
-## Haal periodiek catalogus van datasets op
+## 4.1.1. Haal periodiek catalogus van datasets op
 
 Hierdoor kan de Nationale catalogus plannen wanneer ze een catalogus ophaalt en is er geen filevorming als alle dataleveranciers besluiten om de catalogus te willen updaten
 
@@ -40,7 +40,7 @@ Hierdoor kan de Nationale catalogus plannen wanneer ze een catalogus ophaalt en 
 **Figuur 5.** Componenten voor het ophalen van de catalogus van datasets
 ///
 
-## Maak data beschikbaar voor secundair gebruik
+## 4.1.2. Maak data beschikbaar voor secundair gebruik
 
 ![](datastation-klaarzetten.drawio.svg)
 
@@ -54,7 +54,7 @@ Hierdoor kan de Nationale catalogus plannen wanneer ze een catalogus ophaalt en 
 **Figuur 7.** Overzicht van het organiseren en klaarzetten van de data voor federatieve analyse
 ///
 
-## Verwerk algoritme en geef resultaat terug
+## 4.1.3. Verwerk algoritme en geef resultaat terug
 
 ![](datastation-analyseren.drawio.svg)
 
@@ -62,7 +62,7 @@ Hierdoor kan de Nationale catalogus plannen wanneer ze een catalogus ophaalt en 
 **Figuur 8.** Proces voor het federatief uitvoeren van een algoritme
 ///
 
-## Geef antwoord op dataverzoek
+## 4.1.4. Geef antwoord op dataverzoek
 
 ![](datastation-dataverzoek.drawio.svg)
 
