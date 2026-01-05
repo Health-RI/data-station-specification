@@ -109,19 +109,19 @@ watch:
 
 # Page tree
 nav:
-  - Inleiding:
+  - 1. Inleiding:
     - index.md
     - waarom.md
     - data-stations-als-hoeksteen.md
     - leeswijzer.md
-  - Proces:
+  - 2. Proces:
     - proces/index.md
     - 2.1. Data zoeken en vinden: proces/vinden.md
     - 2.2. Data aanvragen: proces/aanvragen.md
     - 2.3. Data klaarzetten: proces/klaarzetten.md
     - 2.4. Data analyseren: proces/analyseren.md
     - 2.5. Resultaten publiceren: proces/publiceren.md
-  - Informatie:
+  - 3. Informatie:
       - informatie/index.md
       - informatie/syntactisch.md
       - informatie/semantisch.md
