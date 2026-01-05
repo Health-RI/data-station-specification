@@ -24,7 +24,7 @@ theme:
     - navigation.top
     - navigation.tracking
     # - navigation.path
-    - toc.integrate
+    # - toc.integrate
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
@@ -49,6 +49,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - tables
+  - toc:
+      title: Op deze pagina
 plugins:
   - bibtex:
       bib_file: "data-station-specification.bib"
@@ -87,6 +89,7 @@ plugins:
             KIK-V: KIK-V
   - meta
   - mkdocs-pdf
+  - mkdocs-video
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
@@ -106,45 +109,57 @@ watch:
 
 # Page tree
 nav:
-  - Inleiding:
+  - 1. Inleiding:
     - index.md
     - waarom.md
     - data-stations-als-hoeksteen.md
     - leeswijzer.md
-  - Architectuur use-cases:
-    - architectuur/index.md
-    - Data zoeken en vinden: architectuur/ontdekken.md
-    - Data aanvragen: architectuur/aanvragen.md
-    - Data klaarzetten: architectuur/klaarzetten.md
-    - Data analyseren: architectuur/analyseren.md
-    - Resultaten publiceren: architectuur/publiceren.md
-  - Architectuur componenten:
-    - componenten/index.md
-    - Laag 5:
-      - componenten/laag-5/index.md
-      - Federatieve analyse: componenten/laag-5/federatieve-analyse.md
-      - Federatief leren: componenten/laag-5/federatief-leren.md
-      - Data pooling: componenten/laag-5/data-pooling.md
-    - Laag 4:
-      - componenten/laag-4/index.md
-      - catalogus: componenten/laag-4/catalogus.md
-      - DAAMS: componenten/laag-4/daams.md
-      - Federated processing hub: componenten/laag-4/fph.md
-    - Laag 3:
-      - componenten/laag-3/index.md
-      - Data station: componenten/laag-3/data-station.md
-      - Technische standaarden: componenten/laag-3/standaarden.md
+  - 2. Proces:
+    - proces/index.md
+    - 2.1. Data zoeken en vinden: proces/vinden.md
+    - 2.2. Data aanvragen: proces/aanvragen.md
+    - 2.3. Data klaarzetten: proces/klaarzetten.md
+    - 2.4. Data analyseren: proces/analyseren.md
+    - 2.5. Resultaten publiceren: proces/publiceren.md
+  - 3. Informatie:
+      - informatie/index.md
+      - informatie/syntactisch.md
+      - informatie/semantisch.md
+  - Applicatie:
+      - applicatie/index.md
+      - Laag 3:
+          - applicatie/laag-3/index.md
+          - Data station: applicatie/laag-3/data-station.md
+      - Laag 4:
+          - applicatie/laag-4/index.md
+          - catalogus: applicatie/laag-4/catalogus.md
+          - DAAMS: applicatie/laag-4/daams.md
+          - Federated processing hub: applicatie/laag-4/fph.md
+      - Laag 5:
+          - applicatie/laag-5/index.md
+          - Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
+          - Federatief leren: applicatie/laag-5/federatief-leren.md
+          - Data pooling: applicatie/laag-5/data-pooling.md
+      
+  - Infrastructuur:
+      - infrastructuur/index.md
+      - infrastructuur/standaarden.md
   - Implementaties:
     - implementaties/index.md
-    - PLUGIN:
-      - implementaties/PLUGIN/index.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
     - KIK-V:
       - implementaties/KIK-V/index.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
+      - Proces: implementaties/KIK-V/proces.md
+      - Informatie: implementaties/KIK-V/informatie.md
+      - Applicatie: implementaties/KIK-V/applicatie.md
+      - Infrastructuur: implementaties/KIK-V/infrastructuur.md
+    - PLUGIN:
+      - implementaties/PLUGIN/index.md
+      - Informatie: implementaties/PLUGIN/informatie.md
+      - Applicatie: implementaties/PLUGIN/applicatie.md
     - DataSHIELD:
       - implementaties/DataSHIELD/index.md
-      - Architectuur: implementaties/DataSHIELD/architectuur.md
+      - Informatie: implementaties/DataSHIELD/informatie.md
+      - Applicatie: implementaties/DataSHIELD/applicatie.md
   - Discussie:
     - discussie/index.md
     - Primair vs. secundair: discussie/primair-vs-secundair.md    

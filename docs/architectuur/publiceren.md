@@ -1,3 +1,0 @@
-## Resultaten publiceren
-
-TO DO
