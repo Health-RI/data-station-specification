@@ -1,6 +1,6 @@
-# 1.0. Inleiding
+# 1. Inleiding
 
-## 1.0.1. De noodzaak voor een landelijk dekkend netwerk in de zorg
+## De noodzaak voor een landelijk dekkend netwerk in de zorg
 
 Het verlenen van zorg vindt vaak plaats in een netwerk van zorgaanbieders uit verschillende sectoren. Digitalisering, gegevensuitwisseling en databeschikbaarheid vervullen hierin een cruciale rol. Om dit mogelijk te maken, wordt in Nederland gewerkt aan de realisatie van een Landelijke Dekkend Netwerk (LDN). Het LDN is een overkoepelende term en omvat:
 
@@ -24,7 +24,7 @@ Het LDN zal primair gebruik en secundair gebruik van data ondersteunen, met vers
 ///
 
 
-## 1.0.2. Op weg naar de EHDS
+## Op weg naar de EHDS
 Het werk aan het LDN is onderdeel van de implementatie van de European Health Data Space (EHDS), die op 26 maart 2025 in werking is getreden. De belangrijkste mijlpalen op weg naar de volledige uitvoering zijn:
 
 - **maart 2027**: vaststelling landelijke uitvoeringswetten met gedetailleerde regels en praktische uitwerking van de verordening, inclusief de benoeming van de nationale Health Data Access Body (HDAB) als orgaan voor toezicht op en mogelijk maken van secundair gebruik.
@@ -50,13 +50,13 @@ Het werk aan het LDN is onderdeel van de implementatie van de European Health Da
 
 
 
-## 1.0.3. Scope van dit specificatie document
+## Scope van dit specificatie document
 
 Dit specificatie document beschrijft een architectuur voor een landelijke gezondheidsdata-infrastructuur voor secundair gebruik. Het gaat uit van het concept van data stations als hoeksteen om syntactische en semantische interoperabiliteit te realiseren. Deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om secundair van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
 
 Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld onder aan elke pagina.
 
-## 1.0.4. Attributie
+## Attributie
 
 Deze specificatie is opgesteld in opdracht van Health-RI door:
 
