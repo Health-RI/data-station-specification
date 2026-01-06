@@ -1,6 +1,4 @@
----
-title: Data stations voor primair vs. secundair gebruik
----
+# 7.1. Data stations voor primair vs. secundair gebruik
 
 Dit document geeft een beschrijving van een federatieve BVO, met het [data station](../componenten/laag-3/data-station.md) en de [Federated Processing Hub](../componenten/laag-4/fph.md) als de meest kenmerkende componenten. In de context van primair gebruik wordt ook gesproken over data stations en centrale integratie componenten zoals bijvoorbeeld de [_Interoperability Layer_](https://guides.ohie.org/arch-spec/openhie-component-specifications-1/openhie-interoperability-layer-iol) in de OpenHIE architectuur. Doel is om een van de onderzoeksvragen hierover te addresseren:
 

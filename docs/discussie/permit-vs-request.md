@@ -1,6 +1,5 @@
----
-title: Health data permits vs. requests
----
+# 7.2. Health data permits vs. requests
+
 
 EHDS maakt onderscheidt tussen:
 

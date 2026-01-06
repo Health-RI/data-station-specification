@@ -1,5 +1,5 @@
-#  3.0. Perspectief: informatie
-## 3.0.1. Semantische en syntactische interoperabiliteit als randvoorwaarde voor (her)gebruik van gezondheidsgegevens
+#  3. Perspectief: informatie
+## Semantische en syntactische interoperabiliteit als randvoorwaarde voor (her)gebruik van gezondheidsgegevens
 
 Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en betekenis (semantiek) vergelijkbaar en uitwisselbaar zijn. Deze twee vormen van interoperabiliteit zijn essentiele randvoorwaarden. Om te begrijpen hoe computers met elkaar "praten", kunnen we dit vergelijken met hoe mensen communiceren.
 
@@ -19,7 +19,7 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 ---
 
-## 3.0.2. Informatiemodellen voor syntactische interoperabiliteit
+## Informatiemodellen voor syntactische interoperabiliteit
 Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge]. Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
 
 * **FHIR (Fast Healthcare Interoperability Resources)**
@@ -38,7 +38,7 @@ Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **stru
     * *Syntactische rol:* Het standaardiseert de database-structuur voor **analyse**.
 
 
-## 3.0.3. Thesauri en taxonomieen voor semantische interoperabiliteit
+## Thesauri en taxonomieen voor semantische interoperabiliteit
 Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invullen. Hiervoor gebruiken we **terminologiestelsels** (thesauri en taxonomieën). Dit zijn de officiële woordenboeken van de zorg. Zonder deze codes zijn de bovenstaande informatiemodellen lege hulzen.
 
 * **SNOMED CT (De Medische Encyclopedie):**
@@ -58,15 +58,15 @@ Nu we de structuur hebben (via FHIR, openEHR of OMOP), moeten we de inhoud invul
     * *Verschil met SNOMED:* SNOMED is heel gedetailleerd voor de *behandeling* ("breuk van het derde kootje van de linker wijsvinger"), terwijl ICD-10 vaak wat grover is voor de *administratie* ("vingerfractuur").
 
 
-## 3.0.4. Ontologieen
+## Ontologieen
 
 TO DO: KIK-V uitleggen, ontologieen in b.v. genomics
 
 
-## 3.0.5. De Nederlandse context
+## De Nederlandse context
 Vaak ziet u in Nederland ook de term **ZIBs (Zorginformatiebouwstenen)**. ZIBs zijn de Nederlandse "afspraken" over hoe we een medisch concept (zoals 'Brandwond') definiëren. Een ZIB gebruikt **SNOMED** voor de betekenis en kan vervolgens technisch worden verpakt in **FHIR** (voor een app) of **openEHR** (voor het dossier).
 
-## 3.0.6. Wat leggen we uit
+## Wat leggen we uit
 
 Er zijn standaarden in de maak om tussen de informatiemodellen vertalingen te maken. Conform TEHDAS2 moet een BVO transformaties tussen deze informatiemodellen ondersteunen. Voor de komende jaren zullen deze verschillende informatiemodellen blijven bestaan, dus we moeten hier een werkbare oplossing voor aanbieden.
 
