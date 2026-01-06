@@ -34,21 +34,25 @@ Het werk aan het LDN is onderdeel van de implementatie van de European Health Da
 
 
 ???+ abstract "De belangrijkste concepten rondom secundair gebruik"
-    De belangrijkste concepten rondom secundair gebruik zijn gedefinieerd in de nieuwe Europease wetgeving, met name de EHDS (hoofdstuk IV, artikel 50 t/m 81) en de Data Governance Act (DGA).
+    De belangrijkste concepten rondom secundair gebruik zijn gedefinieerd in de nieuwe Europese wetgeving, met name de EHDS (hoofdstuk IV, artikel 50 t/m 81) en de Data Governance Act (DGA).
 
     === "**Beveiligde verwerkingsomgeving (BVO)**"
         Een beveiligde omgeving waarin gezondheidsgegevens verwerkt kunnen worden voor bijvoorbeeld wetenschappelijk onderzoek. Dit kan een centrale BVO zijn, zoals bijvoorbeeld de [CBS Microdata omgeving](https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen), een gefedereerde BVO of een hybride combinatie daarvan. Dit focus van deze specificatie is dat data stations als hoeksteen kunnen fungeren voor een netwerk van BVOs.
     
     === "**Datagebruiker**" 
-        Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten.
+        Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten. In EHDS-terminologie: de gebruiker van gezondheidsegegevens (_Health Data User_).
+
+    === "**Data-afnemer**"
+        Een persoon of organisatie die verwerkingsverantwoordelijkheid heeft over het gebruik van de data door de datagebruiker. Een data-afnemer is deelnemer aan de dataspace voor secundair gebruik.
 
     === "**Datahouder**"
         Een datahouder is een persoon of organisatie (publiek of privaat) die gezondheidsdata beheert. Veel organisaties vallen hieronder. Het gaat niet alleen om ziekenhuizen, maar bijvoorbeeld ook iedereen die producten of diensten ontwikkelt die bestemd zijn voor de zorgsector of gezondheidszorg, of ontwikkelaars van wellnessapps, of wetenschappelijk onderzoekers die zich bezighouden met de zorgsector of gezondheidszorg.
 
+    === "**Dataleverancier**"
+        Een datahouder die niet is uitgezonderd op grond van artikel 50 van de EHDS is dataleverancier en daarmee deelnemer aan de dataspace voor secundair gebruik.
+
     === "**Secundair gebruik**"
         Het gebruik van elektronische gezondheidsgegevens voor andere doeleinden dan die waarvoor ze verzameld zijn. Het gebruiken van gezondheidsgegevens, die zijn vastgelegd voor de behandeling van een patiënt, voor wetenschappelijk onderzoek, is een voorbeeld van secundair gebruik.
-
-
 
 ## Scope van dit specificatie document
 

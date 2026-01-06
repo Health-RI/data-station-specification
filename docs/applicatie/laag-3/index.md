@@ -2,19 +2,19 @@
 
 De derde laag van het zandlopermodel bestaat uit een netwerk van knooppunten met een datastation. Een datastation is een abstract begrip voor het systeem dat ervoor zorgt dat data beschikbaar kan worden gesteld voor secundair gebruik. De term datastation wordt zowel gebruikt binnen primair als secundair gebruik, maar de functie en de eisen verschillen.
 
-## Verschillen tussen datastations voor primair en secundair gebruik
+## Verschil tussen datastations voor primair en secundair gebruik
 
-Bij primair gebruik is de functie van het datastation niet het beschikbaar stellen van data, maar het toegankelijk maken van een patiëntendossier voor de afnemer van de data, die de data beschikbaar maakt voor de eindgebruiker: de zorgverlener. Om dit onderscheid duidelijk te maken, spreken we bij primair gebruik over het toegankelijk maken van data. Het datastation bewaakt hierbij de toegang tot het patiëntendossier op basis van afgesproken en wettelijke toegangsregels. 
+Bij primair gebruik is de functie van het datastation niet het beschikbaar stellen van data, maar het toegankelijk maken van een patiëntendossier voor de data-afnemer, die deze data beschikbaar stelt aan de eindgebruiker: de zorgverlener. Om dit onderscheid duidelijk te maken, spreken we bij primair gebruik over het toegankelijk maken van data. Het datastation bewaakt daarbij de toegang tot het patiëntendossier op basis van afgesproken en wettelijke toegangsregels.
 
-Bij secundair gebruik worden datasets, waarin meerdere patiëntendossiers zijn opgenomen, beschikbaar gesteld aan datagebruikers. In dit geval maakt het datastation de data niet alleen toegankelijk op basis van toegangsregels, maar stelt het deze ook beschikbaar voor het algoritme van de datagebruiker. Dit conform de eisen die gelden voor het beschikbaar stellen van data voor secundair gebruik, waaronder pseudonimisering. De toepassing van de datagebruiker wordt met andere woorden op het datastation uitgevoerd. Bij primair gebruik is dat nooit het geval. 
+Bij secundair gebruik worden datasets, waarin meerdere patiëntendossiers zijn opgenomen, beschikbaar gesteld aan datagebruikers. In dit geval maakt het datastation de data niet alleen toegankelijk op basis van toegangsregels, maar stelt het deze ook beschikbaar voor het algoritme van de datagebruiker. Dit gebeurt conform de eisen die gelden voor het beschikbaar stellen van data voor secundair gebruik, waaronder pseudonimisering. De toepassing, het algoritme van de datagebruiker, wordt met andere woorden op het datastation uitgevoerd. Bij primair gebruik is dit nooit het geval. De data-afnemer heeft in dit scenario de rol van ontvanger van de resultaten van het algoritme, waarmee de datagebruiker de eindresultaten kan leveren.
 
-Daarnaast kan het datastation voorzien in het transport van data, bijvoorbeeld in situaties van datapooling, waarbij data wordt samengebracht in een beveiligde verwerkingsomgeving van de HDAB of van een betrouwbare datahouder. Omdat bij secundair gebruik wordt gewerkt met grote datasets, zijn voor het transport andere standaarden nodig dan bij primair gebruik.
+Naast de uitvoering van algoritmen kan het datastation voorzien in het transport van data, bijvoorbeeld in situaties van datapooling, waarbij data wordt samengebracht in een beveiligde verwerkingsomgeving van de HDAB of van een betrouwbare datahouder. In dit scenario zijn de HDAB en de betrouwbare datahouder de data-afnemers. Omdat bij secundair gebruik wordt gewerkt met grote datasets, zijn voor het transport andere standaarden nodig dan bij primair gebruik.
 
-In de bovenstaande tekst zijn patiëntendossiers als voorbeeld gebruikt. Het secundair gebruik is uiteraard breder en omvat meer dan alleen patiëntendossiers. Ook dat is een verschil met het primair gebruik van data. 
+In de bovenstaande tekst zijn patiëntendossiers als voorbeeld gebruikt. Secundair gebruik is echter breder en omvat meer dan alleen patiëntendossiers. Ook dit vormt een onderscheid ten opzichte van het primair gebruik van data.
 
 ## Een datastation per dataleverancier
 
-Een belangrijk uitgangspunt is dat de data onder de verwerkingsverantwoordelijkheid van de dataleverancier blijft. Deze dataleverancier is een datahouder die op grond van de EHDS verplicht is data beschikbaar te stellen en niet is uitgezonderd op basis van artikel 50. Iedere dataleverancier beschikt daarom in principe over een eigen datastation.
+Een belangrijk uitgangspunt is dat de data in een datastation onder de verwerkingsverantwoordelijkheid valt van een dataleverancier. Deze dataleverancier is een datahouder die op grond van de EHDS verplicht is data beschikbaar te stellen en niet is uitgezonderd op basis van artikel 50. Iedere dataleverancier beschikt daarom in principe over een eigen datastation.
 
 Uitgangspunt is dat dataleveranciers een proces doorlopen om deelnemer te worden aan de dataspace en een deelnemersovereenkomst ondertekenen waarin zij zich verbinden aan de afspraken van de dataspace voor secundair gebruik. De HDAB is verantwoordelijk voor zowel het maken als het handhaven van de afspraken.
 
