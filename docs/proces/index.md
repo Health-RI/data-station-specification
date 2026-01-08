@@ -12,6 +12,12 @@ Het _system of interest_ van deze specificatie is het proces en de daarbij benod
 
 In de draft documentatie van TEHDAS2 zijn de belangrijkste processtappen voor secundair gebruik benoemd. Deze hebben we gerelateerd aan bovenstaand diagram en zullen we in het als leidraad gebruiken in de uitwerking van de architectuur aan de hand van use-cases.
 
+!!! info "Opt-out-recht ten aanzien van de verwerking voor secundair gebruik"
+
+    Overeenkomstig artikel 71 van de EHDS hebben personen een opt-out voor de verwerking van persoonlijke elektronische gezondheidsgegevens voor secundair gebruik, net zoals zij die hebben voor primair gebruik. Dit betekent dat de inhoud van datasets voor primair gebruik kan verschillen van die voor secundair gebruik. Een persoon kan er bijvoorbeeld voor kiezen om zijn of haar persoonlijke dossier beschikbaar te stellen voor primair gebruik, maar niet voor secundair gebruik.
+
+    In de hieronder beschreven processen is de opt-out niet meegenomen. Dit zal moeten worden beschreven in een separaat proces, dat waarschijnlijk onder de verantwoordelijkheid van de HDAB moet worden uitgevoerd. De HDAB zal de opt-out van een persoon vervolgens moeten doorgeven aan de verschillende dataleveranciers.
+
 ### Data zoeken en vinden (_data discovery_)
 Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een catalogus van gezondheidsgevens op https://qa.data.health.europa.eu/. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het aanvragen van de gegevens.
 
