@@ -19,7 +19,7 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 
 ## Informatiemodellen voor syntactische interoperabiliteit
-Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge] Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
+Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen. De zorg kent veel verschillende informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge] Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
 
 
 
@@ -62,4 +62,4 @@ Semantische interoperabiliteit is erop gericht om verschillende computersystemen
 
     Het is goed om op te merken dat alle syntatische standaarden (FHIR, OMOP, openEHR) altijd gebruik maken van meerdere KOS componenten. Op zijn moeten codelijsten (taxonomieen) gebruikt worden, in het meest uitgebreide geval wordt een ontologie gebruikt. Zo wordt SNOMED vrijwel altijd gebruikt bij implementaties van OMOP, openEHR en FHIR.
 
-In het volgende wordt beschreven hoe syntactische en semantische gerealiseerd kan worden binnen de architectuur voor secundair gebruik van data.
+De TEHDAS2 stelt dat BVOs functionaliteit moet aanbieden om semantische en syntactische interoperabiliteit te realiseren (zie FCR-1 en FCR-2 in de [TEHDAS2 requirements](../appendix/tehdas2-requirements.md)). In het volgende wordt beschreven hoe dit gerealiseerd kan worden binnen de datastations.
