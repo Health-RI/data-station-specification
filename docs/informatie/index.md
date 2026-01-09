@@ -3,15 +3,17 @@
 
 Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en betekenis (semantiek) vergelijkbaar en uitwisselbaar zijn. Deze twee vormen van interoperabiliteit zijn essentiele randvoorwaarden. Om te begrijpen hoe computers met elkaar "praten", kunnen we dit vergelijken met hoe mensen communiceren.
 
-* **Syntactische interoperabiliteit (de envelop & de grammatica):**
-    Dit gaat over de **vorm** en de **structuur** van het bericht, zoals bijvoorbeeld een brief. Syntactische interoperabiliteit betekent dat de ontvanger de brief fysiek kan openen, herkent dat het een brief is, en dat zij de letters kan lezen (bijvoorbeeld het Latijnse alfabet). In de computerwereld betekent dit dat twee systemen elkaars bestanden technisch kunnen openen en de structuur herkennen (bijv. "hier staat de naam", "daar staat de datum").
+=== "**Syntactische interoperabiliteit (de envelop & de grammatica)**"
+
+    Syntactische interoperabiliteit gaat over de **vorm** en de **structuur** van het bericht, zoals bijvoorbeeld een brief. Syntactische interoperabiliteit betekent dat de ontvanger de brief fysiek kan openen, herkent dat het een brief is, en dat zij de letters kan lezen (bijvoorbeeld het Latijnse alfabet). In de computerwereld betekent dit dat twee systemen elkaars bestanden technisch kunnen openen en de structuur herkennen (bijv. "hier staat de naam", "daar staat de datum").
     
     !!! info "Analogie"
     
         Ik stuur jou een zin die grammaticaal perfect klopt: *"De blerf schrobt de grakker."* De ontvanger kan de zin lezen (syntax is correct), maar heeft geen idee wat de verzender ermee bedoelt te zeggen.
 
-* **Semantische interoperabiliteit (de betekenis):**
-    Dit gaat over de **inhoud** en het **begrip**. Als de brief eenmaal is geopend, willen we begrijpen wat er staat. We moeten dezelfde taal spreken en dezelfde definities gebruiken. Als ik "bank" schrijf, moet de ontvanger weten of ik een zitmeubel bedoel of een geldinstelling.
+=== "**Semantische interoperabiliteit (de betekenis)**"
+
+    Semantische interoperabiliteit gaat over de **inhoud** en het **begrip**. Als de brief eenmaal is geopend, willen we begrijpen wat er staat. We moeten dezelfde taal spreken en dezelfde definities gebruiken. Als ik "bank" schrijf, moet de ontvanger weten of ik een zitmeubel bedoel of een geldinstelling.
     
     !!! info "Analogie"
     
