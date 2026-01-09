@@ -19,7 +19,7 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 
 ## Informatiemodellen voor syntactische interoperabiliteit
-Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge]. Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
+Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen.In de zorg kent vele informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge] Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
 
 
 
@@ -63,34 +63,3 @@ Semantische interoperabiliteit is erop gericht om verschillende computersystemen
     Het is goed om op te merken dat alle syntatische standaarden (FHIR, OMOP, openEHR) altijd gebruik maken van meerdere KOS componenten. Op zijn moeten codelijsten (taxonomieen) gebruikt worden, in het meest uitgebreide geval wordt een ontologie gebruikt. Zo wordt SNOMED vrijwel altijd gebruikt bij implementaties van OMOP, openEHR en FHIR.
 
 In het volgende wordt beschreven hoe syntactische en semantische gerealiseerd kan worden binnen de architectuur voor secundair gebruik van data.
-
-
-
-## Ontologieen
-
-TO DO: KIK-V uitleggen, ontologieen in b.v. genomics
-
-
-## De Nederlandse context
-Vaak ziet u in Nederland ook de term **ZIBs (Zorginformatiebouwstenen)**. ZIBs zijn de Nederlandse "afspraken" over hoe we een medisch concept (zoals 'Brandwond') definiëren. Een ZIB gebruikt **SNOMED** voor de betekenis en kan vervolgens technisch worden verpakt in **FHIR** (voor een app) of **openEHR** (voor het dossier).
-
-## Wat leggen we uit
-
-Er zijn standaarden in de maak om tussen de informatiemodellen vertalingen te maken. Conform TEHDAS2 moet een BVO transformaties tussen deze informatiemodellen ondersteunen. Voor de komende jaren zullen deze verschillende informatiemodellen blijven bestaan, dus we moeten hier een werkbare oplossing voor aanbieden.
-
-| Transformatie | Beschrijving |
-|:--|:--|
-| [FHIR to OMOP](https://build.fhir.org/ig/HL7/fhir-omop-ig/)| **FHIR to OMOP** is a FHIR Implementation guide that provides details on how to transform healthcare data from FHIR to the OMOP Common Data Model. It aims to bridge the gap between these two widely used formats in healthcare and research. The standard defines mappings between FHIR resources and OMOP data tables, focusing on commonly used EHR data. |
-| [FHIRconnect](https://sevkohler.github.io/FHIRconnect-spec/build/site/FHIRconnect/v1.0.0/index.html) | **FHIRconnect** is a mapping specification for bidirectional mapping between openEHR and FHIR. The goal is to create a mapping language that communities can use to transform data between these standards. The markup language used to express the mappings is YAML. |
-| [openEHR to OMOP](https://github.com/SevKohler/Eos) | The **EOS** research project has developed an ETL engine to transform openEHR into OMOP. |
-
-
-Er zijn reeds verschillende thesauri beschikbaar, maar die worden nog te weinig gebruikt. Er zijn ook al vertalingen tussen verschillende thesauri
-
-- DHD diagnose thesaurus: koppelt ICD10, Snomed en het Nederlandse DBC systeem
-- DHD verrichting thesaurus: ...
-- Z-Index mapping naar RxNorm van ErasmusMC
-- Artikel Cornet et al. van Z-index naar ATC naar RxNorm
-
-De rol van generatieve AI c.q. LLMs: hulpmiddel om ongestructureerde data (vrij tekst) om te zetten naar gestructureerde data (in een gekozen informatiemodel, gecodeerd met een gekozen terminologieyysteem)
-
