@@ -39,7 +39,7 @@ Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tus
     | ID    | Omschrijving |
     |:-----:|:-------------|
     | L4-V1 | Grondslag en rol van data gebruiker in primair proces is anders voor primair (behandelrelatie) en secundair (vergunning of gegevensverzoek). |
-    | L4-V2 | De Federated Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
+    | L4-V2 | De Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
 
 ## Parking lot
 

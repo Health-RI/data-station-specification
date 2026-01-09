@@ -1,4 +1,4 @@
-# Datastation
+# 4.1. Datastation
 
 In een dataspace voor secundair gebruik is het datastation, naast de processing hub, een essentieel component. Waar de processing hub het component is voor de data-afnemer, is het datastation dat voor de dataleverancier. Beide componenten zijn daarmee elkaars tegenhanger binnen de dataspace-architectuur: voor iedere rol is één kerncomponent gedefinieerd.
 
@@ -30,7 +30,7 @@ In de onderstaande paragrafen worden de eisen aan een datastation beschreven.
     Om die reden wordt in dit hoofdstuk geen gedetailleerde architectuur uitgewerkt. Vanuit de dataspace is het vooral van belang dat de interoperabiliteit met het datastation is geborgd en dat het vertrouwen en de integriteit van de dataspace als geheel worden gewaarborgd, over alle autonome onderdelen heen. De eisen aan een datastation richten zich daarom alleen op interoperabiliteit en vertrouwen.
 
 
-## Beheer catalogus van datasets
+## 4.1.1. Beheer catalogus van datasets
 
 Iedere dataleverancier is zelf verantwoordelijk voor het catalogiseren en publiceren van haar datasets. Dit betekent dat de dataleverancier een eigen datasetcatalogus samenstelt en beheert. In dit document spreken we niet af welke datasets in de catalogus moeten worden opgenomen, maar alleen welk formaat wordt gebruikt. De catalogus moet worden opgesteld in [HealthDCAT-AP Release 5](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/).
 
@@ -47,7 +47,7 @@ Voor de beheer van de catalogus wordt uitgegaan van een servicemedewerker die de
 Met het vrijgeven wordt bedoeld dat de dataleverancier een versie van de datacatalogus publiceert en daarmee een nieuwe versie beschikbaar stelt. Dit vrijgeven kan periodiek plaatsvinden, bijvoorbeeld meerdere keren per jaar. Het aanmelden van de catalogus hoeft daarentegen slechts eenmalig te gebeuren.
 Na aanmelding is de catalogus van de dataleverancier geregistreerd in het register van de HDAB ten behoeve van de Nationale catalogus van datasets.
 
-## Haal periodiek catalogus van datasets op
+## 4.1.2. Haal periodiek catalogus van datasets op
 
 De Health Data Access Body (HDAB) is met het component voor de Nationale Catalogus volledig autonoom in het bepalen van de frequentie waarmee de Nationale Catalogus wordt bijgewerkt. Dit betekent dat de HDAB kan plannen wanneer de catalogus van een dataleverancier wordt opgehaald, in plaats van dat dit ad hoc door alle leveranciers tegelijk gebeurt.
 
@@ -59,7 +59,7 @@ De Health Data Access Body (HDAB) is met het component voor de Nationale Catalog
 
 Door deze autonomie ontstaat een efficiënte en gecontroleerde updateprocedure, waardoor piekbelasting of “filevorming” wordt voorkomen wanneer meerdere dataleveranciers tegelijk hun catalogus willen bijwerken. Bovendien draagt deze regeling bij aan de betrouwbaarheid en stabiliteit van de Nationale Catalogus, omdat updates gespreid en voorspelbaar plaatsvinden. Dit biedt zowel de HDAB als de dataleveranciers meer controle over het proces en helpt bij het waarborgen van consistente en actuele informatie in de dataspace.
 
-## Maak data beschikbaar voor secundair gebruik
+## 4.1.3. Maak data beschikbaar voor secundair gebruik
 
 Vanuit de HDAB wordt een verzoek gedaan om een dataset beschikbaar te stellen voor secundair gebruik. Dit verzoek kan gebaseerd zijn op een door de HDAB verleende datavergunning of op een goedgekeurd dataverzoek.
 
@@ -95,7 +95,7 @@ In het onderstaande figuur zijn scenario 2 en 3 weergegeven.
 
 Met het beschikbaar stellen van de datasets is het datastation gereed voor de ontvangst van een algoritme of een dataverzoek.
 
-## Verwerk algoritme en geef resultaat terug
+## 4.1.4. Verwerk algoritme en geef resultaat terug
 
 Een datastation kan onder andere worden gebruikt voor het uitvoeren van een federatieve analyse of voor federatief leren, of kort gezegd voor het uitvoeren van een algortime. De datagebruiker geeft via de processing hub een opdracht om een algoritme uit te voeren op een aantal datastations. In het onderstaande diagram zijn de stappen weergegeven die op het datastation worden uitgevoerd nadat de opdracht door het datastation is ontvangen.
 
@@ -141,7 +141,7 @@ Onder andere moeten de volgende aspecten worden gewaarborgd:
 
 Ten aanzien van de resultaten moet besloten worden of deze de beveiligde omgeving van de processing hub mogen verlaten. Hiervoor zal een vrijgaveproces gedefinieerd moeten worden waarin strikte regels voor export en overdracht gelden.
 
-## Geef antwoord op dataverzoek
+## 4.1.5. Geef antwoord op dataverzoek
 
 Wanneer een dataverzoek wordt ontvangen via de processing hub, start het datastation het verwerkingsproces. Als eerste stap worden de authenticiteit en geldigheid van de identiteit van de data-afnemer, de identiteit van de datagebruiker en het akkoord op het dataverzoek geverifieerd op basis van aangeleverde credentials met een hoog betrouwbaarheidsniveau, conform de eIDAS-verordening. Alleen na een succesvolle verificatie wordt het dataverzoek verder verwerkt.
 

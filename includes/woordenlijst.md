@@ -7,7 +7,6 @@
 *[EHDS]: European Health Data Space
 *[FAIR]: Findable, Accessible, Interoperable, Reusable
 *[FDBS]: Federated Database System
-*[FPH]: Federated Processing Hub
 *[HDAB]: Health Data Access Body
 *[LDN]: Landelijke Dekkend Netwerk
 *[primair gebruik]: gebruik van data voor directe behandeling van een persoon
