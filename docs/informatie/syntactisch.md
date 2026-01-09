@@ -22,7 +22,9 @@ Ten tijde van het schrijven van dit document zijn de volgende (eerste versies va
 
 === "**OMOCL**"
 
-    De [OMOP Conversione Language](https://www.sciencedirect.com/science/article/pii/S1532046423001582) is een domein-specifieke taal waarin mapping van openEHR archetypes zijn gemaakt naar het OMOP CDM. Het is het resultaat van ee onderzoeksproject en is in juli 2025 ter consultatie  voorgelegd aan de openEHR community met als doel om het als formele specificatie te adopteren. EOS is de referentie implementatie van OMOCL. 
+    ![](./omocl.jpg){ align=right}
+
+    De [OMOP Conversion Language](https://www.sciencedirect.com/science/article/pii/S1532046423001582) is een domein-specifieke taal waarin mapping van openEHR archetypes zijn gemaakt naar het OMOP CDM. Het is het resultaat van ee onderzoeksproject en is in juli 2025 ter consultatie  voorgelegd aan de openEHR community met als doel om het als formele specificatie te adopteren. EOS is de referentie implementatie van OMOCL.
 
 
 ## 3.1.3. Implementaties van syntactische mappings
@@ -36,16 +38,16 @@ Implementaties zijn de uitvoeringsmotoren (engines) die de formele specificaties
 
     [openFHIR](https://open-fhir.com/#access) is een commerciele implementatie van de FHIRconnect specificatie. Het gebruikt een facade-patroon om bi-directioneel FHIR data in openEHR op te slaan, en FHIR data uit openEHR te lezen. 
 
-=== "**EOS**"
-
-    Het [Eos Framework](https://github.com/SevKohler/Eos) is de referentieimplementatie van de OMOCL mappingspecificatie. Het volgt een ETL patroon en is geimplementeerd in Java.
-
 === "**OMOPonFHIR**"
     
     Het [OMOPonFHIR](https://github.com/omoponfhir) project levert de softwarecomponenten (servers, adapters) die de bidirectionele FHIR interface realiseren bovenop het OMP CDM. Deze oplossing volgt een facade-patroon: wanneer een client een FHIR `Observation` opvraagt via een REST API, onderschept de facade-laag het verzoek, voert een query uit op de onderliggende OMOP `MEASUREMENT`-tabel in real-time, en transformeert het resultaat naar een FHIR JSON-resource middels de formele specificatie. Middels dit facase patroon kunnen FHIR berichten ook worden opgeslagen in de OMOP database. OMOPonFHIR gaat uit van OMOP CDM 5.4 en FHIR v4 en is geimplementeerd in Java. Het is ontwikkeld voordat de HL7 FHIR-OMOP IG beschikbaar was en heeft daarom de mappings zelf gedefinieerd.
 
+=== "**EOS**"
 
-### 3.1.4. Implicaties voor datastation
+    Het [Eos Framework](https://github.com/SevKohler/Eos) is de referentieimplementatie van de OMOCL mappingspecificatie. Het volgt een ETL patroon en is geimplementeerd in Java.
+
+
+## 3.1.4. Implicaties voor datastations
 
 Conform TEHDAS2 moeten BVOs syntactische operabiliteit ondersteunen, incl. transformaties tussen de meest voorkomende informatiemodellen zoals hierboven is beschreven (zie FCR-1 en FCR-2 in de [TEHDAS2 requirements](../appendix/tehdas2-requirements.md)). In het geval dat datasets of zelfs hele databases beschikbaar zijn in een van de drie informatiemodellen, kunnen van syntactische transformaties goed worden uitgevoerd. Naar verwachting zullen bovengenoemde specificaties en referentieimplementaties komende jaren een mate van volwassenheid behalen dat ze kunnen worden opgenomen als component binnen een BVO.
 
