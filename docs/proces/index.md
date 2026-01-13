@@ -45,6 +45,19 @@ In dit document worden de usecases samengevat om de functionaliteit te beschrijv
 
 Usecases zijn niet alleen een methode om een systeem te beschrijven, maar ook om deze te ontwerpen, te ontwikkelen en te documenteren. Zodra de eisen voor een usecase duidelijk zijn, kan deze worden gerealiseerd. Het technische ontwerp van de usecase wordt een usecase-realisatie genoemd en bestaat onder andere uit sequentiediagrammen, statusdiagrammen en informatiemodellen. De componenten en andere bouwstenen in dit technische ontwerp worden hergebruikt voor alle usecases van het _system of interest_.
 
+!!! Info "Usecases, communicatiepatronen en transacies"
+
+    Een ___business usecase___ vormt de context en beschrijft wat een eindgebruiker wil bereiken op het gebied van informatievoorziening. Voorbeelden van _business usecase_ zijn het voorschrijven van een recept, een verwijzing naar een medisch specialist of de overdracht van een cliënt van een verpleeghuis naar een ziekenhuis en vice versa. Voor secundair gebruik kan een _business usecase_ zijn het monitoren van de kwaliteit van verpleeghuizen of het uitvoeren van een onderzoek naar een specifieke aandoening. De stappen in deze procesbeschrijving zijn onderdeel van iedere _business usecase_ voor secundair gebruik.
+
+    Een ___system usecase___, vaak kortweg _usecase_ genoemd, specificeert het applicatieproces dat nodig is om (een deel van) de informatievoorziening te realiseren. In de processen laten we de usecases zien die voor het proces noodzakelijk zijn.
+
+    Zowel de _business usecase_ als de _usecase_ wordt gestart door een gebeurtenis (in het Engels: event). In alle gevallen gaat het om een proces waarbij de gebeurtenis het startpunt vormt, en de _usecase_ het doel of de waarde van het proces vertegenwoordigt.
+
+    Een ___communicatiepatroon___ binnen de context van gegevensuitwisseling is een vaste, gestructureerde manier van communiceren. Een communicatiepatroon wordt toegepast binnen een _system usecase_, waarbij er altijd een actor is - het systeem van een aanbieder of een persoon - die de communicatie start: de initiator (bron: [Data voor gezondheid](https://www.datavoorgezondheid.nl/documenten/2025/07/14/whitepaper-communicatiepatronen-vws)). 
+    Een communicatiepatroon is opgedeeld in meerdere _transacties_. De [Nuts Notified Pull](https://wiki.nuts.nl/books/communicatiepatronen/page/notified-pull-gebaseerd-op-fhir-subscriptions) is een voorbeeld van een communicatiepatroon waarin verschillende interacties / transacties zijn becchreven.
+
+    Een ___transactie___ is een opeenvolging van acties in een interactie tussen twee systemen die wordt behandeld als één ondeelbare eenheid van werk. In de meeste gevallen kan een _transactie_ worden gezien als een request-response-patroon via HTTP, waarbij een systeem een verzoek (request) stuurt en het andere systeem een bijbehorend antwoord (response) teruggeeft, zodat de interactie als één ondeelbare eenheid van werk kan worden behandeld. 
+
 
 [^1]: TEHDAS2. (2025). Public consultation of the guidelines and technical specifications to enable seamless use of health data across Europe under the upcoming European Health Data Space (EHDS). https://tehdas.eu/public-consultations/
 
