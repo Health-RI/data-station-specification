@@ -4,29 +4,30 @@ Het Platform voor Uitwisseling en Hergebruik van Klinische Data Nederland (PLUGI
 
 Met use-cases [AI-ondersteund coderen](https://www.dhd.nl/producten-diensten/registratie-data/ondersteuning-bij-medische-codering/ai-ondersteund-coderen) en [het vullen en verrijken van de NKR](https://www.icthealth.nl/nieuws/veilig-en-efficient-data-delen-dankzij-het-plugin-initiatief) is aangetoond dat de infrastructuur schaalbaar in kan worden gezet voor de drie soorten van gefedereerde gegevensbewerking:
 
-* Gefedereerde analyse, zoals bijvoorbeeld het herkennen van patiënten voor klinische trials;
-* Gefedereerd leren, zoals [AI-ondersteund coderen](https://www.dhd.nl/producten-diensten/registratie-data/ondersteuning-bij-medische-codering/ai-ondersteund-coderen)
-* Gegevensuitwisseling, zoals [het vullen en verrijken van de NKR](https://www.icthealth.nl/nieuws/)
+De PLUGIN infrastructuur implementeert verschillende componenten zoals in onderstaand diagram en tabel is weergegeven en worden in de volgende pagina's uitgelegd.
 
-De PLUGIN infrastructuur implementeert de volgende componenten:
+![](./plugin-overzicht.drawio.svg)
 
-- Het datastation met de volgende componenten:
-    - een Linux server waarop alle software componenten van het datastation zijn geimplementeerd;
-    - PLUGIN-Lake (in ontiwkkeling) dat de ETL functies en het lakehouse implementeert;
-    - de vantage6 node;
-    - de lokale kopie van het algoritme dat wordt uitgevoeerd; dit is een tijdelijke component dat door de vantage6 node wordt aangemaakt en verwijderd als onderdeel van het federated processing proces.
+!!! note "Lijst van componenten"
 
-- De processing hub met de volgende componenten:
-    - een of meerdere Linux server waarop alle software componenten van de processing hub zijn geimplementeerd;
-    - de vantage6 server zijnde de centrale processing hub waarop gebruikers, organizaties, samenwerkingsverbanden taken en resultaten worden beheerd en georchestreerd;
-    - de vantage6 UI, een webapplicatie waarmee gebruikers kunnen interacteren met de server;
-    - de vantage6 API, waarmee de server programmatisch aangestuurd kan worden en geintegreerd kan worden in workflows met gebruik van de Python client en/of de R client;
-    - een Docker registry met daarin containers die zijn geautoriseerd om decentraal op de datastations uit te voeren;
-    - een optionele _algorithm store_ om binnen een federatief netwerk verschillende soorten goedgekeurde berekeningen met elkaar te delen en federatief uit te voeren;
+    | Component | Functie |
+    |:----|:---------|
+    | PLUGIN-Analytics | gefedereerde analyse |
+    | PLUGIN-ML | gefedereerd leren |
+    | PLUGIN-Hub | data pooling |
+    | vantage6 server | centrale processing hub waarop gebruikers, organizaties, samenwerkingsverbanden taken en resultaten worden beheerd en georchestreerd |
+    | vantage6 UI | webapplicatie waarmee gebruikers kunnen interacteren met de serve |
+    | vantage6 API | programmatische aansturing van de server, incl. Python client en R client |
+    | Docker registry | containers die zijn geautoriseerd om decentraal op de datastations uit te voeren |
+    | Algorithm store | de metadata over de (algoritme) containers, inclusief ondersteuning van goedkeuringsproces |
+    | vantage6 node | decentrale component van processing hub die de lokale berekeningen uitvoert |
+    | algoritme container | tijdelijke lokale kopie van het algoritme dat wordt uitgevoeerd, wordt aangemaakt en verwijderd door de vantage6 node |
+    | PLUGIN-Lake | Lakehouse voor serverless opslag en ETL transformaties op het datastation |
 
 
 
-!!! info "Externe documentatie"
+
+??? info "Externe documentatie"
 
     - [PLUGIN programma website](https://plugin.healthcare/)
     - [Installatiegids AI-ondersteund coderen](https://installatiegids-aioc.dhd.nl/)
