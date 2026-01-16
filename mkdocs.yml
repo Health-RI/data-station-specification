@@ -153,8 +153,10 @@ nav:
       - Infrastructuur: implementaties/KIK-V/infrastructuur.md
     - 6.2. PLUGIN:
       - implementaties/PLUGIN/index.md
+      - Proces: implementaties/PLUGIN/proces.md
       - Informatie: implementaties/PLUGIN/informatie.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
+      - Applicatie: implementaties/PLUGIN/applicatie.md
+      - Infrastructuur: implementaties/PLUGIN/infrastructuur.md
     # - 6.3. DataSHIELD:
     #   - implementaties/DataSHIELD/index.md
     #   - Informatie: implementaties/DataSHIELD/informatie.md

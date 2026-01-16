@@ -2,17 +2,7 @@
 
 <div class="grid cards" markdown>
 
--   ![](plugin.png)
-
-    ---
-
-    De PLUGIN-basisinfrastructuur is een federatief netwerk gebouwd op vantage6 dat tot doel heeft om ziekenhuizen in staat te stellen medische gegevens veilig en decentraal beschikbaar te stellen voor uiteenlopende toepassingen.
-
-    ---
-
-    [:octicons-arrow-right-24: Bekijk](./PLUGIN/index.md)
-
--  ![](kik-v.svg)
+-  ![](kik-v.png)
 
     ---
 
@@ -20,8 +10,18 @@
 
     ---
 
-    [:octicons-arrow-right-24: Bekijk](./KIK-V/index.md)
+    [:octicons-arrow-right-24: Lees meer over KIK-V](./KIK-V/index.md)
 
+-   ![](plugin.png)
+
+    ---
+
+    PLUGIN is een hybride infrastructuur gebouwd op vantage6 waarmee ziekenhuisdata via datastations beschikbaar zijn voor verschillende vormen van secundair gebruik.
+
+    ---
+
+    [:octicons-arrow-right-24: Lees meer over PLUGIN](./PLUGIN/index.md)
+<!-- 
 -   ![](datashield.webp)
 
     ---
@@ -30,6 +30,6 @@
 
     ---
 
-    [:octicons-arrow-right-24: Bekijk](./DataSHIELD/index.md)
+    [:octicons-arrow-right-24: Bekijk](./DataSHIELD/index.md) -->
 
 </div>
