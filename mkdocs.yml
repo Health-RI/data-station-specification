@@ -155,10 +155,10 @@ nav:
       - implementaties/PLUGIN/index.md
       - Informatie: implementaties/PLUGIN/informatie.md
       - Architectuur: implementaties/PLUGIN/architectuur.md
-    - 6.3. DataSHIELD:
-      - implementaties/DataSHIELD/index.md
-      - Informatie: implementaties/DataSHIELD/informatie.md
-      - Applicatie: implementaties/DataSHIELD/applicatie.md
+    # - 6.3. DataSHIELD:
+    #   - implementaties/DataSHIELD/index.md
+    #   - Informatie: implementaties/DataSHIELD/informatie.md
+    #   - Applicatie: implementaties/DataSHIELD/applicatie.md
   - 7. Discussie:
     - discussie/index.md
     - 7.1. Centraal vs. decentraal: discussie/centraal-vs-decentraal.md    
