@@ -16,7 +16,6 @@ Het LDN zal primair gebruik en secundair gebruik van data ondersteunen, met vers
 **Figuur 1.** Primair en secundair gebruik binnen het LDN. Bron: Impactanalyse EHDS Zorginstituut (2022).
 ///
 
-
 ![](ehds-simpel.png)
 
 ///caption
@@ -70,7 +69,7 @@ Deze specificatie is opgesteld in opdracht van Health-RI door:
 Daarnaast hebben de volgende personen een bijdrage geleverd aan de eerste versie:
 
 - [Maarten Kollenstart](https://www.linkedin.com/in/maarten-kollenstart-a08429146/) (TNO): review algehele architectuur van data spaces, _verifiable credentials_
-- [Tim Hendriks](https://www.maastrichtuniversity.nl/nl/tjn-hendriks) (Universiteit Maastricht): federated learning, beschrijving PLUGIN/vantage6 implementatie
+- [Tim Hendriks](https://www.clinicaldatascience.nl/Staff/tim-hendriks) (Medical Data Works): federated learning, beschrijving PLUGIN/vantage6 implementatie
 - [Madou Derksen](https://www.linkedin.com/in/madou-derksen/) (Dutch Hospital Data): beschrijving PLUGIN/vantage6 implementatie
 - [René Houwen](https://www.linkedin.com/in/renehouwen/) (in opdracht van Zorginstituut Nederland): beschrijving KIK-V implementatie
 - [Rik Sonderkamp](https://www.linkedin.com/in/rik-sonderkamp/) (Visma Connect, in opdracht van Zorginstituut Nederland): beschrijving KIK-V implementatie
