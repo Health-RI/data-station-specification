@@ -1,19 +1,28 @@
-# 7.1. Data stations voor primair vs. secundair gebruik
+# 7.2. Data stations voor primair vs. secundair gebruik
 
-Dit document geeft een beschrijving van een federatieve BVO, met het [data station](../componenten/laag-3/data-station.md) en de [Federated Processing Hub](../componenten/laag-4/fph.md) als de meest kenmerkende componenten. In de context van primair gebruik wordt ook gesproken over data stations en centrale integratie componenten zoals bijvoorbeeld de [_Interoperability Layer_](https://guides.ohie.org/arch-spec/openhie-component-specifications-1/openhie-interoperability-layer-iol) in de OpenHIE architectuur. Doel is om een van de onderzoeksvragen hierover te addresseren:
+Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/laag-3/data-station.md) en de [processing hub](../applicatie/laag-4/processing-hub.md) als de meest kenmerkende componenten. In vergelijking met de Cumuluz doelarchitectuur zien we vergelijkbare rollen voor het Cumuluz Datastation respectievelijk de Cumuluz Integrator. Zoals in de inleiding is gesteld, is een vergelijking van de architectuur voor primair vs. secundair een van de centrale onderzoeksvragen: 
 
-> Zijn er lancunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van federatieve BVOs in de weg staan, met name ook in relatie tot data stations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
+> Zijn er lancunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van decentrale BVOs in de weg staan, met name ook in relatie tot datastations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
 
-Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tussen data station voor primair en secundair gebruik, als ook voor de centrale integratie component in laag 4.
+In het onderstaande wordt ingegaan op deze vragen.
 
-### Overeenkomsten en verschillen data stations
+## 7.2.1. Verschil in grondslag voor geautoriseerde toegang
+
+Wanneer we de Cumuluz doelarchitectuur vergelijken met dit document, dan zien we dat beide architecturen streven naar een "eenmalige registratie, meervoudig gebruik" benadering. Er is echter een essentieel verschil in de grondslag:
+
+- **Primair gebruik:** gebaseerd op de behandelrelatie en toestemming van de patiënt.
+- **Secundair gebruik:** Gebaseerd op een vergunning uitgegeven door een HDAB.
+
+In het ontwerp van een Cumuluz Datastation is duidelijk gespecificeerd hoe via een centrale toestemmingsvoorziening (MITZ) toegang tot het datastation wordt gegeven. In het geval van secundair gebruik is er nog geen sluitende technische integratie waarbij een decentraal datastation autonoom vergunning die door de HDAB/DAAMS is uitgegeven kan valideren. Dit laatste staat los van MITZ, waarin alleen op de opt-out registratie voor secundair gebruik is vastgelegd.
+
+## 7.2.2. Vergelijking primair en secundair datastation
 
 ???+ success "Overeenkomsten tussen primaire en secundaire data stations"
     | ID    | Omschrijving |
     |:-----:|:-------------|
-    | DS-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten op het gebied van authenticatie, localisatie, beveiliging etc. |
-    | DS-02 | Een data station valt in het domein van de data houder. |
-    | DS-O3 | Een data station gaat uit van conformiteit, waarbij meerdere informatiemodellen worden ondersteund incl. functionaliteit om transformaties tussen deze modellen uit te voeren. |
+    | DS-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten. |
+    | DS-02 | Een datastation valt in het domein van de datahouder. |
+    | DS-O3 | Een datastation gaat uit van conformiteit, waarbij meerdere informatiemodellen worden ondersteund incl. functionaliteit om transformaties tussen deze modellen uit te voeren. |
          
 ???+ warning "Verschillen tussen primaire en secundaire data stations"
     | ID    | Omschrijving |
@@ -25,13 +34,12 @@ Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tus
     | DS-V5 | Opslag van data is bij een primair data station optioneel, bij een secondair data stations een vereiste om _data visiting_ te ondersteunen. |
     | DS-V6 | Een primair data station heeft geen voorziening voor het lokaal uitvoeren van berekeningen. Voor een secondair data stations een vereiste om _data visiting_ te ondersteunen. |
 
-
-### Overeenkomsten en verschillen integratie component in laag 4
+## Vergelijking Integrator (primair) en Processing Hub (secundair)
 
 ???+ success "Overeenkomsten centrale interatie component in laag 4"
     | ID    | Omschrijving |
     |:-----:|:-------------|
-    | L4-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten op het gebied van authenticatie, localisatie, beveiliging etc. |
+    | L4-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten. |
     | L4-O2 | Data gebruikers (systemen of personen) krijgen toegang tot data via één centrale ingang, er wordt gebruik gemaakt van een _hub-and-spoke_ netwerk topologie. |
     | L4-03 | Inrichting van laag 4 gaat uit van het [_four corner model_](https://health-ri.github.io/data-spaces-archimate/?view=id-65fda4e829df4a489df5644ffbbdb0e6): meerdere service providers zijn voorzien in het LDN. |
 
@@ -40,6 +48,31 @@ Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tus
     |:-----:|:-------------|
     | L4-V1 | Grondslag en rol van data gebruiker in primair proces is anders voor primair (behandelrelatie) en secundair (vergunning of gegevensverzoek). |
     | L4-V2 | De Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
+
+
+
+
+
+
+
+
+### Geharmoniseerde API voor Permits en Autorisatie:**
+Het Landelijk Afsprakenstelsel (LAS) moet worden uitgebreid met een specifieke "EHDS-connector". Deze API moet het voor een decentraal Datastation mogelijk maken om een digitale permit van de HDAB direct te vertalen naar lokale toegangsrechten in de BVO, vergelijkbaar met hoe de Generieke Functie Autorisatie werkt voor primair gebruik.
+
+
+* **Dual-purpose Adapter Functies:**
+De "Adapter"-rol in de CumuluZ-architectuur moet worden doorontwikkeld naar een dual-purpose component die zowel FHIR (primair) als analytische formaten (secundair) kan uitserveren vanuit dezelfde geabstraheerde datalaag. Dit borgt dat de data-integriteit tussen de patiëntenzorg en onderzoek behouden blijft.
+
+
+* **Eenduidige Governance op "Data Access Committees" (DAC):**
+Het proces voor het verlenen van toegang moet worden gestroomlijnd waarbij de lokale DAC van een ziekenhuis en de nationale HDAB via een federatief model samenwerken. Dit voorkomt dubbele administratieve lasten en zorgt ervoor dat de bronhouder de regie behoudt, conform architectuurprincipe C2.
+
+Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tussen data station voor primair en secundair gebruik, als ook voor de centrale integratie component in laag 4.
+
+
+
+
+
 
 ## Parking lot
 

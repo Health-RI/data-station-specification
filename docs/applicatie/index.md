@@ -42,7 +42,7 @@ In dit hoofdstuk beschrijven we de applicatie componenten van een federatieve BV
 | Laag | Systemen |
 |:----:|:---------|
 | **5** | **> [Gefedereerde analyse](./laag-5/federatieve-analyse.md)**<br>**> [Gefedereerd leren](./laag-5/federatief-leren.md)**<br>**> [Data pooling](./laag-5/data-pooling.md)** |
-| **4** | > [Data Access Application Mgnt System](./laag-4/daams.md)<br>> [Catalogus gezondheidsgegevens](./laag-4/catalogus.md)<br>**> [Processing hub](./laag-4/fph.md)** |
+| **4** | > [Data Access Application Mgnt System](./laag-4/daams.md)<br>> [Catalogus gezondheidsgegevens](./laag-4/catalogus.md)<br>**> [Processing hub](./laag-4/processing-hub.md)** |
 | **3** | **> [Data station](./laag-3/data-station.md)** |
 | **2** | > Data ontsluitingssysteem |
 | **1** | > bronsystemen |
