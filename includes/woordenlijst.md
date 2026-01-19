@@ -25,4 +25,5 @@
 *[SPE]: Secure Processing Environment
 *[Vantage6]: Een open-source infrastructuur voor privacy verbeterende technieken
 *[websockets]: Een protocol voor het openen van een interactieve communicatieverbinding, dat langere tijd open kan blijven staan.
+*[YAML]: Yet Another Markup Language
 
