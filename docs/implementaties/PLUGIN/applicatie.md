@@ -1,4 +1,4 @@
-# Architectuur
+# Applicatie
 
 Om een federatieve infrastructuur mogelijk te maken, zijn er op technisch vlak twee vereisten: 
 
@@ -28,49 +28,11 @@ De Vantage6 Node voert openstaande taken uit. Hierbij wordt het aangegeven Docke
 
 Om het algoritme uit te voeren start de node op basis van het binnengehaalde Docker image een Docker container op het data station. Communicatie vanuit het algoritme verloopt hierbij altijd via de node naar de server.
 
-## HL7 FHIR
+Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing wordt niet gebruikt binnen PLUGIN, maar bij specifieke use-cases om datalek problematiek tegen te gaan.
 
+## PLUGIN
 
-
-
-## Benodigdheden
-
-### Juridisch
-
-https://www.medicaldataworks.nl/governance
-
-
-### Data Station Hardware
-
-PLUGIN verwacht bij voorkeur de volgende hardware-specificaties:
-
-* ≥ 16 cores, x86/x64 CPU
-* ≥ 56 GB CPU RAM
-* ≥ 360 GB SSD
-* virtualization enabled
-* GPU (optioneel, maar aanbevolen):
-    * CUDA compatible NVIDIA kaart
-    * 16 GB GPU RAM
-
-
-Specificaties zijn echter sterk afhankelijk van de uit te voeren algoritmen.
-
-### Netwerk
-
-* ≥ 100Mbit ethernet
-* Poort 443/TCP (https) open voor **uitgaand** verkeer naar de server
-* Een Publiek IP-adres voor whitelisting bij de server
-
-### Software
-
-* Besturingssysteem: Ubuntu 22.04+, Windows 10 of hoger, macOS 13.x of hoger
-* Docker of Docker Desktop
-* Python versie 3.10+
-
-## Data
-
-
-
-### Node Beheerder
-
-Vereist voor PLUGIN?
+### PLUGIN-Analytics
+### PLUGIN-ML
+### PLUGIN-Hub
+### PLUGIN-Lake

@@ -140,7 +140,7 @@ dependencies = [
 requires-dist = [
     { name = "mkdocs-bibtex", specifier = ">=4.4.0" },
     { name = "mkdocs-glightbox", specifier = ">=0.5.1" },
-    { name = "mkdocs-material", git = "https://github.com/health-ri/mkdocs-material-insiders" },
+    { name = "mkdocs-material" },
     { name = "mkdocs-pdf", specifier = ">=0.1.2" },
     { name = "mkdocs-puml", specifier = ">=2.3.0" },
     { name = "mkdocs-static-i18n", specifier = ">=1.3.0" },
@@ -512,22 +512,24 @@ wheels = [
 
 [[package]]
 name = "mkdocs-material"
-version = "9.6.20+insiders.4.53.17"
-source = { git = "https://github.com/health-ri/mkdocs-material-insiders#0892d2e7967351da96f8d1ede2b46beec7e407a1" }
+version = "9.7.1"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "babel" },
     { name = "backrefs" },
-    { name = "click" },
     { name = "colorama" },
     { name = "jinja2" },
     { name = "markdown" },
-    { name = "mergedeep" },
     { name = "mkdocs" },
     { name = "mkdocs-material-extensions" },
     { name = "paginate" },
     { name = "pygments" },
     { name = "pymdown-extensions" },
     { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/27/e2/2ffc356cd72f1473d07c7719d82a8f2cbd261666828614ecb95b12169f41/mkdocs_material-9.7.1.tar.gz", hash = "sha256:89601b8f2c3e6c6ee0a918cc3566cb201d40bf37c3cd3c2067e26fadb8cce2b8", size = 4094392, upload-time = "2025-12-18T09:49:00.308Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3e/32/ed071cb721aca8c227718cffcf7bd539620e9799bbf2619e90c757bfd030/mkdocs_material-9.7.1-py3-none-any.whl", hash = "sha256:3f6100937d7d731f87f1e3e3b021c97f7239666b9ba1151ab476cabb96c60d5c", size = 9297166, upload-time = "2025-12-18T09:48:56.664Z" },
 ]
 
 [[package]]
