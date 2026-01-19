@@ -1,6 +1,4 @@
----
-title: Data stations voor primair vs. secundair gebruik
----
+# 7.1. Data stations voor primair vs. secundair gebruik
 
 Dit document geeft een beschrijving van een federatieve BVO, met het [data station](../componenten/laag-3/data-station.md) en de [Federated Processing Hub](../componenten/laag-4/fph.md) als de meest kenmerkende componenten. In de context van primair gebruik wordt ook gesproken over data stations en centrale integratie componenten zoals bijvoorbeeld de [_Interoperability Layer_](https://guides.ohie.org/arch-spec/openhie-component-specifications-1/openhie-interoperability-layer-iol) in de OpenHIE architectuur. Doel is om een van de onderzoeksvragen hierover te addresseren:
 
@@ -41,7 +39,7 @@ Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tus
     | ID    | Omschrijving |
     |:-----:|:-------------|
     | L4-V1 | Grondslag en rol van data gebruiker in primair proces is anders voor primair (behandelrelatie) en secundair (vergunning of gegevensverzoek). |
-    | L4-V2 | De Federated Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
+    | L4-V2 | De Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
 
 ## Parking lot
 

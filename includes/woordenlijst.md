@@ -11,7 +11,6 @@
 *[Epic]: Elektronisch Patiëntendossier ontwikkeld door Epic Systems Corporation
 *[FAIR]: Findable, Accessible, Interoperable, Reusable
 *[FDBS]: Federated Database System
-*[FPH]: Federated Processing Hub
 *[HDAB]: Health Data Access Body
 *[HiX]: Healthcare Information eXchange, door ChipSoft ontwikkelde totaaloplossing voor zorginstellingen.
 *[LDN]: Landelijke Dekkend Netwerk

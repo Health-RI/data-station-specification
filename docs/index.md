@@ -1,6 +1,6 @@
-# 1.0. Inleiding
+# 1. Inleiding
 
-## 1.0.1. De noodzaak voor een landelijk dekkend netwerk in de zorg
+## De noodzaak voor een landelijk dekkend netwerk in de zorg
 
 Het verlenen van zorg vindt vaak plaats in een netwerk van zorgaanbieders uit verschillende sectoren. Digitalisering, gegevensuitwisseling en databeschikbaarheid vervullen hierin een cruciale rol. Om dit mogelijk te maken, wordt in Nederland gewerkt aan de realisatie van een Landelijke Dekkend Netwerk (LDN). Het LDN is een overkoepelende term en omvat:
 
@@ -23,7 +23,7 @@ Het LDN zal primair gebruik en secundair gebruik van data ondersteunen, met vers
 ///
 
 
-## 1.0.2. Op weg naar de EHDS
+## Op weg naar de EHDS
 Het werk aan het LDN is onderdeel van de implementatie van de European Health Data Space (EHDS), die op 26 maart 2025 in werking is getreden. De belangrijkste mijlpalen op weg naar de volledige uitvoering zijn:
 
 - **maart 2027**: vaststelling landelijke uitvoeringswetten met gedetailleerde regels en praktische uitwerking van de verordening, inclusief de benoeming van de nationale Health Data Access Body (HDAB) als orgaan voor toezicht op en mogelijk maken van secundair gebruik.
@@ -33,29 +33,33 @@ Het werk aan het LDN is onderdeel van de implementatie van de European Health Da
 
 
 ???+ abstract "De belangrijkste concepten rondom secundair gebruik"
-    De belangrijkste concepten rondom secundair gebruik zijn gedefinieerd in de nieuwe Europease wetgeving, met name de EHDS (hoofdstuk IV, artikel 50 t/m 81) en de Data Governance Act (DGA).
+    De belangrijkste concepten rondom secundair gebruik zijn gedefinieerd in de nieuwe Europese wetgeving, met name de EHDS (hoofdstuk IV, artikel 50 t/m 81) en de Data Governance Act (DGA).
 
     === "**Beveiligde verwerkingsomgeving (BVO)**"
         Een beveiligde omgeving waarin gezondheidsgegevens verwerkt kunnen worden voor bijvoorbeeld wetenschappelijk onderzoek. Dit kan een centrale BVO zijn, zoals bijvoorbeeld de [CBS Microdata omgeving](https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen), een gefedereerde BVO of een hybride combinatie daarvan. Dit focus van deze specificatie is dat data stations als hoeksteen kunnen fungeren voor een netwerk van BVOs.
     
     === "**Datagebruiker**" 
-        Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten.
+        Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten. In EHDS-terminologie: de gebruiker van gezondheidsegegevens (_Health Data User_).
+
+    === "**Data-afnemer**"
+        Een persoon of organisatie die verwerkingsverantwoordelijkheid heeft over het gebruik van de data door de datagebruiker. Een data-afnemer is deelnemer aan de dataspace voor secundair gebruik.
 
     === "**Datahouder**"
         Een datahouder is een persoon of organisatie (publiek of privaat) die gezondheidsdata beheert. Veel organisaties vallen hieronder. Het gaat niet alleen om ziekenhuizen, maar bijvoorbeeld ook iedereen die producten of diensten ontwikkelt die bestemd zijn voor de zorgsector of gezondheidszorg, of ontwikkelaars van wellnessapps, of wetenschappelijk onderzoekers die zich bezighouden met de zorgsector of gezondheidszorg.
 
+    === "**Dataleverancier**"
+        Een datahouder die niet is uitgezonderd op grond van artikel 50 van de EHDS is dataleverancier en daarmee deelnemer aan de dataspace voor secundair gebruik.
+
     === "**Secundair gebruik**"
         Het gebruik van elektronische gezondheidsgegevens voor andere doeleinden dan die waarvoor ze verzameld zijn. Het gebruiken van gezondheidsgegevens, die zijn vastgelegd voor de behandeling van een patiënt, voor wetenschappelijk onderzoek, is een voorbeeld van secundair gebruik.
 
-
-
-## 1.0.3. Scope van dit specificatie document
+## Scope van dit specificatie document
 
 Dit specificatie document beschrijft een architectuur voor een landelijke gezondheidsdata-infrastructuur voor secundair gebruik. Het gaat uit van het concept van data stations als hoeksteen om syntactische en semantische interoperabiliteit te realiseren. Deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om secundair van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
 
 Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld onder aan elke pagina.
 
-## 1.0.4. Attributie
+## Attributie
 
 Deze specificatie is opgesteld in opdracht van Health-RI door:
 

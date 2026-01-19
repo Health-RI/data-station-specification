@@ -1,4 +1,4 @@
-# Is een hybride BVO mogelijk en wenselijk?
+# 7.3. Is een hybride BVO mogelijk en wenselijk?
 
 Ingaan op de vraag:
 
