@@ -134,7 +134,7 @@ nav:
           - applicatie/laag-4/index.md
           - 4.2. catalogus: applicatie/laag-4/catalogus.md
           - 4.3. DAAMS: applicatie/laag-4/daams.md
-          - 4.4. Federated processing hub: applicatie/laag-4/fph.md
+          - 4.4. Federated processing hub: applicatie/laag-4/processing-hub.md
       - Laag 5:
           - applicatie/laag-5/index.md
           - 4.5. Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
@@ -153,17 +153,20 @@ nav:
       - Infrastructuur: implementaties/KIK-V/infrastructuur.md
     - 6.2. PLUGIN:
       - implementaties/PLUGIN/index.md
+      - Proces: implementaties/PLUGIN/proces.md
       - Informatie: implementaties/PLUGIN/informatie.md
-      - Architectuur: implementaties/PLUGIN/architectuur.md
-    - 6.3. DataSHIELD:
-      - implementaties/DataSHIELD/index.md
-      - Informatie: implementaties/DataSHIELD/informatie.md
-      - Applicatie: implementaties/DataSHIELD/applicatie.md
+      - Applicatie: implementaties/PLUGIN/applicatie.md
+      - Infrastructuur: implementaties/PLUGIN/infrastructuur.md
+    # - 6.3. DataSHIELD:
+    #   - implementaties/DataSHIELD/index.md
+    #   - Informatie: implementaties/DataSHIELD/informatie.md
+    #   - Applicatie: implementaties/DataSHIELD/applicatie.md
   - 7. Discussie:
     - discussie/index.md
-    - 7.1. Primair vs. secundair: discussie/primair-vs-secundair.md    
-    - 7.2. Permit vs. request: discussie/permit-vs-request.md
-    - 7.3. Centraal vs. federatief: discussie/centraal-vs-federatief.md    
+    - 7.1. Centraal vs. decentraal: discussie/centraal-vs-decentraal.md    
+    - 7.2. Primair vs. secundair: discussie/primair-vs-secundair.md    
+    - 7.3. Permit vs. request: discussie/permit-vs-request.md
+    
   - Appendix:
     - appendix/index.md
     - Archimate data space: https://health-ri.github.io/data-spaces-archimate/

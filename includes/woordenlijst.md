@@ -1,7 +1,8 @@
 *[BVO]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
 *[BVOs]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
 *[DAAMS]: Data Access Application Management System
-*[Data gebruiker]: Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten.
+*[Datagebruiker]: Een persoon of organisatie die toegang heeft gekregen tot elektronische gezondheidsgegevens voor secundair gebruik. Bijvoorbeeld een onderzoeker, een beleidsmederwerker of een ontwikkelaar van commerciële producten.
+*[Dataleverancier]: Een datagebruiker die op grond van de EHDS verplicht is data beschikbaar te stellen en niet is uitgezonderd op basis van artikel 50. Iedere dataleverancier beschikt daarom in principe over een eigen datastation.
 *[Docker container]: Een samengesteld pakket aan software dat snel en betrouwbaar draait in verschillende omgevingen.
 *[Docker image]: Een uit te breiden blauwdruk voor een Docker container.
 *[DGA]: Data Governance Act

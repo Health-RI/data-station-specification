@@ -68,12 +68,10 @@ Deze specificatie is opgesteld in opdracht van Health-RI door:
 
 Daarnaast hebben de volgende personen een bijdrage geleverd aan de eerste versie:
 
-- [Maarten Kollenstart](https://www.linkedin.com/in/maarten-kollenstart-a08429146/) (TNO): review algehele architectuur van data spaces, _verifiable credentials_
+- [Maarten Kollenstart](https://www.linkedin.com/in/maarten-kollenstart-a08429146/) (TNO): review algehele architectuur van data spaces, detaillering gebruik DCAT standaard,  _verifiable credentials_
 - [Tim Hendriks](https://www.clinicaldatascience.nl/Staff/tim-hendriks) (Medical Data Works): federated learning, beschrijving PLUGIN/vantage6 implementatie
 - [Madou Derksen](https://www.linkedin.com/in/madou-derksen/) (Dutch Hospital Data): beschrijving PLUGIN/vantage6 implementatie
 - [René Houwen](https://www.linkedin.com/in/renehouwen/) (in opdracht van Zorginstituut Nederland): beschrijving KIK-V implementatie
-- [Rik Sonderkamp](https://www.linkedin.com/in/rik-sonderkamp/) (Visma Connect, in opdracht van Zorginstituut Nederland): beschrijving KIK-V implementatie
-
 
 **:material-creative-commons: Dit werk is gelicenseerd onder een [Creative Commons Naamsvermelding 4.0 Internationaal licentie](https://creativecommons.org/licenses/by/4.0/).**
 
