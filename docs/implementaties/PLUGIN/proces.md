@@ -8,7 +8,7 @@ In deze implementatie wordt de rol van het Datastation vervuld door een **vantag
 
 Om een federatief proces te starten, moet eerst een samenwerkingsverband worden opgezet. Binnen vantage6 worden hiervoor de volgende entiteiten gebruikt:
 
-![](../vantage6-rollen.svg)
+![](./vantage6-rollen.svg)
 
 *   **Samenwerking (Collaboration):** Een verzameling van organisaties (dataleveranciers) die met elkaar samenwerken. Dit komt overeen met de groep dataleveranciers waarvoor een datagebruiker een vergunning heeft.
 *   **Organisatie (Organization):** Een deelnemende entiteit, zoals een ziekenhuis of onderzoeksinstituut.

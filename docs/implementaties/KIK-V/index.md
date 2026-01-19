@@ -4,7 +4,7 @@
 
 ![type:video](https://www.youtube.com/embed/e57qKcb1ZRw?si=MBryg2leLNIA7pXt)
 
-In het programma KIK-V werken ketenpartijen in de verpleeghuiszorg samen aan het stroomlijnen van de informatie-uitwisseling, aan de hand van een afsprakenset. 
+In het programma KIK-V[^1] werken ketenpartijen in de verpleeghuiszorg samen aan het stroomlijnen van de informatie-uitwisseling, aan de hand van een afsprakenset. 
 
 Voordat KIK-V werd gebruikt, vragen ketenpartijen zoals de zorgkantoren, de NZa, de IGJ en het Zorginstituut aan zorgaanbieders vooral om gegevens aan te leveren via centrale databases om zo het aantal uitvragen aan een zorgaanbieder te beperken. Helaas sluiten deze centrale informatiebronnen niet altijd aan bij de behoeften van de ketenpartijen. Die hebben actuelere gegevens nodig of van een ander detailniveau. Soms zijn aanvullende gegevens nodig of veranderen behoeften door externe factoren. Het gevolg is: juist méér uitvragen aan de zorgaanbieder als datahouder.
 
