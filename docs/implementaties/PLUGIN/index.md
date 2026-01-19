@@ -16,15 +16,13 @@ De PLUGIN infrastructuur implementeert verschillende componenten zoals in onders
     | PLUGIN-ML | gefedereerd leren |
     | PLUGIN-Hub | data pooling |
     | vantage6 server | centrale processing hub waarop gebruikers, organizaties, samenwerkingsverbanden taken en resultaten worden beheerd en georchestreerd |
-    | vantage6 UI | webapplicatie waarmee gebruikers kunnen interacteren met de serve |
+    | vantage6 UI | webapplicatie waarmee gebruikers kunnen interacteren met de server |
     | vantage6 API | programmatische aansturing van de server, incl. Python client en R client |
     | Docker registry | containers die zijn geautoriseerd om decentraal op de datastations uit te voeren |
     | Algorithm store | de metadata over de (algoritme) containers, inclusief ondersteuning van goedkeuringsproces |
     | vantage6 node | decentrale component van processing hub die de lokale berekeningen uitvoert |
     | algoritme container | tijdelijke lokale kopie van het algoritme dat wordt uitgevoeerd, wordt aangemaakt en verwijderd door de vantage6 node |
     | PLUGIN-Lake | Lakehouse voor serverless opslag en ETL transformaties op het datastation |
-
-
 
 
 ??? info "Externe documentatie"
