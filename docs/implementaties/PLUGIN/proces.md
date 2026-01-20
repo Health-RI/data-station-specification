@@ -8,7 +8,7 @@ In deze implementatie wordt de rol van het Datastation vervuld door een **vantag
 
 Om een federatief proces te starten, moet eerst een samenwerkingsverband worden opgezet. Binnen vantage6 worden hiervoor de volgende entiteiten gebruikt:
 
-![](../vantage6-rollen.svg)
+![](./vantage6-rollen.svg)
 
 *   **Samenwerking (Collaboration):** Een verzameling van organisaties (dataleveranciers) die met elkaar samenwerken. Dit komt overeen met de groep dataleveranciers waarvoor een datagebruiker een vergunning heeft.
 *   **Organisatie (Organization):** Een deelnemende entiteit, zoals een ziekenhuis of onderzoeksinstituut.
@@ -17,7 +17,7 @@ Om een federatief proces te starten, moet eerst een samenwerkingsverband worden 
 *   **Taak (Task):** Een specifieke opdracht, zoals het trainen van een model of het uitvoeren van een analyse, die naar een of meerdere nodes wordt gestuurd.
 *   **Rol (Role) en Regel (Rule):** Definiëren de permissies van een gebruiker.
 
-De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace.
+De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Dataworks heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en open source beschikbaar gesteld.
 
 ## Uitvoeren van een federatieve taak
 
