@@ -135,7 +135,7 @@ nav:
           - applicatie/laag-4/index.md
           - 4.2. catalogus: applicatie/laag-4/catalogus.md
           - 4.3. DAAMS: applicatie/laag-4/daams.md
-          - 4.4. Federated processing hub: applicatie/laag-4/processing-hub.md
+          - 4.4. Processing hub: applicatie/laag-4/processing-hub.md
       - Laag 5:
           - applicatie/laag-5/index.md
           - 4.5. Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
