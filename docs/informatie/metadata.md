@@ -187,7 +187,8 @@ Voor secundair gebruik (onderzoek, beleid, innovatie) verschuift de nadruk naar 
 Wanneer een catalogus browser of federatieve query-engine automatisch de mogelijkheden van een dataservice wil bepalen, moet bekend zijn welk type specificatie de `dcat:endpointDescription` bevat. Een FHIR CapabilityStatement heeft bijvoorbeeld een andere structuur dan een OpenAPI specificatie, en systemen moeten weten hoe ze deze moeten interpreteren. Door het type specificatie expliciet te maken met `dct:conformsTo`, kan een systeem de juiste keuze maken en de beschikbare mogelijkheden ontdekken.
 
 ???+ success "Combineren van endpointDescription met conformsTo"
-Combineer `dcat:endpointDescription` altijd met `dct:conformsTo` om het type specificatie expliciet te maken:
+
+    Combineer `dcat:endpointDescription` altijd met `dct:conformsTo` om het type specificatie expliciet te maken:
 
     ```turtle
     <https://example.org/service/fhir-api> a dcat:DataService ;
