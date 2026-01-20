@@ -64,4 +64,28 @@ Semantische interoperabiliteit is erop gericht om verschillende computersystemen
 
     Het is goed om op te merken dat alle syntatische standaarden (FHIR, OMOP, openEHR) altijd gebruik maken van meerdere KOS componenten. Op zijn moeten codelijsten (taxonomieen) gebruikt worden, in het meest uitgebreide geval wordt een ontologie gebruikt. Zo wordt SNOMED vrijwel altijd gebruikt bij implementaties van OMOP, openEHR en FHIR.
 
+## Metadata standaarden voor vindbaarheid en toegankelijkheid
+
+Naast semantische en syntactische interoperabiliteit is het ook essentieel dat datasets _vindbaar_ en _begrijpelijk_ zijn. Metadata beschrijft niet alleen welke data beschikbaar is, maar ook onder welke voorwaarden deze gebruikt mag worden en via welke services de data toegankelijk is. Voor metadata interoperabiliteit tussen datastations worden internationale standaarden gebruikt.
+
+=== "**DCAT**"
+
+    **DCAT** (Data Catalog Vocabulary) is een W3C-standaard voor het beschrijven van datasets in datacatalogi. Het biedt een gemeenschappelijk vocabulaire waarmee organisaties hun datasets kunnen beschrijven, ongeacht het domein.
+
+=== "**DCAT-AP**"
+
+    **DCAT-AP** is een Europees applicatieprofiel van DCAT, ontwikkeld door de Europese Commissie. Het verfijnt DCAT met extra verplichte en aanbevolen velden die relevant zijn voor Europese overheidsdata, zoals toegangsrechten en toepasselijke wetgeving.
+
+=== "**HealthDCAT-AP**"
+
+    **HealthDCAT-AP** is een uitbreiding van DCAT-AP specifiek voor de gezondheidszorgsector. Het voegt metadata-elementen toe die essentieel zijn voor gezondheidsdata, zoals gezondheidscategorieën, populatiekenmerken, coderingssystemen, retentieperiodes en de verantwoordelijke Health Data Access Body (HDAB).
+
+=== "**Health-RI metadata schema**"
+
+    Het **Health-RI metadata schema** is een Nederlands profiel gebaseerd op DCAT-AP en HealthDCAT-AP, met specifieke aanpassingen voor de Health-RI Datacatalogus. Dit schema definieert welke metadata-elementen verplicht, aanbevolen of optioneel zijn voor Nederlandse gezondheidsdata.
+
+Met deze metadata standaarden kunnen datastations hun datasets op een gestructureerde en interoperabele manier beschrijven. Belangrijke DCAT-klassen hierbij zijn de catalogus (verzameling van datasets), de dataset zelf (logische groepering van gegevens), distributies (concrete toegangsvormen), en dataservices (operationele toegangspunten). Daarnaast moet rekening gehouden worden met het verschil tussen statische databronnen zoals onderzoekscohorten en dynamische databronnen zoals actieve databases, elk met hun eigen aanpak voor versiebeheer en metadata-onderhoud.
+
+---
+
 De TEHDAS2 stelt dat BVOs functionaliteit moet aanbieden om semantische en syntactische interoperabiliteit te realiseren (zie FCR-1 en FCR-2 in de [TEHDAS2 requirements](../appendix/tehdas2-requirements.md)). In het volgende wordt beschreven hoe dit gerealiseerd kan worden binnen de datastations.

@@ -125,6 +125,7 @@ nav:
       - informatie/index.md
       - informatie/syntactisch.md
       - informatie/semantisch.md
+      - informatie/metadata.md
   - 4. Applicatie:
       - applicatie/index.md
       - Laag 3:
