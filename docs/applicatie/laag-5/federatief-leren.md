@@ -102,28 +102,23 @@ Tegelijkertijd zijn er nog de nodige uitdagingen voor grootschalige implementati
 
     === "Techniek en infrastructuur"
 
-    * **Hardware:** De meeste FL-modellen vereisen krachtige **GPU's**, die momenteel in veel ziekenhuizen niet standaard beschikbaar zijn op de plek waar de data staat.
-    * **Data-heterogeniteit:** Verschillen in patiëntenpopulaties en klinische protocollen leiden tot variatie in data, wat de nauwkeurigheid van het centrale model kan ondermijnen.
+        * **Hardware:** De meeste FL-modellen vereisen krachtige **GPU's**, die momenteel in veel ziekenhuizen niet standaard beschikbaar zijn op de plek waar de data staat.
+        * **Data-heterogeniteit:** Verschillen in patiëntenpopulaties en klinische protocollen leiden tot variatie in data, wat de nauwkeurigheid van het centrale model kan ondermijnen.
 
     === "Privacy en veiligheid"
 
-    * **Metadata-lekken:** Hoewel patiëntdata lokaal blijft, kunnen aanvallers via modelparameters of metadata (zoals het aantal patiënten per locatie) soms toch gevoelige informatie herleiden.
-    * **Encryptiekosten:** Sterke encryptie (Homomorphic Encryption) vraagt momenteel nog te veel rekenkracht voor grootschalig gebruik bij complexe modellen.
-
-
+        * **Metadata-lekken:** Hoewel patiëntdata lokaal blijft, kunnen aanvallers via modelparameters of metadata (zoals het aantal patiënten per locatie) soms toch gevoelige informatie herleiden.
+        * **Encryptiekosten:** Sterke encryptie (Homomorphic Encryption) vraagt momenteel nog te veel rekenkracht voor grootschalig gebruik bij complexe modellen.
 
     === "Standaardisatie"
 
-    * **Eigen implementaties:** De meeste onderzoekers bouwen hun eigen FL-software in plaats van bestaande raamwerken (zoals Flower of NVIDIA FLARE) te gebruiken, wat de kans op fouten vergroot.
-    * **Slechte documentatie:** Details over data-voorbehandeling, missing values en model-initialisatie ontbreken vaak, waardoor resultaten lastig te verifiëren zijn.
-
-
+        * **Eigen implementaties:** De meeste onderzoekers bouwen hun eigen FL-software in plaats van bestaande raamwerken (zoals Flower of NVIDIA FLARE) te gebruiken, wat de kans op fouten vergroot.
+        * **Slechte documentatie:** Details over data-voorbehandeling, missing values en model-initialisatie ontbreken vaak, waardoor resultaten lastig te verifiëren zijn.
 
     === "Juridisch en operationeel"
     
-
-    * **Regelgeving:** FL-netwerken moeten voldoen aan strenge privacywetgeving zoals de **AVG (GDPR)** en HIPAA.
-    * **Gebrek aan praktijkvoorbeelden:** Geen van de 89 onderzochte artikelen leverde bewijs voor een daadwerkelijke, langdurige inzet in een echte klinische omgeving.
+        * **Regelgeving:** FL-netwerken moeten voldoen aan strenge privacywetgeving zoals de **AVG (GDPR)** en HIPAA.
+        * **Gebrek aan praktijkvoorbeelden:** Geen van de 89 onderzochte artikelen leverde bewijs voor een daadwerkelijke, langdurige inzet in een echte klinische omgeving.
 
 Alhoewel federatief leren dus veel kan brengen, zals er nog het nodige moeten gebeuren om in op grote schaal routinematig te gebruiken. Daar waar de standaardisatie van het datastation al redelijk ver is, is dat voor het component federatief leren veel minder het geval. In de verdere uitwerking en ontwikkeling zal dus bijvoorbeeld de uitkomst van het [Health-AI programma](https://www.clinicaldatascience.nl/health-ai) meegenomen moeten worden.
 
