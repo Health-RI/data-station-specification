@@ -2,7 +2,7 @@
 
 [TO DO: vertalen naar het Nederlands]
 
-The following are the standards that have been used or are in the process of being used for composable data stations. However, this specification is **not limited to supporting these standards or open source application components**.
+The following are the standards that have been used or are in the process of being used for composable datastations. However, this specification is **not limited to supporting these standards or open source application components**.
 
 ## Infrastructure standards
 

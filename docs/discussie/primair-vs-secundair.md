@@ -1,4 +1,4 @@
-# 7.2. Data stations voor primair vs. secundair gebruik
+# 7.2. Datastations voor primair vs. secundair gebruik
 
 Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/laag-3/data-station.md) en de [processing hub](../applicatie/laag-4/processing-hub.md) als de meest kenmerkende componenten. In vergelijking met de Cumuluz doelarchitectuur zien we vergelijkbare rollen voor het Cumuluz Datastation respectievelijk de Cumuluz Integrator. Zoals in de inleiding is gesteld, is een vergelijking van de architectuur voor primair vs. secundair een van de centrale onderzoeksvragen: 
 
@@ -17,22 +17,22 @@ In het ontwerp van een Cumuluz Datastation is duidelijk gespecificeerd hoe via e
 
 ## 7.2.2. Vergelijking primair en secundair datastation
 
-???+ success "Overeenkomsten tussen primaire en secundaire data stations"
+???+ success "Overeenkomsten tussen primaire en secundaire datastations"
     | ID    | Omschrijving |
     |:-----:|:-------------|
     | DS-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten. |
     | DS-02 | Een datastation valt in het domein van de datahouder. |
     | DS-O3 | Een datastation gaat uit van conformiteit, waarbij meerdere informatiemodellen worden ondersteund incl. functionaliteit om transformaties tussen deze modellen uit te voeren. |
          
-???+ warning "Verschillen tussen primaire en secundaire data stations"
+???+ warning "Verschillen tussen primaire en secundaire datastations"
     | ID    | Omschrijving |
     |:------:|:-------------|
     | DS-V1 | Primair gebruik richt zich uitsluitend op klinische data. Secundair gebruik omvat ook bedrijfsmatige en logistieke data. |
     | DS-V2 | Localisatie van data in het primaire proces is gebaseerd op unieke identifiers voor personen, terwijl in het secundaire proces de gegevenscatalogus wordt gebruikt. |
-    | DS-V3 | Toegangscontrole bij een data station wordt uitgevoerd op persoonsniveau. Bij een secundair data station is toegangscontrole ingericht op de berekening die wordt uitgevoerd. |
+    | DS-V3 | Toegangscontrole bij een datastation wordt uitgevoerd op persoonsniveau. Bij een secundair datastation is toegangscontrole ingericht op de berekening die wordt uitgevoerd. |
     | DS-V4 | Primair gebruik is geoptimaliseerd voor snelle (_latency_ minder dan 1 seconde) voor bevraging van data van één persoon, terwijl secundair gebruik uit gaat van bulk bevraging met een grotere latency. |
-    | DS-V5 | Opslag van data is bij een primair data station optioneel, bij een secondair data stations een vereiste om _data visiting_ te ondersteunen. |
-    | DS-V6 | Een primair data station heeft geen voorziening voor het lokaal uitvoeren van berekeningen. Voor een secondair data stations een vereiste om _data visiting_ te ondersteunen. |
+    | DS-V5 | Opslag van data is bij een primair datastation optioneel, bij een secondair datastations een vereiste om _data visiting_ te ondersteunen. |
+    | DS-V6 | Een primair datastation heeft geen voorziening voor het lokaal uitvoeren van berekeningen. Voor een secondair datastations een vereiste om _data visiting_ te ondersteunen. |
 
 ## Vergelijking Integrator (primair) en Processing Hub (secundair)
 
@@ -67,7 +67,7 @@ De "Adapter"-rol in de CumuluZ-architectuur moet worden doorontwikkeld naar een 
 * **Eenduidige Governance op "Data Access Committees" (DAC):**
 Het proces voor het verlenen van toegang moet worden gestroomlijnd waarbij de lokale DAC van een ziekenhuis en de nationale HDAB via een federatief model samenwerken. Dit voorkomt dubbele administratieve lasten en zorgt ervoor dat de bronhouder de regie behoudt, conform architectuurprincipe C2.
 
-Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tussen data station voor primair en secundair gebruik, als ook voor de centrale integratie component in laag 4.
+Onderstaande tabellen geven een overzicht van de verschillen en overeenkomst tussen datastation voor primair en secundair gebruik, als ook voor de centrale integratie component in laag 4.
 
 
 

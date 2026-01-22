@@ -6,7 +6,7 @@
 
 De wijze waarop afnemers (datagebruikers) en aanbieder (datahouders) het KIK-V vraag- en antwoordspel vormgeven, is (mede) afhankelijk van de mate van digitalisering van de betrokken actoren. De afspraken en specificaties binnen KIK-V beschrijven het vraag- en antwoordspel met gebruik van datastations door zorgaanbieders en de KIK-starter door afnemers. Op basis van de afspraken en specificaties kunnen aanbieders een datastation implementeren voor toepassing van KIK-V en de uitwisseling met de KIK-starter voor afnemers. Afnemers kunnen naar de afspraken en specificaties verwijzen in de uitwisselprofielen.
 
-In feite ondersteund KIK-V dus wat in de EHDS gegevensverzoeken worden genoemd, met gebruik van federated analytics in een decentraal netwerk van data stations.
+In feite ondersteund KIK-V dus wat in de EHDS gegevensverzoeken worden genoemd, met gebruik van federated analytics in een decentraal netwerk van datastations.
 
 ## Principes
 

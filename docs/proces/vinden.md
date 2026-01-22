@@ -4,7 +4,7 @@ Het zoeken en vinden van data is de eerste stap in het hele proces. Een potentiÃ
 
 Het publiceren en beheren van een Nationale catalogus van datasets is een taak van de HDAB, zoals vastgelegd in artikel 57(1j) van de EHDS[^1].
 
-!!! info Gebruik van het concept dataleverancier
+!!! info "Dategebuiker versus dataleverancier"
 
     In de usecases gebruiken we bewust de term dataleverancier in plaats van datahouder. Daarmee maken we een duidelijk onderscheid tussen de verantwoordelijkheid van een organisatie die gezondheidsgegevens bezit (datahouder) en een organisatie die gegevens beschikbaar moet stellen (dataleverancier). Artikel 50 van de EHDS benoemt een aantal uitzonderingen waarbij datahouders geen gezondheidsgegevens hoeven te leveren.
 

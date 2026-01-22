@@ -1,4 +1,4 @@
-site_name: Data stations voor secundair gebruik in de zorg
+site_name: Datastations voor secundair gebruik in de zorg
 site_url: https://health-ri.github.io/data-station-specification
 repo_url: https://github.com/Health-RI/data-station-specification
 theme:
@@ -65,13 +65,13 @@ plugins:
         - locale: en
           name: English
           build: true
-          site_name: Data stations for secondary use of health data
+          site_name: Datastations for secondary use of health data
           nav_translations:
             # Introduction sections
-            Data stations voor secundair gebruik in de zorg: Data station for secondary use of health data
+            Datastations voor secundair gebruik in de zorg: Data station for secondary use of health data
             Inleiding: Introduction
             Scope van de specificatie: Scope of the specification
-            Data stations als basis voor interoperabiliteit: Data stations as cornerstone for interoperability
+            Datastations als basis voor interoperabiliteit: Data stations as cornerstone for interoperability
             Leeswijzer: Reader's guide
 
             # main sections
@@ -83,7 +83,7 @@ plugins:
             Motivatie: Motivation
             Principes: Principles
             Standaarden: Standards
-            Data station: Data station
+            Datastation: Datastation
             Federatief netwerk: Federated network
             PLUGIN: PLUGIN
             KIK-V: KIK-V
@@ -130,7 +130,7 @@ nav:
       - applicatie/index.md
       - Laag 3:
           - applicatie/laag-3/index.md
-          - 4.1. Data station: applicatie/laag-3/data-station.md
+          - 4.1. Datastation: applicatie/laag-3/data-station.md
       - Laag 4:
           - applicatie/laag-4/index.md
           - 4.2. catalogus: applicatie/laag-4/catalogus.md

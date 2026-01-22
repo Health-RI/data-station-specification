@@ -26,7 +26,7 @@ KIK-V implementeerd een vorm van federated analytics, waarbij de volgende compon
 - Applicatie:
     - **laag 4 | KIK-Starter** is de applicatie waarmee datagebruikers hun gegevensverzoeken kunnen uitvoeren.
     - **laag 4 | Credentialsplatform** vervuld een functie vergelijkbaar met de DAAMS, waarbinnen goedgekeurde uitwisselprofielen worden beheerd en beschikbaar gesteld voor datagebruikers.
-    - **laag 3 | Data station** bevat de data en metadata in RDF formaat en is via het beveiligde NUTS-netwerk te benaderen middels een SPARQL query API.
+    - **laag 3 | Datastation** bevat de data en metadata in RDF formaat en is via het beveiligde NUTS-netwerk te benaderen middels een SPARQL query API.
 - Infrastructuur:
     - Het **Nuts netwerk** is de basis waarmee het vraag- en antwoordspel van gegevensverzoeken wordt ondersteund.
 

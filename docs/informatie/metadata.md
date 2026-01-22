@@ -729,7 +729,7 @@ De volgende voorbeelden illustreren hoe verschillende typen databronnen in een d
 
 ## 3.3.6. Relatie met het vijflagenmodel
 
-De metadata-standaarden die in dit document worden beschreven, sluiten aan bij het vijflagenmodel voor data stations:
+De metadata-standaarden die in dit document worden beschreven, sluiten aan bij het vijflagenmodel voor datastations:
 
 - **Laag 3 (het datastation)**: De `dcat:Catalog` en `dcat:Dataset` beschrijvingen vormen de basis voor de catalogusfunctie van het datastation. Het datastation moet haar catalogus publiceren in HealthDCAT-AP formaat.
 - **Laag 4 (orchestratie)**: De `dcat:DataService` beschrijvingen maken het mogelijk voor federatieve query-engines en catalogus browsers om automatisch de mogelijkheden van een datastation te ontdekken.

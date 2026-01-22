@@ -1,4 +1,4 @@
-### Data Station Hardware
+### Datastation Hardware
 
 PLUGIN verwacht bij voorkeur de volgende hardware-specificaties:
 
