@@ -34,11 +34,11 @@ Als beheerder van de Nationale catalogus van datasets zal de HDAB de Nationale c
 
 ## 2.1.3. Zoek datasets
 
-Een onderzoeker of andere partij kan in de Nationale of Europese catalogus zoeken naar relevante datasets. In de beschrijving van de datasets moet voldoende informatie beschikbaar zijn om te bepalen welke data gebruikt kan worden voor een van de doelen zoals genoemd in artikel 53 van de EHDS. Het formaat van de catalogus is beschreven in HealthDCAT-AP Release 5[^2]. 
+Een onderzoeker of andere partij kan in de Nationale of Europese catalogus zoeken naar relevante datasets. In de beschrijving van de datasets moet voldoende informatie beschikbaar zijn om te bepalen welke data gebruikt kan worden voor een van de doelen zoals genoemd in artikel 53 van de EHDS. Het formaat van de catalogus is beschreven in HealthDCAT-AP Release 5.[^2]
 
-### 2.1.3.1 Welke data wordt gepubliceerd in de catalogus
+!!! info "Welke data wordt gepubliceerd in de catalogus"
 
-Alle categorieën elektronische gezondheidsgegevens overeenkomstig artikel 51 van de EHDS moeten beschikbaar zijn voor secundair gebruik. Voor gegevens uit elektronische gezondheidsdossiers gaan we zoveel mogelijk uit van databeschikbaarheid in het OMOP-formaat. Voor gegevens waarin dat niet mogelijk is, zoals administratieve gegevens op het gebied van gezondheidszorg (artikel 51 lid 1e) en gegevens met betrekking tot gezondheidswerkers (artikel 51 lid 1j), gaan we uit van een RDF-formaat overeenkomstig de FAIR-dataprincipes[^3].
+    Alle categorieën elektronische gezondheidsgegevens overeenkomstig artikel 51 van de EHDS moeten beschikbaar zijn voor secundair gebruik. Voor gegevens uit elektronische gezondheidsdossiers gaan we zoveel mogelijk uit van databeschikbaarheid in een of meerdere van de drie meest gebruikte klinische informatiemodellen, zijnde FHIR, OMOP en openEHR.[@tsafnat2024converge] Voor gegevens waarin dat niet mogelijk is, zoals administratieve gegevens op het gebied van gezondheidszorg (artikel 51 lid 1e) en gegevens met betrekking tot gezondheidswerkers (artikel 51 lid 1j), gaan we uit van een RDF-formaat overeenkomstig de FAIR-dataprincipes.[^3]
 
 
 [^1]: European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/

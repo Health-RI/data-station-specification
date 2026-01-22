@@ -8,8 +8,8 @@ Alle aanvragen die via het centrale platform worden ingediend, komen altijd eers
 
 In de EHDS[^1] wordt onderscheid gemaakt tussen twee soorten aanvragen:
 
-- Aanvragen voor toegang tot gezondheidsgegevens (artikel 67), en
-- Verzoeken om gezondheidsgegevens (artikel 69).
+- Aanvragen voor toegang tot gezondheidsgegevens [artikel 68](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_68), en
+- Verzoeken om gezondheidsgegevens [artikel 69](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_69).
 
 Wanneer een aanvraag positief wordt beoordeeld, leidt dit tot het verstrekken van een datavergunning voor toegang tot de gegevens of een goedkeuring van het verzoek. In het diagram worden deze stappen weergegeven als "Verstrek datavergunning of goedkeuring aan verzoek" en "Vraag toegang tot gezondheidsdata aan."
 
@@ -43,8 +43,8 @@ De aanvrager moet tijdens het invullen van de aanvraag aangeven welke datasets n
 
 De HDAB geeft een vergunning of een goedkeuring op een aanvraag. Welke van de twee het wordt, hangt af van het soort aanvraag dat is ingediend:
 
-- De HDAB verleent een vergunning als de aanvraag gaat over toegang tot gezondheidsgegevens (volgens artikel 67).
-- De HDAB geeft een goedkeuring als het een verzoek om gezondheidsgegevens betreft (volgens artikel 69).
+- De HDAB verleent een vergunning als de aanvraag gaat over toegang tot gezondheidsgegevens (volgens [artikel 68](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_68)).
+- De HDAB geeft een goedkeuring als het een verzoek om gezondheidsgegevens betreft (volgens [artikel 69](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_69)).
 
 In dit deel (de usecase) leggen we uit welke stappen doorlopen moeten worden om tot deze vergunning of goedkeuring te komen.
 
@@ -92,11 +92,11 @@ Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de datalev
 
 ## Trek attestatie in
 
-Op basis van artikel 63 van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken.
+Op basis van [artikel 63](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_63) van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken.
 
 ## 2.2.4. Raadpleeg ingediende aanvragen
 
-De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken (artikel 57), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
+De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken ([artikel 57](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_57)), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 
 [^1]: European Parliament and Council. (2025). Regulation (EU) 2025/327 of the European Parliament and of the Council of 11 February 2025 on the European Health Data Space and amending Directive 2011/24/EU and Regulation (EU) 2024/2847. Official Journal of the European Union. https://eur-lex.europa.eu/eli/reg/2025/327/
 
