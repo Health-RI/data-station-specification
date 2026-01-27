@@ -34,7 +34,7 @@ De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
 ## 2.4.2. Registreer algoritme
 
-Een analyse of leerproces wordt uitgevoerd door een algoritme, bijvoorbeeld een script geschreven in Python of een andere programmeertaal. Het algoritme wordt verpakt in een container, zodat het geïsoleerd kan worden uitgevoerd. Met geïsoleerd wordt bedoeld dat de code uitsluitend invloed heeft binnen de container zelf en geen effect heeft op de omgeving daarbuiten. Op deze manier ontstaat op het datastation een beveiligde verwerkingsomgeving waarin meerdere algoritmen, elk in een eigen container, kunnen worden uitgevoerd. Docker is op dit moment een de facto standaard voor comntainers.
+Een analyse of leerproces wordt uitgevoerd door een algoritme, bijvoorbeeld een script geschreven in Python of een andere programmeertaal. Het algoritme wordt verpakt in een container, zodat het geïsoleerd kan worden uitgevoerd. Met geïsoleerd wordt bedoeld dat de code uitsluitend invloed heeft binnen de container zelf en geen effect heeft op de omgeving daarbuiten. Op deze manier ontstaat op het datastation een beveiligde verwerkingsomgeving waarin meerdere algoritmen, elk in een eigen container, kunnen worden uitgevoerd. Docker is op dit moment een de facto standaard voor containers.
 
 De datagebruiker ontwikkelt het algoritme, test het en registreert het vervolgens in een algoritmeregister. De voorwaarden voor registratie moeten nog worden uitgewerkt. Een mogelijke voorwaarde voor registratie is bijvoorbeeld het uitvoeren van een code review.
 

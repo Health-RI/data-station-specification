@@ -25,7 +25,7 @@ The following are the standards that have been used or are in the process of bei
 
 **Component** | **Purpose**
 :--|:--
-[DuckDB](https://duckdb.org) | **DuckDB** is an in-memory, embeddable, columnar database management system designed for analytical workloads. It is simple to use becasue it requires no external dependencies and data can be stored in a persistent, single-file database. It offers a flexible extension mechanism that allows defining new data types, file formats and SQL syntax.
+[DuckDB](https://duckdb.org) | **DuckDB** is an in-memory, embeddable, columnar database management system designed for analytical workloads. It is simple to use because it requires no external dependencies and data can be stored in a persistent, single-file database. It offers a flexible extension mechanism that allows defining new data types, file formats and SQL syntax.
 [Polars](https://pola.rs) | **Polars** is an open-source library for data manipulation, known for being one of the fastest data processing solutions on a single machine. It features a well-structured, typed API that is both expressive and easy to use.
 [Kuzu](https://docs.kuzudb.com/) | **Kuzu** is an embedded property graph database that supports the Cypher query language. It is optimized for handling complex join-heavy analytical workloads on very large graphs.
 [LanceDB](https://lancedb.com/) | **LanceDB** is an open-source multimodal lakehouse that can be used as a vector database and memory for large-scale Generative AI and Search applications, and as a data management platform for large-scale AI workflows: model fine-tuning and training, feature engineering and explorative data analytics over petabyte-size Lance datasets.

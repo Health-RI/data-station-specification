@@ -6,7 +6,7 @@ Wanneer er een belangrijke bevinding is over een individu, meldt de datagebruike
 
 ## 2.5.1. Overzicht van de usecases
 
-Het is een aanname dat het terugmelden van de resutlaten via de DAAMS zal verlopen.
+Het is een aanname dat het terugmelden van de resultaten via de DAAMS zal verlopen.
 
 ![](uc-publiceren.drawio.svg)
 
