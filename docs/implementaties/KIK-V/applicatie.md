@@ -1,8 +1,8 @@
 # KIK-V implementatie: applicatie
 
-## Het KIK-V data station
+## Het KIK-V datastation
 
-Het KIK-V data station is een gestandaardiseerde applicatie waarmee de syntactische en semantische interoperabiliteit van data wordt gerealiseerd. Hiertoe is een specificatie opgesteld zodat zakelijke dienstverleners een _datastation-as-a-service_ kunnen aanbieden. Een KIK-V data station moet ten minste voldoen aan alle onderstaande functionaliteiten. Uiteraard staat het de data station leveranciers daarnaast vrij om hun eigen functionaliteiten toe te voegen. 
+Het KIK-V datastation is een gestandaardiseerde applicatie waarmee de syntactische en semantische interoperabiliteit van data wordt gerealiseerd. Hiertoe is een specificatie opgesteld zodat zakelijke dienstverleners een _datastation-as-a-service_ kunnen aanbieden. Een KIK-V datastation moet ten minste voldoen aan alle onderstaande functionaliteiten. Uiteraard staat het de datastation leveranciers daarnaast vrij om hun eigen functionaliteiten toe te voegen. 
 
 | Vereiste functionaliteit | Omschrijving |
 |:-------------------------|:-------------|
@@ -21,7 +21,7 @@ Het KIK-V data station is een gestandaardiseerde applicatie waarmee de syntactis
 | Flexibel | nieuwe bronsystemen en partners kunnen gemakkelijk worden toegevoegd. |
 | Geschikt voor zorginstellingen | zowel grote als kleine zorginstellingen, met verschillende IT-niveaus, kunnen het systeem gebruiken. |
 
-Per december 2025 zijn er drie leveranciers van KIK-V data stations: [bince](https://bince.nl/over-het-product/daas-kik-v-zorginstituut), [nlcom](https://nlcom.nl/diensten/kik-v-daas/) en [SureSync](https://suresync.nl/datastation). Een screenshot van Bince geeft een indruk hoe het data station in de praktijk gebruikt wordt.
+Per december 2025 zijn er drie leveranciers van KIK-V datastations: [bince](https://bince.nl/over-het-product/daas-kik-v-zorginstituut), [nlcom](https://nlcom.nl/diensten/kik-v-daas/) en [SureSync](https://suresync.nl/datastation). Een screenshot van Bince geeft een indruk hoe het datastation in de praktijk gebruikt wordt.
 
 ![](https://bince-2020.imgix.net/media/Bince-Datastation-KIK-V-Pagina-2-1.png?auto=format&crop=focalpoint&domain=bince-2020.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&ixlib=php-3.3.1&q=100&w=1170n)
 

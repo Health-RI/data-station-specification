@@ -2,7 +2,7 @@
 
 De volgende standaarden zijn gebruikt of worden momenteel gebruikt voor composable data stations. Deze specificatie is echter **niet beperkt tot ondersteuning van deze standaarden of open source applicatiecomponenten**.
 
-## Infrastructuur standaarden
+The following are the standards that have been used or are in the process of being used for composable datastations. However, this specification is **not limited to supporting these standards or open source application components**.
 
 **Standaard** | **Doel**
 :--|:--
