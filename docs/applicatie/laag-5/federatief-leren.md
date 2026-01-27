@@ -1,11 +1,11 @@
-# 4.5. Federatief Leren
+# 4.6. Federatief Leren
 
 Federatief leren is een machine learning-techniek waarbij een model wordt getraind op meerdere decentrale servers, zogenaamde _nodes_ of _clients_, die hun lokale data niet delen. In plaats van data te centraliseren, brengt federatief leren het model naar de data. Het proces wordt geleid door een centrale server die het globale model beheert, maar deze server heeft nooit direct toegang tot de lokale data. De training vindt plaats op de lokale clients, en alleen de updates van het model worden teruggestuurd naar de server.
 
 Er zijn veel verschillende implementaties van federatief leren. Het [Flower framework](https://flower.ai/docs/framework/index.html) is daarvan een de meest gebruikte. Het is een open source library dat wordt beheerd door Flower Labs GmbH en wordt inmiddels in verschillende sectoren gebruikt. We beschouwen Flower als een referentie implementatie van federated learning. Onderstaande beschrijving van federatief leren als applicatiecomponent is gebaseerd op de documentatie van het [Flower framework](https://flower.ai/docs/framework/index.html). 
 
  
-## 4.5.1. Usecase van federatief leren
+## 4.6.1. Usecase van federatief leren
 
 Het proces van federatief leren kan worden opgedeeld in een aantal generieke, herhalende stappen. Een volledige cyclus van deze stappen wordt een 'ronde' genoemd.
 
@@ -78,7 +78,7 @@ sequenceDiagram
 
         Het is goed om teHet onderstaande sequence diagram illustreert de interactie tussen de centrale server (`ServerApp`), de federated learning strategie (`Strategy`) die op de server draait, en de decentrale clients (`ClientApps`).
 
-## 4.5.2. Recente ontwikkelingen en uitdagingen voor federatief leren in de zorg
+## 4.6.2. Recente ontwikkelingen en uitdagingen voor federatief leren in de zorg
 
 Een systematische review van 89 wetenschappelijke artikelen (gepubliceerd tussen 2015 en 2023) op het gebied van federatief leren in de zorg geeft een goed overzicht van recente ontwilleingen en de uitdagingen voor grootschalige implementatie.[@zhang2024recent]
 
