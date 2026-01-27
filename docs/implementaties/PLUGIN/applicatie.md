@@ -27,12 +27,6 @@ Het datastation (links) en de federated processing hub (rechts) vormen de twee-e
 
 Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing wordt niet gebruikt binnen PLUGIN, maar bij specifieke use-cases om datalek problematiek tegen te gaan.
 
-## PLUGIN
-
-### PLUGIN-Analytics
-### PLUGIN-ML
-### PLUGIN-Hub
-### PLUGIN-Lake
 
 ## Federatief leren met PLUGIN/vantage6
 
