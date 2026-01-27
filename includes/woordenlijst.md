@@ -1,3 +1,4 @@
+*[AIOC]: AI Ondersteund Coderen
 *[BVO]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
 *[BVOs]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
 *[DAAMS]: Data Access Application Management System
@@ -14,12 +15,15 @@
 *[FDBS]: Federated Database System
 *[HDAB]: Health Data Access Body
 *[HiX]: Healthcare Information eXchange, door ChipSoft ontwikkelde totaaloplossing voor zorginstellingen.
+*[ICD-10]: De nieuwste versie van het internationaal gestandaardiseerde classificatiesysteem van diagnosen.
 *[LDN]: Landelijke Dekkend Netwerk
 *[primair gebruik]: gebruik van data voor directe behandeling van een persoon
 *[secundair gebruik]: gebruik van data voor andere doeleinden dan directe behandeling
+*[NKR]: Nederlandse Kankerregistratie
 *[PHT]: Personal Health Train
 *[PLUGIN]: Platform voor Uitwisseling en Hergebruik van Klinische Data Nederland
 *[SPE]: Secure Processing Environment
 *[Vantage6]: Een open-source infrastructuur voor privacy verbeterende technieken
 *[websockets]: Een protocol voor het openen van een interactieve communicatieverbinding, dat langere tijd open kan blijven staan.
+*[YAML]: Yet Another Markup Language
 
