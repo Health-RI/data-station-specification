@@ -4,44 +4,50 @@ Onderscheid wordt gemaakt tussen *trainingsziekenhuizen* en *inferentieziekenhui
 
 Het datastation voor PLUGIN is te realiseren als een standaard Linux server. Dit mag ook een VM zijn. Hierop wordt een Vantage6 Node geinstalleerd, een aantal gebruikersaccounts aangemaakt en een standaard folderstructuur ingesteld. Zowel de Node zelf als de daarop uitgevoerde algoritmen zoals de PLUGIN-ML pipeline worden gedraaid binnen Docker.
 
-## Benodigdheden
+## Hard- & software
 
-### Data Station Hardware
+PLUGIN gaat uit van een Linux server als de fysieke machine waarop alle applicatie componenten draaien. Dit mag ook een virtual machine zijn. De belangrijkste voorwaarden zijn dat de machine:
 
-PLUGIN verwacht bij voorkeur de volgende hardware-specificaties:
+* in staat is om [Docker](https://www.docker.com) te draaien.<br>**NB:** Om de PLUGIN infrastructuur te gebruiken is het noodzakelijk om Docker Engine en niet Docker Desktop te installeren. Docker desktop maakt gebruik van een virtuele machine die niet compatibel is met de PLUGIN infrastructuur.
+* toegang heeft tot de data (zie ook [hieronder](#technisch-vlak-target))
 
-* ≥ 16 cores, x86/x64 CPU
-* ≥ 56 GB CPU RAM
-* ≥ 360 GB SSD
+De specificaties van de Linux server zijn als volgt:
+
+* \>= 16 cores, x86/x64 CPU
+* \>= 56 GB CPU RAM
+* \>= 360 GB SSD
 * virtualization enabled
-* GPU (voor trainingsziekenhuizen):
-    * CUDA compatible NVIDIA kaart
-    * 16 GB GPU RAM
+* GPU (optioneel, maar aanbevolen):
+    - [CUDA compatible](https://developer.nvidia.com/cuda-gpus) NVIDIA kaart
+    - 16 GB GPU RAM
 
-Specificaties zijn echter sterk afhankelijk van de uit te voeren algoritmen.
+Indien voor (iets) lagere specificaties van CPU of RAM gekozen wordt, zal het systeem nog steeds werken, maar duren berekeningen mogelijk wat langer. Qua SSD-opslag wordt minder capaciteit afgeraden. Of een **GPU** nodig is, is afhankelijk de use cases waaraan deelgenomen wordt. In het algemeen is het zo een GPU vereist is als datastation deelnemen in het trainen van algoritmes. Als een ziekenhuis alleen een getraind model wil gebruiken op haar eigen data (_inference_), dan is dat mogelijk zonder GPU.
 
-### Netwerk
+## Netwerk
 
-* ≥ 100Mbit ethernet
-* Poort 443/TCP (https) open voor **uitgaand** verkeer naar de server
-* Een Publiek IP-adres voor whitelisting bij de server
+* \>= 100Mbit ethernet
+* Port 443/TCP (https) open voor _uitgaand_ verkeer naar ...
+    * DHD
+        * vantage6 server: [https://plugin.dhd.nl](https://plugin.dhd.nl)
+        * Docker registry: [https://plugindhd.blob.core.windows.net](https://plugindhd.blob.core.windows.net)
+        * Docker registry (voor updates van vantage6): [https://harbor2.vantage6.ai](https://harbor2.vantage6.ai)
+        * blob storage: [https://plugindhd.azurecr.io](https://plugindhd.azurecr.io)
+    * IKNL
+        * vantage6 server: [https://cotopaxi.vantage6.ai](https://cotopaxi.vantage6.ai)
+        * Docker registry: [https://harbor2.vantage6.ai](https://harbor2.vantage6.ai)
+    * [websites nodig voor installatie/upgrade Python3, Docker, etc.]
 
-### Software
+## Toegang tot data
 
-* Besturingssysteem: Ubuntu 22.04+, Windows 10 of hoger, macOS 13.x of hoger
-* Docker of Docker Desktop
-* Python versie 3.10+
+## Beschikbaar stellen van data
+Om federatieve toepassingen mogelijk te maken, is het belangrijk dat iedere deelnemer zijn/haar klinische data op dezelfde manier aan het platform aanbiedt. Naast eerder genoemde syntactische en semantische interoperabiliteit, is het noodzakelijk op ook technische standaarden af te spreken. Indien bijvoorbeeld wordt gekozen voor FHIR als informatiestandaard, dan kan de technische interface op verschillende manieren worden geimplementeer:
 
-## AIOC Folderstructuur
 
-Een eenduidige folderstructuur wordt aangehouden op de geïnstalleerde server voor de werking van het model. In de configuratie wordt per ziekenhuis aangegeven waar het model naar de data moet zoeken. Hiervoor wordt een standaard folderstructuur aangehouden.
+1. Via een FHIR-server en de bijbehorende [REST API](https://hl7.org/fhir/http.html), zoals [HAPI](https://hapifhir.io/hapi-fhir/) of [Firely](https://fire.ly/products/firely-server/) Server. Voor efficiente data-overdracht, zou gebruik gemaakt kunnen worden van de [bulk data API](https://hl7.org/fhir/uv/bulkdata/) en [nd-json](https://hl7.org/fhir/nd-json.html).
+2. Via een relationele database, zoals [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-2022) of [PostgreSQL](https://www.postgresql.org), waarbij de FHIR resources ofwerl i) tabulair worden opgeslagen (met ieder attribuut van een resource in een aparte kolom), ofwerl als document (in een kolom van type JSON-B).
+3. Via een data lake / blob storage, waarbij de resources als [nd-json](https://hl7.org/fhir/nd-json.html) bestanden worden opgeslagen en worden ontsloten via een (in process) database management systeem (zoals [DuckDB](https://duckdb.org)).
 
-![AIOC bestand flow](../../assets/aioc-bestand-flow.png)
+Ongetwijfeld zijn er nog andere opties mogelijk.
 
-De bestanden aangeleverd door het ziekenhuis komen binnen in een map aanleveringen per aanlevering. De resultaten van het model kunnen vanuit de map epd_output opgehaald worden en ingelezen worden in het EPD.
+De eerste optie heeft als voordeel dat andere applicaties binnen het ziekenhuis gebruik kunnen maken van dezelfde server. Bijvoorbeeld voor Clinical Decision Support. De tweede optie sluit goed aan bij de technology stack die al in veel ziekenhuizen beschikbaar is, en wordt reeds toegepast door het LUMC, ErasmusMC en UMCUtrecht. De derde optie is waarschijnlijk (financieel) het voordeligst, omdat alleen data-opslag nodig is; een database of app server is niet noodzakelijk.
 
-* **aanleveringen** - In deze map levert het ziekenhuis de aanleverfolders aan
-* **coderingen** - De AIOC applicatie maakt hier een werkmap aan waar onder andere een kopie van de aangeleverde data, checkpoint bestanden en resultaten komen te staan. Dit is vooral een werkmap voor de data scientists.
-* **epd_output** - Hier worden de uiteindelijke resultaten/output bestanden klaargezet. Deze bestanden kunnen direct in het EPD geïmporteerd worden.
-* **latest** - In deze map wordt het laatste outputbestand van de AIOC applicatie geplaatst. Het bestand in deze map kan gebruikt worden om de resultaten te importeren in het EPD.
-* **TRAIN_DATA** - In deze map worden de trainingsdata opgeslagen. Deze map is alleen voor trainingsziekenhuizen en bevat data van meerdere jaren met ICD-10 codering om het model te trainen.

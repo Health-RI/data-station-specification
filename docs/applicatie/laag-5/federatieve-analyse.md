@@ -53,19 +53,19 @@ Federatieve databases systemen worden al geruime tijd gebruikt door organisaties
 
     === "Federated Database Systeem"
 
-    Nagenoeg alle volwassen database systemen ondersteunen federatieve analyse. ZO heeft PostgreSQL, een van de meest gebruikte open source relationele database systemen, de [_foreign data wrapper_ extensie](https://www.postgresql.org/docs/current/postgres-fdw.html) waarmee federatieve queries kunnen worden uitgevoerd over een netwerk van PostgreSQL databases. In het geval van MongoDB, de meest gebruikte open source document database, wordt federated queries ondersteund via [Atlas](https://www.mongodb.com/docs/atlas/data-federation/query/query-federated-database/).
+        Nagenoeg alle volwassen database systemen ondersteunen federatieve analyse. ZO heeft PostgreSQL, een van de meest gebruikte open source relationele database systemen, de [_foreign data wrapper_ extensie](https://www.postgresql.org/docs/current/postgres-fdw.html) waarmee federatieve queries kunnen worden uitgevoerd over een netwerk van PostgreSQL databases. In het geval van MongoDB, de meest gebruikte open source document database, wordt federated queries ondersteund via [Atlas](https://www.mongodb.com/docs/atlas/data-federation/query/query-federated-database/).
 
     === "Multistore system"
 
-    Veel volwassen databaseplatformen bieden functionaliteit om verschillende database formats te queryen via één query-interface. Een voorbeeld hiervan is Microsoft PolyBase, waarmee relationele data, document data en data op cloud storage bevraagd kan worden met T-SQL (de SQL dialect van Microsfot SQL Server).
+        Veel volwassen databaseplatformen bieden functionaliteit om verschillende database formats te queryen via één query-interface. Een voorbeeld hiervan is Microsoft PolyBase, waarmee relationele data, document data en data op cloud storage bevraagd kan worden met T-SQL (de SQL dialect van Microsfot SQL Server).
 
     === "Polyglot systeem"
 
-    Spark SQL was een van de eerste federatieve polyglot systemen. Met deze open source technlogie kunnen verschillende relationele data bevraagd worden met ofwel een SQL interace (Spark SQL) of met een dataframe interface (Spark DataFrames). Sindsdien zijn veel data analyse platformen polyglot geworden. De Python data stack is inmiddels ook volledig polyglot: gebruikers kunnen met open source libraries als DuckDB, polars en Ibis vrijelijk switchen tussen een SQL of een dataframe interface
+        Spark SQL was een van de eerste federatieve polyglot systemen. Met deze open source technlogie kunnen verschillende relationele data bevraagd worden met ofwel een SQL interace (Spark SQL) of met een dataframe interface (Spark DataFrames). Sindsdien zijn veel data analyse platformen polyglot geworden. De Python data stack is inmiddels ook volledig polyglot: gebruikers kunnen met open source libraries als DuckDB, polars en Ibis vrijelijk switchen tussen een SQL of een dataframe interface
 
     === "Polystore systeem"
 
-    TO DO: er zijn nog niet echt polystore systemen die op grote schaal gebruikt worden?!
+        TO DO: er zijn nog niet echt polystore systemen die op grote schaal gebruikt worden?!
 
 De huidige generatie federatieve systemen (zoals BigDAWG, CloudMdsQL en Myria) richt zich op het integreren van relationele data met diverse NoSQL- en bestandsformaten.
 
