@@ -17,7 +17,11 @@ Om een federatief proces te starten, moet eerst een samenwerkingsverband worden 
 *   **Taak (Task):** Een specifieke opdracht, zoals het trainen van een model of het uitvoeren van een analyse, die naar een of meerdere nodes wordt gestuurd.
 *   **Rol (Role) en Regel (Rule):** Definiëren de permissies van een gebruiker.
 
-De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Dataworks heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en open source beschikbaar gesteld.
+De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Dataworks heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en [open source beschikbaar gesteld](https://cris.maastrichtuniversity.nl/en/publications/a-governance-framework-for-federated-learning-projects-in-healthc/). 
+
+*   **Infrastructure User Agreement:** Een overeenkomst tussen elk data station en de beheerder van de infrastructuur. Hierin staan de rollen en verantwoordelijkheden op het gebied van infrastructuur van de partijen beschreven. Dit contract staat los van het project of de samenwerking, en kan dus worden hergebruikt voor toekomstige projecten.
+*   **Consortium Agreement:** Hoewel er patientdata op individuele basis wordt verstuurd, beschrijft dit document de omgang met intellectueel eigendom, welke partijen toestemming hebben om nieuwe taken te starten, en wie recht heeft de resultaten te publiceren.
+*   **Data Processing or Joint Controller Agreement:** In het geval van federated learning vindt verwerking op het data station plaats van de eigenaar van de data, op verzoek van de instantie die het algoritme rondstuurt. Voor de AVG is dan ook een data processing agreement nodig. Wanneer deelnemende ziekenhuizen ook deelnemen in de ontwikkeling van de rondgestuurde algoritmen, is een joint controller agreement nodig om aan te geven dat beide partijen betrokken waren bij de uitwerking van de verwerking.
 
 ## Uitvoeren van een federatieve taak
 
