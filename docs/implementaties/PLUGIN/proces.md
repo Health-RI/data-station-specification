@@ -66,35 +66,6 @@ PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief le
 
     Dit sluit direct aan bij de usecase [Geef antwoord op dataverzoek](../../applicatie/laag-3/data-station.md#415-geef-antwoord-op-dataverzoek).
 
-    ```mermaid
-        sequenceDiagram
-            actor Onderzoeker
-            participant Server
-            participant Aggregator as Aggregator-node
-            participant Registry as Docker Registry
-
-            box "Meerdere worker-nodes"
-                participant Node as Node(s)
-            end
-
-            Onderzoeker->>Server: Taak aanmaken (Server API)
-
-            Aggregator->>Server: Hoofdtaak ophalen
-            Aggregator->>Registry: Docker-image ophalen (hoofdtaak)
-
-            Aggregator->>Server: Subtaken aanmaken
-
-            loop Voor elke subtaak (parallel uitgevoerd)
-                Node->>Server: Subtaak ophalen
-                Node->>Registry: Docker-image ophalen (subtaak)
-                Node->>Server: Resultaat van subtaak opslaan
-            end
-
-            Aggregator->>Server: Subtaakresultaten ophalen
-            Aggregator->>Server: Eindresultaat van hoofdtaak indienen
-
-            Onderzoeker->>Server: Eindresultaat ophalen
-    ```
 
 === "Data pooling (doorleveren van data)"
 
