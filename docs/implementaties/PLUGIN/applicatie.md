@@ -25,14 +25,43 @@ Het datastation (links) en de federated processing hub (rechts) vormen de twee-e
         Voor een maximale flexibiliteit in het soort uit te voeren taak, wordt in Vantage6 gebruik gemaakt van [Docker images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/). Een sjabloon-image bevat vereiste logica zoals het verwerken van inputs en terugsturen van resultaten. Deze kan vervolgens worden uitgebreid met de specifieke logica voor de use-case, zoals bijvoorbeeld een federatieve query of een federated learning algoritme. Het Docker image dat hieruit resulteert wordt opgeslagen in een centrale [Docker registry](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/) (een bibliotheek voor Docker images).
 
 
-Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing wordt niet gebruikt binnen PLUGIN, maar bij specifieke use-cases om datalek problematiek tegen te gaan.
-
+Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing kan gebruikt worden in specifieke gevallen waarin samengestelde data nog steeds gevoelig kan zijn, om het risico op een datalek verder te verkleinen.
 
 ## Federatief leren met PLUGIN/vantage6
 
 De PLUGIN-architectuur is gebaseerd op vantage6. Het gefedereerd leren van een algoritme omvat een reeks gecoördineerde stappen tussen de onderzoeker, de centrale server en de datastations. Dit proces is ontworpen om de analyse uit te voeren zonder dat de brongegevens de lokale omgeving van het datastation verlaten. Hieronder volgt een detailleerde beschrijving wat elk van de applicatiecomponenten hierin doen.
 
-![](./pht-workflow.png)
+```mermaid
+    sequenceDiagram
+        actor Onderzoeker
+        participant Server
+        participant Aggregator as Secure Aggregation Server (SAS)
+        participant Registry as Docker Registry
+
+        box "Meerdere worker-nodes"
+            participant Node as Node(s)
+        end
+
+        Onderzoeker->>Server: Authenticatie
+        Onderzoeker->>Server: Taak specificatie (Server API)
+
+        Aggregator->>Server: Hoofdtaak ophalen
+        Aggregator->>Registry: Docker-image ophalen (hoofdtaak)
+
+        Aggregator->>Server: Subtaken aanmaken
+
+        loop Voor elke subtaak (parallel uitgevoerd)
+            Node->>Server: Subtaak ophalen
+            Node->>Registry: Docker-image ophalen (subtaak)
+            Node->>Server: Resultaat van subtaak opslaan
+            Aggregator->>Server: Subtaakresultaten ophalen
+            Aggregator->>Aggregator: Verificatie en aggregatie
+        end
+
+        Aggregator->>Server: Eindresultaat van hoofdtaak indienen
+
+        Onderzoeker->>Server: Eindresultaat ophalen
+```
 
 ???+ note "**Authenticatie**"
 
@@ -112,9 +141,12 @@ Door de architectuur op deze manier in componenten op te delen, wordt een modula
 
 TO DO: uitleggen hoe al deze componenten eigenlijk een-op-een te vertalen zijn naar de moderne lakehouse architectuur.
 
+Om te voldoen aan uiteenlopende databehoeften (zoals klassieke rapportages, analyses, delen van data en data science) wordt door gezondheidsinstellingen veelal gebruik gemaakt van een gescheiden data warehouse, een datalake en andere analytische omgevingen. Deze scheiding leidt tot duplicatie van data, extra complexiteit en vermoeilijking van data governance.
 
+Een lakehouse architectuur lost deze problematiek op door de functionaliteiten van de verschillende omgevingen samen te voegen. Alle data wordt opgeslagen in een flexibel en schaalbaar platform. Er is slechts één opslaglaag op basis van open standaarden, waarbij zowel ongestructureerde als gestructureerde data kan worden opgeslagen. De PLUGIN datastation componenten vormen de basis voor een moderne lakehouse architectuur.
 
+### gestandaardiseerde data modellen (FHIR/OMOP/openEHR)
 
-### Node Beheerder
+### APIs (SQL/No-SQL/Docker)
 
-Vereist voor PLUGIN?
+### Storage
