@@ -1,6 +1,6 @@
 # 2 Perspectief: proces
 ## Het proces van secundair gebruik van data _system of interest_
-Het _system of interest_ van deze specificatie is het proces en de daarbij benodige infomratie, applicaties en infrastructuur voor secundair gebruik van zorggegevens. Een dergelijk systeem bestaat uit verschillende elementen, zoals in figuur 3 is weergegeven.
+Het _system of interest_ van deze specificatie is het proces en de daarbij benodige informatie, applicaties en infrastructuur voor secundair gebruik van zorggegevens. Een dergelijk systeem bestaat uit verschillende elementen, zoals in figuur 1 is weergegeven.
 
 ![](health-ri-flowchart.jpg)
 

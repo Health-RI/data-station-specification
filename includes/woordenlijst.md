@@ -1,6 +1,7 @@
 *[ACID compliance]: Vier eigenschappen (Atomicity, Consistency, Isolation, Durability) die data-integriteit waarborgen
 *[AIOC]: AI Ondersteund Coderen
 *[BVO]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
+*[CDM]: Common Data Model
 *[BVOs]: Beveiligde verwerkingsomgeving, Nederlandse vertaling van SPE
 *[DAAMS]: Data Access Application Management System
 *[Data catalog]: Centrale inventaris van data-assets met metadata voor vindbaarheid
@@ -18,13 +19,18 @@
 *[ETL]: Extract-Transform-Load: data wordt getransformeerd voordat het wordt opgeslagen
 *[FAIR]: Findable, Accessible, Interoperable, Reusable
 *[FDBS]: Federated Database System
+*[FHIR]: Fast Healthcare Interoperability Resources
+*[FPH]: Federated Processing Hub
 *[HDAB]: Health Data Access Body
 *[HiX]: Healthcare Information eXchange, door ChipSoft ontwikkelde totaaloplossing voor zorginstellingen.
 *[ICD-10]: De nieuwste versie van het internationaal gestandaardiseerde classificatiesysteem van diagnosen.
-*[LDN]: Landelijke Dekkend Netwerk
+*[LDN]: Landelijk Dekkend Netwerk
+*[LOINC]: Logical Observation Identifiers Names and Codes
 *[NKR]: Nederlandse Kankerregistratie
 *[OLAP]: Online Analytical Processing: complexe analyses op grote datasets voor besluitvorming
 *[OLTP]: Online Transaction Processing: real-time transactieverwerking voor operationele systemen
+*[OMOP]: Observational Medical Outcomes Partnership
+*[openEHR]: Open Electronic Health Record
 *[PHT]: Personal Health Train
 *[PLUGIN]: Platform voor Uitwisseling en Hergebruik van Klinische Data Nederland
 *[primair gebruik]: gebruik van data voor directe behandeling van een persoon
@@ -33,8 +39,11 @@
 *[Schema-on-write]: Data structureren bij opslag (write)
 *[schema-on-write]: Data structureren bij opslag (write)
 *[secundair gebruik]: gebruik van data voor andere doeleinden dan directe behandeling
+*[SNOMED]: Systematized Nomenclature of Medicine
 *[SPE]: Secure Processing Environment
+*[TEHDAS2]: Towards the European Health Data Space 2
 *[Vantage6]: Een open-source infrastructuur voor privacy verbeterende technieken
+*[VWS]: Ministerie van Volksgezondheid, Welzijn en Sport
 *[websockets]: Een protocol voor het openen van een interactieve communicatieverbinding, dat langere tijd open kan blijven staan.
 *[YAML]: Yet Another Markup Language
 
