@@ -15,6 +15,6 @@ EHDS maakt onderscheidt tussen:
 
 ## Praktijk beproeving universeel datastation
 
-In december 2023 tot april 2024 is onderzoek gedaan naar databeschikbaarheid via eenfederatief netwerk van datastations en herbruikbaarheid van KIK-V producten in deAchterhoek.
+In december 2023 tot april 2024 is onderzoek gedaan naar databeschikbaarheid via een federatief netwerk van datastations en herbruikbaarheid van KIK-V producten in de Achterhoek.
 
 ![Alt text](<../appendix/KIK-V/praktijkbeproeving-universeel-datastation-met-hergebruik-van-kik-v-producten.pdf>){ type=application/pdf style="min-height:100vh;width:100%" }

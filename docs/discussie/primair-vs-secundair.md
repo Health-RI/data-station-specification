@@ -2,7 +2,7 @@
 
 Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/laag-3/data-station.md) en de [processing hub](../applicatie/laag-4/processing-hub.md) als de meest kenmerkende componenten. In vergelijking met de Cumuluz doelarchitectuur zien we vergelijkbare rollen voor het Cumuluz Datastation respectievelijk de Cumuluz Integrator. Zoals in de inleiding is gesteld, is een vergelijking van de architectuur voor primair vs. secundair een van de centrale onderzoeksvragen: 
 
-> Zijn er lancunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van decentrale BVOs in de weg staan, met name ook in relatie tot datastations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
+> Zijn er lacunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van decentrale BVOs in de weg staan, met name ook in relatie tot datastations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
 
 In het onderstaande wordt ingegaan op deze vragen.
 

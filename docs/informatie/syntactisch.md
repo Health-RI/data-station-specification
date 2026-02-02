@@ -40,7 +40,7 @@ Implementaties zijn de uitvoeringsmotoren (engines) die de formele specificaties
 
 === "**OMOPonFHIR**"
     
-    Het [OMOPonFHIR](https://github.com/omoponfhir) project levert de softwarecomponenten (servers, adapters) die de bidirectionele FHIR interface realiseren bovenop het OMP CDM. Deze oplossing volgt een facade-patroon: wanneer een client een FHIR `Observation` opvraagt via een REST API, onderschept de facade-laag het verzoek, voert een query uit op de onderliggende OMOP `MEASUREMENT`-tabel in real-time, en transformeert het resultaat naar een FHIR JSON-resource middels de formele specificatie. Middels dit facase patroon kunnen FHIR berichten ook worden opgeslagen in de OMOP database. OMOPonFHIR gaat uit van OMOP CDM 5.4 en FHIR v4 en is geimplementeerd in Java. Het is ontwikkeld voordat de HL7 FHIR-OMOP IG beschikbaar was en heeft daarom de mappings zelf gedefinieerd.
+    Het [OMOPonFHIR](https://github.com/omoponfhir) project levert de softwarecomponenten (servers, adapters) die de bidirectionele FHIR interface realiseren bovenop het OMP CDM. Deze oplossing volgt een facade-patroon: wanneer een client een FHIR `Observation` opvraagt via een REST API, onderschept de facade-laag het verzoek, voert een query uit op de onderliggende OMOP `MEASUREMENT`-tabel in real-time, en transformeert het resultaat naar een FHIR JSON-resource middels de formele specificatie. Middels dit facade patroon kunnen FHIR berichten ook worden opgeslagen in de OMOP database. OMOPonFHIR gaat uit van OMOP CDM 5.4 en FHIR v4 en is geimplementeerd in Java. Het is ontwikkeld voordat de HL7 FHIR-OMOP IG beschikbaar was en heeft daarom de mappings zelf gedefinieerd.
 
 === "**EOS**"
 
