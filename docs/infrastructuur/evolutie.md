@@ -4,7 +4,7 @@
 
 Een data infrastructuur, vaak ook een data platform genoemd, is een implementatie van een data engineering lifecycle die bestaat uit opslag (_storage_) als fundament, met daarbovenop processing lagen voor ingestie, transformatie en ontsluiting. Deze worden ondersteund door ondersteunende processen zoals governance, security en orchestratie.
 
-![Data engineering lifecycle](./data-engeering-lifecycle.png)
+![Data engineering lifecycle](./data-engineering-lifecylce.png)
 
 Om implementaties van data platforms te kunnen evalueren, introduceren we eerst een aantal infrastructuur concepten.
 
