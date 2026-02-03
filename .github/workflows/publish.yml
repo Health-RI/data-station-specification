@@ -39,9 +39,9 @@ jobs:
         #   MATERIAL_INSIDERS_TOKEN: ${{ secrets.MATERIAL_INSIDERS_TOKEN }}
         run: pip install mkdocs-material mkdocs-bibtex mkdocs-static-i18n mkdocs-glightbox mkdocs-puml mkdocs-pdf mkdocs-video
       - run: mkdocs build                      
-      - uses: actions/configure-pages@v5       
-      - uses: actions/upload-pages-artifact@v3 
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: 'site/'
-      - uses: actions/deploy-pages@v4          
+      - uses: actions/deploy-pages@v4
         id: deployment
