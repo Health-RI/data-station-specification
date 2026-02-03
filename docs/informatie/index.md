@@ -31,7 +31,7 @@ Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **stru
     
 === "openEHR"
 
-    openEHR is vooral gericht op het langdurig en zeer gedetailleerd vastleggen van medische dossiers, onafhankelijk van leveranciers. Ook openEHR werkt met het concept van informatiebouwstenen, maar doet dit om een meer geavanceerde manier dan FHIR of OMOP. Zo worden niet alleen elementaire bouwstenen gedefinieert, maar kunnen samengestelde medische concepten worden gedefineerd met zogenaamde archetypen. Qua syntactische interoperabiliteit richt openEHR zich vooral op de structuur voor **opslag**. Waar FHIR zich richt op het *versturen* van de brief, richt openEHR zich op hoe je het dossier in de kast *archiveert* zodat het over 20 jaar nog steeds leesbaar is.
+    openEHR is vooral gericht op het langdurig en zeer gedetailleerd vastleggen van medische dossiers, onafhankelijk van leveranciers. Ook openEHR werkt met het concept van informatiebouwstenen, maar doet dit om een meer geavanceerde manier dan FHIR of OMOP. Zo worden niet alleen elementaire bouwstenen gedefinieerd, maar kunnen samengestelde medische concepten worden gedefineerd met zogenaamde archetypen. Qua syntactische interoperabiliteit richt openEHR zich vooral op de structuur voor **opslag**. Waar FHIR zich richt op het *versturen* van de brief, richt openEHR zich op hoe je het dossier in de kast *archiveert* zodat het over 20 jaar nog steeds leesbaar is.
 
 === "OMOP"
 

@@ -1,4 +1,4 @@
-# 1.3. Vraagestelling en leeswijzer
+# 1.3. Vraagstelling en leeswijzer
 
 ## 1.3.1. Centrale ontwerp- en onderzoeksvragen
 

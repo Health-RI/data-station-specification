@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Spell checker for markdown documentation."""
 
 import re
@@ -13,7 +14,7 @@ IGNORE_WORDS = {
     'pyproject', 'justfile', 'github', 'git', 'api', 'apis', 'http', 'https',
     'url', 'urls', 'uri', 'uris',
     'daams', 'hdab', 'tehdas', 'kik', 'datashield', 'plugin', 'datastation',
-    'datastations', 'mdw', 'hylobate', 'spe',
+    'datastations', 'mdw', 'spe',
     'federatief', 'federatieve', 'hoeksteen', 'leeswijzer', 'woordenlijst',
     'waarom', 'discussie', 'implementaties', 'analyseren', 'aanvragen',
     'klaarzetten', 'publiceren', 'vinden', 'syntactisch', 'semantisch',

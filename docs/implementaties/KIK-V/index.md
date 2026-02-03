@@ -22,7 +22,7 @@ KIK-V implementeerd een vorm van federated analytics, waarbij de volgende compon
 
 - Informatie:
     - De **ontologie** is het centrale gegevensmodel waarmee KIK-V werkt
-    - De **uitwisselprofielen** definieren de verschilende gegevensverzoeken die via het platform kunnen worden ingediende en verwerkt. Deze profielen worden opgesteld via een gestructureerd matchingsproces
+    - De **uitwisselprofielen** definiëren de verschillende gegevensverzoeken die via het platform kunnen worden ingediende en verwerkt. Deze profielen worden opgesteld via een gestructureerd matchingsproces
 - Applicatie:
     - **laag 4 | KIK-Starter** is de applicatie waarmee datagebruikers hun gegevensverzoeken kunnen uitvoeren.
     - **laag 4 | Credentialsplatform** vervuld een functie vergelijkbaar met de DAAMS, waarbinnen goedgekeurde uitwisselprofielen worden beheerd en beschikbaar gesteld voor datagebruikers.

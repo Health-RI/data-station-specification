@@ -20,7 +20,7 @@ Uitgangspunt is dat dataleveranciers een proces doorlopen om deelnemer te worden
 
 !!! info "Afsprakenstelsels en dataspaces"
 
-    In de tekst wordt zowel de term afsprakenstelsel als dataspace gebruikt. Een dataspace definiëren we als een afsprakenstelsel voor databeschikbaarheid, het maakt een betrouwbare gegenvensuitwisseling mogelijk tussen deelnemers. Afsprakenstelsels kunnen met andere woorden over vele onderwerpen gaan, dataspaces beperken het onderwerp tot gegevensuitwisseling en databeschikbaarheid. 
+    In de tekst wordt zowel de term afsprakenstelsel als dataspace gebruikt. Een dataspace definiëren we als een afsprakenstelsel voor databeschikbaarheid, het maakt een betrouwbare gegevensuitwisseling mogelijk tussen deelnemers. Afsprakenstelsels kunnen met andere woorden over vele onderwerpen gaan, dataspaces beperken het onderwerp tot gegevensuitwisseling en databeschikbaarheid. 
 
 ## Model met dienstverleners
 
