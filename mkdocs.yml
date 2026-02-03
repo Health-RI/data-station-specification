@@ -143,6 +143,8 @@ nav:
           - 4.7. Data pooling: applicatie/laag-5/data-pooling.md
   - 5. Infrastructuur:
       - infrastructuur/index.md
+      - infrastructuur/evolutie.md
+      - infrastructuur/composable-data-stack.md
       - infrastructuur/standaarden.md
   - 6. Implementaties:
     - implementaties/index.md
