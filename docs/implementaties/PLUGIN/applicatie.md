@@ -24,7 +24,22 @@ Het datastation (links) en de federated processing hub (rechts) vormen de twee-e
 
         Voor een maximale flexibiliteit in het soort uit te voeren taak, wordt in Vantage6 gebruik gemaakt van [Docker images](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/). Een sjabloon-image bevat vereiste logica zoals het verwerken van inputs en terugsturen van resultaten. Deze kan vervolgens worden uitgebreid met de specifieke logica voor de use-case, zoals bijvoorbeeld een federatieve query of een federated learning algoritme. Het Docker image dat hieruit resulteert wordt opgeslagen in een centrale [Docker registry](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/) (een bibliotheek voor Docker images).
 
+    === "**PLUGIN-Analytics**"
+        
+        De PLUGIN-analytics applicatie maakt het mogelijk om gefedereerde analysetaken uit te voeren waarop een geaggregeerd antwoord terug komt. Deze applicatie bestaat onder andere uit een verkennerfunctie met daarin het metadata schema en vooropgestelde analyse vragen. 
+        
+    === "**PLUGIN-ML**"
 
+        De PLUGIN-ML applicatie stelt de datagebruiker in staat om federatief een AI-model te ontwikkelen. PLUGIN-ML omvat zowel de machine learning algoritmes die uitgevoerd worden bij de PLUGIN-datastations als de aggregatie algoritmes die de modellen samenvoegen tot een generiek model. Via PLUGIN-ML is een datagebruiker in staat om een pipeline op te zetten gebruik makend van veel gebruikte Machine learning algoritmes.
+
+    === "**PLUGIN-Hub**"     
+
+        De PLUGIN-Hub applicatie verstuurd veilig data in bulk vanaf de PLUGIN-datastation naar de centrale processing hub. De datagebruiker dient hierbij een ‘permit’ of grondslag te hebben om deze data te mogen ontvangen. 
+
+    === "**PLUGIN-Lake**"   
+
+        De PLUGIN-Lake applicatie is een federatieve lakehouse implementatie binnen de PLUGIN-datastations. PLUGIN-Lake ontvangt, transformeert en stelt data beschikbaar aan de bovenstaande 3 applicaties. Hierbij is het o.a. mogelijk om ETL-processen in te richten, zoals het transformeren van data in FHIR formaat naar OMOP. 
+        
 Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing kan gebruikt worden in specifieke gevallen waarin samengestelde data nog steeds gevoelig kan zijn, om het risico op een datalek verder te verkleinen.
 
 ## Federatief leren met PLUGIN/vantage6
