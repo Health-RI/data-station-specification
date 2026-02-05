@@ -1,6 +1,6 @@
 # PLUGIN Healthcare
 
-Het Platform voor Uitwisseling en Hergebruik van Klinische Data Nederland (PLUGIN) beoogt klinische data in de  Elektronische Patiëntendossiers (EPDs) van Nederlandse ziekenhuizen te ontsluiten op een veilige, schaalbare en duurzame wijze. PLUGIN is van oorsprong een initiatief van [Dutch Hospital Data](https://www.dhd.nl/), [Integraal Kankercentrum Nederland](https://iknl.nl/) en [Expertisecentrum Zorgalgoritmen](https://zorgalgoritmen.nl/) De basis infrastructuur maakt gebruik van [vantage6](https://vantage6.ai/) en maakt het mogelijk medische data decentraal beschikbaar te stellen voor zowel algemene gegevensuitwisseling als federatief leren en analyseren.
+Het **P****l**atform voor **U**itwisseling en Her**g**ebruik van Kl**i**nische Data **N**ederland (PLUGIN) beoogt klinische data in de  Elektronische Patiëntendossiers (EPDs) van Nederlandse ziekenhuizen te ontsluiten op een veilige, schaalbare en duurzame wijze. PLUGIN is van oorsprong een initiatief van [Dutch Hospital Data](https://www.dhd.nl/), [Integraal Kankercentrum Nederland](https://iknl.nl/) en [Expertisecentrum Zorgalgoritmen](https://zorgalgoritmen.nl/) De basis infrastructuur maakt gebruik van [vantage6](https://vantage6.ai/) en maakt het mogelijk medische data decentraal beschikbaar te stellen voor zowel algemene gegevensuitwisseling als federatief leren en analyseren.
 
 Met use-cases [AI-ondersteund coderen](https://www.dhd.nl/producten-diensten/registratie-data/ondersteuning-bij-medische-codering/ai-ondersteund-coderen) en [het vullen en verrijken van de NKR](https://www.icthealth.nl/nieuws/veilig-en-efficient-data-delen-dankzij-het-plugin-initiatief) is aangetoond dat de infrastructuur schaalbaar in kan worden gezet voor de drie soorten van gefedereerde gegevensbewerking.
 
@@ -12,16 +12,16 @@ De PLUGIN infrastructuur implementeert verschillende componenten zoals in onders
 
     | Component | Functie |
     |:----|:---------|
-    | PLUGIN-Analytics | gefedereerde analyse |
-    | PLUGIN-ML | gefedereerd leren |
-    | PLUGIN-Hub | data pooling |
-    | vantage6 server | centrale processing hub waarop gebruikers, organizaties, samenwerkingsverbanden taken en resultaten worden beheerd en georchestreerd |
-    | vantage6 UI | webapplicatie waarmee gebruikers kunnen interacteren met de server |
-    | vantage6 API | programmatische aansturing van de server, incl. Python client en R client |
-    | Docker registry | containers die zijn geautoriseerd om decentraal op de datastations uit te voeren |
-    | Algorithm store | de metadata over de (algoritme) containers, inclusief ondersteuning van goedkeuringsproces |
-    | vantage6 node | decentrale component van processing hub die de lokale berekeningen uitvoert |
-    | algoritme container | tijdelijke lokale kopie van het algoritme dat wordt uitgevoerd, wordt aangemaakt en verwijderd door de vantage6 node |
+    | PLUGIN-Analytics | Component voor gefedereerde analyse |
+    | PLUGIN-ML | Component voor gefedereerd leren |
+    | PLUGIN-Hub | Component waarmee federatief gegevensaanleveringen kunnen worden uitgevoerd (data pooling) |
+    | vantage6 server | Centrale processing hub waarop gebruikers, organizaties, samenwerkingsverbanden taken en resultaten worden beheerd en georchestreerd |
+    | vantage6 UI | Webapplicatie waarmee gebruikers kunnen interacteren met de server |
+    | vantage6 API | Programmatische aansturing van de server, incl. Python client en R client |
+    | Docker registry | Containers die zijn geautoriseerd om decentraal op de datastations uit te voeren |
+    | Algorithm store | De metadata over de (algoritme) containers, inclusief ondersteuning van goedkeuringsproces |
+    | vantage6 node | Decentrale component van processing hub die de lokale berekeningen uitvoert |
+    | algoritme container | Tijdelijke lokale kopie van het algoritme dat wordt uitgevoerd, wordt aangemaakt en verwijderd door de vantage6 node |
     | PLUGIN-Lake | Lakehouse voor serverless opslag en ETL transformaties op het datastation |
 
 
