@@ -12,16 +12,16 @@ Om een federatief proces te starten, moet eerst een samenwerkingsverband worden 
 
 *   **Samenwerking (Collaboration):** Een verzameling van organisaties (dataleveranciers) die met elkaar samenwerken. Dit komt overeen met de groep dataleveranciers waarvoor een datagebruiker een vergunning heeft.
 *   **Organisatie (Organization):** Een deelnemende entiteit, zoals een ziekenhuis of onderzoeksinstituut.
-*   **Node:** De technische implementatie van een Datastation. Dit is een service die bij de organisatie draait en taken (algoritmes) uitvoert op de lokale data.
-*   **Gebruiker (User):** Een persoon die namens een organisatie of de Processing Hub taken mag aanmaken en beheren.
+*   **Node:** De technische implementatie van een Datastation. Dit is een service die bij de organisatie (datahouder) draait en taken (algoritmes) uitvoert op de lokale data.
+*   **Gebruiker (User):** Een persoon die namens een organisatie op de Processing Hub taken mag aanmaken en beheren.
 *   **Taak (Task):** Een specifieke opdracht, zoals het trainen van een model of het uitvoeren van een analyse, die naar een of meerdere nodes wordt gestuurd.
 *   **Rol (Role) en Regel (Rule):** Definiëren de permissies van een gebruiker.
 
-De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Dataworks heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en [open source beschikbaar gesteld](https://cris.maastrichtuniversity.nl/en/publications/a-governance-framework-for-federated-learning-projects-in-healthc/). 
+De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Data Works heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en [open source beschikbaar gesteld](https://cris.maastrichtuniversity.nl/en/publications/a-governance-framework-for-federated-learning-projects-in-healthc/). 
 
-*   **Infrastructure User Agreement:** Een overeenkomst tussen elk data station en de beheerder van de infrastructuur. Hierin staan de rollen en verantwoordelijkheden op het gebied van infrastructuur van de partijen beschreven. Dit contract staat los van het project of de samenwerking, en kan dus worden hergebruikt voor toekomstige projecten.
+*   **Infrastructure User Agreement:** Een overeenkomst tussen elk datastation en de beheerder van de infrastructuur. Hierin staan de rollen en verantwoordelijkheden op het gebied van de infrastructuur van de partijen beschreven. Dit contract staat los van het project of de samenwerking, en kan dus worden hergebruikt voor toekomstige projecten.
 *   **Consortium Agreement:** Hoewel er patientdata op individuele basis wordt verstuurd, beschrijft dit document de omgang met intellectueel eigendom, welke partijen toestemming hebben om nieuwe taken te starten, en wie recht heeft de resultaten te publiceren.
-*   **Data Processing or Joint Controller Agreement:** In het geval van federated learning vindt verwerking op het data station plaats van de eigenaar van de data, op verzoek van de instantie die het algoritme rondstuurt. Voor de AVG is dan ook een data processing agreement nodig. Wanneer deelnemende ziekenhuizen ook deelnemen in de ontwikkeling van de rondgestuurde algoritmen, is een joint controller agreement nodig om aan te geven dat beide partijen betrokken waren bij de uitwerking van de verwerking.
+*   **Data Processing or Joint Controller Agreement:** In het geval van federated learning vindt verwerking op het datastation plaats van de eigenaar van de data, op verzoek van de instantie die het algoritme rondstuurt. Voor de AVG is dan ook een data processing agreement nodig. Wanneer deelnemende ziekenhuizen ook deelnemen in de ontwikkeling van de rondgestuurde algoritmen, is een joint controller agreement nodig om aan te geven dat beide partijen betrokken waren bij de uitwerking van de verwerking.
 
 ## Uitvoeren van een federatieve taak
 
@@ -46,15 +46,15 @@ Belangrijk is dat de centrale coördinatie niet per se op de vantage6 server pla
 
 !!! note "Toelichting taakverdeling"
 
-    De meest simpele taakverdeling in vantage6 is als volgt. De gebruiker (links) creëert een taak voor het centrale deel van het algoritme (roze zeshoek). Het centrale deel creëert sub-taken voor de gefedereerde delen (groene zeshoeken). Wanneer de sub-taken zijn         voltooid, verzamelt het centrale deel de resultaten en berekent het het uiteindelijke resultaat, dat vervolgens beschikbaar is voor de gebruiker.            
+    De meest simpele taakverdeling in vantage6 is als volgt. De datagebruiker (links) creëert een taak voor het centrale deel van het algoritme (roze zeshoek). Het centrale deel creëert sub-taken voor de gefedereerde delen (groene zeshoeken). Wanneer de sub-taken zijn         voltooid, verzamelt het centrale deel de resultaten en berekent het het uiteindelijke resultaat, dat vervolgens beschikbaar is voor de datagebruiker.            
     
     ![](./algorithm_central_and_subtasks.png)
 
-    In de praktijk werkt de taakverdeling net iets anders. De gebruiker creëert een taak voor het centrale deel van het algoritme. Dit wordt geregistreerd op de server en leidt tot de creatie van een centrale algoritmecontainer op een van de knooppunten.  Het centrale algoritme creëert vervolgens sub-taken voor de gefedereerde delen van het algoritme, die opnieuw worden geregistreerd op de server. Alle knooppunten waarvoor de sub-taak bedoeld is, beginnen hun werk door het gefedereerde deel van het algoritme uit te voeren. De knooppunten sturen de resultaten terug naar de server, vanwaar ze worden opgepikt door het centrale algoritme. Het centrale algoritme berekent vervolgens het uiteindelijke resultaat en stuurt dit naar de server, waar de gebruiker het kan ophalen.
+    In de praktijk werkt de taakverdeling net iets anders. De datagebruiker creëert een taak voor het centrale deel van het algoritme. Dit wordt geregistreerd op de server en leidt tot de creatie van een centrale algoritmecontainer op een van de vantage6 nodes.  Het centrale algoritme creëert vervolgens sub-taken voor de gefedereerde delen van het algoritme, die opnieuw worden geregistreerd op de server. Alle vantage6 nodes waarvoor de sub-taak bedoeld is, beginnen hun werk door het gefedereerde deel van het algoritme uit te voeren. De vantage6 nodes sturen de resultaten terug naar de vantage6 server, vanwaar ze worden opgepikt door het centrale algoritme. Het centrale algoritme berekent vervolgens het uiteindelijke resultaat en stuurt dit naar de processing hub, waar de datagebruiker het kan ophalen.
 
     ![](./task_journey.png)
 
-    Het is gemakkelijk om de centrale server te verwarren met het centrale deel van het algoritme: de server is het centrale deel van de infrastructuur, maar niet de plaats waar het centrale deel van het algoritme wordt uitgevoerd (Fig. 2). Het centrale deel wordt feitelijk uitgevoerd op een van de knooppunten, omdat dit meer flexibiliteit biedt: een algoritme kan bijvoorbeeld zware rekenbronnen nodig hebben om de aggregatie uit te voeren, en het is beter om dit te doen op een knooppunt dat over deze bronnen beschikt, in plaats van de server te moeten upgraden telkens wanneer een nieuw algoritme meer bronnen nodig heeft.   
+    Het is gemakkelijk om de centrale vanatage6 server te verwarren met het centrale deel van het algoritme: de vantage6 server is het centrale deel van de infrastructuur, maar niet de plaats waar het centrale deel van het algoritme wordt uitgevoerd (Fig. 2). Het centrale deel wordt feitelijk uitgevoerd op een van de vantage6 nodes, omdat dit meer flexibiliteit biedt: een algoritme kan bijvoorbeeld zware rekenbronnen nodig hebben om de aggregatie uit te voeren, en het is beter om dit te doen op een vantage6 node dat over deze bronnen beschikt, in plaats van de server te moeten upgraden telkens wanneer een nieuw algoritme meer bronnen nodig heeft.   
 
 ## Gebruik van PLUGIN voor federatieve analyse en data pooling
 
@@ -64,7 +64,7 @@ PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief le
 
     Bij gefedereerde analyse is het doel niet het trainen van een model, maar het uitvoeren van een statistische analyse. Het "algoritme" is hierbij een aggregatiequery (bv. `COUNT` of `AVG`).
 
-    *   Elk Datastation voert de query lokaal uit.
+    *   Elk PLUGIN-datastation voert de query lokaal uit.
     *   De geaggregeerde (niet-identificeerbare) resultaten worden naar de centrale taak gestuurd.
     *   De centrale taak combineert de resultaten voor een overkoepelend antwoord.
 
@@ -75,7 +75,7 @@ PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief le
 
     De infrastructuur kan ook worden gebruikt om data te verzamelen op een centrale locatie, zoals een Processing Hub. Dit wordt "Data Pooling" genoemd. Hierbij is het "algoritme" een selectiequery.
 
-    *   Elk Datastation voert een selectiequery uit om een specifieke dataset of cohort te selecteren.
+    *   Elk PLUGIN-datastation voert een selectiequery uit om een specifieke dataset of cohort te selecteren.
     *   In plaats van een geaggregeerd resultaat, stuurt de node de geselecteerde ruwe data 'as-is' door naar de Processing Hub.
 
     Dit proces sluit aan bij het scenario voor centrale beschikbaarstelling zoals beschreven in de usecase [Maak data beschikbaar voor secundair gebruik](../../applicatie/laag-3/data-station.md#413-maak-data-beschikbaar-voor-secundair-gebruik). Privacy en veiligheid hangen hierbij af van de beveiliging van de ontvangende Processing Hub.
