@@ -56,6 +56,82 @@ Belangrijk is dat de centrale coördinatie niet per se op de vantage6 server pla
 
     Het is gemakkelijk om de centrale vanatage6 server te verwarren met het centrale deel van het algoritme: de vantage6 server is het centrale deel van de infrastructuur, maar niet de plaats waar het centrale deel van het algoritme wordt uitgevoerd (Fig. 2). Het centrale deel wordt feitelijk uitgevoerd op een van de vantage6 nodes, omdat dit meer flexibiliteit biedt: een algoritme kan bijvoorbeeld zware rekenbronnen nodig hebben om de aggregatie uit te voeren, en het is beter om dit te doen op een vantage6 node dat over deze bronnen beschikt, in plaats van de server te moeten upgraden telkens wanneer een nieuw algoritme meer bronnen nodig heeft.   
 
+## Federatief leren met PLUGIN/vantage6
+
+De PLUGIN-architectuur is gebaseerd op vantage6. Het gefedereerd leren van een algoritme omvat een reeks gecoördineerde stappen tussen de onderzoeker, de centrale server en de datastations. Dit proces is ontworpen om de analyse uit te voeren zonder dat de brongegevens de lokale omgeving van het datastation verlaten. Hieronder volgt een detailleerde beschrijving wat elk van de applicatiecomponenten hierin doen.
+
+```mermaid
+    sequenceDiagram
+        actor Onderzoeker
+        participant Server
+        participant Aggregator as Secure Aggregation Server (SAS)
+        participant Registry as Docker Registry
+
+        box "Meerdere worker-nodes"
+            participant Node as Node(s)
+        end
+
+        Onderzoeker->>Server: Authenticatie
+        Onderzoeker->>Server: Taak specificatie (Server API)
+
+        Aggregator->>Server: Hoofdtaak ophalen
+        Aggregator->>Registry: Docker-image ophalen (hoofdtaak)
+
+        Aggregator->>Server: Subtaken aanmaken
+
+        loop Voor elke subtaak (parallel uitgevoerd)
+            Node->>Server: Subtaak ophalen
+            Node->>Registry: Docker-image ophalen (subtaak)
+            Node->>Server: Resultaat van subtaak opslaan
+            Aggregator->>Server: Subtaakresultaten ophalen
+            Aggregator->>Aggregator: Verificatie en aggregatie
+        end
+
+        Aggregator->>Server: Eindresultaat van hoofdtaak indienen
+
+        Onderzoeker->>Server: Eindresultaat ophalen
+```
+
+???+ note "**Authenticatie**"
+
+    De onderzoeker start het proces door te authenticeren bij de centrale Vantage6-server.
+
+??? note "**Taak specificatie**"
+    
+    Na succesvolle authenticatie definieert de onderzoeker een taak. Hierbij wordt opgegeven:
+    *   Welk algoritme (Docker-image) gebruikt moet worden.
+    *   Specifieke inputparameters voor de analyse.
+    *   Het aantal iteraties (indien van toepassing, voor machine learning).
+    *   De identiteit van de *Secure Aggregation Server* (SAS), de node die verantwoordelijk is voor het aggregeren van resultaten.
+
+??? note "**Verzending naar nodes**"
+    
+    De centrale server stuurt de taak door naar de betrokken nodes. De SAS (Secure Aggregation Server, een specifieke node) ontvangt het verzoek als eerste.
+
+??? note "**Start hoofdalgoritme (SAS)**"
+    
+    De SAS downloadt het Docker-image, start het hoofd-algoritme en orkestreert de subtaken die door de datastations uitgevoerd moeten worden.
+
+??? note "**Start subtaken (datastations)**"
+    
+    De datastations ontvangen hun subtaak van de centrale server, downloaden hetzelfde Docker-image en starten het lokale deel van het algoritme. De analyse wordt uitgevoerd op de lokale data.
+
+??? note "**Verzending lokale resultaten**"
+    
+    Na elke trainingscyclus of analysestap stuurt het algoritme op het datastation de lokale resultaten (bijv. modelgewichten of statistische coëfficiënten) naar de SAS. De brongegevens verlaten het datastation niet.
+
+??? note "**Verificatie en aggregatie**"
+    
+    De SAS verifieert de resultaten, extraheert de metadata en voegt de resultaten van alle datastations samen tot een geaggregeerd tussenmodel. Dit voltooit één iteratie.
+
+??? note "**Vervolg-iteraties**"
+    
+    Voor vervolgstappen vragen de datastations de geaggregeerde resultaten van de vorige ronde op bij de SAS om hun lokale modellen verder te trainen. Deze cyclus herhaalt zich totdat het model convergeert of het gewenste aantal iteraties is bereikt.
+
+??? note "**Afronding**"
+    
+    De SAS informeert de onderzoeker dat de taak is voltooid. De onderzoeker kan vervolgens het finale, globale model downloaden van de server. Gedurende het proces heeft niemand, ook de onderzoeker niet, toegang tot de tussenresultaten, wat de veiligheid waarborgt.
+    
 ## Gebruik van PLUGIN voor federatieve analyse en data pooling
 
 PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief leren. Echter, dezelfde infrastructuur en processen kunnen worden toegepast voor verschillende vormen van secundair datagebruik.
