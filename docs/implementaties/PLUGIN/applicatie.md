@@ -6,7 +6,7 @@
 
 Het datastation (links) en de federated processing hub (rechts) vormen de twee-eenheid van de PLUGIN/vantage6 architectuur. Hieronder wordt de functie van elke component in meer detail beschreven.
 
-!!! note "Gedetailleerde beschrijving applicatiecomponenten vantage6"
+!!! note "Gedetailleerde beschrijving applicatiecomponenten PLUGIN"
 
     === "**vantage6 server**"
 
@@ -41,82 +41,6 @@ Het datastation (links) en de federated processing hub (rechts) vormen de twee-e
         De PLUGIN-Lake applicatie is een federatieve lakehouse implementatie binnen de PLUGIN-datastations. PLUGIN-Lake ontvangt, transformeert en stelt data beschikbaar aan de bovenstaande 3 applicaties. Hierbij is het o.a. mogelijk om ETL-processen in te richten, zoals het transformeren van data in FHIR formaat naar OMOP. 
         
 Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggregator Node* gebruikt. Hiermee wordt de node bedoeld waar aggregatie van deelresultaten plaats vindt. Hoewel het mogelijk is deze node op een aparte locatie te realiseren, verschilt deze technisch gezien niet van andere Vantage6 nodes. Elke Vantage6 Node is dus in potentie een aggregator node. Uitzondering hierop is de [*Secure Aggregator Node*](https://ai.jmir.org/2025/1/e60847). Deze oplossing kan gebruikt worden in specifieke gevallen waarin samengestelde data nog steeds gevoelig kan zijn, om het risico op een datalek verder te verkleinen.
-
-## Federatief leren met PLUGIN/vantage6
-
-De PLUGIN-architectuur is gebaseerd op vantage6. Het gefedereerd leren van een algoritme omvat een reeks gecoördineerde stappen tussen de onderzoeker, de centrale server en de datastations. Dit proces is ontworpen om de analyse uit te voeren zonder dat de brongegevens de lokale omgeving van het datastation verlaten. Hieronder volgt een detailleerde beschrijving wat elk van de applicatiecomponenten hierin doen.
-
-```mermaid
-    sequenceDiagram
-        actor Onderzoeker
-        participant Server
-        participant Aggregator as Secure Aggregation Server (SAS)
-        participant Registry as Docker Registry
-
-        box "Meerdere worker-nodes"
-            participant Node as Node(s)
-        end
-
-        Onderzoeker->>Server: Authenticatie
-        Onderzoeker->>Server: Taak specificatie (Server API)
-
-        Aggregator->>Server: Hoofdtaak ophalen
-        Aggregator->>Registry: Docker-image ophalen (hoofdtaak)
-
-        Aggregator->>Server: Subtaken aanmaken
-
-        loop Voor elke subtaak (parallel uitgevoerd)
-            Node->>Server: Subtaak ophalen
-            Node->>Registry: Docker-image ophalen (subtaak)
-            Node->>Server: Resultaat van subtaak opslaan
-            Aggregator->>Server: Subtaakresultaten ophalen
-            Aggregator->>Aggregator: Verificatie en aggregatie
-        end
-
-        Aggregator->>Server: Eindresultaat van hoofdtaak indienen
-
-        Onderzoeker->>Server: Eindresultaat ophalen
-```
-
-???+ note "**Authenticatie**"
-
-    De onderzoeker start het proces door te authenticeren bij de centrale Vantage6-server.
-
-??? note "**Taak specificatie**"
-    
-    Na succesvolle authenticatie definieert de onderzoeker een taak. Hierbij wordt opgegeven:
-    *   Welk algoritme (Docker-image) gebruikt moet worden.
-    *   Specifieke inputparameters voor de analyse.
-    *   Het aantal iteraties (indien van toepassing, voor machine learning).
-    *   De identiteit van de *Secure Aggregation Server* (SAS), de node die verantwoordelijk is voor het aggregeren van resultaten.
-
-??? note "**Verzending naar nodes**"
-    
-    De centrale server stuurt de taak door naar de betrokken nodes. De SAS (Secure Aggregation Server, een specifieke node) ontvangt het verzoek als eerste.
-
-??? note "**Start hoofdalgoritme (SAS)**"
-    
-    De SAS downloadt het Docker-image, start het hoofd-algoritme en orkestreert de subtaken die door de datastations uitgevoerd moeten worden.
-
-??? note "**Start subtaken (datastations)**"
-    
-    De datastations ontvangen hun subtaak van de centrale server, downloaden hetzelfde Docker-image en starten het lokale deel van het algoritme. De analyse wordt uitgevoerd op de lokale data.
-
-??? note "**Verzending lokale resultaten**"
-    
-    Na elke trainingscyclus of analysestap stuurt het algoritme op het datastation de lokale resultaten (bijv. modelgewichten of statistische coëfficiënten) naar de SAS. De brongegevens verlaten het datastation niet.
-
-??? note "**Verificatie en aggregatie**"
-    
-    De SAS verifieert de resultaten, extraheert de metadata en voegt de resultaten van alle datastations samen tot een geaggregeerd tussenmodel. Dit voltooit één iteratie.
-
-??? note "**Vervolg-iteraties**"
-    
-    Voor vervolgstappen vragen de datastations de geaggregeerde resultaten van de vorige ronde op bij de SAS om hun lokale modellen verder te trainen. Deze cyclus herhaalt zich totdat het model convergeert of het gewenste aantal iteraties is bereikt.
-
-??? note "**Afronding**"
-    
-    De SAS informeert de onderzoeker dat de taak is voltooid. De onderzoeker kan vervolgens het finale, globale model downloaden van de server. Gedurende het proces heeft niemand, ook de onderzoeker niet, toegang tot de tussenresultaten, wat de veiligheid waarborgt.
 
 ## PLUGIN en de European Interoperability Reference Architecture (EIRA)
 
