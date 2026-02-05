@@ -3,27 +3,29 @@
 
 ## Informatiemodellen voor syntactische interoperabiliteit
 
-Ten tijde van het schrijven van dit document heeft PLUGIN gewerkt met twee verschillende informatiemodellen die elk in een afzonderlijke usecase zijn beproefd c.q. geimplementeerd.
+Ten tijde van het schrijven van dit document heeft PLUGIN gewerkt met twee verschillende informatiemodellen die elk in een afzonderlijke usecase zijn beproefd c.q. geimplementeerd. Binnenkort gaat PLUGIN starten met een nieuwe use-case waarin zowel OMOP CDM als openEHR worden beproefd.
 
 !!! note "Informatiemodellen in PLUGIN"
 
     === "FHIR"
 
-        Vanuit het originele ontwerp heeft PLUGIN in het gebruik van FHIR geprioriteerd. De overwegingen om dit informatiemodel te gebruiken is beschreven in een artikel door Kapitan et al. (2025).[@kapitan2025data] Een van de belangrijke principes hierin is dat van late-binding: doordat PLUGIN is bedoeld als generieke infrastructuur, is de gedachte dat het opleggen van condities en restricties in de binnenkomende data stapgewijs kan worden gedaan. Uitgaande van FHIR R4 als basis, wordt de data 'getrechterd' naar steeds specifiekere profielen, zijnde het zibs2020 profiel, nl-core en het profiel van de uiteindelijke toepassing, in dit geval de NCR-EHR profiel van de Nederlandse Kankerregistratie. 
+        Vanuit het originele ontwerp heeft PLUGIN het gebruik van FHIR geprioriteerd. De overwegingen om dit informatiemodel te gebruiken is beschreven in een artikel door Kapitan et al. (2025).[@kapitan2025data] Een van de belangrijke principes hierin is dat van late-binding: doordat PLUGIN is bedoeld als generieke infrastructuur, is de gedachte dat het opleggen van condities en restricties in de binnenkomende data stapgewijs kan worden gedaan. Uitgaande van FHIR R4 als basis, wordt de data 'getrechterd' naar steeds specifiekere profielen, zijnde het zibs2020 profiel, nl-core en het profiel van de uiteindelijke toepassing, in dit geval de NCR-EHR profiel van de Nederlandse Kankerregistratie. 
         
         ![](./late-binding.png)
 
         Deze aanpak is succesvol beproefd in een usecase met het RadboudUMC, waarbij gegevens voor hoofd-halskanker automatisch uit de Epic FHIR v3 API zijn onttrokken en vertaald naar het target profiel.
 
+        Daarnaast heeft het PLUGIN-consortium samen met Santeon, HealthSageAI, pacmed, stichtingNICE, UMCG, HL7 Netherlands, Health-RI en openEHR Nederland gewerkt aan een FHIR Common Data Model. Meer over dit FHIR Common Data Model is terug te lezen in de [PLUGIN FHIR Implementation Guide](https://plugin.healthcare/fhir/). 
+
     === "AI-ondersteund coderen"
 
-        Voor het project "AI-ondersteund coderen" wordt een specifieke set gegevens gebruikt. DHD heeft hiervoor een AI-model ontwikkeld dat op basis van ongestructureerde data (brievenverslagen) automatisch ICD-10 codes kan genereren voor dagopnames. 
+        Voor het project "AI-ondersteund coderen" wordt een specifieke set gegevens gebruikt. Het project heeft een AI-model ontwikkeld dat op basis van ongestructureerde data (brievenverslagen) automatisch ICD-10 codes kan genereren voor dagopnamen. 
         
         Deelnemende ziekenhuizen leveren hiervoor een dataset aan die bestaat uit:
         
         *   Brievenverslagen
         *   Diagnoses
-        *   Opnames
+        *   Opnamen
         *   Subtrajecten
         *   Zorgactiviteiten
 
