@@ -10,14 +10,14 @@ Om implementaties van data platforms te kunnen evalueren, introduceren we eerst 
 
 !!! abstract "Infrastructuur concepten"
 
-    **OLTP** (*Online Transaction Processing*): real-time transactieverwerking voor operationele systemen.    
-    **OLAP** (*Online Analytical Processing*): complexe analyses op grote datasets voor besluitvorming.
-    **ACID compliance** Vier eigenschappen (*Atomicity*, *Consistency*, *Isolation*, *Durability*) die data-integriteit waarborgen.
-    **ETL** (*Extract-Transform-Load*): data wordt getransformeerd voordat het wordt opgeslagen.
-    **ELT** (*Extract-Load-Transform*): ruwe data wordt eerst opgeslagen, daarna getransformeerd.
-    **Data lineage** Volledige transformatiegeschiedenis van data van oorsprong tot bestemming.
-    **Data catalog** Centrale inventaris van data-assets met metadata voor vindbaarheid.
-    **Schema-on-read vs Schema-on-write** Data structureren bij opslag (write) vs bij gebruik (read).
+    * **OLTP** (*Online Transaction Processing*): real-time transactieverwerking voor operationele systemen.    
+    * **OLAP** (*Online Analytical Processing*): complexe analyses op grote datasets voor besluitvorming.
+    * **ACID compliance** Vier eigenschappen (*Atomicity*, *Consistency*, *Isolation*, *Durability*) die data-integriteit waarborgen.
+    * **ETL** (*Extract-Transform-Load*): data wordt getransformeerd voordat het wordt opgeslagen.
+    * **ELT** (*Extract-Load-Transform*): ruwe data wordt eerst opgeslagen, daarna getransformeerd.
+    * **Data lineage** Volledige transformatiegeschiedenis van data van oorsprong tot bestemming.
+    * **Data catalog** Centrale inventaris van data-assets met metadata voor vindbaarheid.
+    * **Schema-on-read vs Schema-on-write** Data structureren bij opslag (write) vs bij gebruik (read).
 
 Sinds de komst van relationele databases zijn grofweg drie generaties van data infrastructuren te onderscheiden: datawarehouses, data lakes en de lakehouse architectuur.
 

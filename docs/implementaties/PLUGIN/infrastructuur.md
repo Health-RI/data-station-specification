@@ -19,53 +19,57 @@ Naast de centrale server is er een of meerdere centrale Docker registries nodig 
 
 De decentrale componenten binnen een PLUGIN infrastructuur bestaan uit de eerder genoemde componenten in het applicatielaag en kunnen worden samengevat in de vantage6 node, PLUGIN-Lake en algoritme containers.
 
-### Vantage6 Node
+!!! abstract "Decentrale componenten"
 
-De vantage6 node is de poort naar het federatieve netwerk en de locale orkestratie laag binnen het datastation. De node bevraagt de centrale vantage6 server en ontvangt opdrachten die uitgevoerd moeten worden als gecontainerizeerde applicaties. De vantage6 node zet vervolgens een tijdelijk netwerk op tussen de beschikbare data bronnen en de algoritme container. Na uitvoering van de opdracht, worden de resultaten via de node teruggestuurd naar de centrale vantage6 server en de algoritme container opgeruimd.
+    === "Vantage6 Node"
 
-### PLUGIN-Lake
+        De vantage6 node is de poort naar het federatieve netwerk en de locale orkestratie laag binnen het datastation. De node bevraagt de centrale vantage6 server en ontvangt opdrachten die uitgevoerd moeten worden als gecontainerizeerde applicaties. De vantage6 node zet vervolgens een tijdelijk netwerk op tussen de beschikbare data bronnen en de algoritme container. Na uitvoering van de opdracht, worden de resultaten via de node teruggestuurd naar de centrale vantage6 server en de algoritme container opgeruimd.
 
-PLUGIN-Lake staat tussen de beschikbare data bronnen en de vantage6 node in. PLUGIN-Lake zorgt voor een uniforme toegang tot de data bronnen en eventuele data transformaties die nodig zijn om de data op de gewenste wijze aan te bieden aan de algoritme container.
+    === "PLUGIN-Lake"
 
-### Algoritme container
+        PLUGIN-Lake staat tussen de beschikbare data bronnen en de vantage6 node in. PLUGIN-Lake zorgt voor een uniforme toegang tot de data bronnen en eventuele data transformaties die nodig zijn om de data op de gewenste wijze aan te bieden aan de algoritme container.
 
-Een algoritme container bevat de opdracht specifieke code die nodig is om een bepaalde taak uit te voeren. De node haalt de container op uit de centrale Docker Registry en start de container op binnen een tijdelijk netwerk. De algoritme container kan vervolgens alleen communiceren met de data bronnen en services binnen een datastation die beschikbaar zijn gesteld via de vantage6 node.
+    === "Algoritme container"
 
-## Server eisen voor datastation
+        Een algoritme container bevat de opdracht specifieke code die nodig is om een bepaalde taak uit te voeren. De node haalt de container op uit de centrale Docker Registry en start de container op binnen een tijdelijk netwerk. De algoritme container kan vervolgens alleen communiceren met de data bronnen en services binnen een datastation die beschikbaar zijn gesteld via de vantage6 node.
 
-Om deel te kunnen nemen aan het PLUGIN platform worden systeemeisen gesteld aan het datastation binnen een deelnemende organisatie. Elke deelnemende organisatie dient een eigen machine (fysiek of virtueel) beschikbaar te stellen waarop de decentrale componenten van het PLUGIN platform kunnen draaien.
+## Intrastructuur eisen voor datastation
 
-## Systeemeisen
+Om deel te kunnen nemen aan het PLUGIN platform worden eisen gesteld aan het datastation binnen een deelnemende organisatie. Elke deelnemende organisatie dient een eigen machine (fysiek of virtueel) beschikbaar te stellen waarop de decentrale componenten van het PLUGIN platform kunnen draaien.
 
-Om te stabiliteit en performance van het platform te waarborgen, stellen we de volgende minimale systeemeisen aan het datastation:
+!!! abstract "Eisen datastation"
 
-- **Linux besturingssysteem**: Door het intensieve gebruik van container technologie (Docker of kubernetes) is een Linux besturingssysteem vereist.
-- **CPU 16 cores, x86/x64 CPU**: Voor het uitvoeren van de algoritmen is een multi-core CPU vereist.
-- **RAM 64 GB**: Bij het werken met veel data of data intensieve algoritmes is voldoende RAM noodzakelijk.
-- **SSD 360 GB**: Opslag van (meta)data
-- *Optioneel: **NVIDIA GPU (≥ 16 GB VRAM)**: Bij het beschikbaar stellen van een datastation voor de ontwikkeling van AI-modellen is een nvidia compatibele GPU vereist.
+    === "Systeemeisen"
 
-## Netwerk eisen
+        Om te stabiliteit en performance van het platform te waarborgen, stellen we de volgende minimale systeemeisen aan het datastation:
 
-Om te kunnen deelnemen aan de PLUGIN infrastructuur, is het noodzakelijk dat het datastation kan communiceren met de centrale vantage6 server. De volgende netwerk eisen worden gesteld:
+        - **Linux besturingssysteem**: Door het intensieve gebruik van container technologie (Docker of kubernetes) is een Linux besturingssysteem vereist.
+        - **CPU 16 cores, x86/x64 CPU**: Voor het uitvoeren van de algoritmen is een multi-core CPU vereist.
+        - **RAM 64 GB**: Bij het werken met veel data of data intensieve algoritmes is voldoende RAM noodzakelijk.
+        - **SSD 360 GB**: Opslag van (meta)data
+        - *Optioneel: **NVIDIA GPU (≥ 16 GB VRAM)**: Bij het beschikbaar stellen van een datastation voor de ontwikkeling van AI-modellen is een nvidia compatibele GPU vereist.
 
-- **100 Mbit/s ethernet**
-- **Port 443/TCP open voor uitgaand verkeer**
+    === "Netwerk eisen"
 
-De volgende endpoints moeten bereikbaar zijn vanuit het datastation:
+        Om te kunnen deelnemen aan de PLUGIN infrastructuur, is het noodzakelijk dat het datastation kan communiceren met de centrale vantage6 server. De volgende netwerk eisen worden gesteld:
 
-- adres van de centrale vantage6 server(s) waar het datastation op aansluit
-- Vantage6 docker registry
-- Docker registries van de algoritme containers
-- *Eventuele toegang tot repositories voor updates van software en dependencies*
+        - **100 Mbit/s ethernet**
+        - **Port 443/TCP open voor uitgaand verkeer**
 
-## Software eisen
+        De volgende endpoints moeten bereikbaar zijn vanuit het datastation:
 
-- **Docker**: Voor het draaien van de vantage6 node en de algoritme containers is Docker vereist.
-- **Python 3.10**: Nodig voor het opzetten van een vantage6 node
-- **vantage6**: Python package die vantage6 beschikbaar maakt als Command Line Interface (CLI)
+        - adres van de centrale vantage6 server(s) waar het datastation op aansluit
+        - Vantage6 docker registry
+        - Docker registries van de algoritme containers
+        - *Eventuele toegang tot repositories voor updates van software en dependencies*
 
-De overige applicaties worden geinstalleerd als gecontainerizeerde applicaties. Om deze te beheren wordt er gebruik gemaakt van docker compose, kubernetes en eventueel linux native tools.
+    === "Software eisen"
+
+        - **Docker**: Voor het draaien van de vantage6 node en de algoritme containers is Docker vereist.
+        - **Python 3.10**: Nodig voor het opzetten van een vantage6 node
+        - **vantage6**: Python package die vantage6 beschikbaar maakt als Command Line Interface (CLI)
+
+        De overige applicaties worden geinstalleerd als gecontainerizeerde applicaties. Om deze te beheren wordt er gebruik gemaakt van docker compose, kubernetes en eventueel linux native tools.
 
 ## Toegang tot data
 

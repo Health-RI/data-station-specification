@@ -44,10 +44,11 @@ Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggre
 
 ## PLUGIN en de European Interoperability Reference Architecture (EIRA)
 
-De architectuur van PLUGIN, gebaseerd op de principes van de Personal Health Train en Vantage6, kan worden beschreven aan de hand van de **European Interoperability Reference Architecture (EIRA)**. EIRA biedt een raamwerk om interoperabele architecturen te ontwerpen door herbruikbare *Architectural Building Blocks (ABBs)* te identificeren.
+Om te voldoen aan uiteenlopende databehoeften (zoals klassieke rapportages, analyses, delen van data en data science) wordt door gezondheidsinstellingen veelal gebruik gemaakt van een gescheiden data warehouse, een datalake en andere analytische omgevingen. Deze scheiding leidt tot duplicatie van data, extra complexiteit en uitdagingen op het gebied van data governance. De aanpak van PLUGIN, en meer specifiek het onderdeel PLUGIN-Lake, zet in op een lakehouse architectuur om deze pijnpunten te addresseren. Een lakehouse architectuur kan een oplossing bieden voor deze problematiek door de functionaliteiten van de verschillende omgevingen samen te voegen. Alle data wordt opgeslagen in een flexibel en schaalbaar platform. Er is slechts één opslaglaag op basis van open standaarden, waarbij zowel ongestructureerde als gestructureerde data kan worden opgeslagen, zoals beschreven in [hoofdstuk 5](../../infrastructuur/index.md).
 
-Hoewel een gedetailleerde mapping naar specifieke EIRA ABB's een technische oefening is (vaak vastgelegd in een Archimate-model), kunnen we de componenten van PLUGIN conceptueel positioneren binnen de EIRA-gedachte. De architectuur is opgebouwd uit logische componenten die elk een specifieke rol vervullen, wat aansluit bij de EIRA-visie. De belangrijkste componenten, beschouwd als ABBs, zijn hieronder weergegeven.
+Deze aanpak en architectuur van PLUGIN is in lijn met de principes van de **European Interoperability Reference Architecture (EIRA)**. EIRA biedt een raamwerk om interoperabele architecturen te ontwerpen door herbruikbare *Architectural Building Blocks (ABBs)* te identificeren. We hebben de architectuur van PLUGIN vertaald naar de terminologie en concepten van EIRA, met de intentie om bij te dragen aan verdere standaardisatie en het verbeteren van interoperabiliteit. De mapping tussen de belangrijkste componenten van PLUGIN en EIRA AAB is hieronder weergegeven. Daaruit blijk dat de EIRA in feite alle essentiele componenten voor het realiseren van een lakehouse architectuur, en dus PLUGIN-Lake, heeft opgenomen in de referentie architectuur.e belangrijkste componenten, beschouwd als ABBs, zijn hieronder weergegeven.
 
+![](./datastation-eira.png)
 
 !!! note "PLUGIN in termen van EIRA architectural building blocks"
 
@@ -71,21 +72,6 @@ Hoewel een gedetailleerde mapping naar specifieke EIRA ABB's een technische oefe
     
         De infrastructuur die veilige data-uitwisseling (van geaggregeerde resultaten, niet brongegevens) mogelijk maakt. Dit valt onder EIRA ABBs zoals *Secure Communication* en *Network Infrastructure*.
 
-Door de architectuur op deze manier in componenten op te delen, wordt een modulaire en interoperabele opzet gerealiseerd die in lijn is met de principes van EIRA voor het bouwen van grensoverschrijdende en sector-overstijgende digitale diensten.
 
 
-## PLUGIN en de composable data stack
 
-![](./datastation-eira.png)
-
-TO DO: uitleggen hoe al deze componenten eigenlijk een-op-een te vertalen zijn naar de moderne lakehouse architectuur.
-
-Om te voldoen aan uiteenlopende databehoeften (zoals klassieke rapportages, analyses, delen van data en data science) wordt door gezondheidsinstellingen veelal gebruik gemaakt van een gescheiden data warehouse, een datalake en andere analytische omgevingen. Deze scheiding leidt tot duplicatie van data, extra complexiteit en vermoeilijking van data governance.
-
-Een lakehouse architectuur lost deze problematiek op door de functionaliteiten van de verschillende omgevingen samen te voegen. Alle data wordt opgeslagen in een flexibel en schaalbaar platform. Er is slechts één opslaglaag op basis van open standaarden, waarbij zowel ongestructureerde als gestructureerde data kan worden opgeslagen. De PLUGIN datastation componenten vormen de basis voor een moderne lakehouse architectuur.
-
-### gestandaardiseerde data modellen (FHIR/OMOP/openEHR)
-
-### APIs (SQL/No-SQL/Docker)
-
-### Storage
