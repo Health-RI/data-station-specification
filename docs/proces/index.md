@@ -19,7 +19,7 @@ In de draft documentatie van TEHDAS2 zijn de belangrijkste processtappen voor se
     In de hieronder beschreven processen is de opt-out niet meegenomen. Dit zal moeten worden beschreven in een separaat proces, dat waarschijnlijk onder de verantwoordelijkheid van de HDAB moet worden uitgevoerd. De HDAB zal de opt-out van een persoon vervolgens moeten doorgeven aan de verschillende dataleveranciers.
 
 ### Data zoeken en vinden (_data discovery_)
-Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een catalogus van gezondheidsgevens op https://qa.data.health.europa.eu/. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het aanvragen van de gegevens.
+Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een catalogus van gezondheidsgevens. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het aanvragen van de gegevens.
 
 ### Data aanvragen (_data access_)
 Het aanvragen van toegang tot data is feitelijk een aanvraag tot verwerking door de data gebruiker van gegevens die door een gegevenshouder zijn verstrekt, in overeenstemming met specifieke technische, juridische of organisatorische vereisten, zonder noodzakelijkerwijs de overdracht of het downloaden van dergelijke gegevens te impliceren. (Verordening inzake Gegevensgovernance (DGA), Artikel 2(8), (9) en (13)). Op basis van de aanvraag wordt een vergunning verleend voor toegang tot de gegevens of een verzoek om data wordt goedgekeurd.
@@ -45,7 +45,7 @@ In dit document worden de usecases samengevat om de functionaliteit te beschrijv
 
 Usecases zijn niet alleen een methode om een systeem te beschrijven, maar ook om deze te ontwerpen, te ontwikkelen en te documenteren. Zodra de eisen voor een usecase duidelijk zijn, kan deze worden gerealiseerd. Het technische ontwerp van de usecase wordt een usecase-realisatie genoemd en bestaat onder andere uit sequentiediagrammen, statusdiagrammen en informatiemodellen. De componenten en andere bouwstenen in dit technische ontwerp worden hergebruikt voor alle usecases van het _system of interest_.
 
-!!! Info "Usecases, communicatiepatronen en transacies"
+!!! Info "Usecases, communicatiepatronen en transacties"
 
     Een ___business usecase___ vormt de context en beschrijft wat een eindgebruiker wil bereiken op het gebied van informatievoorziening. Voorbeelden van _business usecase_ zijn het voorschrijven van een recept, een verwijzing naar een medisch specialist of de overdracht van een cliënt van een verpleeghuis naar een ziekenhuis en vice versa. Voor secundair gebruik kan een _business usecase_ zijn het monitoren van de kwaliteit van verpleeghuizen of het uitvoeren van een onderzoek naar een specifieke aandoening. De stappen in deze procesbeschrijving zijn onderdeel van iedere _business usecase_ voor secundair gebruik.
 
@@ -54,7 +54,7 @@ Usecases zijn niet alleen een methode om een systeem te beschrijven, maar ook om
     Zowel de _business usecase_ als de _usecase_ wordt gestart door een gebeurtenis (in het Engels: event). In alle gevallen gaat het om een proces waarbij de gebeurtenis het startpunt vormt, en de _usecase_ het doel of de waarde van het proces vertegenwoordigt.
 
     Een ___communicatiepatroon___ binnen de context van gegevensuitwisseling is een vaste, gestructureerde manier van communiceren. Een communicatiepatroon wordt toegepast binnen een _system usecase_, waarbij er altijd een actor is - het systeem van een aanbieder of een persoon - die de communicatie start: de initiator (bron: [Data voor gezondheid](https://www.datavoorgezondheid.nl/documenten/2025/07/14/whitepaper-communicatiepatronen-vws)). 
-    Een communicatiepatroon is opgedeeld in meerdere _transacties_. De [Nuts Notified Pull](https://wiki.nuts.nl/books/communicatiepatronen/page/notified-pull-gebaseerd-op-fhir-subscriptions) is een voorbeeld van een communicatiepatroon waarin verschillende interacties / transacties zijn becchreven.
+    Een communicatiepatroon is opgedeeld in meerdere _transacties_. De [Nuts Notified Pull](https://wiki.nuts.nl/books/communicatiepatronen/page/notified-pull-gebaseerd-op-fhir-subscriptions) is een voorbeeld van een communicatiepatroon waarin verschillende interacties / transacties zijn beschreven.
 
     Een ___transactie___ is een opeenvolging van acties in een interactie tussen twee systemen die wordt behandeld als één ondeelbare eenheid van werk. In de meeste gevallen kan een _transactie_ worden gezien als een request-response-patroon via HTTP, waarbij een systeem een verzoek (request) stuurt en het andere systeem een bijbehorend antwoord (response) teruggeeft, zodat de interactie als één ondeelbare eenheid van werk kan worden behandeld. 
 

@@ -31,7 +31,7 @@ Daarnaast moet het in de context van de EHDS mogelijk zijn om te werken met _fed
 
 ## De componenten van een decentraal netwerk van BVOs
 
-In de uitwerking van de architectuur voor een decentraal netwerk van BVOs staan **het datastation** en de **processing hub** centraal. Deze twee applicatie componenten realiseren gezamenlijk de functionaliteit die nodig is in een decentrale BVO. In relatie tot het [FAIR zandloper model](../data-stations-als-hoeksteen.md#122-de-vijf-lagen-van-het-zandloper-model-als-denkraam), is het datastation onderdeel van laag 3, terwijl de FPH onderdeel is van laag 4. Conceptueel plaatsen we de verschillende vormen van gefedereerde gegevensbewerking in laag 5. Voortbouwend op TEHDAS2 maken we onderscheid tussen drie (arche)typen:
+In de uitwerking van de architectuur voor een decentraal netwerk van BVOs staan **het datastation** en de **processing hub** centraal. Deze twee applicatie componenten realiseren gezamenlijk de functionaliteit die nodig is in een decentrale BVO. In relatie tot het [FAIR zandloper model](../data-stations-als-hoeksteen.md), is het datastation onderdeel van laag 3, terwijl de FPH onderdeel is van laag 4. Conceptueel plaatsen we de verschillende vormen van gefedereerde gegevensbewerking in laag 5. Voortbouwend op TEHDAS2 maken we onderscheid tussen drie (arche)typen:
 
 1. **Gefedereerde analyse**: statistieken worden lokaal berekend in een netwerk van datastations. Alleen geaggregeerde resultaten of samenvattende statistieken worden uit de datastations geëxporteerd, met bijbehorende waarborgen dat geen persoonsgegevens worden onttrokken. Gefedereerde analyse is in principe hetzelfde als een _Federated Database System_. Gefedereerde analyse is bij uitstek geschikt om gegevensverzoeken in de zin van [EHDS artikel 69](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327&qid=1764922416982#art_69) uit te voeren. [KIK-V](../implementaties/KIK-V/index.md) zien wij als een referentie implementatie voor gefedereerde analyse.
 2. **Gefedereerd leren**: modellen worden getraind en gevalideerd op de datastations zonder dat de ruwe data wordt gedeeld tussen de datastations. In plaats daarvan worden alleen de model updates gedeeld met de FPH om daarmee betere dataprivacy en beveiliging te bereiken. [PLUGIN](../implementaties/PLUGIN/index.md) zien wij als een referentie implementatie voor gefedereerd leren.
@@ -41,9 +41,9 @@ In dit hoofdstuk beschrijven we de applicatie componenten van een federatieve BV
 
 | Laag | Systemen |
 |:----:|:---------|
-| **5** | **> [Gefedereerde analyse](./laag-5/federatieve-analyse.md)**<br>**> [Gefedereerd leren](./laag-5/federatief-leren.md)**<br>**> [Data pooling](./laag-5/data-pooling.md)** |
-| **4** | > [Data Access Application Mgnt System](./laag-4/daams.md)<br>> [Catalogus gezondheidsgegevens](./laag-4/catalogus.md)<br>**> [Processing hub](./laag-4/processing-hub.md)** |
-| **3** | **> [Datastation](./laag-3/data-station.md)** |
+| **5** | **> [Gefedereerde analyse](./federatieve-analyse.md)**<br>**> [Gefedereerd leren](./federatief-leren.md)**<br>**> [Data pooling](./data-pooling.md)** |
+| **4** | > [Data Access Application Mgnt System](./daams.md)<br>> [Catalogus gezondheidsgegevens](./catalogus.md)<br>**> [Processing hub](./processing-hub.md)** |
+| **3** | **> [Datastation](./data-station.md)** |
 | **2** | > Data ontsluitingssysteem |
 | **1** | > bronsystemen |
 

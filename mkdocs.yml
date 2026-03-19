@@ -128,19 +128,13 @@ nav:
       - informatie/metadata.md
   - 4. Applicatie:
       - applicatie/index.md
-      - Laag 3:
-          - applicatie/laag-3/index.md
-          - 4.1. Datastation: applicatie/laag-3/data-station.md
-      - Laag 4:
-          - applicatie/laag-4/index.md
-          - 4.2. catalogus: applicatie/laag-4/catalogus.md
-          - 4.3. DAAMS: applicatie/laag-4/daams.md
-          - 4.4. Processing hub: applicatie/laag-4/processing-hub.md
-      - Laag 5:
-          - applicatie/laag-5/index.md
-          - 4.5. Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
-          - 4.6. Federatief leren: applicatie/laag-5/federatief-leren.md
-          - 4.7. Data pooling: applicatie/laag-5/data-pooling.md
+      - 4.1. Datastation: applicatie/data-station.md
+      - 4.2. Catalogus: applicatie/catalogus.md
+      - 4.3. DAAMS: applicatie/daams.md
+      - 4.4. Processing hub: applicatie/processing-hub.md
+      - 4.5. Federatieve analyse: applicatie/federatieve-analyse.md
+      - 4.6. Federatief leren: applicatie/federatief-leren.md
+      - 4.7. Data pooling: applicatie/data-pooling.md
   - 5. Infrastructuur:
       - infrastructuur/index.md
       - infrastructuur/evolutie.md
@@ -170,6 +164,7 @@ nav:
     - 7.2. Primair vs. secundair: discussie/primair-vs-secundair.md    
     - 7.3. Permit vs. request: discussie/permit-vs-request.md
     - 7.4. Dataspace initiatieven: discussie/dataspace-initiatieven.md
+    - 7.5. Voorstel ontwikkelagenda: discussie/ontwikkelagenda.md
     
   - Appendix:
     - appendix/index.md

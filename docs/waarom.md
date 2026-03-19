@@ -3,7 +3,7 @@
 ## 1.1.1. Te weinig aandacht voor federatieve oplossingen en het concept van _data visiting_
 Ten tijde van het schrijven van dit document zijn een aantal belangrijke richtlijnen in de maak betreffende de uitwerking en implementatie van de EHDS voor secundair gebruik, met name:
 
-- [TEHDAS2](https://tehdas.eu/public-consultations/): gedetailleerde richtlijnen en technische specificiaties in 11 documenten.[^1]
+- [TEHDAS2](https://tehdas.eu/public-consultations/): gedetailleerde richtlijnen en technische specificiaties welke publiekelijk zijn of worden geconsulteerd.[^1]
 - [Data Spaces Support Center Blueprint](https://dssc.eu/space/BVE2/1071251457/Data+Spaces+Blueprint+v2.0+-+Home): industrie-overstijgende richtlijnen voor inrichting van data spaces.
 - [Uitgangspunten LDN](https://open.overheid.nl/documenten/52acfd51-3585-416d-979b-ab6deaba79d9/file): brede uitgangspunten geformuleerd door VWS, waaronder _privacy-by-design_, hoge mate van open source werken en opslag van data bij de bron.
 
@@ -24,7 +24,7 @@ Het concept van _data visiting_, ook wel bekend als _federated computing_ of _Pe
     === "**Gefedereerd leren<br>(_federated learning_)**"
         Een specifieke vorm van gefedereerde berekening waarbij modellen worden getraind en gevalideerd op gedistribueerde BVOs. De ruwe data wordt niet gedeeld tussen de BVOs. In plaats daarvan worden alleen de model updates gedeeld om daarmee betere data privacy en beveiliging te bereiken. Omdat het moeilijk is om de anonimiteit van tussentijdse resultaten te beoordelen, is het essentieel dat gefedereerd leren gebeurd in een vertrouwd netwerk van BVOs.
 
-    TEHDAS2 maakt onderscheid tussen twee scenarios, namelijk gefedereerde analyse (a) en gefedereerd leren (b).
+    TEHDAS2 maakt onderscheid tussen twee scenarios, namelijk gefedereerde analyse (a) en gefedereerd leren (b), zoals hieronder weergegeven. Daarbij is het goed om op te merken dat dit een versimpelde weergave is. In scenario a) wordt vaak ook gebruik gemaakt van een aggregation server (terwijl die niet is ingetekend). 
 
     ![](federation-scenarios.png)
 

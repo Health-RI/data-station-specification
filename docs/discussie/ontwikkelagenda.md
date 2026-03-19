@@ -1,4 +1,4 @@
-# Voorstel ontwikkelagenda BVOs
+# 7.5. Voorstel ontwikkelagenda BVOs
 
 De grootste gaps die we zien zijn:
 
@@ -19,6 +19,6 @@ Beelden worden na ontvangst direct geanonimiseerd, en lokaal gebruikte structuur
 ### Computatieservice
 Bij beeldontvangst worden automatisch afgeleide analyses uitgevoerd, zoals DVH-berekeningen en radiomics-extracties. Door gebruik te maken van de genormaliseerde naamgeving van intekeningen is ook mogelijk deze berekeningen te baseren op samengestelde structuren (bijvoorbeeld de gemiddelde dosis in beide longen, afgezien van de primaire tumor). De resultaten van deze configureerbare analyses worden opgeslagen in een relationele database en beschikbaar gesteld voor gebruik door de node.
 
-### interoperabiliteit
+### Interoperabiliteit
 Om interoperabiliteit van de data te garanderen worden zowel beelddata als afgeleide resultaten geconverteerd naar OMOP en graphDB door middel van automatische conversies.
 

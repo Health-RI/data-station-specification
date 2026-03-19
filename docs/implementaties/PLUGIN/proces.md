@@ -1,6 +1,6 @@
 # Proces voor federatieve verwerking met PLUGIN
 
-Deze pagina beschrijft hoe de PLUGIN-implementatie, die gebruikmaakt van vantage6, de processen voor [federatieve analyse](../../proces/analyseren.md) en het [klaarzetten van data](../../proces/klaarzetten.md) ondersteunt. PLUGIN/vantage6 is een concreet voorbeeld van hoe een Datastation en een Processing Hub kunnen samenwerken voor secundair datagebruik, zoals beschreven in het hoofdstuk over het [datastation](../../applicatie/laag-3/data-station.md).
+Deze pagina beschrijft hoe de PLUGIN-implementatie, die gebruikmaakt van vantage6, de processen voor [federatieve analyse](../../proces/analyseren.md) en het [klaarzetten van data](../../proces/klaarzetten.md) ondersteunt. PLUGIN/vantage6 is een concreet voorbeeld van hoe een Datastation en een Processing Hub kunnen samenwerken voor secundair datagebruik, zoals beschreven in het hoofdstuk over het [datastation](../../applicatie/data-station.md).
 
 In deze implementatie wordt de rol van het Datastation vervuld door een **vantage6 Node**. De coördinatie tussen de nodes wordt beheerd door een **vantage6 Server**. De datagebruiker initieert de taken vanaf een Processing Hub, die in deze context functioneert als een client naar de vantage6-infrastructuur.
 
@@ -29,7 +29,7 @@ Het uitvoeren van een federatieve taak, zoals federatief leren of een federatiev
 
 1.  **Taakcreatie:** Een gebruiker (bijv. een onderzoeker via de Processing Hub) maakt een centrale taak aan. Deze taak specificeert welk algoritme moet worden uitgevoerd en op welke Datastations (nodes).
 2.  **Distributie:** De vantage6 Server ontvangt de centrale taak en deelt deze op in subtaken voor elke deelnemende node.
-3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/laag-3/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
+3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
 4.  **Resultaten retourneren:** De node stuurt het resultaat (bv. een lokaal getraind model of een geaggregeerd antwoord) terug naar de centrale locatie die de taak coördineert.
 5.  **Aggregatie:** De resultaten van alle nodes worden geaggregeerd om tot een eindresultaat te komen. Dit kan een iteratief proces zijn, waarbij de geaggregeerde resultaten worden gebruikt voor een volgende ronde van subtaken.
 

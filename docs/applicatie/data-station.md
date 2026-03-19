@@ -1,6 +1,58 @@
 # 4.1. Datastation
 
-In een dataspace voor secundair gebruik is het datastation, naast de processing hub, een essentieel component. Waar de processing hub het component is voor de data-afnemer, is het datastation dat voor de dataleverancier. Beide componenten zijn daarmee elkaars tegenhanger binnen de dataspace-architectuur: voor iedere rol is één kerncomponent gedefinieerd.
+## 4.1.1. Het datastation in het hart van de zandloper
+
+De derde laag van het zandlopermodel bestaat uit een netwerk van knooppunten met een datastation. Een datastation is een abstract begrip voor het systeem dat ervoor zorgt dat data beschikbaar kan worden gesteld voor secundair gebruik. De term datastation wordt zowel gebruikt binnen primair als secundair gebruik, maar de functie en de eisen verschillen.
+
+!!! info "Verschil tussen datastations voor primair en secundair gebruik"
+
+    Bij primair gebruik is de functie van het datastation niet het beschikbaar stellen van data, maar het toegankelijk maken van een patiëntendossier voor de data-afnemer, die deze data beschikbaar stelt aan de eindgebruiker: de zorgverlener. Om dit onderscheid duidelijk te maken, spreken we bij primair gebruik over het toegankelijk maken van data. Het datastation bewaakt daarbij de toegang tot het patiëntendossier op basis van afgesproken en wettelijke toegangsregels.
+
+    Bij secundair gebruik worden datasets, waarin meerdere patiëntendossiers zijn opgenomen, beschikbaar gesteld aan datagebruikers. In dit geval maakt het datastation de data niet alleen toegankelijk op basis van toegangsregels, maar stelt het deze ook beschikbaar voor het algoritme van de datagebruiker. Dit gebeurt conform de eisen die gelden voor het beschikbaar stellen van data voor secundair gebruik, waaronder pseudonimisering. De toepassing, het algoritme van de datagebruiker, wordt met andere woorden op het datastation uitgevoerd. Bij primair gebruik is dit nooit het geval. De data-afnemer heeft in dit scenario de rol van ontvanger van de resultaten van het algoritme, waarmee de datagebruiker de eindresultaten kan leveren.
+
+    Naast de uitvoering van algoritmen kan het datastation voorzien in het transport van data, bijvoorbeeld in situaties van datapooling, waarbij data wordt samengebracht in een beveiligde verwerkingsomgeving van de HDAB of van een betrouwbare datahouder. In dit scenario zijn de HDAB en de betrouwbare datahouder de data-afnemers. Omdat bij secundair gebruik wordt gewerkt met grote datasets, zijn voor het transport andere standaarden nodig dan bij primair gebruik.
+
+    In de bovenstaande tekst zijn patiëntendossiers als voorbeeld gebruikt. Secundair gebruik is echter breder en omvat meer dan alleen patiëntendossiers. Ook dit vormt een onderscheid ten opzichte van het primair gebruik van data.
+
+### 4.1.1.1. Eén datastation per dataleverancier
+
+Een belangrijk uitgangspunt is dat de data in een datastation onder de verwerkingsverantwoordelijkheid valt van een dataleverancier. Deze dataleverancier is een datahouder die op grond van de EHDS verplicht is data beschikbaar te stellen en niet is uitgezonderd op basis van artikel 50. Iedere dataleverancier beschikt daarom in principe over een eigen datastation.
+
+Uitgangspunt is dat dataleveranciers een proces doorlopen om deelnemer te worden aan de dataspace en een deelnemersovereenkomst ondertekenen waarin zij zich verbinden aan de afspraken van de dataspace voor secundair gebruik. De HDAB is verantwoordelijk voor zowel het maken als het handhaven van de afspraken.
+
+!!! info "Afsprakenstelsels en dataspaces"
+
+    In de tekst wordt zowel de term afsprakenstelsel als dataspace gebruikt. Een dataspace definiëren we als een afsprakenstelsel voor databeschikbaarheid, het maakt een betrouwbare gegevensuitwisseling mogelijk tussen deelnemers. Afsprakenstelsels kunnen met andere woorden over vele onderwerpen gaan, dataspaces beperken het onderwerp tot gegevensuitwisseling en databeschikbaarheid. 
+
+### 4.1.1.2.Model met dienstverleners
+
+In de praktijk zijn dataleveranciers niet altijd in staat om zelfstandig een datastation te implementeren. Zij beschikken daarvoor vaak niet over de benodigde mensen, processen en technische mogelijkheden. Dit geldt overigens ook regelmatig voor datagebruikers.
+
+Om dit op te vangen, gaat de architectuur uit van een zogenoemd four-corner model. Hierbij treden dienstverleners namens dataleveranciers en datagebruikers op en sluiten zij deze partijen aan op de dataspace voor secundair gebruik. Door deze aansluiting worden dataleveranciers en datagebruikers middels een knooppunt opgenomen in het netwerk van deelnemers. Bij het primaire gebruik van data vervullen organisaties vaak beide rollen: dataleverancier en datagebruiker. Bij secundair gebruik zijn deze rollen vaker gescheiden, omdat onderzoekers en overheidsinstanties bijvoorbeeld uitsluitend als datagebruiker optreden en geen dataleverancier zijn.
+
+Het four-corner model wordt toegepast in vrijwel alle moderne afsprakenstelsels. Met alle deelnemers worden afspraken gemaakt over hun rol, taken en verantwoordelijkheden binnen het stelsel. 
+
+![](datastation-4corner.drawio.svg)
+
+///caption
+**Figuur 1.** Four-corner model, met dienstverleners voor dataleveranciers en gebruikers.
+///
+
+Niet iedere zorgaanbieder hoeft zelf een dienstverlener te contracteren. In het huidige landschap zien we dat veel zorgaanbieders samenwerken binnen regionale samenwerkingsorganisaties om gezamenlijk een dienstverlener te contracteren voor de aansluiting op een dataspace. Ook binnen deze constructie blijft het uitgangspunt gehandhaafd dat iedere dataleverancier beschikt over een eigen datastation. De dienstverlener host deze voor de dataleverancier.
+
+In het four-corner model kan een dienstverlener knooppunten hosten voor zowel dataleveranciers als voor datagebruikers. Voor dataleveranciers richt de dienstverlener een datastation in; voor datagebruikers een processing hub. 
+
+![](datastation-netwerk.drawio.svg)
+
+///caption
+**Figuur 2.** Netwerk van datastations en processing hub
+///
+
+Binnen het secundaire gebruik is de inrichting van een processing hub voorbehouden aan de HDAB en aan betrouwbare datahouders. Vanuit elke processing hub kan zowel een goedgekeurd dataverzoek als (federatief) een algoritme worden uitgevoerd op basis van een datavergunning. In het bovenstaande figuur is alleen de processing hub van de HDAB weergegeven. In werkelijkheid kunnen er meerdere processing hubs bestaan, een hub per betrouwbare datahouder.
+
+## 4.1.2. Datastation voor secundair gebruik
+
+In een dataspace voor secundair gebruik is het datastation de tegenhanger van de processing hub. Waar de processing hub het component is voor de data-afnemer, is het datastation dat voor de dataleverancier. Deze componenten vormen een twee-eenheidbinnen de dataspace-architectuur: voor iedere rol is één kerncomponent gedefinieerd.
 
 Het datastation is een technisch component dat is opgenomen in een knooppunt van de dataspace. Vanuit het datastation stelt de dataleverancier data beschikbaar voor secundair gebruik, onder vooraf vastgestelde voorwaarden. Het datastation ondersteunt functies zoals het ontsluiten van datasets, het toepassen van toegangs- en gebruiksvoorwaarden, het waarborgen van beveiliging en privacy, en het faciliteren van interoperabiliteit met andere knooppunten binnen de dataspace.
 
@@ -10,7 +62,7 @@ Door deze rolverdeling ontstaat een heldere scheiding van verantwoordelijkheden:
 
     Een datastation is een door een dienstverlener beheerde omgeving waarin datasets en gegevensdiensten van een dataleverancier worden ontsloten volgens afgesproken standaarden, met expliciete regels voor toegang, autorisatie, logging en gebruik, zodat gegevens betrouwbaar en interoperabel kunnen worden gebruikt en worden uitgewisseld binnen een dataspace.
 
-Het datastation is als systeem betrokken bij de processen voor het [klaarzetten](../../proces/klaarzetten.md) van data en het [analyseren](../../proces/analyseren.md) van data. Het ondersteunt deze processen met de usecases die in het onderstaande diagram zijn weergegeven.
+Het datastation is als systeem betrokken bij de processen voor het [klaarzetten](../proces/klaarzetten.md) van data en het [analyseren](../proces/analyseren.md) van data. Het ondersteunt deze processen met de usecases die in het onderstaande diagram zijn weergegeven.
 
 Door het kleurverschil tussen de actoren en het datastation wordt inzichtelijk gemaakt dat het datastation interacteert met de HDAB en met betrouwbare datahouders. De configuratie, het beheer en het onderhoud van het datastation zelf zijn niet opgenomen in de usecases. Met het usecasediagram moet immers inzichtelijk gemaakt worden welke waarde het datastation heeft voor het realiseren van de dataspace. Configuratie, beheer en onderhoud is waardevol, maar is niet de reden waarom dataspace een datastation nodig heeft.
 
@@ -30,9 +82,9 @@ In de onderstaande paragrafen worden de eisen aan een datastation beschreven.
     Om die reden wordt in dit hoofdstuk geen gedetailleerde architectuur uitgewerkt. Vanuit de dataspace is het vooral van belang dat de interoperabiliteit met het datastation is geborgd en dat het vertrouwen en de integriteit van de dataspace als geheel worden gewaarborgd, over alle autonome onderdelen heen. De eisen aan een datastation richten zich daarom alleen op interoperabiliteit en vertrouwen.
 
 
-## 4.1.1. Beheer catalogus van datasets
+## 4.1.3. Beheer catalogus van datasets
 
-Iedere dataleverancier is zelf verantwoordelijk voor het catalogiseren en publiceren van haar datasets. Dit betekent dat de dataleverancier een eigen datasetcatalogus samenstelt en beheert. In dit document spreken we niet af welke datasets in de catalogus moeten worden opgenomen, maar alleen welk formaat wordt gebruikt. De catalogus moet worden opgesteld in [HealthDCAT-AP Release 5](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/).
+Iedere dataleverancier is zelf verantwoordelijk voor het catalogiseren en publiceren van haar datasets. Dit betekent dat de dataleverancier een eigen datasetcatalogus samenstelt en beheert. In dit document spreken we niet af welke datasets in de catalogus moeten worden opgenomen, maar alleen welk formaat wordt gebruikt. De catalogus moet worden opgesteld in [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-5/).
 
 De catalogus moet toegankelijk zijn via het datastation. In de EHDS is vastgelegd (artikel 77) dat de catalogus die door de Health Data Access Body (HDAB) wordt gepubliceerd openbaar toegankelijk is. In lijn daarmee kan ook de catalogus op het datastation openbaar toegankelijk zijn.
 
@@ -47,7 +99,7 @@ Voor de beheer van de catalogus wordt uitgegaan van een servicemedewerker die de
 Met het vrijgeven wordt bedoeld dat de dataleverancier een versie van de datacatalogus publiceert en daarmee een nieuwe versie beschikbaar stelt. Dit vrijgeven kan periodiek plaatsvinden, bijvoorbeeld meerdere keren per jaar. Het aanmelden van de catalogus hoeft daarentegen slechts eenmalig te gebeuren.
 Na aanmelding is de catalogus van de dataleverancier geregistreerd in het register van de HDAB ten behoeve van de Nationale catalogus van datasets.
 
-## 4.1.2. Haal periodiek catalogus van datasets op
+## 4.1.4. Haal periodiek catalogus van datasets op
 
 De Health Data Access Body (HDAB) is met het component voor de Nationale Catalogus volledig autonoom in het bepalen van de frequentie waarmee de Nationale Catalogus wordt bijgewerkt. Dit betekent dat de HDAB kan plannen wanneer de catalogus van een dataleverancier wordt opgehaald, in plaats van dat dit ad hoc door alle leveranciers tegelijk gebeurt.
 
@@ -59,11 +111,11 @@ De Health Data Access Body (HDAB) is met het component voor de Nationale Catalog
 
 Door deze autonomie ontstaat een efficiënte en gecontroleerde updateprocedure, waardoor piekbelasting of “filevorming” wordt voorkomen wanneer meerdere dataleveranciers tegelijk hun catalogus willen bijwerken. Bovendien draagt deze regeling bij aan de betrouwbaarheid en stabiliteit van de Nationale Catalogus, omdat updates gespreid en voorspelbaar plaatsvinden. Dit biedt zowel de HDAB als de dataleveranciers meer controle over het proces en helpt bij het waarborgen van consistente en actuele informatie in de dataspace.
 
-## 4.1.3. Maak data beschikbaar voor secundair gebruik
+## 4.1.5. Maak data beschikbaar voor secundair gebruik
 
 Vanuit de HDAB wordt een verzoek gedaan om een dataset beschikbaar te stellen voor secundair gebruik. Dit verzoek kan gebaseerd zijn op een door de HDAB verleende datavergunning of op een goedgekeurd dataverzoek.
 
-Het uitgangspunt is dat een dataleverancier een data heeft verkregen en deze georganiseerd heeft in een aantal datasets om deze vervolgens via een catalogus te publiceren. In het onderstaande figuur zijn deze randvoorwaardelijke stappen weergegeven. In de datasets die worden aangeboden voor secundair gebruik mogen geen personen zijn verwerkt die via een opt-out hebben aangegeven geen deel te willen uitmaken van het secundair gebruik (artikel 71 EHDS).
+Het uitgangspunt is dat een dataleverancier data heeft verkregen of verzameld en deze georganiseerd heeft in een aantal datasets om deze vervolgens via een catalogus te publiceren. In het onderstaande figuur zijn deze randvoorwaardelijke stappen weergegeven. In de datasets die worden samengesteld/geprepareerd op basis van een vergunning, moeten die personen verwijderd worden waar op dat moment een opt-out voor geregistreerd staat, waarmee zij aangeven geen deel te willen uitmaken van het secundair gebruik op grond van de EHDS (artikel 71 EHDS).
 
 ![](datastation-organiseren.drawio.svg)
 
@@ -85,6 +137,12 @@ In een federatieve opzet wordt de geprepareerde data beschikbaar gesteld in het 
 
 Ad 3: Wanneer datasets centraal beschikbaar worden gesteld, worden de geprepareerde datasets veilig getransporteerd naar een centrale processing hub. In deze hub kunnen datasets worden samengebracht, geintegreerd en geanalyseerd, zodat onderzoekers en algoritmes toegang hebben tot de gecombineerde gegevenssets binnen de geldende randvoorwaarden van de vergunning. Het transport naar de centrale hub vindt plaats via beveiligde verbindingen, waarbij integriteit en vertrouwelijkheid van de data te allen tijde moeten worden gewaarborgd.
 
+!!! info "Horizontaal versus vertikaal gepartitioneerde data"
+
+    Het proces van het data beschikbaar maken is afhankelijk van de manier waarop de data is gepartitioneerd. Het beschikbaar maken van horizontaal gepartitioneerde data is relatief het meest eenvoudig: elke data houder heeft een complete rij (record) van een data subject en zet deze klaar in het data station.
+    
+    Voor vertikaal gepartitioneerde data is het proces bewerkelijker. Ten tijd van het opstellen van deze specficatie zijn federatieve analyse technieken onvoldoende volwassen om op grote schaal te gebruiken voor het werken met vertikaal gepartitioneerde data. Om voor één data subject verschillende datapunten (kolommen) te combineren over verschillende datahouders, zal bijvoorbeeld elke data houder de data moeten voorzien met een uniform pseudoniem, waarmee de data over de data stations gekoppeld kan worden. Vervolgens zou de data (tijdelijke) doorgeleverd moeten worden naar een centrale BVE, daar gekoppeld moeten worden alvorens het daarwerkelijk beschikbaar is voor de data gebruiker. 
+
 In het onderstaande figuur zijn scenario 2 en 3 weergegeven.
 
 ![](datastation-klaarzetten.drawio.svg)
@@ -95,7 +153,7 @@ In het onderstaande figuur zijn scenario 2 en 3 weergegeven.
 
 Met het beschikbaar stellen van de datasets is het datastation gereed voor de ontvangst van een algoritme of een dataverzoek.
 
-## 4.1.4. Verwerk algoritme en geef resultaat terug
+## 4.1.6. Verwerk algoritme en geef resultaat terug
 
 Een datastation kan onder andere worden gebruikt voor het uitvoeren van een federatieve analyse of voor federatief leren, of kort gezegd voor het uitvoeren van een algortime. De datagebruiker geeft via de processing hub een opdracht om een algoritme uit te voeren op een aantal datastations. In het onderstaande diagram zijn de stappen weergegeven die op het datastation worden uitgevoerd nadat de opdracht door het datastation is ontvangen.
 
@@ -141,9 +199,9 @@ Onder andere moeten de volgende aspecten worden gewaarborgd:
 
 Ten aanzien van de resultaten moet besloten worden of deze de beveiligde omgeving van de processing hub mogen verlaten. Hiervoor zal een vrijgaveproces gedefinieerd moeten worden waarin strikte regels voor export en overdracht gelden.
 
-## 4.1.5. Geef antwoord op dataverzoek
+## 4.1.7. Geef antwoord op dataverzoek
 
-Wanneer een dataverzoek wordt ontvangen via de processing hub, start het datastation het verwerkingsproces. Als eerste stap worden de authenticiteit en geldigheid van de identiteit van de data-afnemer, de identiteit van de datagebruiker en het akkoord op het dataverzoek geverifieerd op basis van aangeleverde credentials met een hoog betrouwbaarheidsniveau, conform de eIDAS-verordening. Alleen na een succesvolle verificatie wordt het dataverzoek verder verwerkt.
+Bovenstaande paragraaf is een manier om invulling te geven aan een data vergunning (_data permit_) in de zin van de EHDS. Een data station kan als applicatie ook een dataverzoek (_data request_) ondersteunen. De manier hoe dit wordt uitgevoerd lijk heel erg op het eerder beschreven proces, zij het dat het eenvoudiger is. Wanneer een dataverzoek wordt ontvangen via de processing hub, start het datastation het verwerkingsproces. Als eerste stap worden de authenticiteit en geldigheid van de identiteit van de data-afnemer, de identiteit van de datagebruiker en het akkoord op het dataverzoek geverifieerd op basis van aangeleverde credentials met een hoog betrouwbaarheidsniveau, conform de eIDAS-verordening. Alleen na een succesvolle verificatie wordt het dataverzoek verder verwerkt.
 
 Vervolgens haalt het datastation het bijbehorende algoritme op uit het algoritmeregister. In deze context bevat het register een verzameling herbruikbare queries die zijn goedgekeurd voor gebruik binnen de dataspace. Na het ophalen wordt de integriteit van het algoritme gecontroleerd, bijvoorbeeld door middel van digitale handtekeningen of checksums, om te waarborgen dat het algoritme authentiek en onveranderd is.
 

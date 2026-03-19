@@ -2,9 +2,7 @@
 
 Het aanvraagproces start op het moment dat de benodigde gezondheidsgegevens gevonden zijn in de Europese of nationale gezondheidsdatacatalogus.
 
-Vervolgens kan een aanvraag ingediend worden via twee kanalen: via het centrale platform van HealthData@EU (kort: centrale platform) of via het eigen systeem van de Nationale instantie voor toegang tot gezondheidsgegevens (HDAB). De keuze voor het centrale platform wordt gemaakt wanneer gegevens uit meerdere lidstaten moeten worden aangevraagd. Aanvragen die direct bij een HDAB worden ingediend, zijn uitsluitend van toepassing op gegevens die zich binnen de eigen lidstaat bevinden.
-
-Alle aanvragen die via het centrale platform worden ingediend, komen altijd eerst binnen bij het Nationale Contactpunt voor e-Health (NCPeH). Het NCPeH fungeert als een verbindingspunt in de infrastructuur, speciaal ontworpen om de veilige uitwisseling van gezondheidsgegevens tussen de verschillende lidstaten van de Europese Unie mogelijk te maken. Het is goed om te weten dat er geen directe communicatie is tussen de HDAB en het centrale platform; alles loopt via dit NCPeH.
+Vervolgens kan een aanvraag ingediend worden via twee kanalen: via het centrale platform van HealthData@EU (kort: centrale platform) of via het eigen systeem van de Nationale instantie voor toegang tot gezondheidsgegevens (HDAB). Alle aanvragen die via het centrale platform worden ingediend, komen altijd eerst binnen bij het Nationale Contactpunt voor e-Health (NCPeH). Het NCPeH fungeert als een verbindingspunt in de infrastructuur, speciaal ontworpen om de veilige uitwisseling van gezondheidsgegevens tussen de verschillende lidstaten van de Europese Unie mogelijk te maken. Het maakt voor de aanvrager niet uit of de aanvraag centraal of via de nationale instantie wordt ingediend. Het is goed om te weten dat er geen directe communicatie is tussen de HDAB en het centrale platform; alles loopt via dit NCPeH.
 
 In de EHDS[^1] wordt onderscheid gemaakt tussen twee soorten aanvragen:
 
@@ -78,7 +76,7 @@ Als de aanvraag haalbaar is, gaat deze door naar de volgende stap. Soms wordt ee
 
 ### 2.2.3.4. Verstrekken kostenindicatie
 
-Zodra duidelijk is welke gegevens geleverd kunnen worden, worden de totale kosten berekend, inclusief de kosten van de dataleveranciers en die van de HDAB. De aanvrager ontvangt een overzicht van deze kosten en moet aangeven of hij hiermee akkoord gaat. Bij akkoord gaat de aanvraag verder. Als de aanvrager niet reageert of de kosten niet accepteert, kan de aanvraag worden beëindigd.
+Zodra duidelijk is welke gegevens geleverd kunnen worden, worden de vaste en lopende kosten berekend, inclusief de kosten van de dataleveranciers, eventuele BVO leveranciers en die van de HDAB. De aanvrager ontvangt een overzicht van deze kosten en moet aangeven of hij hiermee akkoord gaat. Bij akkoord gaat de aanvraag verder. Als de aanvrager niet reageert of de kosten niet accepteert, kan de aanvraag worden beëindigd.
 
 ### 2.2.3.5. Verstrekken attestatie (vergunning of goedkeuring)
 
@@ -90,11 +88,11 @@ Voor bijzondere persoonsgegevens, zoals medische dossiergegevens, is een hoog be
 
 Zodra de vergunning of goedkeuring is verleend, wordt een verzoek aan de dataleveranciers gestuurd om de gevraagde gegevens beschikbaar te stellen aan de aanvrager, hetzij binnen een beveiligde verwerkingsomgeving, hetzij door de gegevens zoals gevraagd uit het verzoek te leveren.
 
-## Trek attestatie in
+## 2.2.4. Trek attestatie in
 
-Op basis van [artikel 63](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_63) van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken.
+Op basis van [artikel 63](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_63) van de EHDS moet de HDAB toezicht houden op de naleving van de voorwaarden die aan de vergunning of goedkeuring zijn verbonden. Als tijdens dit toezicht blijkt dat een aanvrager deze voorwaarden niet nakomt, kan de HDAB ingrijpen en de vergunning of goedkeuring intrekken. In de toekomst zal nader beschreven moeten worden hoe, naast het intrekken van de goedkeuring of vergunning, het proces van verlengen of aanvullen van de vergunning ingericht gaat worden.
 
-## 2.2.4. Raadpleeg ingediende aanvragen
+## 2.2.5. Raadpleeg ingediende aanvragen
 
 De EHDS schrijft voor dat de HDAB een aanvraag direct na ontvangst openbaar moet maken ([artikel 57](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202500327#art_57)), ook als later blijkt dat de aanvraag niet volledig is en nog aangepast moet worden. Dit betekent dat de openbaarmaking plaatsvindt voordat de aanvraag op volledigheid wordt gecontroleerd. Daarnaast stelt artikel 57 dat de aanvragen elektronisch beschikbaar moeten worden gesteld. Een overzicht op een website volstaat daarmee dus niet.
 
