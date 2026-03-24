@@ -30,7 +30,7 @@ Het uitvoeren van een federatieve taak, zoals federatief leren of een federatiev
 
 1.  **Taakcreatie:** Een gebruiker (bijv. een onderzoeker via de Processing Hub) maakt een centrale taak aan. Deze taak specificeert welk algoritme moet worden uitgevoerd en op welke Datastations (nodes).
 2.  **Distributie:** De vantage6 Server ontvangt de centrale taak en deelt deze op in subtaken voor elke deelnemende node.
-3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
+3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/data-station.md#416-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
 4.  **Resultaten retourneren:** De node stuurt het resultaat (bv. een lokaal getraind model of een geaggregeerd antwoord) terug naar de centrale locatie die de taak coördineert.
 5.  **Aggregatie:** De resultaten van alle nodes worden geaggregeerd om tot een eindresultaat te komen. Dit kan een iteratief proces zijn, waarbij de geaggregeerde resultaten worden gebruikt voor een volgende ronde van subtaken.
 
@@ -149,7 +149,7 @@ PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief le
     *   De geaggregeerde (niet-identificeerbare) resultaten worden naar de centrale taak gestuurd.
     *   De centrale taak combineert de resultaten voor een overkoepelend antwoord, waarbij extra controles op herleidbaarheid worden uitgevoerd (_statistical disclosure control_) op het eindresultaat.
 
-    Dit sluit direct aan bij de usecase [Geef antwoord op dataverzoek](../../applicatie/laag-3/data-station.md#415-geef-antwoord-op-dataverzoek).
+    Dit sluit direct aan bij de usecase [Geef antwoord op dataverzoek](../../applicatie/data-station.md#417-geef-antwoord-op-dataverzoek).
 
 
 === "Data pooling (doorleveren van data)"
@@ -159,4 +159,4 @@ PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief le
     *   Elk PLUGIN-datastation voert een selectiequery uit om een specifieke dataset of cohort te selecteren.
     *   In plaats van een geaggregeerd resultaat, stuurt de node de geselecteerde ruwe data 'as-is' door naar de Processing Hub.
 
-    Dit proces sluit aan bij het scenario voor centrale beschikbaarstelling zoals beschreven in de usecase [Maak data beschikbaar voor secundair gebruik](../../applicatie/laag-3/data-station.md#413-maak-data-beschikbaar-voor-secundair-gebruik). Privacy en veiligheid hangen hierbij af van de beveiliging van de ontvangende Processing Hub.
+    Dit proces sluit aan bij het scenario voor centrale beschikbaarstelling zoals beschreven in de usecase [Maak data beschikbaar voor secundair gebruik](../../applicatie/data-station.md#415-maak-data-beschikbaar-voor-secundair-gebruik). Privacy en veiligheid hangen hierbij af van de beveiliging van de ontvangende Processing Hub.
