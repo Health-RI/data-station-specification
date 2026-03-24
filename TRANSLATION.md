@@ -11,7 +11,8 @@ Translate the entire MkDocs project from Dutch into English. The project is a te
 ## Translation approach
 
 - Direct AI-assisted translation, preserving technical terminology, markdown formatting and internal links.
-- BibTeX citation keys (`[@key]`), SVG/image references, admonitions, footnotes and mermaid/tab content blocks are preserved exactly as-is.
+- BibTeX citation keys (`[@key]`), admonitions, footnotes and mermaid/tab content blocks are preserved exactly as-is.
+- SVG diagrams: English `.en.svg` variants were generated for all diagrams containing Dutch text; image references in `.en.md` files point to these translated variants.
 - For the glossary: a separate `includes/woordenlijst.en.md` was created with English definitions (not an in-place replacement).
 - The DataSHIELD section (commented out of nav) was translated but kept commented out.
 - `docs/applicatie/data-pooling.en.md` is empty — the Dutch original is also 0 bytes.
@@ -43,11 +44,8 @@ These files already existed in English before work began:
 
 | File |
 |------|
-| `docs/index.en.md` |
-| `docs/leeswijzer.en.md` |
 | `docs/data-stations-als-hoeksteen.en.md` |
 | `docs/infrastructuur/standaarden.en.md` |
-| `docs/proces/index.en.md` |
 | `docs/implementaties/index.en.md` |
 | `docs/appendix/tehdas2-requirements.en.md` |
 | `docs/scratch.en.md` |
@@ -105,6 +103,107 @@ These files already existed in English before work began:
 | `docs/appendix/tehdas2-hdab.en.md` | `docs/appendix/tehdas2-hdab.md` | PDF embed, no text to translate |
 | `docs/appendix/tehdas2-spe.en.md` | `docs/appendix/tehdas2-spe.md` | PDF embed, no text to translate |
 
+### Session 3 — Re-translation of pre-existing stub files
+
+The following files existed before session 1 but contained incorrect, incomplete or empty content. They have been replaced with full translations of their Dutch source files.
+
+| Updated file | Dutch source | Notes |
+|-------------|--------------|-------|
+| `docs/index.en.md` | `docs/index.md` | Previous content was a generic Health-RI intro stub; replaced with full Section 1 translation including LDN description, key concepts admonition (6 tabs), scope, EHDS timeline info box, and attribution |
+| `docs/leeswijzer.en.md` | `docs/leeswijzer.md` | File was empty (0 bytes); filled with translation of research questions and reading guide |
+| `docs/proces/index.en.md` | `docs/proces/index.md` | Previous content was an unrelated academic abstract; replaced with full process perspective translation including EHDS process steps, use-case methodology, and communication patterns info box |
+
+`docs/waarom.en.md` (also listed as a stub) was reviewed against `docs/waarom.md` and found to be a faithful existing translation — left unchanged.
+
+---
+
+## Bug fixes
+
+### Broken links in `implementaties/PLUGIN/proces.md` and `proces.en.md`
+
+Three anchor links in the Dutch file pointed to non-existent section numbers (the use-case headings in `applicatie/data-station.md` had shifted from 4.1.3/4/5 to 4.1.5/6/7 at some point). The English translation initially inherited these stale links plus two additional path errors introduced during translation. All six links were corrected:
+
+| File | Old anchor | Fixed anchor |
+|------|-----------|--------------|
+| `implementaties/PLUGIN/proces.md` | `#414-verwerk-algoritme-en-geef-resultaat-terug` | `#416-verwerk-algoritme-en-geef-resultaat-terug` |
+| `implementaties/PLUGIN/proces.md` | `#415-geef-antwoord-op-dataverzoek` | `#417-geef-antwoord-op-dataverzoek` |
+| `implementaties/PLUGIN/proces.md` | `#413-maak-data-beschikbaar-voor-secundair-gebruik` | `#415-maak-data-beschikbaar-voor-secundair-gebruik` |
+| `implementaties/PLUGIN/proces.en.md` | `../applicatie/data-station.en.md#416-…` (wrong relative path) | `../../applicatie/data-station.md#416-process-algorithm-and-return-result` |
+| `implementaties/PLUGIN/proces.en.md` | `../../applicatie/laag-3/data-station.md#415-…` (phantom path) | `../../applicatie/data-station.md#417-answer-data-request` |
+| `implementaties/PLUGIN/proces.en.md` | `../../applicatie/laag-3/data-station.md#413-…` (phantom path) | `../../applicatie/data-station.md#415-make-data-available-for-secondary-use` |
+
+---
+
+## SVG diagram translations
+
+### Approach
+
+Draw.io-exported SVGs store each label in up to three redundant locations within the file:
+1. As `value="..."` attributes inside a HTML-entity-encoded `<mxfile>` / `<mxGraphModel>` blob in the `content=` attribute on the `<svg>` root.
+2. As literal text inside `<foreignObject><div>` elements in the SVG body (the visual rendering).
+3. As `<text>` fallback elements inside `<switch>` blocks (older draw.io web exports only).
+
+Some labels contain inline HTML with `&nbsp;` entities that split words across markup boundaries. The translation script normalises these before matching.
+
+Plain Inkscape SVGs (`ehds-simpel.svg`) store text directly as `<text>` / `<tspan>` content nodes.
+
+A one-shot Python script (`translate_svgs.py`, not committed) applied a ~100-entry Dutch→English dictionary across all three locations for each file.
+
+### SVGs translated (18 `.en.svg` files created)
+
+| Original SVG | English variant | Dutch labels |
+|---|---|---|
+| `docs/proces/uc-vinden.drawio.svg` | `uc-vinden.drawio.en.svg` | 8 |
+| `docs/proces/uc-aanvragen.drawio.svg` | `uc-aanvragen.drawio.en.svg` | 13 |
+| `docs/proces/uc-aanvragen-state.drawio.svg` | `uc-aanvragen-state.drawio.en.svg` | 19 |
+| `docs/proces/uc-klaarzetten.drawio.svg` | `uc-klaarzetten.drawio.en.svg` | 2 |
+| `docs/proces/uc-analyseren.drawio.svg` | `uc-analyseren.drawio.en.svg` | 9 |
+| `docs/proces/uc-publiceren.drawio.svg` | `uc-publiceren.drawio.en.svg` | 5 |
+| `docs/applicatie/datastation-4corner.drawio.svg` | `datastation-4corner.drawio.en.svg` | 9 |
+| `docs/applicatie/datastation-netwerk.drawio.svg` | `datastation-netwerk.drawio.en.svg` | 5 |
+| `docs/applicatie/uc-datastation.drawio.svg` | `uc-datastation.drawio.en.svg` | 10 |
+| `docs/applicatie/datastation-beheren.drawio.svg` | `datastation-beheren.drawio.en.svg` | 5 |
+| `docs/applicatie/datastation-ophalen.drawio.svg` | `datastation-ophalen.drawio.en.svg` | 4 |
+| `docs/applicatie/datastation-organiseren.drawio.svg` | `datastation-organiseren.drawio.en.svg` | 12 |
+| `docs/applicatie/datastation-klaarzetten.drawio.svg` | `datastation-klaarzetten.drawio.en.svg` | 8 |
+| `docs/applicatie/datastation-analyseren.drawio.svg` | `datastation-analyseren.drawio.en.svg` | 7 |
+| `docs/applicatie/datastation-leveren.drawio.svg` | `datastation-leveren.drawio.en.svg` | 7 |
+| `docs/applicatie/datastation-dataverzoek.drawio.svg` | `datastation-dataverzoek.drawio.en.svg` | 7 |
+| `docs/implementaties/PLUGIN/plugin-overzicht.drawio.svg` | `plugin-overzicht.drawio.en.svg` | 7 |
+| `docs/ehds-simpel.svg` | `ehds-simpel.en.svg` | 4 |
+
+### SVGs without `.en.svg` (no translation needed)
+
+| SVG | Reason |
+|-----|--------|
+| `docs/proces/fair-hourglass.svg` | Text rendered as path geometry — no text nodes |
+| `docs/implementaties/PLUGIN/vantage6-rollen.svg` | Already fully English |
+| `docs/implementaties/kik-v.svg` | Logo, no text content |
+| `docs/assets/noun-hourglass-7893158.svg` | Attribution text only |
+
+### `.en.md` files updated (19 image references)
+
+| File | References updated |
+|------|--------------------|
+| `docs/proces/publiceren.en.md` | 1 |
+| `docs/proces/vinden.en.md` | 1 |
+| `docs/proces/klaarzetten.en.md` | 1 |
+| `docs/proces/aanvragen.en.md` | 2 |
+| `docs/proces/analyseren.en.md` | 1 |
+| `docs/applicatie/data-station.en.md` | 10 |
+| `docs/implementaties/PLUGIN/applicatie.en.md` | 1 |
+| `docs/implementaties/PLUGIN/index.en.md` | 1 |
+
+Note: `docs/implementaties/PLUGIN/proces.en.md` references `vantage6-rollen.svg` which is already English — no change needed.
+
+`docs/ehds-simpel.en.svg` was created for completeness but is not currently referenced by any `.en.md` file.
+
+---
+
+## Known limitations
+
+- **Bibtex citation warnings**: `informatie/metadata.md` and `informatie/metadata.en.md` contain Turtle (RDF) code blocks with `@prefix`, `@nl` and `@en` language tags. The `mkdocs-bibtex` plugin mistakenly scans these as citation keys, producing four `WARNING - Inline reference to unknown key` messages per build. This is a known plugin limitation and the warnings are harmless.
+
 ---
 
 ## Total files
@@ -112,7 +211,10 @@ These files already existed in English before work began:
 | Category | Count |
 |----------|-------|
 | Infrastructure files modified/created | 4 |
-| Pre-existing English files (untouched) | 8 |
+| Pre-existing English files (untouched) | 5 |
 | English translations created — session 1 | 18 |
 | English translations created — session 2 | 25 |
+| Pre-existing stub files re-translated — session 3 | 3 |
 | **Total `.en.md` files in project** | **51** |
+| English SVG diagrams created | 18 |
+| **Total `.en.svg` files in project** | **18** |
