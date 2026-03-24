@@ -128,19 +128,13 @@ nav:
       - informatie/metadata.md
   - 4. Applicatie:
       - applicatie/index.md
-      - Laag 3:
-          - applicatie/laag-3/index.md
-          - 4.1. Datastation: applicatie/laag-3/data-station.md
-      - Laag 4:
-          - applicatie/laag-4/index.md
-          - 4.2. catalogus: applicatie/laag-4/catalogus.md
-          - 4.3. DAAMS: applicatie/laag-4/daams.md
-          - 4.4. Processing hub: applicatie/laag-4/processing-hub.md
-      - Laag 5:
-          - applicatie/laag-5/index.md
-          - 4.5. Federatieve analyse: applicatie/laag-5/federatieve-analyse.md
-          - 4.6. Federatief leren: applicatie/laag-5/federatief-leren.md
-          - 4.7. Data pooling: applicatie/laag-5/data-pooling.md
+      - 4.1. Datastation: applicatie/data-station.md
+      - 4.2. Catalogus: applicatie/catalogus.md
+      - 4.3. DAAMS: applicatie/daams.md
+      - 4.4. Processing hub: applicatie/processing-hub.md
+      - 4.5. Federatieve analyse: applicatie/federatieve-analyse.md
+      - 4.6. Federatief leren: applicatie/federatief-leren.md
+      - 4.7. Data pooling: applicatie/data-pooling.md
   - 5. Infrastructuur:
       - infrastructuur/index.md
       - infrastructuur/evolutie.md
@@ -150,16 +144,16 @@ nav:
     - implementaties/index.md
     - 6.1. KIK-V:
       - implementaties/KIK-V/index.md
-      - Proces: implementaties/KIK-V/proces.md
-      - Informatie: implementaties/KIK-V/informatie.md
-      - Applicatie: implementaties/KIK-V/applicatie.md
-      - Infrastructuur: implementaties/KIK-V/infrastructuur.md
+      - 6.1.1. Proces: implementaties/KIK-V/proces.md
+      - 6.1.2. Informatie: implementaties/KIK-V/informatie.md
+      - 6.1.3. Applicatie: implementaties/KIK-V/applicatie.md
+      - 6.1.4. Infrastructuur: implementaties/KIK-V/infrastructuur.md
     - 6.2. PLUGIN:
       - implementaties/PLUGIN/index.md
-      - Proces: implementaties/PLUGIN/proces.md
-      - Informatie: implementaties/PLUGIN/informatie.md
-      - Applicatie: implementaties/PLUGIN/applicatie.md
-      - Infrastructuur: implementaties/PLUGIN/infrastructuur.md
+      - 6.2.1. Proces: implementaties/PLUGIN/proces.md
+      - 6.2.2. Informatie: implementaties/PLUGIN/informatie.md
+      - 6.2.3. Applicatie: implementaties/PLUGIN/applicatie.md
+      - 6.2.4. Infrastructuur: implementaties/PLUGIN/infrastructuur.md
     # - 6.3. DataSHIELD:
     #   - implementaties/DataSHIELD/index.md
     #   - Informatie: implementaties/DataSHIELD/informatie.md
@@ -170,6 +164,7 @@ nav:
     - 7.2. Primair vs. secundair: discussie/primair-vs-secundair.md    
     - 7.3. Permit vs. request: discussie/permit-vs-request.md
     - 7.4. Dataspace initiatieven: discussie/dataspace-initiatieven.md
+    - 7.5. Voorstel ontwikkelagenda: discussie/ontwikkelagenda.md
     
   - Appendix:
     - appendix/index.md

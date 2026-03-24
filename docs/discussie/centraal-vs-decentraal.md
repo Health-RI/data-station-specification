@@ -1,6 +1,6 @@
 # 7.1. Centrale versus decentrale BVOs
 
-Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/laag-3/data-station.md) en de [processing hub](../applicatie/laag-4/processing-hub.md) als de meest kenmerkende componenten. Zoals eerder gesteld is de EHDS onvoldoende expliciet over de nut en noodzaak van decentrale architecturen, wat de aanleiding was voor een van de onderzoeksvragen:
+Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/data-station.md) en de [processing hub](../applicatie/processing-hub.md) als de meest kenmerkende componenten. Zoals eerder gesteld is de EHDS onvoldoende expliciet over de nut en noodzaak van decentrale architecturen, wat de aanleiding was voor een van de onderzoeksvragen:
 
 > Op welke manier kunnen hybride BVOs, zijnde een synergie tussen centrale en decentrale BVOs, gerealiseerd worden en welke mogelijkheden zijn er om hierin tot standaardisatie te komen?
 

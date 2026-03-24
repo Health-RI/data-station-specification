@@ -16,7 +16,7 @@ Om implementaties van data platforms te kunnen evalueren, introduceren we eerst 
     * **ETL** (*Extract-Transform-Load*): data wordt getransformeerd voordat het wordt opgeslagen.
     * **ELT** (*Extract-Load-Transform*): ruwe data wordt eerst opgeslagen, daarna getransformeerd.
     * **Data lineage** Volledige transformatiegeschiedenis van data van oorsprong tot bestemming.
-    * **Data catalog** Centrale inventaris van data-assets met metadata voor vindbaarheid.
+    * **Data catalog** Centrale inventaris van data-assets met metadata van de data voor vindbaarheid.
     * **Schema-on-read vs Schema-on-write** Data structureren bij opslag (write) vs bij gebruik (read).
 
 Sinds de komst van relationele databases zijn grofweg drie generaties van data infrastructuren te onderscheiden: datawarehouses, data lakes en de lakehouse architectuur.
@@ -30,7 +30,7 @@ Sinds de komst van relationele databases zijn grofweg drie generaties van data i
 
 === "Data lakes"
 
-    Data lakes ontstonden als reactie op de beperkingen van warehouses voor grote volumes heterogene data. Ze hanteren **schema-on-read** met **ELT-processen**: ruwe data wordt opgeslagen zonder voorafgaande structurering. Dit maakte een scheiding mogelijk tussen opslag (vaak goedkope object storage) en compute (via diverse engines). Hierdoor bestaat de architectuur uit loosely coupled componenten die flexibiliteit en schaalbaarheid bieden, maar geen native ACID-compliance of gestandaardiseerd metadata management door het ontbreken van centrale orchestratie en gestandardiseerde metadata lagen.
+    Data lakes ontstonden als reactie op de beperkingen van warehouses voor grote volumes heterogene data. Ze hanteren **schema-on-read** met **ELT-processen**: ruwe data wordt opgeslagen zonder voorafgaande structurering. Dit maakte een scheiding mogelijk tussen opslag (vaak goedkope object storage) en compute (via diverse engines). Hierdoor bestaat de architectuur uit loosely coupled componenten die flexibiliteit en schaalbaarheid bieden, maar geen native ACID-compliance of gestandaardiseerd metadata management door het ontbreken van centrale orchestratie en gestandardiseerde lagen met metadata van de data.
 
 === "Lakehouses"
 

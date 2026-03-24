@@ -30,7 +30,7 @@ De generieke initiatieven zijn veelal vormgegeven als verenigingen en stichtinge
 
 ## 7.4.4. Interoperabiliteit
 
-Op het niveau van interoperabiliteit zijn er zowel overeenkomsten als verschillen. Beide benaderingen maken gebruik van metadata-standaarden zoals DCAT om datasets te beschrijven. Binnen de EHDS zijn er uitbreidingen zoals HealthDCAT-AP om gezondheidsspecifieke metadata te ondersteunen. Dit kan ook in generieke data spaces worden toegepast en vereist minimale inspanning om compatibiliteit te waarborgen. 
+Op het niveau van interoperabiliteit zijn er zowel overeenkomsten als verschillen. Beide benaderingen maken gebruik van metadata-standaarden zoals DCAT om datasets te beschrijven. Binnen de EHDS zijn er uitbreidingen zoals HealthDCAT-AP om gezondheidsspecifieke metadata van de data te ondersteunen. Dit kan ook in generieke data spaces worden toegepast en vereist minimale inspanning om compatibiliteit te waarborgen. 
 
 Op het gebied van autorisatie, zoals eerder benoemd, zijn grotere verschillen aanwezig. EHDS gebruikt een centraal uitgegeven datapermit model, terwijl generieke data spaces peer-to-peer contractonderhandelingen hanteren. Het vertalen van een EHDS datapermit naar een ODRL policy (gebruikt in generieke data spaces) is mogelijk, maar vereist expliciete mapping en begrip van de onderliggende semantiek. De vertaling van ODRL policies naar EHDS datapermits is complexer, gezien de generiekere insteek van ODRL. Ook zullen systemen ontwikkeld voor EHDS en generieke data spaces verschillende interfaces en workflows hebben voor het aanvragen, uitgeven en handhaven van toegang.
 

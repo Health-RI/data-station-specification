@@ -1,6 +1,6 @@
-# KIK-V implementatie: applicatie
+# 6.1.3. KIK-V implementatie: applicatie
 
-## Het KIK-V datastation
+## 6.1.3.1. Het KIK-V datastation
 
 Het KIK-V datastation is een gestandaardiseerde applicatie waarmee de syntactische en semantische interoperabiliteit van data wordt gerealiseerd. Hiertoe is een specificatie opgesteld zodat zakelijke dienstverleners een _datastation-as-a-service_ kunnen aanbieden. Een KIK-V datastation moet ten minste voldoen aan alle onderstaande functionaliteiten. Uiteraard staat het de datastation leveranciers daarnaast vrij om hun eigen functionaliteiten toe te voegen. 
 
@@ -25,14 +25,14 @@ Per december 2025 zijn er drie leveranciers van KIK-V datastations: [bince](http
 
 ![](https://bince-2020.imgix.net/media/Bince-Datastation-KIK-V-Pagina-2-1.png?auto=format&crop=focalpoint&domain=bince-2020.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&ixlib=php-3.3.1&q=100&w=1170n)
 
-## KIK-Starter
+## 6.1.3.2. KIK-Starter
 
 ![type:video](https://www.youtube.com/embed/rMiQUMycBe8?si=Ygu8BX2kWHzOM4Eu)
 
 TO DO: hier nog een korte beschrijving van KIK-started toevoegen
 
 
-## Credentialsplatform
+## 6.1.3.3. Credentialsplatform
 
 ![](../../assets/kik-v-credentialsplatform.png)
 

@@ -1,6 +1,6 @@
 # 7.2. Datastations voor primair vs. secundair gebruik
 
-Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/laag-3/data-station.md) en de [processing hub](../applicatie/laag-4/processing-hub.md) als de meest kenmerkende componenten. In vergelijking met de Cumuluz doelarchitectuur zien we vergelijkbare rollen voor het Cumuluz Datastation respectievelijk de Cumuluz Integrator. Zoals in de inleiding is gesteld, is een vergelijking van de architectuur voor primair vs. secundair een van de centrale onderzoeksvragen: 
+Dit document geeft een beschrijving van een decentrale BVO, met het [datastation](../applicatie/data-station.md) en de [processing hub](../applicatie/processing-hub.md) als de meest kenmerkende componenten. In vergelijking met de Cumuluz doelarchitectuur zien we vergelijkbare rollen voor het Cumuluz Datastation respectievelijk de Cumuluz Integrator. Zoals in de inleiding is gesteld, is een vergelijking van de architectuur voor primair vs. secundair een van de centrale onderzoeksvragen: 
 
 > Zijn er lacunes danwel tegenstrijdigheden in de huidige benadering van de EHDS voor secundair gebruik die het gebruik van decentrale BVOs in de weg staan, met name ook in relatie tot datastations voor primair gebruik? Zo ja, welke oplossingsrichtingen zijn er?
 
@@ -13,7 +13,9 @@ Wanneer we de Cumuluz doelarchitectuur vergelijken met dit document, dan zien we
 - **Primair gebruik:** gebaseerd op de behandelrelatie en toestemming van de patiënt.
 - **Secundair gebruik:** Gebaseerd op een vergunning uitgegeven door een HDAB.
 
-In het ontwerp van een Cumuluz Datastation is duidelijk gespecificeerd hoe via een centrale toestemmingsvoorziening (MITZ) toegang tot het datastation wordt gegeven. In het geval van secundair gebruik is er nog geen sluitende technische integratie waarbij een decentraal datastation autonoom vergunning die door de HDAB/DAAMS is uitgegeven kan valideren. Dit laatste staat los van MITZ, waarin alleen op de opt-out registratie voor secundair gebruik is vastgelegd.
+In het ontwerp van een Cumuluz Datastation is duidelijk gespecificeerd hoe via een centrale toestemmingsvoorziening (MITZ) toegang tot het datastation wordt gegeven.
+
+In het geval van secundair gebruik zijn er twee aspecten die relevant zijn voor geautoriseerde toegang. Het eerste aspect betreft opt-out: in het klaarzetten van de data voor een datagebruiker (met een vergunning), is het de verantwoordelijkheid van de datahouder om data subjecten te exluderen die een beroep hebben gedaan op hun opt-out recht. Hiertoe kan de datahouder gebruik maken van MITZ als centrale toestemmingsvoorziening waarin een actuele status beschikbaar is van personen die een opt-out hebben gedaan. Het tweede aspect is het autorisatie mechanisme _an sich_: welke berekeningen mogen op de datastations worden uitgevoerd. De huidige stand van de techniek van federated processing heeft verschillende authorisatie mechanismen in zich. Deze verschillen echter van implementatie tot implementatie en er is nog geen universele standaard. Het is conceptueel mogelijk om op termijn te werken met _verififiable credentials_ die gekoppeld zijn aan de vergunning die door de HDAB/DAAMS is uitgegeven, maar daar bestaan nog geen werkende implementaties van.
 
 ## 7.2.2. Vergelijking primair en secundair datastation
 
@@ -40,13 +42,13 @@ In het ontwerp van een Cumuluz Datastation is duidelijk gespecificeerd hoe via e
     | ID    | Omschrijving |
     |:-----:|:-------------|
     | L4-O1 | Vergelijkbare, zo niet identieke, ontwerp principes en niet-functionele vereisten. |
-    | L4-O2 | Data gebruikers (systemen of personen) krijgen toegang tot data via één centrale ingang, er wordt gebruik gemaakt van een _hub-and-spoke_ netwerk topologie. |
+    | L4-O2 | Datagebruikers (systemen of personen) krijgen toegang tot data via één centrale ingang, er wordt gebruik gemaakt van een _hub-and-spoke_ netwerk topologie. |
     | L4-03 | Inrichting van laag 4 gaat uit van het [_four corner model_](https://health-ri.github.io/data-spaces-archimate/?view=id-65fda4e829df4a489df5644ffbbdb0e6): meerdere service providers zijn voorzien in het LDN. |
 
 ???+ warning "Verschillen centrale interatie component in laag 4"
     | ID    | Omschrijving |
     |:-----:|:-------------|
-    | L4-V1 | Grondslag en rol van data gebruiker in primair proces is anders voor primair (behandelrelatie) en secundair (vergunning of gegevensverzoek). |
+    | L4-V1 | Grondslag en rol van datagebruiker in primair proces is anders voor primair (behandelrelatie) en secundair (vergunning of gegevensverzoek). |
     | L4-V2 | De Processing Hub vervult een belangrijke functie voor output controle c.q. _statistical disclosure control_. Dit is bij primair gebruik niet aan de orde. |
 
 

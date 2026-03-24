@@ -1,6 +1,6 @@
 # Proces voor federatieve verwerking met PLUGIN
 
-Deze pagina beschrijft hoe de PLUGIN-implementatie, die gebruikmaakt van vantage6, de processen voor [federatieve analyse](../../proces/analyseren.md) en het [klaarzetten van data](../../proces/klaarzetten.md) ondersteunt. PLUGIN/vantage6 is een concreet voorbeeld van hoe een Datastation en een Processing Hub kunnen samenwerken voor secundair datagebruik, zoals beschreven in het hoofdstuk over het [datastation](../../applicatie/laag-3/data-station.md).
+Deze pagina beschrijft hoe de PLUGIN-implementatie, die gebruikmaakt van vantage6, de processen voor [federatieve analyse](../../proces/analyseren.md) en het [klaarzetten van data](../../proces/klaarzetten.md) ondersteunt. PLUGIN/vantage6 is een concreet voorbeeld van hoe een Datastation en een Processing Hub kunnen samenwerken voor secundair datagebruik, zoals beschreven in het hoofdstuk over het [datastation](../../applicatie/data-station.md).
 
 In deze implementatie wordt de rol van het Datastation vervuld door een **vantage6 Node**. De coördinatie tussen de nodes wordt beheerd door een **vantage6 Server**. De datagebruiker initieert de taken vanaf een Processing Hub, die in deze context functioneert als een client naar de vantage6-infrastructuur.
 
@@ -10,18 +10,19 @@ Om een federatief proces te starten, moet eerst een samenwerkingsverband worden 
 
 ![](./vantage6-rollen.svg)
 
-*   **Samenwerking (Collaboration):** Een verzameling van organisaties (dataleveranciers) die met elkaar samenwerken. Dit komt overeen met de groep dataleveranciers waarvoor een datagebruiker een vergunning heeft.
-*   **Organisatie (Organization):** Een deelnemende entiteit, zoals een ziekenhuis of onderzoeksinstituut.
-*   **Node:** De technische implementatie van een Datastation. Dit is een service die bij de organisatie (datahouder) draait en taken (algoritmes) uitvoert op de lokale data.
 *   **Gebruiker (User):** Een persoon die namens een organisatie op de Processing Hub taken mag aanmaken en beheren.
-*   **Taak (Task):** Een specifieke opdracht, zoals het trainen van een model of het uitvoeren van een analyse, die naar een of meerdere nodes wordt gestuurd.
+*   **Node:** De technische implementatie van een Datastation. Dit is een service die bij de organisatie (datahouder) draait en taken (algoritmes) uitvoert op de lokale data.
+*   **Organisatie (Organization):** Een deelnemende entiteit, zoals een ziekenhuis of onderzoeksinstituut.
 *   **Rol (Role) en Regel (Rule):** Definiëren de permissies van een gebruiker.
+*   **Samenwerking (Collaboration):** Een verzameling van organisaties (dataleveranciers) die met elkaar samenwerken. Dit komt overeen met de groep dataleveranciers waarvoor een datagebruiker een vergunning heeft.
+*.  **Studie (Study):** Een studie is een selectie van organisaties binnen een samenwerking die partipiceren in een specifieke analyse.
+*   **Taak (Task):** Een specifieke opdracht, zoals het trainen van een model of het uitvoeren van een analyse, die naar een of meerdere nodes wordt gestuurd.
 
 De **vantage6 Server** beheert deze entiteiten en zorgt voor veilige communicatie en correcte autorisatie, in lijn met de governance-eisen van de dataspace. Medical Data Works heeft afgelopen jaren veel ervaring opgedaan met het opzetten van dergelijke samenwerkingsverbanden en heeft hiertoe standaard [overeenkomsten en governance documenten](https://www.medicaldataworks.nl/governance) opgesteld en [open source beschikbaar gesteld](https://cris.maastrichtuniversity.nl/en/publications/a-governance-framework-for-federated-learning-projects-in-healthc/). 
 
-*   **Infrastructure User Agreement:** Een overeenkomst tussen elk datastation en de beheerder van de infrastructuur. Hierin staan de rollen en verantwoordelijkheden op het gebied van de infrastructuur van de partijen beschreven. Dit contract staat los van het project of de samenwerking, en kan dus worden hergebruikt voor toekomstige projecten.
 *   **Consortium Agreement:** Hoewel er patientdata op individuele basis wordt verstuurd, beschrijft dit document de omgang met intellectueel eigendom, welke partijen toestemming hebben om nieuwe taken te starten, en wie recht heeft de resultaten te publiceren.
 *   **Data Processing or Joint Controller Agreement:** In het geval van federated learning vindt verwerking op het datastation plaats van de eigenaar van de data, op verzoek van de instantie die het algoritme rondstuurt. Voor de AVG is dan ook een data processing agreement nodig. Wanneer deelnemende ziekenhuizen ook deelnemen in de ontwikkeling van de rondgestuurde algoritmen, is een joint controller agreement nodig om aan te geven dat beide partijen betrokken waren bij de uitwerking van de verwerking.
+*   **Infrastructure User Agreement:** Een overeenkomst tussen elk datastation en de beheerder van de infrastructuur. Hierin staan de rollen en verantwoordelijkheden op het gebied van de infrastructuur van de partijen beschreven. Dit contract staat los van het project of de samenwerking, en kan dus worden hergebruikt voor toekomstige projecten.
 
 ## Uitvoeren van een federatieve taak
 
@@ -29,7 +30,7 @@ Het uitvoeren van een federatieve taak, zoals federatief leren of een federatiev
 
 1.  **Taakcreatie:** Een gebruiker (bijv. een onderzoeker via de Processing Hub) maakt een centrale taak aan. Deze taak specificeert welk algoritme moet worden uitgevoerd en op welke Datastations (nodes).
 2.  **Distributie:** De vantage6 Server ontvangt de centrale taak en deelt deze op in subtaken voor elke deelnemende node.
-3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/laag-3/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
+3.  **Lokale Uitvoering:** Elke node voert de taak (het algoritme) uit op de lokale data. Dit gebeurt in een geïsoleerde omgeving (een Docker-container), zoals beschreven in de usecase [Verwerk algoritme en geef resultaat terug](../../applicatie/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). De ruwe data verlaat de node niet.
 4.  **Resultaten retourneren:** De node stuurt het resultaat (bv. een lokaal getraind model of een geaggregeerd antwoord) terug naar de centrale locatie die de taak coördineert.
 5.  **Aggregatie:** De resultaten van alle nodes worden geaggregeerd om tot een eindresultaat te komen. Dit kan een iteratief proces zijn, waarbij de geaggregeerde resultaten worden gebruikt voor een volgende ronde van subtaken.
 
@@ -122,7 +123,7 @@ De PLUGIN-architectuur is gebaseerd op vantage6. Het gefedereerd leren van een a
 
 ??? note "**Verificatie en aggregatie**"
     
-    De SAS verifieert de resultaten, extraheert de metadata en voegt de resultaten van alle datastations samen tot een geaggregeerd tussenmodel. Dit voltooit één iteratie.
+    De SAS verifieert de resultaten, extraheert de metadata van de resultaten en voegt de resultaten van alle datastations samen tot een geaggregeerd tussenmodel. Dit voltooit één iteratie.
 
 ??? note "**Vervolg-iteraties**"
     
@@ -136,13 +137,17 @@ De PLUGIN-architectuur is gebaseerd op vantage6. Het gefedereerd leren van een a
 
 PLUGIN/vantage6 is van oorsprong opgezet voor het ondersteunen van federatief leren. Echter, dezelfde infrastructuur en processen kunnen worden toegepast voor verschillende vormen van secundair datagebruik.
 
+=== "Gefedereerd leren"
+
+    De oorspronkelijke usecase waarvoor vantage6 en PLUGIN zijn ontwikkeld. Doel is het trainen van afzonderlijke machine learning modellen op elk datastation, die vervolgens worden gecombineerd tot een model. Het combineren tot een model is in principe het nemen van een gemiddelde over alle modellen.
+
 === "Gefedereerde analyse"
 
     Bij gefedereerde analyse is het doel niet het trainen van een model, maar het uitvoeren van een statistische analyse. Het "algoritme" is hierbij een aggregatiequery (bv. `COUNT` of `AVG`).
 
     *   Elk PLUGIN-datastation voert de query lokaal uit.
     *   De geaggregeerde (niet-identificeerbare) resultaten worden naar de centrale taak gestuurd.
-    *   De centrale taak combineert de resultaten voor een overkoepelend antwoord.
+    *   De centrale taak combineert de resultaten voor een overkoepelend antwoord, waarbij extra controles op herleidbaarheid worden uitgevoerd (_statistical disclosure control_) op het eindresultaat.
 
     Dit sluit direct aan bij de usecase [Geef antwoord op dataverzoek](../../applicatie/laag-3/data-station.md#415-geef-antwoord-op-dataverzoek).
 

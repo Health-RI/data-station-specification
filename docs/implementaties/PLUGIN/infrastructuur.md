@@ -7,7 +7,7 @@ De PLUGIN infrastructuur bestaat uit centrale en decentrale componenten die geza
 In het hart van de PLUGIN infrastructuur bevindt zich een centrale vantage6 server. Deze server maakt het mogelijk om opdrachten via een webinterface of client klaar te zetten voor de data stations. De centrale vantage6 server bestaat uit de volgende onderdelen:
 
 - De centrale vantage6 server applicatie, die draait binnen een Docker container.
-- Een database (PostgreSQL) voor het opslaan van metadata over gebruikers, organisaties, opdrachten, etc.
+- Een database (PostgreSQL) voor het opslaan van metadata van gebruikers, organisaties, opdrachten, etc.
 - Een UI (webinterface) voor het beheren van gebruikers, organisaties, data stations en opdrachten.
 - Eventueel een large file storage (blob storage) voor het opslaan van opdracht resultaten voor efficiente overdracht.
 
