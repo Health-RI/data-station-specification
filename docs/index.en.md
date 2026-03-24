@@ -2,26 +2,25 @@
 
 ## The need for a national infrastructure for secondary use of health data
 
-The provision of care often takes place within a network of healthcare providers from different sectors. Digitalisation, data exchange and data availability play a crucial role in this. To make this possible, the Netherlands is working on the realisation of a Nationally Covering Network (NCN). The NCN is an overarching term and encompasses:
+The provision of care often takes place within a network of healthcare providers from different sectors. Digitalisation, data exchange and data availability play a crucial role in this. To make this possible, the Netherlands is working towards the realisation of a nationwide datasharing network (_landelijke dekkend netwerk_, LDN). The LDN is an overarching term and encompasses:
 
-- an NCN of **infrastructures**, connecting healthcare providers with one another for exchanging and making available health data;
+- an LDN of **infrastructures**, connecting healthcare providers with one another for exchanging and making available health data;
 - an accompanying **trust framework** with technical, organisational and legal agreements necessary to ensure that citizens and healthcare professionals can trust the data and its safe and responsible use;
 - **generic functions** with agreements, standards and provisions such as identification, authentication, authorisation and addressing.
 
-The NCN will support both primary and secondary use of data, with different types of users, bodies and standards.
-
+The LDN will support both primary and secondary use of data, with different types of users, bodies and standards.
 This document focuses on the elaboration of an infrastructure for secondary use. It assumes two roles: data holders and data users. On the data holder side, the **data station** is the essential system with which data holders can make data available for reuse in an effective and efficient manner. On the data user side, the **processing hub** is the central component for realising a secure processing environment in which data users can work. The combination of a data station and the processing hub forms the essence of the proposed architecture. This architecture is hybrid: it supports different forms of analysis, both centralised and decentralised. It is open: a data station can be connected to multiple processing hubs; within one collaboration (network) of data stations, different studies can be carried out. All of this stems from the ambition to harmonise and standardise as much as possible. These concepts will be explained in detail throughout this document.
 
 ![](assets/primair-secundair-gebruik.png)
 
 ///caption
-**Figure 1.** Primary and secondary use within the NCN. Original figure from Impact Analysis EHDS Zorginstituut (2022), adapted.
+**Figure 1.** Primary and secondary use within the LDN. Original figure from Impact Analysis EHDS Zorginstituut (2022), adapted.
 ///
 
 ![](ehds-simpel.png)
 
 ///caption
-**Figure 2.** Simplified representation of secondary use of data in the context of the NCN.
+**Figure 2.** Simplified representation of secondary use of data in the context of the LDN.
 ///
 
 ???+ abstract "The key concepts around secondary use"
@@ -53,7 +52,7 @@ This specification document describes an architecture for a national health data
 Questions, comments and feedback on this document are very welcome. Please use the comment field at the bottom of each page.
 
 ???+ info "EHDS implementation timeline"
-    The work on the NCN is part of the implementation of the European Health Data Space (EHDS), which entered into force on 26 March 2025. The key milestones on the road to full implementation are:
+    The work on the LDN is part of the implementation of the European Health Data Space (EHDS), which entered into force on 26 March 2025. The key milestones on the road to full implementation are:
 
     - **March 2027**: adoption of national implementing legislation with detailed rules and practical elaboration of the regulation, including the designation of the national Health Data Access Body (HDAB) as the body for overseeing and enabling secondary use.
     - **March 2029**: the regulation will apply to the first priority categories of health data (patient records, electronic prescriptions and dispensing) in all EU countries for primary use. The HDAB is operational and secondary use is possible for most data categories.
@@ -64,7 +63,7 @@ Questions, comments and feedback on this document are very welcome. Please use t
     
 ## Attribution
 
-This specification has been prepared at the request of Health-RI by:
+This specification was commissioned by Health-RI, for which the following persons were contracted:
 
 - [Daniel Kapitan](https://linkedin.com/in/dkapitan)
 - [René Hietkamp](https://www.linkedin.com/in/renehietkamp/)
