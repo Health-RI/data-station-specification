@@ -49,6 +49,8 @@ This document focuses on the elaboration of an infrastructure for secondary use.
 
 This specification document describes an architecture for a national health data infrastructure for secondary use. It is based on the concept of data stations as a cornerstone for achieving syntactic and semantic interoperability, in combination with a processing hub as the system through which data users gain access to the data and can perform computations. This specification has been prepared at the request of Health-RI, as part of its core task to enable secondary use of health data. Various experts and practitioners have been involved from the outset in writing and developing this document. It is intended that the specification will be submitted for consultation to the field in early 2026 via a process yet to be determined.
 
+The data station specification is available in English and Dutch, you can switch languages using the button at the top. The English translation was generated with the help of Claude Sonnet 4.6. The Dutch version is leading in case of ambiguity between the two versions.
+
 Questions, comments and feedback on this document are very welcome. Please use the comment field at the bottom of each page.
 
 ???+ info "EHDS implementation timeline"

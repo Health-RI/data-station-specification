@@ -51,6 +51,8 @@ Dit document richt zich op de uitwerking van een infrastructuur voor secundair g
 
 Dit specificatiedocument beschrijft een architectuur voor een landelijke gezondheidsdata-infrastructuur voor secundair gebruik. Het gaat uit van het concept van datastations als hoeksteen om syntactische en semantische interoperabiliteit te realiseren, in combinatie met een processing hub als systeem waarmee datagebruikers toegang krijgen tot de data en berekeningen kunnen uitvoeren. Deze specificatie is opgesteld in opdracht van Health-RI, als onderdeel van haar kerntaak om secundair gebruik van gezondheidsgegevens mogelijk te maken. Verschillende experts en ervaringsdeskundigen zijn vanaf het begin betrokken bij het schrijven en uitwerken van dit document. Het is de bedoeling dat de specificatie begin 2026 ter consultatie wordt voorgelegd aan het werkveld via een nog nader te kiezen proces.
 
+Dit specificatie document is beschikbaar in het Nederlands en in het Engels (wisselen van taal kan met de knop in de horizontale navigatiebalk bovenaan de pagina). De Engelse versie is gemaakt met behulp van Claude Sonnet 4.6. In geval dat er inconsistenties zijn tussen de twee versies is de Nederlandse versie leidend.
+
 Vragen, reacties en feedback op dit document zijn van harte welkom. Gebruik hiervoor het commentaar veld onder aan elke pagina.
 
 ???+ info "Tijdslijn implementatie EHDS"
