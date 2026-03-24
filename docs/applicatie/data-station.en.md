@@ -32,7 +32,7 @@ To address this, the architecture is based on a so-called four-corner model. In 
 
 The four-corner model is applied in virtually all modern agreement frameworks. Agreements are made with all participants about their role, tasks and responsibilities within the framework.
 
-![](datastation-4corner.drawio.svg)
+![](datastation-4corner.drawio.en.svg)
 
 ///caption
 **Figure 1.** Four-corner model, with service providers for data holders and users.
@@ -42,7 +42,7 @@ Not every healthcare provider needs to contract a service provider themselves. I
 
 In the four-corner model, a service provider can host nodes for both data holders and data users. For data holders, the service provider sets up a data station; for data users, a processing hub.
 
-![](datastation-netwerk.drawio.svg)
+![](datastation-netwerk.drawio.en.svg)
 
 ///caption
 **Figure 2.** Network of data stations and processing hub.
@@ -67,7 +67,7 @@ The data station as a system is involved in the processes for [preparing](../pro
 The colour difference between the actors and the data station makes it clear that the data station interacts with the HDAB and with trusted data holders. The configuration, management and maintenance of the data station itself are not included in the use cases. The use case diagram is intended to make clear what value the data station has for realising the data space. Configuration, management and maintenance is valuable, but is not the reason why the data space needs a data station.
 
 
-![](uc-datastation.drawio.svg)
+![](uc-datastation.drawio.en.svg)
 
 ///caption
 **Figure 3.** Use case diagram of the data station for secondary use.
@@ -88,7 +88,7 @@ Each data holder is itself responsible for cataloguing and publishing its datase
 
 The catalogue must be accessible via the data station. The EHDS stipulates (Article 77) that the catalogue published by the Health Data Access Body (HDAB) is publicly accessible. In line with this, the catalogue on the data station may also be publicly accessible.
 
-![](datastation-beheren.drawio.svg)
+![](datastation-beheren.drawio.en.svg)
 
 ///caption
 **Figure 4.** Components for managing the dataset catalogue.
@@ -103,7 +103,7 @@ After registration, the data holder's catalogue is registered in the HDAB's regi
 
 The Health Data Access Body (HDAB), with the National Catalogue component, is completely autonomous in determining the frequency with which the National Catalogue is updated. This means that the HDAB can plan when a data holder's catalogue is retrieved, rather than this happening ad hoc by all holders simultaneously.
 
-![](datastation-ophalen.drawio.svg)
+![](datastation-ophalen.drawio.en.svg)
 
 ///caption
 **Figure 5.** Components for retrieving the dataset catalogue.
@@ -117,7 +117,7 @@ The HDAB sends a request to make a dataset available for secondary use. This req
 
 The starting point is that a data holder has obtained or collected data and has organised it into a number of datasets in order to publish these via a catalogue. In the figure below, these prerequisite steps are shown. In the datasets that are compiled/prepared on the basis of a permit, those persons for whom an opt-out has been registered at that time must be removed, indicating they do not wish to be part of secondary use under the EHDS (Article 71 EHDS). The principle of data minimisation must also be applied, meaning only a subset of the data that is relevant to the permit is made available to the data user.
 
-![](datastation-organiseren.drawio.svg)
+![](datastation-organiseren.drawio.en.svg)
 
 ///caption
 **Figure 6.** Overview of organising and preparing the data for federated analysis.
@@ -145,7 +145,7 @@ Re 3: When datasets are made available centrally, the prepared datasets are secu
 
 In the figure below, scenarios 2 and 3 are shown.
 
-![](datastation-klaarzetten.drawio.svg)
+![](datastation-klaarzetten.drawio.en.svg)
 
 ///caption
 **Figure 7.** Process for making data available for secondary use, with alternative scenarios for executing data pooling (central) and federation.
@@ -161,7 +161,7 @@ A data station can be used, among other things, to execute a federated analysis 
 
     An algorithm is a set of rules and instructions that a computer executes. Algorithms help, for example, to analyse problems but also to make decisions. (source: [Digitale Overheid](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/algoritmes/))
 
-![](datastation-analyseren.drawio.svg)
+![](datastation-analyseren.drawio.en.svg)
 
 ///caption
 **Figure 8.** Process for executing an algorithm in a federated manner.
@@ -181,7 +181,7 @@ Once the algorithm has finished executing, the data station notifies the process
 
 It is possible that the algorithm remains active within the data station for an agreed period after the initial execution. During this period, the algorithm can be restarted periodically to perform repeated analyses or to perform federated learning based on newly available data. After this period, the algorithm is terminated and removed from the container management environment, unless otherwise agreed.
 
-![](datastation-leveren.drawio.svg)
+![](datastation-leveren.drawio.en.svg)
 
 ///caption
 **Figure 9.** Overview of executing a federated analysis and delivering the results.
@@ -207,7 +207,7 @@ The data station then retrieves the associated algorithm from the algorithm regi
 
 The algorithm is then started and executed on the data station. During execution, the algorithm is processed in isolation, so that data security and privacy are maintained. After execution is complete, the results are reported back to the processing hub, in accordance with the agreed protocols and interfaces.
 
-![](datastation-dataverzoek.drawio.svg)
+![](datastation-dataverzoek.drawio.en.svg)
 
 ///caption
 **Figure 10.** Process for executing a data request in a federated manner.

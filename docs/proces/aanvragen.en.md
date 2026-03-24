@@ -21,7 +21,7 @@ The HDAB uses a system for receiving and processing applications. Within the sec
 
 In the use case methodology, a use case can be extended with another use case. In the diagram, this is applied to make clear that issuing a data permit or approval precedes applying for access to health data. This means that an applicant can start with the use case for applying for data, and that this automatically includes the steps required for granting the permit or approval.
 
-![](uc-aanvragen.drawio.svg)
+![](uc-aanvragen.drawio.en.svg)
 
 ///caption
 **Figure 3.** Overview of the use cases for applying for (access to) health data.
@@ -48,7 +48,7 @@ This section (the use case) explains which steps must be followed to reach this 
 
 The use case starts when an application is submitted, either via the central platform or via the HDAB's own system. The diagram below illustrates the various statuses that an application goes through from submission to the final decision: approval, rejection or withdrawal by the applicant. Each status represents a completed process step, which is briefly described in this use case.
 
-![](uc-aanvragen-state.drawio.svg)
+![](uc-aanvragen-state.drawio.en.svg)
 
 
 ///caption

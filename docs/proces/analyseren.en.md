@@ -22,7 +22,7 @@ In addition to performing analyses, the Processing Hub offers the ability to sen
 
 For analyses requiring data pooling, the HDAB provides a Secure Processing Environment (SPE). In this situation, data from different sources must be physically brought together to perform the analysis. The SPE is integrated into the Processing Hub, so that this hub serves both as a portal for decentralised analyses — where the data remains with the holder — and for centralised analyses in a secure environment where pooled data is processed. The way in which users gain access to the Processing Hub is determined and managed by the HDAB.
 
-![](uc-analyseren.drawio.svg)
+![](uc-analyseren.drawio.en.svg)
 
 ///caption
 **Figure 6.** Overview of the use cases for analysing or learning from data.

@@ -12,7 +12,7 @@ Publishing and managing a National catalogue of datasets is a task of the HDAB, 
 
 In the overview of the use cases, the actor time is shown to indicate that this use case is executed periodically. Within the National catalogue system for datasets, these periods are scheduled to retrieve the catalogue from data holders. Data holders have set up a data station on which the catalogue is published.
 
-![](uc-vinden.drawio.svg)
+![](uc-vinden.drawio.en.svg)
 
 ///caption
 **Figure 2.** Overview of the use cases for finding and discovering datasets.

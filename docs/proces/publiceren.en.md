@@ -8,7 +8,7 @@ When there is an important finding concerning an individual, the data user repor
 
 It is an assumption that the reporting of results will take place via the DAAMS.
 
-![](uc-publiceren.drawio.svg)
+![](uc-publiceren.drawio.en.svg)
 
 ///caption
 **Figure 7.** Overview of the use cases for publishing the results.

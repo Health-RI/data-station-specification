@@ -30,7 +30,7 @@ Executing a federated task, such as federated learning or a federated analysis, 
 
 1.  **Task creation:** A user (e.g. a researcher via the Processing Hub) creates a central task. This task specifies which algorithm is to be executed and on which Data Stations (nodes).
 2.  **Distribution:** The vantage6 Server receives the central task and splits it into subtasks for each participating node.
-3.  **Local execution:** Each node executes the task (the algorithm) on the local data. This occurs in an isolated environment (a Docker container), as described in the use case [Process algorithm and return result](../../applicatie/data-station.md#414-verwerk-algoritme-en-geef-resultaat-terug). The raw data does not leave the node.
+3.  **Local execution:** Each node executes the task (the algorithm) on the local data. This occurs in an isolated environment (a Docker container), as described in the use case [Process algorithm and return result](../../applicatie/data-station.md#416-process-algorithm-and-return-result). The raw data does not leave the node.
 4.  **Returning results:** The node sends the result (e.g. a locally trained model or an aggregated answer) back to the central location coordinating the task.
 5.  **Aggregation:** The results from all nodes are aggregated to arrive at a final result. This can be an iterative process, in which aggregated results are used for a next round of subtasks.
 
@@ -149,7 +149,7 @@ PLUGIN/vantage6 was originally set up to support federated learning. However, th
     *   The aggregated (non-identifiable) results are sent to the central task.
     *   The central task combines the results for an overarching answer, with additional statistical disclosure control checks performed on the final result.
 
-    This directly aligns with the use case [Respond to data request](../../applicatie/laag-3/data-station.md#415-geef-antwoord-op-dataverzoek).
+    This directly aligns with the use case [Answer data request](../../applicatie/data-station.md#417-answer-data-request).
 
 
 === "Data pooling (forwarding data)"
@@ -159,4 +159,4 @@ PLUGIN/vantage6 was originally set up to support federated learning. However, th
     *   Each PLUGIN data station executes a selection query to select a specific dataset or cohort.
     *   Instead of an aggregated result, the node forwards the selected raw data 'as-is' to the Processing Hub.
 
-    This process aligns with the scenario for central data availability as described in the use case [Make data available for secondary use](../../applicatie/laag-3/data-station.md#413-maak-data-beschikbaar-voor-secundair-gebruik). Privacy and security here depend on the security of the receiving Processing Hub.
+    This process aligns with the scenario for central data availability as described in the use case [Make data available for secondary use](../../applicatie/data-station.md#415-make-data-available-for-secondary-use). Privacy and security here depend on the security of the receiving Processing Hub.

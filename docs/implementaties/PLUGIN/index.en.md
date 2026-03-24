@@ -6,7 +6,7 @@ With use cases [AI-assisted coding](https://www.dhd.nl/producten-diensten/regist
 
 The PLUGIN infrastructure implements various components as shown in the diagram and table below, which are explained on the following pages.
 
-![](./plugin-overzicht.drawio.svg)
+![](./plugin-overzicht.drawio.en.svg)
 
 !!! note "List of components"
 

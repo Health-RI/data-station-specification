@@ -24,7 +24,7 @@ A data holder is obliged to make data available to the HDAB on the basis of a pe
 
 The HDAB uses a system for receiving and processing applications. Within the secondary use system, this system is called the Data Access Application Management System (DAAMS). From this system, the HDAB sends a request to make data available to the data station of a data holder. The data station is a system used for making data available for secondary use.
 
-![](uc-klaarzetten.drawio.svg)
+![](uc-klaarzetten.drawio.en.svg)
 
 ///caption
 **Figure 5.** Overview of the use cases for preparing the extract from the datasets.

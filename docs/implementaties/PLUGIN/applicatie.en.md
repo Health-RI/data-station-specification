@@ -2,7 +2,7 @@
 
 ## Application components of PLUGIN
 
-![](./plugin-overzicht.drawio.svg)
+![](./plugin-overzicht.drawio.en.svg)
 
 The data station (left) and the federated processing hub (right) form the paired unit of the PLUGIN/vantage6 architecture. The function of each component is described in more detail below.
 
