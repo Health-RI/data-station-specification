@@ -26,7 +26,7 @@ Het datastation (links) en de federated processing hub (rechts) vormen de twee-e
 
     === "**PLUGIN-Analytics**"
         
-        De PLUGIN-analytics applicatie maakt het mogelijk om gefedereerde analysetaken uit te voeren waarop een geaggregeerd antwoord terug komt. Deze applicatie bestaat onder andere uit een verkennerfunctie met daarin het metadata schema en vooropgestelde analyse vragen. 
+        De PLUGIN-analytics applicatie maakt het mogelijk om gefedereerde analysetaken uit te voeren waarop een geaggregeerd antwoord terug komt. Deze applicatie bestaat onder andere uit een verkennerfunctie met daarin het metadata schema van de data en vooropgestelde analyse vragen. 
         
     === "**PLUGIN-ML**"
 
@@ -46,7 +46,7 @@ Wanneer gesproken wordt over specifieke implementaties wordt vaak de term *Aggre
 
 Om te voldoen aan uiteenlopende databehoeften (zoals klassieke rapportages, analyses, delen van data en data science) wordt door gezondheidsinstellingen veelal gebruik gemaakt van een gescheiden data warehouse, een datalake en andere analytische omgevingen. Deze scheiding leidt tot duplicatie van data, extra complexiteit en uitdagingen op het gebied van data governance. De aanpak van PLUGIN, en meer specifiek het onderdeel PLUGIN-Lake, zet in op een lakehouse architectuur om deze pijnpunten te addresseren. Een lakehouse architectuur kan een oplossing bieden voor deze problematiek door de functionaliteiten van de verschillende omgevingen samen te voegen. Alle data wordt opgeslagen in een flexibel en schaalbaar platform. Er is slechts één opslaglaag op basis van open standaarden, waarbij zowel ongestructureerde als gestructureerde data kan worden opgeslagen, zoals beschreven in [hoofdstuk 5](../../infrastructuur/index.md).
 
-Deze aanpak en architectuur van PLUGIN is in lijn met de principes van de **European Interoperability Reference Architecture (EIRA)**. EIRA biedt een raamwerk om interoperabele architecturen te ontwerpen door herbruikbare *Architectural Building Blocks (ABBs)* te identificeren. We hebben de architectuur van PLUGIN vertaald naar de terminologie en concepten van EIRA, met de intentie om bij te dragen aan verdere standaardisatie en het verbeteren van interoperabiliteit. De mapping tussen de belangrijkste componenten van PLUGIN en EIRA AAB is hieronder weergegeven. Daaruit blijk dat de EIRA in feite alle essentiele componenten voor het realiseren van een lakehouse architectuur, en dus PLUGIN-Lake, heeft opgenomen in de referentie architectuur.e belangrijkste componenten, beschouwd als ABBs, zijn hieronder weergegeven.
+Deze aanpak en architectuur van PLUGIN is in lijn met de principes van de **European Interoperability Reference Architecture (EIRA)**. EIRA biedt een raamwerk om interoperabele architecturen te ontwerpen door herbruikbare *Architectural Building Blocks (ABBs)* te identificeren. We hebben de architectuur van PLUGIN vertaald naar de terminologie en concepten van EIRA, met de intentie om bij te dragen aan verdere standaardisatie en het verbeteren van interoperabiliteit. De mapping tussen de belangrijkste componenten van PLUGIN en EIRA AAB is hieronder weergegeven. Daaruit blijk dat de EIRA in feite alle essentiele componenten voor het realiseren van een lakehouse architectuur, en PLUGIN-Lake, heeft opgenomen in de referentie-architectuur.
 
 ![](./datastation-eira.png)
 

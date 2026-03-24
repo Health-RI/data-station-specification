@@ -18,9 +18,7 @@ De usecases uit het diagram zijn in de vervolgparagrafen kort beschreven.
 
 ## 2.5.2. Meld publicatie van onderzoeksresultaten
 
-De datagebruiker moet de resultaten binnen 18 maanden (artikel 61(4)) publiceren nadat de analyse in een beveiligde verwerkingsomgeving is afgerond of nadat de gevraagde gezondheidsdata is ontvangen. De resultaten moeten altijd anoniem worden gepresenteerd.
-
-Daarnaast moet de datagebruiker de Health Data Access Body op de hoogte stellen van de resultaten. In de publicatie moet ook worden vermeld dat de resultaten zijn verkregen met data uit het kader van de European Health Data Space (EHDS).
+Nadat de analyse in een beveiligde verwerkingsomgeving is afgerond of nadat de gevraagde gezondheidsdata is ontvangen, moet de datagebruiker conform artikel 61, lid 4, de geanonimiseerde onderzoeksresultaten binnen 18 maanden publiceren en informeert daarbij de HDAB. In de publicatie moet ook worden vermeld dat de resultaten zijn verkregen met data uit het kader van de European Health Data Space (EHDS).
 
 ## 2.5.3. Meld significante bevinding over een individu
 

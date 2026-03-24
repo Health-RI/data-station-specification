@@ -21,7 +21,7 @@ Om gezondheidsgegevens zinnig te kunnen hergebruiken moet de vorm (syntax) en be
 
 
 ## Informatiemodellen voor syntactische interoperabiliteit
-Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen. De zorg kent veel verschillende informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge] Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data.
+Om gegevens technisch uit te wisselen, hebben we standaarden nodig die de **structuur** bepalen. De zorg kent veel verschillende informatie modellen, maar in de afgelopen jaar is de sector aan het convergeren naar openEHR, OMOP en FHIR als de belangrijkste informatiemodellen.[@tsafnat2024converge] Hoewel ze ook betekenis (semantiek) bevatten, is hun belangrijkste functie dat ze de "container" voor de data zijn.
 
 
 

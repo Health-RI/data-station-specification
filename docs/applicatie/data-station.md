@@ -22,7 +22,7 @@ Uitgangspunt is dat dataleveranciers een proces doorlopen om deelnemer te worden
 
 !!! info "Afsprakenstelsels en dataspaces"
 
-    In de tekst wordt zowel de term afsprakenstelsel als dataspace gebruikt. Een dataspace definiëren we als een afsprakenstelsel voor databeschikbaarheid, het maakt een betrouwbare gegevensuitwisseling mogelijk tussen deelnemers. Afsprakenstelsels kunnen met andere woorden over vele onderwerpen gaan, dataspaces beperken het onderwerp tot gegevensuitwisseling en databeschikbaarheid. 
+    In de tekst wordt zowel de term afsprakenstelsel als dataspace gebruikt. Een dataspace definiëren we als een afsprakenstelsel voor databeschikbaarheid, het maakt een betrouwbare data transacties mogelijk tussen deelnemers. Daarbij wordt een brede definitie van data transactie gehanteerd: een transactie kan gegevensuitwisseling zijn (data van deelnemer A naar deelnemer B) of meer complexe scenario's zoals _algorithm-to-the-data_, de basis van gefedereerde analyse. Afsprakenstelsels kunnen met andere woorden over vele onderwerpen gaan, dataspaces beperken het onderwerp tot data transacties en databeschikbaarheid. 
 
 ### 4.1.1.2.Model met dienstverleners
 
@@ -115,7 +115,7 @@ Door deze autonomie ontstaat een efficiënte en gecontroleerde updateprocedure, 
 
 Vanuit de HDAB wordt een verzoek gedaan om een dataset beschikbaar te stellen voor secundair gebruik. Dit verzoek kan gebaseerd zijn op een door de HDAB verleende datavergunning of op een goedgekeurd dataverzoek.
 
-Het uitgangspunt is dat een dataleverancier data heeft verkregen of verzameld en deze georganiseerd heeft in een aantal datasets om deze vervolgens via een catalogus te publiceren. In het onderstaande figuur zijn deze randvoorwaardelijke stappen weergegeven. In de datasets die worden samengesteld/geprepareerd op basis van een vergunning, moeten die personen verwijderd worden waar op dat moment een opt-out voor geregistreerd staat, waarmee zij aangeven geen deel te willen uitmaken van het secundair gebruik op grond van de EHDS (artikel 71 EHDS).
+Het uitgangspunt is dat een dataleverancier data heeft verkregen of verzameld en deze georganiseerd heeft in een aantal datasets om deze vervolgens via een catalogus te publiceren. In het onderstaande figuur zijn deze randvoorwaardelijke stappen weergegeven. In de datasets die worden samengesteld/geprepareerd op basis van een vergunning, moeten die personen verwijderd worden waar op dat moment een opt-out voor geregistreerd staat, waarmee zij aangeven geen deel te willen uitmaken van het secundair gebruik op grond van de EHDS (artikel 71 EHDS). Tevens zal het principe van dataminimalisatie moeten worden toegepast, dus alleen een subset van de data beschikbaar worden gesteld aan de datagebruiker die relevant is voor de vergunning.
 
 ![](datastation-organiseren.drawio.svg)
 
@@ -141,7 +141,7 @@ Ad 3: Wanneer datasets centraal beschikbaar worden gesteld, worden de gepreparee
 
     Het proces van het data beschikbaar maken is afhankelijk van de manier waarop de data is gepartitioneerd. Het beschikbaar maken van horizontaal gepartitioneerde data is relatief het meest eenvoudig: elke data houder heeft een complete rij (record) van een data subject en zet deze klaar in het data station.
     
-    Voor vertikaal gepartitioneerde data is het proces bewerkelijker. Ten tijd van het opstellen van deze specficatie zijn federatieve analyse technieken onvoldoende volwassen om op grote schaal te gebruiken voor het werken met vertikaal gepartitioneerde data. Om voor één data subject verschillende datapunten (kolommen) te combineren over verschillende datahouders, zal bijvoorbeeld elke data houder de data moeten voorzien met een uniform pseudoniem, waarmee de data over de data stations gekoppeld kan worden. Vervolgens zou de data (tijdelijke) doorgeleverd moeten worden naar een centrale BVE, daar gekoppeld moeten worden alvorens het daarwerkelijk beschikbaar is voor de data gebruiker. 
+    Voor vertikaal gepartitioneerde data is het proces bewerkelijker. Ten tijd van het opstellen van deze specficatie zijn federatieve analyse technieken onvoldoende volwassen om op grote schaal te gebruiken voor het werken met vertikaal gepartitioneerde data. Om voor één data subject verschillende datapunten (kolommen) te combineren over verschillende datahouders, zal bijvoorbeeld elke data houder de data moeten voorzien met een uniform pseudoniem, waarmee de data over de data stations gekoppeld kan worden. Vervolgens zou de data (tijdelijke) doorgeleverd moeten worden naar een centrale BVE, daar gekoppeld moeten worden alvorens het daarwerkelijk beschikbaar is voor de datagebruiker. 
 
 In het onderstaande figuur zijn scenario 2 en 3 weergegeven.
 

@@ -1,6 +1,6 @@
-# KIK-V implementatie: informatie
+# 6.1.2.KIK-V implementatie: informatie
 
-## Ontologie
+## 6.1.2.1. Ontologie
 
 ![](https://www.kik-v.nl/_next/image?url=https%3A%2F%2Fwww.kik-v.nl%2Fsite%2Fbinaries%2Fcontent%2Fgallery%2Fsite-content%2Fcontent-afbeeldingen%2Fplaatje-ontologie-voor-dummies.png&w=2560&q=70)
 
@@ -26,7 +26,7 @@ De ontologie van KIK-V wordt gebruikt om informatie-uitwisseling in de Nederland
 Al deze informatie is openbaar en gratis te bekijken en te downloaden via het [publicatieplatform van KIK-V](https://kik-v-publicatieplatform.nl/). Zo kunnen aanbieders in de verpleeghuiszorg en informatie-vragende partijen die met KIK-V werken deze informatie inzien en gebruiken om makkelijker samen te werken en gegevens te delen.
 
 
-## Data beschikbaar maken
+## 6.1.2.2. Data beschikbaar maken
 
 Het [KIK-V stappenplan](https://www.kik-v.nl/starten-met-kik-v) beschrijft hoe aan het begin van de implementatie een analyse wordt gemaakt van de beschikbare informatie en de aanpak om dit beschikbaar te maken. De analyse bestaat:
 

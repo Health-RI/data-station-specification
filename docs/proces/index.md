@@ -8,7 +8,7 @@ Het _system of interest_ van deze specificatie is het proces en de daarbij benod
 **Figuur 1.** Schematisch overzicht van het proces van secundair gebruik van data. Bron: Health-RI.
 ///
 
-## Het proces van secundair gebruik vanuit het perspectief van de data gebruiker
+## Het proces van secundair gebruik vanuit het perspectief van de datagebruiker
 
 In de draft documentatie van TEHDAS2 zijn de belangrijkste processtappen voor secundair gebruik benoemd. Deze hebben we gerelateerd aan bovenstaand diagram en zullen we in het als leidraad gebruiken in de uitwerking van de architectuur aan de hand van use-cases.
 
@@ -19,10 +19,10 @@ In de draft documentatie van TEHDAS2 zijn de belangrijkste processtappen voor se
     In de hieronder beschreven processen is de opt-out niet meegenomen. Dit zal moeten worden beschreven in een separaat proces, dat waarschijnlijk onder de verantwoordelijkheid van de HDAB moet worden uitgevoerd. De HDAB zal de opt-out van een persoon vervolgens moeten doorgeven aan de verschillende dataleveranciers.
 
 ### Data zoeken en vinden (_data discovery_)
-Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een catalogus van gezondheidsgevens. Zodra de data zijn gevonden, kan de data gebruiker beginnen met het aanvragen van de gegevens.
+Voordat de gebruiker de gegevens kan gebruiken, moet worden nagegaan of de benodigde gegevens beschikbaar zijn in het benodigde formaat voor het secundaire gebruiksdoel. Datasets die beschikbaar zijn in de EU zijn te vinden in een catalogus van gezondheidsgevens. Zodra de data zijn gevonden, kan de datagebruiker beginnen met het aanvragen van de gegevens.
 
 ### Data aanvragen (_data access_)
-Het aanvragen van toegang tot data is feitelijk een aanvraag tot verwerking door de data gebruiker van gegevens die door een gegevenshouder zijn verstrekt, in overeenstemming met specifieke technische, juridische of organisatorische vereisten, zonder noodzakelijkerwijs de overdracht of het downloaden van dergelijke gegevens te impliceren. (Verordening inzake Gegevensgovernance (DGA), Artikel 2(8), (9) en (13)). Op basis van de aanvraag wordt een vergunning verleend voor toegang tot de gegevens of een verzoek om data wordt goedgekeurd.
+Het aanvragen van toegang tot data is feitelijk een aanvraag tot verwerking door de datagebruiker van gegevens die door een gegevenshouder zijn verstrekt, in overeenstemming met specifieke technische, juridische of organisatorische vereisten, zonder noodzakelijkerwijs de overdracht of het downloaden van dergelijke gegevens te impliceren. (Verordening inzake Gegevensgovernance (DGA), Artikel 2(8), (9) en (13)). Op basis van de aanvraag wordt een vergunning verleend voor toegang tot de gegevens of een verzoek om data wordt goedgekeurd.
 
 ### Data klaarzetten voor verwerking (_data preparation_)
 Gedurende deze fase leveren de gegevenshouders de benodigde gegevens aan de HDAB (Gezondheidsgegevens Toegangsorgaan), die de gegevens voorbereidt voor secundair gebruik. Hierbij worden technieken toegepast voor pseudonimisering, anonimisering, generalisatie, onderdrukking en randomisering van persoonsgegevens. Het beginsel van dataminimalisatie (conform de AVG/GDPR) moet worden gerespecteerd om de privacy te waarborgen.

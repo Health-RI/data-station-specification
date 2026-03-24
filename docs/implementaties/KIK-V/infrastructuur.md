@@ -1,6 +1,6 @@
-# KIK-V implementatie: infrastructuur
+# 6.1.4. KIK-V implementatie: infrastructuur
 
-## Het  vraag- en antwoordspel via Nuts
+## 6.1.4.1. Het  vraag- en antwoordspel via Nuts
 
 Nuts levert de basisinfrastructuur waarop het KIK-V netwerk is gebouwd. De documentatie ervan bestaat uit:
 

@@ -1,6 +1,6 @@
 # 5.3. Standaarden en open source componenten
 
-De volgende standaarden zijn gebruikt of worden momenteel gebruikt voor composable data stations. Deze specificatie is echter **niet beperkt tot ondersteuning van deze standaarden of open source applicatiecomponenten**. Deze lijst is een eerste aanzet en niet bedoeld als een compleet overzicht.
+De volgende standaarden zijn gebruikt of worden momenteel gebruikt voor composable data stations, gericht op het beschikbaar stellen van klinische data die routinematig worden vastgelegd. Deze specificatie is echter **niet beperkt tot ondersteuning van deze standaarden of open source applicatiecomponenten**. Deze lijst is een eerste aanzet en niet bedoeld als een compleet overzicht.
 
 **Standaard** | **Doel**
 :--|:--
@@ -11,6 +11,7 @@ De volgende standaarden zijn gebruikt of worden momenteel gebruikt voor composab
 [Lance](https://lancedb.github.io/lance/) | **Lance** is een modern kolom-georiënteerd dataformaat geoptimaliseerd voor machine learning en AI-applicaties. Het verwerkt efficiënt diverse multimodale datatypes en biedt hoogwaardige query- en versiebeheermogelijkheden.
 [Substrait](https://substrait.io/) | **Substrait** is een formaat voor het beschrijven van rekenoperaties op gestructureerde data. Het is ontworpen voor interoperabiliteit tussen verschillende talen en systemen.
 [SQL-on-FHIR](https://build.fhir.org/ig/FHIR/sql-on-fhir-v2/) | **SQL-on-FHIR** is een specificatie welke grootschalige analyse van FHIR-data toegankelijk maakt voor een breder publiek, en deze overdraagbaar maakt tussen systemen. Het hoofddoel van dit project is om FHIR-data goed te laten werken met de beste beschikbare analysetools, ongeacht de technologie-stack.
+[CSVW](https://csvw.org/) | **CSVW** (CSV on the Web) is een standaard voor het beschrijven van CSV-bestanden met metadata, zodat deze beter interoperabel en machine-leesbaar zijn.
 
 ## Informatie standaarden
 

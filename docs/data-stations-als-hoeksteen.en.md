@@ -4,15 +4,15 @@ The model is broken down into five distinct layers that guide data from its raw 
 ### FAIRification (Top)
 
 **Layer 1: Raw Data Creation**
-[cite_start]This top layer represents the creation and capture of raw data and metadata[cite: 73, 77]. [cite_start]At this stage, researchers and domain experts have maximum freedom, using established community practices and their preferred tools, from handwritten notes to specialized software[cite: 69, 119].
+[cite_start]This top layer represents the creation and capture of raw data and metadata of the data[cite: 73, 77]. [cite_start]At this stage, researchers and domain experts have maximum freedom, using established community practices and their preferred tools, from handwritten notes to specialized software[cite: 69, 119].
 
 **Layer 2: Harmonization**
-In this layer, the raw data begins its journey toward standardization. [cite_start]It is a "funneling" process where tools are used to harmonize the data and metadata, converting them into more structured formats using machine-readable vocabularies and schemas[cite: 89, 122].
+In this layer, the raw data begins its journey toward standardization. [cite_start]It is a "funneling" process where tools are used to harmonize the data and associated metadata, converting them into more structured formats using machine-readable vocabularies and schemas[cite: 89, 122].
 
 ### Center of the Hourglass
 
 **Layer 3: FAIR-Ready Data (The "Waist")**
-[cite_start]This is the narrowest, most critical part of the model, acting as the bridge between the two phases[cite: 67]. [cite_start]Here, data and metadata are rendered as **machine-actionable information** according to a minimal, open, and technology-independent standard[cite: 81, 82, 90]. [cite_start]This standardized format, or "spanning layer," ensures that data from any source can be understood and processed by various automated services[cite: 250]. [cite_start]In the context of health data, a standard like FHIR is well-suited to function as this spanning layer[cite: 255].
+[cite_start]This is the narrowest, most critical part of the model, acting as the bridge between the two phases[cite: 67]. [cite_start]Here, data and metadata of the data are rendered as **machine-actionable information** according to a minimal, open, and technology-independent standard[cite: 81, 82, 90]. [cite_start]This standardized format, or "spanning layer," ensures that data from any source can be understood and processed by various automated services[cite: 250]. [cite_start]In the context of health data, a standard like FHIR is well-suited to function as this spanning layer[cite: 255].
 
 ### FAIR Orchestration (Bottom)
 

@@ -144,16 +144,16 @@ nav:
     - implementaties/index.md
     - 6.1. KIK-V:
       - implementaties/KIK-V/index.md
-      - Proces: implementaties/KIK-V/proces.md
-      - Informatie: implementaties/KIK-V/informatie.md
-      - Applicatie: implementaties/KIK-V/applicatie.md
-      - Infrastructuur: implementaties/KIK-V/infrastructuur.md
+      - 6.1.1. Proces: implementaties/KIK-V/proces.md
+      - 6.1.2. Informatie: implementaties/KIK-V/informatie.md
+      - 6.1.3. Applicatie: implementaties/KIK-V/applicatie.md
+      - 6.1.4. Infrastructuur: implementaties/KIK-V/infrastructuur.md
     - 6.2. PLUGIN:
       - implementaties/PLUGIN/index.md
-      - Proces: implementaties/PLUGIN/proces.md
-      - Informatie: implementaties/PLUGIN/informatie.md
-      - Applicatie: implementaties/PLUGIN/applicatie.md
-      - Infrastructuur: implementaties/PLUGIN/infrastructuur.md
+      - 6.2.1. Proces: implementaties/PLUGIN/proces.md
+      - 6.2.2. Informatie: implementaties/PLUGIN/informatie.md
+      - 6.2.3. Applicatie: implementaties/PLUGIN/applicatie.md
+      - 6.2.4. Infrastructuur: implementaties/PLUGIN/infrastructuur.md
     # - 6.3. DataSHIELD:
     #   - implementaties/DataSHIELD/index.md
     #   - Informatie: implementaties/DataSHIELD/informatie.md

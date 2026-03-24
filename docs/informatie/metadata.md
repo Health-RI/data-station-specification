@@ -2,7 +2,7 @@
 
 ## 3.3.1. Waarom metadata essentieel is voor datastations
 
-Metadata speelt een cruciale rol in een datastation. Zonder goede metadata weten onderzoekers en systemen niet welke data beschikbaar is, wat de kwaliteit ervan is, en onder welke voorwaarden deze gebruikt mag worden. Metadata maakt het mogelijk om:
+Metadata speelt een cruciale rol in een datastation. Zonder goede metadata van de data weten onderzoekers en systemen niet welke data beschikbaar is, wat de kwaliteit ervan is, en onder welke voorwaarden deze gebruikt mag worden. Metadata maakt het mogelijk om:
 
 - **Datasets te vinden**: Een onderzoeker kan in een catalogus zoeken naar datasets over hartfalen in een bepaalde leeftijdsgroep.
 - **Datasets te begrijpen**: De beschrijving vertelt welke variabelen er zijn, hoe de data is verzameld, en welke beperkingen er gelden.
@@ -76,7 +76,7 @@ De klasse `dcat:DatasetSeries` is bedoeld voor het beschrijven van verzamelingen
 - **Versies van onderzoeksdatasets**: Opeenvolgende versies van een cohort na correcties of uitbreidingen
 - **Longitudinale data**: Meetmomenten in een follow-up studie
 
-De serie definieert gemeenschappelijke metadata (zoals toegangsrechten en coderingssystemen), terwijl individuele datasets hun specifieke kenmerken behouden (zoals het aantal records en de temporele dekking).
+De serie definieert gemeenschappelijke metadata van de data (zoals toegangsrechten en coderingssystemen), terwijl individuele datasets hun specifieke kenmerken behouden (zoals het aantal records en de temporele dekking).
 
 **De distributie: `dcat:Distribution`**
 
@@ -110,7 +110,7 @@ Voor automatische verwerking door systemen is het essentieel dat de dataservice 
 
 ## 3.3.3. Statische versus dynamische databronnen
 
-Een belangrijk onderscheid bij het modelleren van databronnen is het verschil tussen _statische_ en _dynamische_ databronnen. Dit onderscheid heeft directe gevolgen voor hoe metadata wordt beheerd en hoe versiebeheer wordt toegepast.
+Een belangrijk onderscheid bij het modelleren van databronnen is het verschil tussen _statische_ en _dynamische_ databronnen. Dit onderscheid heeft directe gevolgen voor hoe metadata van de data wordt beheerd en hoe versiebeheer wordt toegepast.
 
 **Statische databronnen: cohorten en extracties**
 
@@ -134,7 +134,7 @@ De DatasetSeries klasse is bijzonder nuttig voor statische databronnen wanneer:
 
 1. Er periodiek nieuwe versies van dezelfde soort data worden gepubliceerd
 2. Onderzoekers de mogelijkheid moeten hebben om specifieke versies te selecteren
-3. Er gemeenschappelijke metadata is die op serie-niveau kan worden gedefinieerd
+3. Er gemeenschappelijke metadata van de data is die op serie-niveau kan worden gedefinieerd
 
 **Dynamische databronnen: actieve databases**
 
@@ -152,12 +152,14 @@ Voor dynamische databronnen adviseren we de volgende aanpak:
 
 ??? example "Praktijkvoorbeeld: versioning strategie"
 
-    Een ziekenhuis heeft een OMOP-CDM database die dagelijks wordt bijgewerkt met nieuwe patiëntgegevens. De metadata wordt als volgt beheerd:
+    Een ziekenhuis heeft een OMOP-CDM database die dagelijks wordt bijgewerkt met nieuwe patiëntgegevens. De metadata van de data wordt als volgt beheerd:
 
     - **Schema-versie**: `dcat:version` = "OMOP CDM v5.4" – wijzigt alleen bij upgrade van het datamodel
     - **Update-frequentie**: `dcat:accrualPeriodicity` = DAILY – geeft aan dat data dagelijks wordt toegevoegd
     - **Statistieken**: `numberOfRecords` en `numberOfUniqueIndividuals` worden maandelijks bijgewerkt, met `dct:modified` op de bijgewerkte datum
     - **Temporele dekking**: `dct:temporal` met startdatum 2018-01-01 en geen einddatum
+
+    De Research Data Alliance heeft [data versioning usecases](https://doi.org/10.15497/RDA00041) en [aanbevelingen t.a.v. versioning](https://doi.org/10.5281/zenodo.13743875) opgesteld die meegenomen kunnen worden in de uiteindelijke keuze en implementatie van de versioning strategie.
 
 ## 3.3.4. Metadata voor primair versus secundair gebruik
 

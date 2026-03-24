@@ -1,6 +1,6 @@
-# KIK-V implementatie: process
+# 6.1.1. KIK-V implementatie: process
 
-## Functionele beschrijving vraag- en antwoordspel
+## 6.1.1.1. Functionele beschrijving vraag- en antwoordspel
 
 ![](https://kik-v-publicatieplatform.nl/api/gitblob?repositoryUrl=https%3A%2F%2Fgitlab.com%2Fkik-v%2Fafsprakenset&branchOrTag=3.0.0&path=Documentatie%2Fafspraken_gegevensuitwisseling_datastations%2Ffunctionele_beschrijving_vraag_en_antwoordspel.png)
 
@@ -8,7 +8,7 @@ De wijze waarop afnemers (datagebruikers) en aanbieder (datahouders) het KIK-V v
 
 In feite ondersteund KIK-V dus wat in de EHDS gegevensverzoeken worden genoemd, met gebruik van federated analytics in een decentraal netwerk van datastations.
 
-## Principes
+## 6.1.1.2. Principes
 
 Voor de gegevensuitwisseling tussen KIK-starter en datastations zijn de algemene principes van de Afsprakenset KIK-V van toepassing. Hieruit volgen zaken zoals de toepassing van de Principes Informatiestelsel voor de zorg (P12) en de FAIR-dataprincipes (P10).
 
