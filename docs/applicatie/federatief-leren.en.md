@@ -57,7 +57,7 @@ sequenceDiagram
         *   **Strategy**: The logic that implements the federated learning algorithm. This determines how clients are selected, how training and evaluation are configured, and how the results are aggregated.
         *   **ClientApps**: The applications at the decentralised locations that perform the local training and evaluation on their own data.
 
-        The **ServerApp** is what in this document is called the Processing Hub. The **Strategy** component is in practice executed by one of the data stations. This process is described in more detail in the PLUGIN implementation ([PLUGIN process](../../implementaties/PLUGIN/proces.md)).
+        The **ServerApp** is what in this document is called the Processing Hub. The **Strategy** component is in practice executed by one of the data stations. This process is described in more detail in the PLUGIN implementation ([PLUGIN process](../implementaties/PLUGIN/proces.en.md)).
 
     === "Process"
 

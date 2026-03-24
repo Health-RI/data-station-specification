@@ -40,13 +40,10 @@ Translate the entire MkDocs project from Dutch into English. The project is a te
 
 ### Pre-existing English files (not translated in this project)
 
-These files already existed in English before work began:
+These files already existed in English before work began and have not been replaced:
 
 | File |
 |------|
-| `docs/data-stations-als-hoeksteen.en.md` |
-| `docs/infrastructuur/standaarden.en.md` |
-| `docs/implementaties/index.en.md` |
 | `docs/appendix/tehdas2-requirements.en.md` |
 | `docs/scratch.en.md` |
 
@@ -114,6 +111,16 @@ The following files existed before session 1 but contained incorrect, incomplete
 | `docs/proces/index.en.md` | `docs/proces/index.md` | Previous content was an unrelated academic abstract; replaced with full process perspective translation including EHDS process steps, use-case methodology, and communication patterns info box |
 
 `docs/waarom.en.md` (also listed as a stub) was reviewed against `docs/waarom.md` and found to be a faithful existing translation — left unchanged.
+
+### Session 4 — Re-translation of remaining pre-existing stub files
+
+The following files existed before session 1 but contained incorrect or empty content. They have been replaced with full translations of their Dutch source files.
+
+| Updated file | Dutch source | Notes |
+|-------------|--------------|-------|
+| `docs/data-stations-als-hoeksteen.en.md` | `docs/data-stations-als-hoeksteen.md` | Previous content was an unrelated generic FAIR hourglass description with `[cite:]` tags; replaced with full Section 1.2 translation including hourglass model, FAIR principles admonition, five-layer description, data product admonition, and footnote |
+| `docs/implementaties/index.en.md` | `docs/implementaties/index.md` | File was empty (0 bytes); filled with grid cards layout for KIK-V and PLUGIN implementations (DataSHIELD card kept commented out) |
+| `docs/infrastructuur/standaarden.en.md` | `docs/infrastructuur/standaarden.md` | Previous content was outdated (missing `DuckLake` and `CSVW` entries, had `Kuzu` instead of `LadybugDB`, different intro text and section structure); replaced with full translation of the current Dutch source |
 
 ---
 
@@ -211,10 +218,11 @@ Note: `docs/implementaties/PLUGIN/proces.en.md` references `vantage6-rollen.svg`
 | Category | Count |
 |----------|-------|
 | Infrastructure files modified/created | 4 |
-| Pre-existing English files (untouched) | 5 |
+| Pre-existing English files (untouched) | 2 |
 | English translations created — session 1 | 18 |
 | English translations created — session 2 | 25 |
 | Pre-existing stub files re-translated — session 3 | 3 |
+| Pre-existing stub files re-translated — session 4 | 3 |
 | **Total `.en.md` files in project** | **51** |
 | English SVG diagrams created | 18 |
 | **Total `.en.svg` files in project** | **18** |
