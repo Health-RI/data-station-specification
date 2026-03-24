@@ -140,14 +140,6 @@ plugins:
       theme:
         light: kanagawa/fuji
         dark: kanagawa/wave
-extra:
-  alternate:
-    - name: Nederlands
-      link: /
-      lang: nl
-    - name: English
-      link: /en/
-      lang: en
 hooks:
   - hooks.py
 watch:
