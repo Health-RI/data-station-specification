@@ -1,0 +1,1 @@
+![Alt text](<TEHDAS2/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf>){ type=application/pdf style="min-height:100vh;width:100%" }
