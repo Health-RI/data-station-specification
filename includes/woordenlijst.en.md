@@ -20,7 +20,7 @@
 *[FAIR]: Findable, Accessible, Interoperable, Reusable
 *[FDBS]: Federated Database System
 *[FHIR]: Fast Healthcare Interoperability Resources
-*[FPH]: Federated Processing Hub
+*[PH]: Processing Hub
 *[HDAB]: Health Data Access Body
 *[HiX]: Healthcare Information eXchange, an integrated healthcare solution developed by ChipSoft.
 *[ICD-10]: The latest version of the internationally standardised classification system of diagnoses.
