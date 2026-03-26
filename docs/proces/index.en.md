@@ -2,7 +2,7 @@
 ## The process of secondary data use as _system of interest_
 The _system of interest_ of this specification is the process and the associated information, applications and infrastructure for the secondary use of health data. Such a system consists of various elements, as shown in Figure 1.
 
-![](health-ri-flowchart.jpg)
+![](health-ri-flowchart-en.png)
 
 ///caption
 **Figure 1.** Schematic overview of the process of secondary data use. Source: Health-RI.

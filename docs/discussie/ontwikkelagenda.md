@@ -3,7 +3,7 @@
 De grootste gaps die we zien zijn:
 
 - Output controle: nog _unsolved problem_ voor deep learning modellen
-- Smart contracts als extra waarborg in federatieve BVO. Alleen een
+- Smart contracts als extra waarborg in hybride BVO
 
 ## Imaging Data voorzieningen
 Voor het faciliteren van onderzoek en registraties op basis van medische beelden zouden een aantal componenten aan het data station kunnen worden toegevoegd. Een voorbeeldimplementatie wordt momenteel ontwikkeld door [MDW](https://www.medicaldataworks.nl/) in de context van [DIGIONE](https://digicore-cancer.eu/). 

@@ -60,3 +60,4 @@ The same applies to the exposure of source systems with a non-standard informati
 | Epic FHIR v3 | OMOP CDM 5.4 | - Translate FHIR v3 to v4 using existing specifications<br>- Use FHIRconnect specification and implement in programming language of choice<br>- Low complexity provided that coding systems in FHIR v3 are already used correctly in the source system |
 | openEHR | OMOP CDM 5.4 | - RSO Zuid-Limburg has already made the transformation of _legacy_ systems to openEHR within its region for primary use of data<br>- With OMOCL and EOS, data stations for secondary use can be implemented from openEHR using an ETL pattern |
 | OMOP CDM 5.4 | FHIR | - Suppose a national quality registry uses OMOP and wants to create a citizen app that allows people to look up information about themselves<br>- With OMOPonFHIR, a FHIR facade can be realised to offer an API for the app |
+
